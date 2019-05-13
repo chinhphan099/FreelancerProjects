@@ -1,0 +1,5 @@
+mixin blocks(headingText)
+  .block&attributes(attributes)
+    h2.heading!= headingText
+    if block
+      block

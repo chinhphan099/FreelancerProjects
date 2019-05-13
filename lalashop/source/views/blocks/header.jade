@@ -1,0 +1,168 @@
+header.header
+  .header-top-over
+    .grid
+      .top-links
+        +link('Hotline: 1900 1456', 'tel:19001456')
+          i.icon-phone
+          | Hotline: 1900 1456
+        +link('Liên hệ', 'mailto:lalashop@gmal.com').hidden-xs
+          i.icon-mail
+          | Liên hệ
+      .top-links.right-hand
+        +link('Hướng dẫn', 'guide.html').hidden-xs
+          i.icon-help
+          | Hướng dẫn
+        +link('Kiểm tra đơn hàng', '/order.html')
+          i.icon-news
+          | Kiểm tra đơn hàng
+          .content.order-module
+            +form({'id': 'order_form'})
+              +input({'id': 'txt-order-id', 'placeholder': 'Mã đơn hàng'})
+              +input({'id': 'txt-id-email', 'placeholder': 'Số điện thoại hoặc email'})
+              +button({'id': 'btn-check'}).btn-primary Kiểm tra
+        +link('Thông báo', 'javascript:;').hidden-xs
+          i.icon-notice
+          | Thông báo (
+          span 1
+          | )
+          .content
+            p
+              | Giảm giá&nbsp;
+              strong.pink 50%
+              | &nbsp;cho đơn hàng đầu tiên
+  .grid
+    .row.pos-rel
+      .col-lg-8.col-md-7.col-sm-9.col-xs-5
+        .logo-wrap
+          - if (typeof(bodyClass) === 'home') {
+            h1
+          - } else {
+            div
+          - }
+            +link('Lala Shop', 'index.html').logo
+              +img('Lala Shop', 'logo.png')
+        .search-wrap
+          +form({'id': 'search_form', 'action': '/search.html'})
+            .search-box
+              +input({'id': 'txt-search', 'placeholder': 'Tìm sản phẩm tại đây'})(autofocus)
+              span: +button({'id': 'btn-search', 'type': 'submit'})
+                i.icon-search
+      .col-lg-4.col-md-5.col-sm-3.col-xs-7.notify-box
+        .wrap.clearfix
+          .group.cart-group
+            +link('Giỏ hàng', '/cart.html').text-view
+              i.icon-cart
+              if loged
+                span.total 10
+              else
+                span.total 0
+              span.text Giỏ hàng
+            if loged
+              .content.exist-cart
+                p.status
+                  +link('xem tất cả', '#', 'Xem tất cả')
+                    i.icon-next
+                  | Có 2 sản phẩm trong giỏ hàng
+                ul.chose-list
+                  li
+                    .thumb
+                      +link('Decal 3D dán tường cho bé')
+                        +img-upload('Decal 3D dán tường cho bé', 'photo_06.jpg')
+                    .details
+                      span.quantum x1
+                      +link('Remove', 'javascript:;', "&nbsp;").icon-trash
+                      p.name: +link('Decal 3D dán tường cho bé')
+                      p.old-price 1.000.000 đ
+                      p.sale-price 500.000 đ
+                  li
+                    .thumb
+                      +link('Decal 3D dán tường cho bé')
+                        +img-upload('Decal 3D dán tường cho bé', 'photo_08.jpg')
+                    .details
+                      span.quantum x1
+                      +link('Remove', 'javascript:;', "&nbsp;").icon-trash
+                      p.name: +link('Decal 3D dán tường cho bé')
+                      p.old-price 1.000.000 đ
+                      p.sale-price 500.000 đ
+                p.total-text
+                  | Tổng cộng:
+                  span.pink 1.000.000 đ
+                .redirect-link
+                  +link('Xem giỏ hàng').to-cart
+                  +button({'id': 'pay-btn'}).btn-primary
+                    +link('Thanh toán')
+            else
+              .content.empty-cart
+                p Bạn chưa chọn sản phẩm nào
+          .group.love-group
+            +link('Yêu thích', '/like.html').text-view
+              i.icon-heart
+              span.text Yêu thích
+          .group.user-group
+            unless loged
+              .notlogin
+                +link('Đăng nhập', '/login.html').text-view
+                  i.icon-user
+                  span.text
+                    | Đăng nhập
+                .content
+                  .login-by
+                    span.text-1 Đăng nhập bằng
+                    +link('Facebook', 'javascript:;', '&nbsp;').icon-facebook
+                    +link('Twitter', 'javascript:;', '&nbsp;').icon-twitter
+                    +link('Google+', 'javascript:;', '&nbsp;').icon-google
+                  +form({'id': 'login_form'})
+                    +input({'id': 'txt-username'})
+                    +input({'id': 'txt-password', 'type': 'password'})
+                    .remember
+                      +input({'id': 'remember-cb', 'type': 'checkbox'})
+                      +label('Nhớ mật khẩu', 'remember-cb')
+                      +link('Quên mật khẩu ?')
+                    +button({'id': 'btn-login'}).btn-primary Đăng nhập
+                    p Chưa là thành viên?
+                    +button({'id': 'btn-link'}).btn-primary.red
+                      +link('Đăng ký ngay', 'register.html')
+            else
+              .loged
+                +link('Chào Junjun123', '/account.html').text-view
+                  i.icon-user
+                  span.text
+                    | Chào
+                    span Junjun123
+                      i.icon-triangle-down
+                .content
+                  ul.links
+                    li: +link('Thông tin cá nhân')
+                    li: +link('Sổ địa chỉ')
+                    li: +link('Đơn hàng của bạn')
+                    li: +link('Thoát', 'javascript:;')
+    //- nav.nav.clearfix
+    //-   ul.navigation
+    //-     +items([
+    //-       {title: 'Home', href: '#'},
+    //-       {
+    //-         title: 'javascript',
+    //-         href:'#',
+    //-         subList: [
+    //-           {title: 'AJAX'},
+    //-           {
+    //-             title: 'RSS',
+    //-             subClass: 'hehe',
+    //-             subList: [
+    //-               {title: 'Local'},
+    //-               {
+    //-                 title: 'Online',
+    //-                 subList: [
+    //-                   {title: 'rss 1'},
+    //-                   {title: 'rss 2'}
+    //-                 ],
+    //-                 subActive: sub3
+    //-               }
+    //-             ],
+    //-             subActive: sub2
+    //-           },
+    //-           {title: 'XML'},
+    //-         ], subActive: sub1
+    //-       },
+    //-       {title: 'Sitemap', href: 'sitemap.html'}
+    //-     ], mainNav)

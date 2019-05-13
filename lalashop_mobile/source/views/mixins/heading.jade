@@ -1,0 +1,7 @@
+mixin mainHeading(headingText)
+  h1.main-title!=headingText
+
+mixin heading(headingText, link)
+  h2.heading&attributes(attributes)
+    +link(headingText, link, headingText)
+      i.icon-next

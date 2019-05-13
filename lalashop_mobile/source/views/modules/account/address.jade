@@ -1,0 +1,29 @@
+.add-address(data-expand='{"effect": "fade"}')
+  +link('Thêm địa chỉ nhận hàng', 'javascript:;', 'Thêm địa chỉ nhận hàng').link-1(data-handle="add-address")
+    i.icon-next
+  .popup.popup-filter.sign-content(data-content="add-address")
+    +form({id: 'add_address_frm'})(data-validates="add_address_frm")
+      .popup-header
+        i.icon-close(data-close="")
+        +button({type: 'submit'}).apply-btn Hoàn tất
+        h2.popup-title Thêm địa chỉ mới
+      .main
+        .relative
+          .content
+            fieldset: +input({id: 'txt_name', placeholder: 'Họ tên'})
+            fieldset: +input({id: 'txt_address', placeholder: 'Địa chỉ'})
+            fieldset: +input({id: 'txt_city', placeholder: 'Tỉnh/ Thành phố'})
+            fieldset: +input({id: 'txt_district', placeholder: 'Quận/ Huyện'})
+            fieldset: +input({id: 'txt_ward', placeholder: 'Phường/ Xã'})
+            fieldset: +input({id: 'txt_phone', type: 'tel', placeholder: 'Số điện thoại'})
+          fieldset.grid
+            p.grey-text Lala shop sẽ liên hệ số điện thoại này để giao hàng đến bạn và kiểm tra tình trang đơn hàng, đổi trả hàng khi cần.
+            +checkbox({id: 'term_cb', text: 'Sử dụng địa chỉ này làm địa chỉ giao hàng'}).normal-cb
+            +button({id: 'save_info', type: 'submit'}).btn-secondary.full-width Lưu thông tin
+  +form({id: 'address_frm'})
+    +address('current')
+    +address()
+    - if(step === 0) {
+      .btn-continue
+        +button({}).btn-secondary.full-width Tiếp tục
+    - }

@@ -1,0 +1,68 @@
+- if(bodyClass === 'search-page') {
+  .grid: span.no-result Không tìm thấy kết quả "#[span.pink abcd]" nào
+- }
+.categories-block
+  - if(bodyClass === 'search-page') {
+    h2.heading Gợi ý
+  - }
+  .product-list.grid-view(data-equal="")
+    +link('product name', 'details.html').item-product(data-parent="")
+      .tmb-img(data-child="thumb")
+        +img-upload('image-33','pro-600x600-0.jpg')
+        span.cell-online Chỉ bán<br/>Online
+      .info
+        p.price
+          strong.discount -15<sup>%</sup>
+          span.new-price 700.000 đ
+          span.old-price 800.000 đ
+        p.title Tên sản phẩm
+    +link('product name', 'details.html').item-product(data-parent="")
+      .tmb-img(data-child="thumb")
+        +img-upload('image-35','pro-600x600-0.jpg')
+        span.celling
+          strong Bán
+          | Chạy
+        span.icon-gift
+        span.pr-new Mới
+      .info
+        p.price
+          strong.discount -15<sup>%</sup>
+          span.new-price 700.000 đ
+          span.old-price 800.000 đ
+        p.title Tên sản phẩm
+    +link('product name', 'details.html').item-product(data-parent="")
+      .tmb-img(data-child="thumb")
+        +img-upload('image-82','pro-600x600-0.jpg')
+      .info
+        p.price
+          strong.discount -15<sup>%</sup>
+          span.new-price 700.000 đ
+          span.old-price 800.000 đ
+        p.title Tên sản phẩm
+    +link('product name', 'details.html').item-product(data-parent="")
+      .tmb-img(data-child="thumb")
+        +img-upload('image-84','pro-600x600-1.jpg')
+      .info
+        p.price
+          strong.discount -15<sup>%</sup>
+          span.new-price 700.000 đ
+          span.old-price 800.000 đ
+        p.title Tên sản phẩm
+    +link('product name', 'details.html').item-product(data-parent="")
+      .tmb-img(data-child="thumb")
+        +img-upload('image-95','pro-600x600-2.jpg')
+      .info
+        p.price
+          span.new-price 700.000 đ
+          span.old-price 800.000 đ
+        p.title Tên sản phẩm
+    +link('product name', 'details.html').item-product(data-parent="")
+      .tmb-img(data-child="thumb")
+        +img-upload('image-102','pro-600x600-1.jpg')
+      .info
+        p.price
+          span.new-price 700.000 đ
+          span.old-price 800.000 đ
+        p.title Tên sản phẩm
+  p.loading-wrap
+    i.icon-loader

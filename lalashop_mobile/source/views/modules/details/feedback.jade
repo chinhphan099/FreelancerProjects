@@ -1,0 +1,41 @@
+.send-feedback.list-view
+  +link('product name', 'details.html').item-product
+    .tmb-img
+      +img-upload('image-33','pro-600x600-0.jpg')
+    .info
+      p.price
+        strong.discount -15<sup>%</sup>
+        span.new-price 700.000 đ
+        span.old-price 800.000 đ
+      p.title Tên sản phẩm
+.rating-form.sign-content
+  +form({id: 'comment_form'})(data-validates="comment_form")
+    h2.title Chạm vào ngôi sao để đánh giá
+    .rating
+      p(data-star="4" data-clickable="true").star
+        i.icon-star
+          +input({type: 'radio', name: 'star', id: 'star-01', value: 'Bad'})
+        i.icon-star
+          +input({type: 'radio', name: 'star', id: 'star-02', value: 'Normal'})
+        i.icon-star
+          +input({type: 'radio', name: 'star', id: 'star-03', value: 'Medium'})
+        i.icon-star
+          +input({type: 'radio', name: 'star', id: 'star-04', value: 'Good'})
+        i.icon-star
+          +input({type: 'radio', name: 'star', id: 'star-05', value: 'Very Good'})
+      span.count Normal
+    .content
+      fieldset
+        +input({name: 'txt_name', placeholder: 'Họ tên'})
+      fieldset
+        +input({name: 'txt_title', placeholder: 'Tiêu đề'})
+      fieldset
+        +input({name: 'txt_comment', placeholder: 'Đánh giá'})
+        //- +textarea('txt_comment', 'txt_comment', 'Đánh giá')
+    .grid
+      .row
+        .col-xs-6
+          +button({}).btn-primary.full-width.no-padding
+            +link('Trở về', 'details-info.html')
+        .col-xs-6
+          +button({type: 'submit'}).btn-secondary.full-width Gửi

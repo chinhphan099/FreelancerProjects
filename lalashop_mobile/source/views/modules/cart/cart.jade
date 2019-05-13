@@ -1,0 +1,53 @@
+.categories-block
+  +form({'action': '#', 'method': 'post'})
+    .product-list.list-view.cart-view
+      .item-cart
+        +link('product name', 'details.html').item-product
+          .tmb-img
+            +img-upload('image-33','pro-600x600-0.jpg')
+          .info
+            p.title Tên sản phẩm
+            p.color
+              +img-upload('image-33','pro-600x600-0.jpg')
+              | 1m2
+        .group-number
+          span.text Số lượng:
+          .relative
+            +input({type: 'number', value: '1'})
+            i.icon-down
+          .price x
+            strong.pink 700.000 đ
+          .btn-delete
+            +link('Xóa', 'javascript:;')
+              i.icon-trash
+      .item-cart
+        +link('product name', 'details.html').item-product
+          .tmb-img
+            +img-upload('image-33','pro-600x600-0.jpg')
+          .info
+            p.title Tên sản phẩm
+            p.color
+              +img-upload('image-33','pro-600x600-0.jpg')
+              | 1m2
+        .group-number
+          span.text Số lượng:
+          .relative
+            +input({type: 'number', value: '1'})
+            i.icon-down
+          .price x
+            strong.pink 700.000 đ
+          +link('Xóa', 'javascript:;').btn-delete
+            i.icon-trash
+      .discount-code
+        h3.text Mã giảm giá
+        .clearfix
+          +button({'id': 'subscribe-btn', 'name': 'subscribe-btn', 'type': 'button'}).btn-primary.no-padding.btn-apply Áp dụng
+          span: +input({'type': 'text', 'name': 'txt-subscribe', 'placeholder': 'Nhập tại đây'})
+    .counting.grid
+      table.tb-details
+        tr
+          td Giá trọn gói
+          td
+            p.price-wrap.text-right
+              span.price 1.400.000 đ
+      +button({type: 'submit'}).btn-secondary.full-width Thanh toán

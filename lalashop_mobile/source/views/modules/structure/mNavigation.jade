@@ -1,0 +1,232 @@
+.navigation
+  .inner
+    .relative
+      ul.nav-group
+        - if(!loged) {
+        li.login-info
+          +link('TienTLQ', 'account-info.html')
+            i.icon-user
+            span.text TienTLQ
+          +link('Thoát', 'javascript:;')
+            span.text Thoát
+        - } else {
+        li.login-info
+          +link('Đăng nhập', 'signIn.html')
+            i.icon-user
+            span.text Đăng nhập
+          +link('Đăng ký', 'signIn-register.html')
+            span.text Đăng ký
+        - }
+        li
+          +link('Giỏ hàng của bạn (6)', 'cart.html')
+            i.icon-cart
+            span.text Giỏ hàng của bạn (<span class="pink">6</span>)
+        li
+          +link('Trang chủ', 'index.html')
+            i.icon-home
+            span.text Trang chủ
+        li
+          +link('Kiểm tra đơn hàng', 'order.html')
+            i.icon-bill
+            span.text Kiểm tra đơn hàng
+        li
+          +link('Thông tin tài khoản', 'account-info.html')
+            i.icon-user
+            span.text Thông tin tài khoản
+        li
+          +link('Địa chỉ nhận hàng', 'account-address.html')
+            i.icon-pin
+            span.text Địa chỉ nhận hàng
+        li
+          +link('Đơn hàng của tôi', 'account-bill.html')
+            i.icon-bills
+            span.text Đơn hàng của tôi
+        li
+          +link('Sản phẩm yêu thích', 'account-wishlist.html')
+            i.icon-heart
+            span.text Sản phẩm yêu thích
+      ul.nav-group
+        li: +link('Khuyến mãi Khuyến', 'categories.html')
+        li: +link('Sản phẩm nổi bật', 'categories.html')
+        li: +link('Sản phẩm mới', 'categories.html')
+        li: +link('Deal tốt', 'categories.html')
+      ul.nav-group(data-expand="")
+        +items([
+          {
+            title: 'Giấy decal cuộn',
+            href: 'javascript:;',
+            handle: 'sub1',
+            subClass: 'sub-menu',
+            liClass: 'has-child',
+            dataActive: 'data-active',
+            subList: [
+              {title: 'Giấy decal cuộn', href: 'categories.html'},
+              {title: 'Decal chủ đề và bảng chữ ', href: 'categories.html'},
+              {title: 'Decal chân tường', href: 'categories.html'},
+              {title: 'Decal dán phòng khách, phòng ngủ', href: 'categories.html'},
+              {title: 'Decal chủ đề và bảng chữ ', href: 'categories.html'},
+              {title: 'Khung ảnh, kệ gỗ', href: 'categories.html'},
+              {title: 'Decal dán phòng khách, phòng ngủ', href: 'categories.html'},
+              {title: 'Decal 3D', href: 'categories.html'},
+              {title: 'Decal chủ đề và bảng chữ ', href: 'categories.html'},
+              {title: 'Decal chân tường', href: 'categories.html'},
+              {title: 'Decal dán phòng khách, phòng ngủ', href: 'categories.html'},
+              {title: 'Decal chủ đề và bảng chữ ', href: 'categories.html'},
+              {title: 'Khung ảnh, kệ gỗ', href: 'categories.html'},
+              {title: 'Decal dán phòng khách, phòng ngủ', href: 'categories.html'}
+            ]
+          },
+          {
+            title: 'Decal dán tường',
+            href: 'javascript:;',
+            handle: 'sub2',
+            subClass: 'sub-menu',
+            liClass: 'has-child',
+            dataActive: 'data-active',
+            subList: [
+              {title: 'Decal dán tường', href: 'categories.html'},
+              {title: 'Decal chủ đề và bảng chữ ', href: 'categories.html'},
+              {title: 'Decal chân tường', href: 'categories.html'},
+              {title: 'Decal dán phòng khách, phòng ngủ', href: 'categories.html'},
+              {title: 'Decal chủ đề và bảng chữ ', href: 'categories.html'},
+              {title: 'Khung ảnh, kệ gỗ', href: 'categories.html'},
+              {title: 'Decal dán phòng khách, phòng ngủ', href: 'categories.html'},
+              {title: 'Decal 3D', href: 'categories.html'},
+              {title: 'Decal chủ đề và bảng chữ ', href: 'categories.html'},
+              {title: 'Decal chân tường', href: 'categories.html'},
+              {title: 'Decal dán phòng khách, phòng ngủ', href: 'categories.html'},
+              {title: 'Decal chủ đề và bảng chữ ', href: 'categories.html'},
+              {title: 'Khung ảnh, kệ gỗ', href: 'categories.html'},
+              {title: 'Decal dán phòng khách, phòng ngủ', href: 'categories.html'}
+            ]
+          },
+          {
+            title: 'Khung ảnh, kệ gỗ',
+            href: 'javascript:;',
+            handle: 'sub3',
+            subClass: 'sub-menu',
+            liClass: 'has-child',
+            dataActive: 'data-active',
+            subList: [
+              {title: 'Khung ảnh, kệ gỗ', href: 'categories.html'},
+              {title: 'Decal chủ đề và bảng chữ ', href: 'categories.html'},
+              {title: 'Decal chân tường', href: 'categories.html'},
+              {title: 'Decal dán phòng khách, phòng ngủ', href: 'categories.html'},
+              {title: 'Decal chủ đề và bảng chữ ', href: 'categories.html'},
+              {title: 'Khung ảnh, kệ gỗ', href: 'categories.html'},
+              {title: 'Decal dán phòng khách, phòng ngủ', href: 'categories.html'},
+              {title: 'Decal 3D', href: 'categories.html'},
+              {title: 'Decal chủ đề và bảng chữ ', href: 'categories.html'},
+              {title: 'Decal chân tường', href: 'categories.html'},
+              {title: 'Decal dán phòng khách, phòng ngủ', href: 'categories.html'},
+              {title: 'Decal chủ đề và bảng chữ ', href: 'categories.html'},
+              {title: 'Khung ảnh, kệ gỗ', href: 'categories.html'},
+              {title: 'Decal dán phòng khách, phòng ngủ', href: 'categories.html'}
+            ]
+          },
+          {
+            title: 'Decal chủ đề và bảng chữ',
+            href: 'javascript:;',
+            handle: 'sub4',
+            subClass: 'sub-menu',
+            liClass: 'has-child',
+            dataActive: 'data-active',
+            subList: [
+              {title: 'Decal chủ đề và bảng chữ', href: 'categories.html'},
+              {title: 'Decal chủ đề và bảng chữ ', href: 'categories.html'},
+              {title: 'Decal chân tường', href: 'categories.html'},
+              {title: 'Decal dán phòng khách, phòng ngủ', href: 'categories.html'},
+              {title: 'Decal chủ đề và bảng chữ ', href: 'categories.html'},
+              {title: 'Khung ảnh, kệ gỗ', href: 'categories.html'},
+              {title: 'Decal dán phòng khách, phòng ngủ', href: 'categories.html'},
+              {title: 'Decal 3D', href: 'categories.html'},
+              {title: 'Decal chủ đề và bảng chữ ', href: 'categories.html'},
+              {title: 'Decal chân tường', href: 'categories.html'},
+              {title: 'Decal dán phòng khách, phòng ngủ', href: 'categories.html'},
+              {title: 'Decal chủ đề và bảng chữ ', href: 'categories.html'},
+              {title: 'Khung ảnh, kệ gỗ', href: 'categories.html'},
+              {title: 'Decal dán phòng khách, phòng ngủ', href: 'categories.html'}
+            ]
+          },
+          {
+            title: 'Xốp đá dán tường',
+            href: 'javascript:;',
+            handle: 'sub5',
+            subClass: 'sub-menu',
+            liClass: 'has-child',
+            dataActive: 'data-active',
+            subList: [
+              {title: 'Xốp đá dán tường', href: 'categories.html'},
+              {title: 'Decal chủ đề và bảng chữ ', href: 'categories.html'},
+              {title: 'Decal chân tường', href: 'categories.html'},
+              {title: 'Decal dán phòng khách, phòng ngủ', href: 'categories.html'},
+              {title: 'Decal chủ đề và bảng chữ ', href: 'categories.html'},
+              {title: 'Khung ảnh, kệ gỗ', href: 'categories.html'},
+              {title: 'Decal dán phòng khách, phòng ngủ', href: 'categories.html'},
+              {title: 'Decal 3D', href: 'categories.html'},
+              {title: 'Decal chủ đề và bảng chữ ', href: 'categories.html'},
+              {title: 'Decal chân tường', href: 'categories.html'},
+              {title: 'Decal dán phòng khách, phòng ngủ', href: 'categories.html'},
+              {title: 'Decal chủ đề và bảng chữ ', href: 'categories.html'},
+              {title: 'Khung ảnh, kệ gỗ', href: 'categories.html'},
+              {title: 'Decal dán phòng khách, phòng ngủ', href: 'categories.html'}
+            ]
+          },
+          {
+            title: 'Giấy decal cuộn',
+            href: 'javascript:;',
+            handle: 'sub6',
+            subClass: 'sub-menu',
+            liClass: 'has-child',
+            dataActive: 'data-active',
+            subList: [
+              {title: 'Giấy decal cuộn', href: 'categories.html'},
+              {title: 'Decal chủ đề và bảng chữ ', href: 'categories.html'},
+              {title: 'Decal chân tường', href: 'categories.html'},
+              {title: 'Decal dán phòng khách, phòng ngủ', href: 'categories.html'},
+              {title: 'Decal chủ đề và bảng chữ ', href: 'categories.html'},
+              {title: 'Khung ảnh, kệ gỗ', href: 'categories.html'},
+              {title: 'Decal dán phòng khách, phòng ngủ', href: 'categories.html'},
+              {title: 'Decal 3D', href: 'categories.html'},
+              {title: 'Decal chủ đề và bảng chữ ', href: 'categories.html'},
+              {title: 'Decal chân tường', href: 'categories.html'},
+              {title: 'Decal dán phòng khách, phòng ngủ', href: 'categories.html'},
+              {title: 'Decal chủ đề và bảng chữ ', href: 'categories.html'},
+              {title: 'Khung ảnh, kệ gỗ', href: 'categories.html'},
+              {title: 'Decal dán phòng khách, phòng ngủ', href: 'categories.html'}
+            ]
+          },
+          {
+            title: 'Decal chủ đề và bảng chữ',
+            href: 'javascript:;',
+            handle: 'sub7',
+            subClass: 'sub-menu',
+            liClass: 'has-child',
+            dataActive: 'data-active',
+            subList: [
+              {title: 'Decal chủ đề và bảng chữ', href: 'categories.html'},
+              {title: 'Decal chủ đề và bảng chữ ', href: 'categories.html'},
+              {title: 'Decal chân tường', href: 'categories.html'},
+              {title: 'Decal dán phòng khách, phòng ngủ', href: 'categories.html'},
+              {title: 'Decal chủ đề và bảng chữ ', href: 'categories.html'},
+              {title: 'Khung ảnh, kệ gỗ', href: 'categories.html'},
+              {title: 'Decal dán phòng khách, phòng ngủ', href: 'categories.html'},
+              {title: 'Decal 3D', href: 'categories.html'},
+              {title: 'Decal chủ đề và bảng chữ ', href: 'categories.html'},
+              {title: 'Decal chân tường', href: 'categories.html'},
+              {title: 'Decal dán phòng khách, phòng ngủ', href: 'categories.html'},
+              {title: 'Decal chủ đề và bảng chữ ', href: 'categories.html'},
+              {title: 'Khung ảnh, kệ gỗ', href: 'categories.html'},
+              {title: 'Decal dán phòng khách, phòng ngủ', href: 'categories.html'}
+            ]
+          }
+        ])
+      ul.nav-group
+        li
+          +link('Hướng dẫn', 'guide.html')
+            i.icon-help
+            span.text Hướng dẫn
+        li
+          +link('Xem Lalashop trên máy tính', '//lala.com.vn')
+            i.icon-pc
+            span.text Xem Lalashop trên máy tính

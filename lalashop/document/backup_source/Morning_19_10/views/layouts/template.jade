@@ -1,0 +1,69 @@
+include ../mixins/all
+
+block vars
+  -title = 'Template'
+
+doctype html
+//[if IE 8]><html lang="en" class="no-js ie ie8"><![endif]
+//[if IE 9]><html lang="en" class="no-js ie ie9"><![endif]
+//[if gt IE 9]><!
+html(class="no-js", lang="en")
+  //<![endif]
+  head
+    meta(charset="utf-8")
+    //[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"><![endif]
+    title=title
+    meta(name="description", content="")
+    meta(name="keywords", content="")
+    meta(name="robots", content="index, follow")
+    meta(name="author", content="")
+    meta(name="viewport", content="width=device-width, initial-scale=1, minimal-ui")
+    link(rel="shortcut icon", href="favicon.ico", type="image/x-icon")
+    link(rel="stylesheet", href="css/libs.css")
+    link(rel="stylesheet", href="css/style.css")
+    //[if lte IE 9]><link rel="stylesheet" href="css/ie.css"><![endif]
+    link(rel="stylesheet", href="css/print.css", media="print")
+    style.
+      .template {padding-bottom: 50px;}
+      h1 {text-align: center; text-transform: uppercase;}
+      h2 {margin: 20px auto; border-bottom: 1px solid #FF6D6D; padding-bottom: 10px; color: #FF6D6D;}
+      h3 {max-width: 1140px; padding: 5px 0; margin: 10px auto; background-color: #ddd;}
+      .group-1 {overflow: hidden;}
+      .red {color: red;}
+      .silver {color: silver;}
+      .green {color: green;}
+      .bgd-silver {background-color: silver;}
+      .section {padding: 25px 0;}
+      .nav-bar-temp {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 11;
+        background-color: #F2F2F2;
+      }
+      .nav-temp {
+        background-color: pink;
+      }
+      .nav-temp li {
+        float: left;
+        margin-left: 5px;
+      }
+      .nav-temp li:first-child {
+        margin-left: 0;
+      }
+      .nav-temp a {
+        display: inline-block;
+        padding: 5px;
+        box-shadow: inset 0 0 5px rgb(108, 108, 108);
+        transition: all .3s;
+      }
+      .nav-temp a:hover {
+        box-shadow: inset 0 0 5px rgb(255, 145, 0);
+      }
+    script(src="js/modernizr.js")
+  body.template
+    block container
+    include ../blocks/script
+    //[if lt IE 8]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]
+    noscript JavaScript is off. Please enable to view full site.

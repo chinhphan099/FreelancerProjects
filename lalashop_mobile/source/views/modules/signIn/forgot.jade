@@ -1,0 +1,10 @@
++form({id: 'forgot_frm'})(data-validates="forgot_frm")
+  .content
+    fieldset
+      +input({name: 'txt_username', placeholder: 'Nhập email hoặc số điện thoại'})
+  .grid
+    .row
+      .col-xs-6.text-center
+        +link('Quay lại', 'signIn.html').backtosignin
+      .col-xs-6
+        +button({id: 'login_btn', type: 'submit'}).btn-secondary.full-width Gửi

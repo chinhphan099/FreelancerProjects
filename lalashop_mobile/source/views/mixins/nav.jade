@@ -1,0 +1,17 @@
+mixin singleMenu(items)
+  nav&attributes(attributes)
+    - each item in items
+      +link(item.title, item.href, item.text)(class=item.itemClass)
+
+mixin items(items)
+  - each item in items
+    - if (item.dataActive) {
+      li(class=item.liClass data-active="")
+        +link(item.title, item.href, item.text)(class=item.linkClass, data-handle=item.handle)
+        - if(item.subList) {
+          ul(class=item.subClass, data-content=item.handle)
+            +items(item.subList, item.subActive)
+        - }
+    - } else {
+      li(class=item.liClass): +link(item.title, item.href, item.text)
+    - }

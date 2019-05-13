@@ -1,0 +1,18 @@
+mixin singleMenu(items)
+  nav&attributes(attributes)
+    - var active = ''
+    - each item,index in items
+      - active = index === mainNav ? 'active' : ''
+      +link(item.title, item.href, item.text)(class=active)
+
+mixin items(items, activeIndex)
+  - var active = ''
+  - each item,index in items
+    - active = index === activeIndex ? 'active': ''
+    li(class=active, class=item.liClass, data-submenu-id=item.submenuid)
+      +link(item.title, item.href, item.text)(class=item.linkClass, target=item.target)
+      - if(item.subList) {
+        div(class=item.subClass, id=item.submenuid)
+          ul
+            +items(item.subList, item.subActive)
+      - }

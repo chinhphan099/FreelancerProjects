@@ -1,0 +1,12 @@
+.sign-content.custom-sign-content.checkout
+  h1.title-hd Thông tin người nhận
+  +form({id: 'add_address_frm'})(data-validates="add_address_frm")
+    .content
+      fieldset: +input({name: 'txt_name', placeholder: 'Họ tên'})
+      fieldset: +input({name: 'txt_city', placeholder: 'Tỉnh/ Thành phố'})
+      fieldset: +input({name: 'txt_district', placeholder: 'Quận/ Huyện'})
+      fieldset: +input({name: 'txt_ward', placeholder: 'Phường/ Xã'})
+      fieldset: +input({name: 'txt_phone', type: 'tel', placeholder: 'Số điện thoại'})
+    p.grey-text Lala shop sẽ liên hệ số điện thoại này để giao hàng và kiểm tra đơn hàng, đổi trả hàng khi cần.
+    fieldset.grid: +checkbox({id: 'term_cb', text: 'Sử dụng địa chỉ này làm địa chỉ giao hàng'}).normal-cb
+    .grid: +button({id: 'save_info', type: 'submit'}).btn-secondary.full-width Tiếp tục

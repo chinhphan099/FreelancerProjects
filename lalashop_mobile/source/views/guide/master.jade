@@ -1,0 +1,29 @@
+.grid#heading
+  h2.prite-h2 Heading
+  include heading
+.grid#icon
+  h2.prite-h2 Icon
+  include icon
+.grid#text
+  h2.prite-h2 Text
+  include text
+.grid#button
+  h2.prite-h2 Button
+  include button
+.grid#form-element
+  h2.prite-h2 Form Elements
+  include form-element
+.grid#background
+  h2.prite-h2 Background
+  include background
+article.nav-bar-temp
+  .grid
+    ul.nav-temp
+      +items([
+        {title: 'heading', href: '#heading'},
+        {title: 'icon', href: '#icon'},
+        {title: 'text', href: '#text'},
+        {title: 'button', href: '#button'},
+        {title: 'form-element', href: '#form-element'},
+        {title: 'background', href: '#background'}
+      ])

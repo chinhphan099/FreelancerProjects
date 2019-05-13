@@ -1,0 +1,79 @@
+// Common
+.pos-rel {
+  position: relative;
+}
+// .margins(30 40 50);
+
+//- Heading
+
+//- Button
+.btn-primary {
+  background-color: @pink;
+  color: white;
+  padding: 13px;
+  .border-radius(3px);
+  &.red {
+    background-color: red;
+  }
+  a {
+    color: white;
+  }
+}
+.btn-secondary {}
+
+//- Checkbox
+.checkbox {
+  .position(relative);
+  display: table;
+  width: 100%;
+  padding-bottom: 18px;
+  label, input {
+    display: table;
+    vertical-align: middle;
+  }
+  label {
+    .position(relative);
+    padding-left: 25px;
+    cursor: pointer;
+    &:before {
+      content: '';
+      .position(0 null 0 0);
+      display: inline-block;
+      .size(15px, 15px);
+      border: 1px solid #e5e5e5;
+    }
+  }
+  input[type=checkbox] {display: none;}
+  input[type=checkbox]:checked {
+    & + label:after {
+      content: "";
+      .position(3px null null 3px);
+      .size(9px, 9px);
+      color: @pink;
+      background-color: @pink;
+    }
+  }
+}
+//- Count
+.count {
+  padding-left: 5px;
+  span {color: @light-gray-1;}
+}
+
+//- Text
+.pink {
+  color: @pink;
+}
+
+// Loader
+.icon-loader {
+  .position(50% null null 50%);
+  .font-size(25px);
+  .transform(translate(-50%, -50%));
+  .animation(loading 1s linear infinite);
+  .transition(~"opacity .25s ease, visibility .25s ease");
+  .slick-initialized + & {
+    opacity: 0;
+    visibility: hidden;
+  }
+}

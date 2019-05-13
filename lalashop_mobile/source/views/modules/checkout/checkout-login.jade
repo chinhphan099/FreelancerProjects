@@ -1,0 +1,11 @@
+.checkout-login(data-expand='{"effect": "fade"}')
+  h1.title-hd Đăng nhập
+  .sign-content.custom-sign-content(data-content="checkout-login")
+    +button({}).btn-fb Đăng nhập bằng facebook
+    p.or-text Hoặc
+    include login
+
+  .sign-content.custom-sign-content(data-content="checkout-signup")
+    +button({}).btn-fb Đăng nhập bằng facebook
+    p.or-text Hoặc
+    include register

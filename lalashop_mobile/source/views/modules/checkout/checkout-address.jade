@@ -1,0 +1,68 @@
+- if(step === 0) {
+  .checkout-address.checkout
+    h1.title-hd Chọn thông tin người nhận
+    include ../account/address
+- } else {
+  .checkout-address.checkout
+    h1.title-hd Thông tin người nhận
+    .content
+      +address().no-border
+      .bgd-gray
+        .btn-edit
+          +button({}).btn-quaternary.full-width
+            i.icon-edit
+            span Chỉnh sửa
+      .list-view.cart-view
+        +link('product name', 'details.html').item-product
+          .tmb-img
+            +img-upload('image-33','pro-600x600-0.jpg')
+          .info
+            p.title 12345 - Đại dương 3D danh cho be gai
+            .group
+              p.color
+                +img-upload('image-33','pro-600x600-0.jpg')
+                | 1m2
+              p.number
+                | 2
+                span x
+                | 500.000 đ
+        +link('product name', 'details.html').item-product
+          .tmb-img
+            +img-upload('image-33','pro-600x600-0.jpg')
+          .info
+            p.title 12345 - Đại dương 3D danh cho be gai
+            .group
+              p.color
+                +img-upload('image-33','pro-600x600-0.jpg')
+                | 1m2
+              p.number
+                | 2
+                span x
+                | 500.000 đ
+      .discount-code
+        h3.text Mã giảm giá
+        .clearfix
+          +button({'id': 'subscribe-btn', 'name': 'subscribe-btn', 'type': 'button'}).btn-primary.no-padding.btn-apply Áp dụng
+          span: +input({'type': 'text', 'name': 'txt-subscribe', 'placeholder': 'Nhập tại đây'})
+      .order-total
+        table.info-table
+          tbody
+            tr
+              td Tạm tính
+              td 1.000.000 đ
+            tr
+              td Phí vận chuyển
+              td Miễn phí
+            tr
+              td Thuế VAT
+              td 0 đ
+            tr
+              td Giảm trên đơn hàng
+              td 100.000 đ
+          tfoot
+            tr
+              td Tổng cộng
+              td.pink 900.000 đ
+      .btn-continue
+        +button({type: 'submit'}).btn-secondary.full-width Thanh toán
+- }

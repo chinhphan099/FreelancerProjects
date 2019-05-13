@@ -1,0 +1,13 @@
+extends ../layouts/layout
+
+block vars
+  -title = 'Accout Bill'
+  -bodyClass = 'account-bill'
+  -footer = 2
+
+block head
+  +mainHeading('Đơn hàng')
+
+block container
+  main
+    include ../modules/account/master

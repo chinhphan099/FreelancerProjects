@@ -1,0 +1,13 @@
+extends ../layouts/layout
+
+block vars
+  -title = 'forgot-pass'
+  -bodyClass = 'forgot-pass'
+  -signIn = 'forgot-pass'
+
+block head
+  +mainHeading('Quên mật khẩu')
+
+block container
+  main
+    include ../modules/signIn/master

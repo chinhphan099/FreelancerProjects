@@ -1,0 +1,243 @@
+// Grid
+@import "mixins/grid.less";
+// Gradient
+@import "mixins/gradient.less";
+// Margin Padding
+@import "mixins/convertPX.less";
+// Prefixer
+@import "mixins/prefixer.less";
+
+// CSS reset
+.cssreset() {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+// Hide text
+.text-hide() {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.antialiased() {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+// Center-align a block level element
+.center-block() {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+// Font-size: PX to EM
+.font-size(@target: @font-size-base, @default: @font-size-base) {
+  font-size: round((@target / @default), 3) + 0rem;
+}
+// Line height
+.line-height(@target: @font-size-base, @default: @font-size-base) {
+  line-height: round((@target / @default), 3) + 0em;
+}
+// Convert PX to EM ~> Return @em value
+.em(@target: @font-size-base, @default: @font-size-base) {
+  @em: round((@target / @default), 3) + 0em;
+}
+// Convert PX to REM ~> Return @em value
+.rem(@target: @font-size-base, @default: @font-size-base) {
+  @rem: round((@target / @default), 3) + 0rem;
+}
+// Sizing shortcuts
+.size(@width, @height: @width) {
+  width: @width;
+  height: @height;
+}
+// Placeholder text
+.placeholder(@color: @placeholder-color) {
+  &:-moz-placeholder {color: @color;}
+  &::-moz-placeholder {color: @color;}
+  &:-ms-input-placeholder {color: @color;}
+  &::-webkit-input-placeholder {color: @color;}
+}
+// Text overflow
+.text-truncate() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+// Clearfix
+.clearfix() {
+  &:before, &:after {
+    display: table;
+    content: "";
+    clear: both;
+  }
+}
+.responsive-visibility() {
+  display: block !important;
+  table& {
+    display: table;
+  }
+  tr& {
+    display: table-row !important;
+  }
+  th&,
+  td& {
+    display: table-cell !important;
+  }
+}
+.responsive-invisibility() {
+  display: none !important;
+}
+// Margins
+// .margins(30px 40px 50px);
+.margins(@values) {
+  .loop(@i) when (@i <= length(@values)) {
+    @value: extract(@values, @i);
+    .margin-top-@{value} {margin-top: @value * 1px;}
+    .margin-right-@{value} {margin-right: @value * 1px;}
+    .margin-bottom-@{value} {margin-bottom: @value * 1px;}
+    .margin-left-@{value} {margin-left: @value * 1px;}
+    .loop(@i + 1);
+  }
+  .loop(1);
+
+  @media (max-width: @screen-xs-max) {
+    .media(@j) when (@j <= length(@values)) {
+      @value: extract(@values, @j);
+      .margin-top-@{value} {margin-top: @value / 2px;}
+      .margin-right-@{value} {margin-right: @value / 2px;}
+      .margin-bottom-@{value} {margin-bottom: @value / 2px;}
+      .margin-left-@{value} {margin-left: @value / 2px;}
+      .media(@j + 1);
+    }
+    .media(1);
+  }
+}
+// Position
+.position(@position: null, @coordinates: null) {
+  & when (@coordinates = null) {
+    & when (@position = null) {
+      // .position();
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    & when not (@position = null) {
+      & when not (isnumber(@position)) and (length(@position) = 1) {
+        // .position(relative);
+        position: @position;
+      }
+
+      & when (length(@position) = 1) and (isnumber(@position)) {
+        // .position(5px);
+        @top: @position;
+        position: absolute;
+        top: @top;
+        right: @top;
+        bottom: @top;
+        left: @top;
+      }
+
+      & when (length(@position) > 1) {
+        // .position(0px 5px);
+        @coordinates: @position;
+        @top: extract(@coordinates, 1);
+        @right: extract(@coordinates, 2);
+        @bottom: extract(@coordinates, 3);
+        @left: extract(@coordinates, 4);
+        position: absolute;
+        & when (isnumber(@top)) {top: @top;}
+        & when (isnumber(@right)) {right: @right;}
+        & when (isnumber(@bottom)) {bottom: @bottom;}
+        & when (isnumber(@left)) {left: @left;}
+      }
+    }
+  }
+
+  & when not (@coordinates = null) {
+    position: @position;
+    & when (length(@coordinates) = 1) {
+      // .position(absolute, 5px);
+      @top: @coordinates;
+      top: @top;
+      right: @top;
+      bottom: @top;
+      left: @top;
+    }
+
+    & when (length(@coordinates) > 1) {
+      // .position(absolute, 1px 2px null 3px);
+      @top: extract(@coordinates, 1);
+      @right: extract(@coordinates, 2);
+      @bottom: extract(@coordinates, 3);
+      @left: extract(@coordinates, 4);
+      & when (isnumber(@top)) {top: @top;}
+      & when (isnumber(@right)) {right: @right;}
+      & when (isnumber(@bottom)) {bottom: @bottom;}
+      & when (isnumber(@left)) {left: @left;}
+    }
+  }
+}
+// Usage
+// .triangle(right, 8px, 8px, #000);
+.triangle-base() {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  -moz-transform: scale(.9999);
+}
+.triangle(@direction, @size, @color) {
+  .triangle(@direction, @size * 2, @size, @color);
+}
+.triangle(@direction, @width, @height, @color) when (@direction = up) {
+  .triangle-base();
+  border-left: (@width / 2) solid transparent;
+  border-right: (@width / 2) solid transparent;
+  border-bottom: @height solid @color;
+}
+.triangle(@direction, @width, @height, @color) when (@direction = down) {
+  .triangle-base();
+  border-left: (@width / 2) solid transparent;
+  border-right: (@width / 2) solid transparent;
+  border-top: @height solid @color;
+}
+.triangle(@direction, @width, @height, @color) when (@direction = left) {
+  .triangle-base();
+  border-top: (@width / 2) solid transparent;
+  border-bottom: (@width / 2) solid transparent;
+  border-right: @height solid @color;
+}
+.triangle(@direction, @width, @height, @color) when (@direction = right) {
+  .triangle-base();
+  border-top: (@width / 2) solid transparent;
+  border-bottom: (@width / 2) solid transparent;
+  border-left: @height solid @color;
+}
+// Background Image Retina
+.img-retina(@image; @retina; @width-retina: 100%; @height-retina: 100%) {
+  background-image: url("@{image}");
+  @media
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min--moz-device-pixel-ratio: 2),
+  only screen and (-o-min-device-pixel-ratio: 2/1),
+  only screen and (min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 192dpi),
+  only screen and (min-resolution: 2dppx) {
+    background-image: url("@{retina}");
+    background-size: @width-retina @height-retina;
+  }
+}
+.keyframes(@name; @arguments) {
+  @-webkit-keyframes @name {@arguments();}
+  @-moz-keyframes @name {@arguments();}
+  @-o-keyframes @name {@arguments();}
+  @keyframes @name {@arguments();}
+}

@@ -1,0 +1,19 @@
+- if(bodyClass === "details-page") {
+  .single-slider(data-popup="#slider")
+    .slick-wrap.details-main-slider(data-slider='{"type": "single"}')
+      .item: .img-view: +img-upload('images', 'slide-1.jpg')
+      .item: .img-view: +img-upload('images', 'slide-3.jpg')
+      .item: .img-view: +img-upload('images', 'slide-4.jpg')
+      .item: .img-view: +img-upload('images', 'slide-5.jpg')
+    i.icon-loader
+    span.item-bought Một sản phẩm đã được thêm vào giỏ hàng
+    include ../details/popup-slider
+- } else {
+  .single-slider
+    .slick-wrap(data-slider='{"type": "single"}')
+      .item: +link('images', 'details.html').img-view: +img-upload('images', 'slide-1.jpg')
+      .item: +link('images', 'details.html').img-view: +img-upload('images', 'slide-5.jpg')
+      .item: +link('images', 'details.html').img-view: +img-upload('images', 'slide-3.jpg')
+      .item: +link('images', 'details.html').img-view: +img-upload('images', 'slide-4.jpg')
+    i.icon-loader
+- }

@@ -1,0 +1,11 @@
++form({id: 'signup_frm', action: 'checkout-address.html'})(data-validates="signup_frm")
+  .content
+    fieldset
+      +input({name: 'txt_username_1', placeholder: 'Email/ Số điện thoại'})
+    fieldset
+      +input({name: 'txt_password_1', type: 'password', placeholder: 'Mật khẩu'})
+    fieldset
+      +input({name: 'txt_name_1', placeholder: 'Họ tên'})
+  .grid
+    +button({id: 'login_btn_1', type: 'submit'}).btn-secondary.full-width Tiếp tục
+    p.signup-text Bạn đã có tài khoản? #[a(href="javascript:;" title="Đăng nhập ngay" data-handle="checkout-login" data-init="") Đăng nhập ngay]

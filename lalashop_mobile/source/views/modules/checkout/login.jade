@@ -1,0 +1,11 @@
++form({id: 'login_frm', action: 'checkout-address.html'})(data-validates="login_frm")
+  .content
+    fieldset
+      +input({name: 'txt_username', placeholder: 'Email/ Số điện thoại'})
+    fieldset
+      +input({name: 'txt_password', type: 'password', placeholder: 'Mật khẩu'})
+  .grid
+    p.forgot-pass-text
+      +link('Quên mật khẩu?', 'signIn-forgot-pass.html')
+    +button({id: 'login_btn', type: 'submit'}).btn-secondary.full-width Tiếp tục
+    p.signup-text Bạn chưa có tài khoản? #[a(href="javascript:;" title="Tạo tài mới" data-handle="checkout-signup") Tạo tài khoản mới]

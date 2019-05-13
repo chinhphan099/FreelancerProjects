@@ -1,0 +1,31 @@
++form({id: 'register_frm'})(data-validates="register_frm")
+  .content
+    fieldset: +input({name: 'txt_last_name', placeholder: 'Họ và tên lót'})
+    fieldset: +input({name: 'txt_first_name', placeholder: 'Tên'})
+    fieldset: +input({name: 'txt_email', type: 'email', placeholder: 'Email'})
+    fieldset: +input({name: 'txt_phone', type: 'tel', placeholder: 'Số điện thoại'})
+    fieldset: +input({name: 'txt_pass', type: 'password', placeholder: 'Mật khẩu'})
+    fieldset: +input({name: 'txt_pass_2', type: 'password', placeholder: 'Nhập lại mật khẩu'})
+    fieldset
+      .custom-date
+        span
+        +input({name: 'txt_dob', type: 'date', placeholder: 'Ngày tháng năm sinh'})
+        i.icon-down
+    fieldset
+      .custom-select
+        span
+        +select({name: 'gender_sb'}, [
+          {value: '', text: 'Giới tính'},
+          {value: 'male', text: 'Nam'},
+          {value: 'female', text: 'Nữ'}
+        ])
+        i.icon-down
+  fieldset.captcha
+    .col-xs-6
+      +input({name: 'txt_captcha', placeholder: 'Nhập mã xác nhận'})
+    .col-xs-6.captcha-value
+      +input({name: 'txt_captcha_value', value: 'phanchinh'})(readonly)
+      i.icon-change
+  fieldset.grid: +checkbox({id: 'term_cb', text: 'Tôi đã đọc và đồng ý với <a href="term.html" title="điều khoản sử dụng">điều khoản sử dụng</a> của Lala shop'}).normal-cb
+  .grid: +button({id: 'register_btn', type: 'submit'}).btn-secondary.full-width Đăng ký
+  fieldset.grid: +checkbox({id: 'subcribe_cb', text: 'Nhận các thông tin khuyến mãi qua e-mail*'}).normal-cb

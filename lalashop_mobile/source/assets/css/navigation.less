@@ -1,0 +1,111 @@
+.open-menu {
+  body {
+    height: 100%;
+    overflow: hidden;
+  }
+  .navigation {
+    left: 0;
+  }
+}
+.navigation {
+  .position(0 null 0 -100%);
+  width: 85%;
+  z-index: 10;
+  .transition(~"left .3s ease");
+  overflow: hidden;
+  .inner {
+    .position();
+   background-color: #ededed;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+}
+
+.nav-group {
+  margin-bottom: 20px;
+  border-top: 1px solid #ccc;
+  background-color: white;
+  li {
+    display: block;
+    border-bottom: 1px solid #ccc;
+    a {
+      display: block;
+      .position(relative);
+      padding: 14px 10px;
+      .font-size(13px);
+      line-height: 1.2;
+      .transition(background-color .3s ease);
+      i {
+        .position(50% null null 10px);
+        margin-top: -13px;
+        .font-size(24px);
+        color: @light-gray-1;
+        line-height: 1.03;
+      }
+      .text {
+        display: block;
+        padding-left: 32px;
+        overflow: hidden;
+      }
+    }
+    &.login-info {
+      a {
+        display: inline-block;
+        width: 50%;
+        & + a {
+          text-align: center;
+          span {
+            padding-left: 20px;
+            border-left: 1px solid #d8d8d8;
+          }
+        }
+      }
+    }
+  }
+  .has-child {
+    > a {
+      padding-right: 25px;
+      &:after {
+        content: "\e91b";
+        font-family: @icomoon;
+        .position(50% 10px null null);
+        margin-top: -8px;
+        .font-size(16px);
+        color: #adadad;
+      }
+    }
+    &.active {
+      > a {
+        &:after {
+          content: "\e918";
+        }
+      }
+    }
+  }
+}
+
+.sub-menu {
+  display: none;
+  padding-left: 20px;
+  border-top: 1px solid #c8c8c8;
+  li {
+    border-bottom: none;
+    &:first-child {
+      a {border-top: none;}
+    }
+    a {
+      padding-left: 0;
+      color: @light-gray-1;
+      border-top: 1px solid #c8c8c8;
+    }
+  }
+}
+
+.overlay {
+  display: none;
+  .position(fixed, 0 0 0 0);
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 9;
+  .open-menu & {display: block;}
+  .open-popup & {display: block;}
+}

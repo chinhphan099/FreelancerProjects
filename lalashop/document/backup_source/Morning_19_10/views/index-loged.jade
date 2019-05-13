@@ -1,0 +1,41 @@
+extends layouts/layout
+
+block vars
+  -title = 'Homepage'
+  -bodyClass = 'home'
+  -mainNav = 1
+  -sub1 = 1
+  -sub2 = 1
+  -sub3 = 0
+  -loged = true
+
+block container
+  main
+    .tygh-wrap
+      .grid
+        .wrap-1180
+          .col-left
+            include blocks/categories
+          .col-right
+            include blocks/categories-horizontal
+            .inner
+              include blocks/slide
+              include blocks/hotdeal
+    .service-block
+      include blocks/service
+    .product.product-pink
+      include blocks/product-pink
+    .product.product-blue
+      include blocks/product
+    .product.produt-lime
+      include blocks/product
+    .product.produt-gold
+      include blocks/product
+    .product.produt-purple
+      include blocks/product
+    .product.produt-orange
+      include blocks/product
+    .product.produt-green
+      include blocks/product
+    .news-block
+      include blocks/news

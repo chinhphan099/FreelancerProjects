@@ -1,0 +1,12 @@
+.checkout-transport.checkout
+  h1.title-hd Chọn gói thanh toán giao hàng
+  +form({'id': 'transport_frm'}).transport_form
+    .content
+      +radio({'id': 'radio-1', 'name': 'transport', 'checked': 'checked', 'text': 'Trong nội thành TP. HCM (từ 1-2 ngày) - <strong>30000đ</strong>'})
+      +radio({'id': 'radio-2', 'name': 'transport', 'text': 'Nhận hàng tại LalaShop 406/10 Thạch Lam Tân Phú - <strong>30000đ</strong>'})
+      +radio({'id': 'radio-3', 'name': 'transport', 'text': 'Giao trong ngày ( nội thành HCM & ĐH phải đặt trước 12h trưa - <strong>30000đ</strong>'})
+      +radio({'id': 'radio-4', 'name': 'transport', 'text': 'Ngoại thành HCM: giao từ 1-2 ngày - <strong>30000đ</strong>'})
+      +radio({'id': 'radio-5', 'name': 'transport', 'text': 'Gửi xe về các tỉnh/thành phố, khách chịu phí gửi xe - <strong>30000đ</strong>'})
+      +radio({'id': 'radio-6', 'name': 'transport', 'text': 'Toàn quốc : gửi nhanh ( 2-3 ngày), khách chịu phí với bưu điện - <strong>30000đ</strong>'})
+      +radio({'id': 'radio-7', 'name': 'transport', 'text': 'Toàn quốc : gửi thường ( 4-7 ngày) - <strong>30000đ</strong>'})
+    .btn-continue: +button({type: 'submit'}).btn-secondary.full-width Tiếp tục

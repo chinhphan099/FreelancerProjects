@@ -1,0 +1,18 @@
+case bodyClass
+  when 'checkout-login-page'
+    +steps(0)
+    include checkout-login
+  when 'checkout-address-page'
+    +steps(1)
+    include checkout-address
+  when 'checkout-add-user-page'
+    +steps(1)
+    include checkout-add-user
+  when 'checkout-transport-page'
+    +steps(2)
+    include checkout-transport
+  when 'checkout-pay-page'
+    +steps(3)
+    include checkout-pay
+  when 'checkout-success-page'
+    include checkout-success

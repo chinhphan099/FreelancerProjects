@@ -1,0 +1,13 @@
+extends ../layouts/layout
+
+block vars
+  -title = 'Accout order'
+  -bodyClass = 'account-order'
+  -footer = 2
+
+block head
+  +mainHeading('Chi tiết đơn hàng')
+
+block container
+  main
+    include ../modules/account/master

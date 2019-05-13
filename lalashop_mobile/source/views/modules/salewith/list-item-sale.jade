@@ -1,0 +1,28 @@
+.sale-with.grid.list-view
+  .inner
+    .item
+      .checkbox.circle
+        +input({type: 'checkbox', id: 'pro-1'})
+        +label(' ', 'pro-1')
+      +link('product name', 'details.html').item-product
+        .tmb-img
+          +img-upload('image-33','pro-600x600-0.jpg')
+        .info
+          p.price
+            span.new-price 700.000 đ
+            span.old-price 800.000 đ
+          p.title Tên sản phẩm
+        i.icon-next
+    .item
+      .checkbox.circle
+        +input({type: 'checkbox', id: 'pro-2'})
+        +label(' ', 'pro-2')
+      +link('product name', 'details.html').item-product
+        .tmb-img
+          +img-upload('image-33','pro-600x600-1.jpg')
+        .info
+          p.price
+            span.new-price 700.000 đ
+            span.old-price 800.000 đ
+          p.title Tên sản phẩm
+        i.icon-next

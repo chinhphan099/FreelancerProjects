@@ -1,0 +1,12 @@
+extends ../layouts/layout
+
+block vars
+  -title = 'Categories'
+  -bodyClass = 'categories'
+
+block head
+  +mainHeading('Decal 3D')
+
+block container
+  main
+    include ../modules/categories/master

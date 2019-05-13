@@ -1,0 +1,15 @@
+extends layouts/template
+
+block vars
+  -title = 'Style Guide'
+
+block container
+  h1 Style Guide
+  grid#position
+    h2 Position
+    include guides/mixin-position
+  article.nav-bar-temp
+    ul.nav-temp
+      +items([
+        {title: 'Mixin Position', href: '#position'}
+      ])

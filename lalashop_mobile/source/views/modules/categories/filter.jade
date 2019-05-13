@@ -1,0 +1,101 @@
+.sort-wrap(data-content="sort-list")
+  .sort-mask
+  ul.sort-list
+    li.active: +link('Bán chạy nhất', '#', 'Bán chạy nhất'): i.icon-check
+    li: +link('Yêu thích', '#', 'Yêu thích'): i.icon-check
+    li: +link('Khuyến mãi', '#', 'Khuyến mãi'): i.icon-check
+    li: +link('Bán chạy nhất', '#', 'Bán chạy nhất'): i.icon-check
+    li: +link('Danh giá từ cao tới thấp', '#', 'Danh giá từ cao tới thấp'): i.icon-check
+.popup.popup-filter(data-content="filter")
+  +form({name: 'filter_form'})
+    .popup-header
+      i.icon-close(data-close="")
+      +button({type: 'submit', name: 'apply-btn'}).apply-btn Hoàn tất
+      h2.popup-title Lọc
+    .main
+      .relative
+        p.btn-removeall
+          +button({'name': 'reset_filter'}).btn-primary.full-width
+            +link('Xoá tất cả', 'categories.html')
+        ul.filter-list(data-expand="")
+          li: +checkbox({name: 'km', text: 'Khuyến mãi'}).circle.right-check
+          li: +checkbox({name: 'hmv', text: 'Hàng mới về', checked: 'checked'}).circle.right-check
+          li
+            +link('Decal 3D', 'javascript:;')(data-handle="categories" data-active="")
+              span.text Decal 3D
+              i.icon-plus
+              i.icon-minus
+            ul.sub-filter(data-content="categories")
+              li: +checkbox({name: 'cate1', text: 'Decal 3D dán phòng khách'}).circle.right-check
+              li: +checkbox({name: 'cate2', text: 'Decal 3D dán tường (<span>7</span>)', checked: 'checked'}).circle.right-check
+              li: +checkbox({name: 'cate3', text: 'Decal 3D dán tường (<span>7</span>)'}).circle.right-check
+              li: +checkbox({name: 'cate4', text: 'Decal 3D dán tường (<span>7</span>)'}).circle.right-check
+              li: +checkbox({name: 'cate5', text: 'Decal 3D dán tường (<span>7</span>)'}).circle.right-check
+              li: +checkbox({name: 'cate6', text: 'Decal 3D dán tường (<span>7</span>)'}).circle.right-check
+              li: +checkbox({name: 'cate7', text: 'Decal 3D dán tường (<span>7</span>)'}).circle.right-check
+              li: +checkbox({name: 'cate8', text: 'Decal 3D dán tường (<span>7</span>)'}).circle.right-check
+              li: +checkbox({name: 'cate9', text: 'Decal 3D dán tường (<span>7</span>)'}).circle.right-check
+              li: +checkbox({name: 'cate10', text: 'Decal 3D dán tường (<span>7</span>)'}).circle.right-check
+              li: +checkbox({name: 'cate11', text: 'Decal 3D dán phòng khách'}).circle.right-check
+              li: +checkbox({name: 'cate12', text: 'Decal 3D dán tường (<span>7</span>)'}).circle.right-check
+              li: +checkbox({name: 'cate13', text: 'Decal 3D dán tường (<span>7</span>)'}).circle.right-check
+              li: +checkbox({name: 'cate14', text: 'Decal 3D dán tường (<span>7</span>)'}).circle.right-check
+              li: +checkbox({name: 'cate15', text: 'Decal 3D dán tường (<span>7</span>)'}).circle.right-check
+              li: +checkbox({name: 'cate16', text: 'Decal 3D dán tường (<span>7</span>)'}).circle.right-check
+              li: +checkbox({name: 'cate17', text: 'Decal 3D dán tường (<span>7</span>)'}).circle.right-check
+              li: +checkbox({name: 'cate18', text: 'Decal 3D dán tường (<span>7</span>)'}).circle.right-check
+              li: +checkbox({name: 'cate19', text: 'Decal 3D dán tường (<span>7</span>)'}).circle.right-check
+              li: +checkbox({name: 'cate20', text: 'Decal 3D dán tường (<span>7</span>)'}).circle.right-check
+              li: +checkbox({name: 'cate21', text: 'Decal 3D dán phòng khách'}).circle.right-check
+              li: +checkbox({name: 'cate22', text: 'Decal 3D dán tường (<span>7</span>)'}).circle.right-check
+              li: +checkbox({name: 'cate23', text: 'Decal 3D dán tường (<span>7</span>)'}).circle.right-check
+              li: +checkbox({name: 'cate24', text: 'Decal 3D dán tường (<span>7</span>)'}).circle.right-check
+              li: +checkbox({name: 'cate25', text: 'Decal 3D dán tường (<span>7</span>)'}).circle.right-check
+              li: +checkbox({name: 'cate26', text: 'Decal 3D dán tường (<span>7</span>)'}).circle.right-check
+              li: +checkbox({name: 'cate27', text: 'Decal 3D dán tường (<span>7</span>)'}).circle.right-check
+              li: +checkbox({name: 'cate28', text: 'Decal 3D dán tường (<span>7</span>)'}).circle.right-check
+              li: +checkbox({name: 'cate29', text: 'Decal 3D dán tường (<span>7</span>)'}).circle.right-check
+              li: +checkbox({name: 'cate30', text: 'Decal 3D dán tường (<span>7</span>)'}).circle.right-check
+          li
+            +link('Màu sắc', 'javascript:;')(data-handle="colors" data-active="")
+              span.text Màu sắc
+              i.icon-minus
+              i.icon-plus
+            .color-filter(data-content="colors")
+              label(for="color-1")
+                +input({type: 'checkbox', id: 'color-1', checked: 'checked'})
+                span Be
+              label(for="color-2")
+                +input({type: 'checkbox', id: 'color-2'})
+                span Hồng
+              label(for="color-3")
+                +input({type: 'checkbox', id: 'color-3'})
+                span Xanh lá
+              label(for="color-4")
+                +input({type: 'checkbox', id: 'color-4'})
+                span Be
+              label(for="color-5")
+                +input({type: 'checkbox', id: 'color-5'})
+                span Hồng
+              label(for="color-6")
+                +input({type: 'checkbox', id: 'color-6', checked: 'checked'})
+                span Xanh lá
+              label(for="color-7")
+                +input({type: 'checkbox', id: 'color-7'})
+                span Be
+              label(for="color-8")
+                +input({type: 'checkbox', id: 'color-8'})
+                span Hồng
+              label(for="color-9")
+                +input({type: 'checkbox', id: 'color-9'})
+                span Xanh lá
+          li
+            +link('Giá', 'javascript:;')(data-handle="prices" data-active="")
+              span.text Giá
+              i.icon-minus
+              i.icon-plus
+            ul.sub-filter(data-content="prices")
+              li: +checkbox({name: 'price1', text: 'Dưới 300.000 đ (<span>7</span>)'}).circle.right-check
+              li: +checkbox({name: 'price2', text: 'Từ 300.000 đ đến 500.000 đ (<span>7</span>)'}).circle.right-check
+              li: +checkbox({name: 'price3', text: 'Từ 500.000 đ đến 1 triệu đ (<span>7</span>)'}).circle.right-check
+              li: +checkbox({name: 'price4', text: 'Trên 1 triệu đ (<span>7</span>)'}).circle.right-check

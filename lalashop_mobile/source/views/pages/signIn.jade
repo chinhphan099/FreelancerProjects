@@ -1,0 +1,13 @@
+extends ../layouts/layout
+
+block vars
+  -title = 'signin'
+  -bodyClass = 'signin'
+  -signIn = 'signIn'
+
+block head
+  +mainHeading('Đăng nhập')
+
+block container
+  main
+    include ../modules/signIn/master

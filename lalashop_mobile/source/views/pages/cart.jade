@@ -1,0 +1,12 @@
+extends ../layouts/layout
+
+block vars
+  -title = 'Cart'
+  -bodyClass = 'cart-page'
+
+block head
+  +mainHeading('Giỏ hàng')
+
+block container
+  main
+    include ../modules/cart/master

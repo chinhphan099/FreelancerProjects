@@ -1,0 +1,16 @@
+extends layouts/template
+
+block vars
+  -title = 'Style Guide'
+
+block container
+  .grid#id
+    h2 Title
+    | include guides/file-name
+    i.icon-loader
+  article.nav-bar-temp
+    .grid
+      ul.nav-temp
+        +items([
+          {title: 'index', href: 'index.html'}
+        ])

@@ -1,0 +1,31 @@
+include ../common/single-slider
+include main-info
+include more-info
+
+.product.buy-more
+  h2.heading
+    +link('Giá sẽ giảm khi mua thêm', 'salewith.html', 'Giá sẽ giảm khi mua thêm')
+      i.icon-next
+  include buy-more
+
+.product
+  h2.heading
+    +link('Sản phẩm liên quan', 'categories.html', 'Sản phẩm liên quan')
+      i.icon-next
+  include ../common/carousel
+
+.product
+  h2.heading
+    +link('Sản phẩm khuyến mãi', 'categories.html', 'Sản phẩm khuyến mãi')
+      i.icon-next
+  include ../common/carousel
+
+.product
+  h2.heading
+    +link('Sản phẩm bán chạy', 'categories.html', 'Sản phẩm bán chạy')
+      i.icon-next
+  include ../common/carousel
+
+.product
+  h2.heading Sản phẩm vừa xem
+  include watched-product

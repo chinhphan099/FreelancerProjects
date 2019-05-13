@@ -1,0 +1,88 @@
+//- form
+mixin form(opts)
+  form(action=opts.action ? opts.action : '#',
+    method=opts.method ? opts.method : 'post',
+    name=opts.name ? opts.name : opts.name = opts.id,
+    id=opts.id ? opts.id : opts.name)&attributes(attributes)
+    if block
+      block
+
+//- input
+mixin input(opts)
+  input(type=opts.type ? opts.type : 'text',
+    name=opts.name ? opts.name : opts.name = opts.id,
+    id=opts.id ? opts.id : opts.name,
+    value=opts.value,
+    checked=opts.checked,
+    placeholder=opts.placeholder)&attributes(attributes)
+
+//- button
+mixin button(opts)
+  button(id=opts.id ? opts.id : opts.name, name=opts.name ? opts.name : opts.id, type=opts.type ? opts.type : 'button')&attributes(attributes)
+    if block
+      block
+
+//- custom input
+mixin customInput(ctrl, opts)
+  .custom-input
+    - if(ctrl.text) {
+      span(class=ctrl.class)!=ctrl.text ? ctrl.text : '&nbsp;'
+    - } else {
+      button(type=ctrl.type ? ctrl.type : 'submit',
+        name=ctrl.name ? ctrl.name : ctrl.name = ctrl.id,
+        id=ctrl.id ? ctrl.id : ctrl.name,
+        class=ctrl.class)!= ctrl.value
+    - }
+    input(type=opts.type ? opts.type : 'input',
+      name=opts.name ? opts.name : opts.name = opts.id,
+      id=opts.id ? opts.id : opts.name,
+      value=opts.value,
+      placeholder=opts.placeholder)&attributes(attributes)
+
+//- textarea
+mixin textarea(name, id, placeholder)
+  textarea(name=name, id=id ? id : name, placeholder=placeholder)&attributes(attributes)
+
+//- label
+mixin label(text, id)
+  - if(text && !id) id = text
+  label(for=id ? id : id = 'input-' + Math.floor((Math.random() * 10) + 1))&attributes(attributes)!=text ? text : id
+
+//- select (dropdown List)
+mixin select(select, opts)
+  select(name=select.name ? select.name : select.name = select.id, id=select.id ? select.id : select.name)&attributes(attributes)
+    - each item, index in opts
+      option(value=item.value ? item.value : item.value = index, selected=item.selected)!=item.text ? item.text : item.value
+
+//- Custom Checkbox
+mixin checkbox(opts)
+  .checkbox&attributes(attributes)
+    input(type=opts.type ? opts.type : 'checkbox',
+      name=opts.name ? opts.name : opts.name = opts.id,
+      id=opts.id ? opts.id : opts.id = opts.name,
+      value=opts.value,
+      checked=opts.checked)
+    +label(opts.text, opts.id)
+
+//- Radio
+mixin radio(opts)
+  .radio&attributes(attributes)
+    input(type='radio',
+      name=opts.name ? opts.name : opts.name = opts.id,
+      id=opts.id ? opts.id : opts.id = opts.name,
+      value=opts.value,
+      checked=opts.checked)
+    +label(opts.text, opts.id)
+
+//- Custom Radio
+mixin radio-list(opts)
+  ul.radio-list&attributes(attributes)
+    - each item, index in opts
+      li
+        .radio
+          input(type=item.type ? item.type : 'radio',
+            name=item.name ? item.name : item.name = item.id,
+            value=item.value ? item.value : index,
+            id=item.id ? item.id : item.id = item.name,
+            checked=item.checked)
+          +label(item.text, item.id)

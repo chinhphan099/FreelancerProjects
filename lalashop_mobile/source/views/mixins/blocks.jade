@@ -1,0 +1,76 @@
+mixin blocks(headingText)
+  .block&attributes(attributes)
+    h2.heading!= headingText
+    if block
+      block
+
+//- Address
+mixin address(className)
+  .customer(class=className)&attributes(attributes)
+    .relative
+      p.lead-text
+        strong LTQ Tien -&nbsp;
+        span 0982 132 456
+      address
+        | Lô 29B-31B-33B, Phường 10, Quận 10, chung cư đường sắt, Lý Thái Tổ, Đà Nẵng
+      - if(bodyClass === 'account-order') {
+        p.lead-text
+          strong Thanh toán:&nbsp;
+          span Thanh toán tận nơi
+        p.lead-text
+          strong Nhà vận chuyển:&nbsp;
+          span ABCD
+      - }
+      - if(className === 'current') {
+        i.icon-check
+      - }
+    - if(bodyClass === 'account-address' || step === 0) {
+      .btn-groups
+        - if(className === 'current') {
+          +button({}).btn-quaternary(disabled="disabled") Giao đến địa chỉ này
+        - } else {
+          +button({}).btn-quaternary Giao đến địa chỉ này
+        - }
+        +button({}).btn-quaternary: i.icon-edit
+        - if(className !== 'current') {
+          +button({}).btn-quaternary: i.icon-trash
+        - }
+    - }
+
+mixin steps(index)
+  - if(index === 0) {
+    -login = 'active'
+  - }
+  - if(index === 1) {
+    -login = 'active'
+    -address = 'active'
+  - }
+  - if(index === 2) {
+    -login = 'active'
+    -address = 'active'
+    -transport = 'active'
+  - }
+  - if(index === 3) {
+    -login = 'active'
+    -address = 'active'
+    -transport = 'active'
+    -pay = 'active'
+  - }
+
+  ul.steps
+    li(class="#{login}")
+      span.logo-step
+        i.icon-loged
+      p.text Đăng nhập
+    li(class="#{address}")
+      span.logo-step
+        i.icon-pin
+      p.text Địa chỉ
+    li(class="#{transport}")
+      span.logo-step
+        i.icon-truck
+      p.text Vận chuyển
+    li(class="#{pay}")
+      span.logo-step
+        i.icon-pay
+      p.text Thanh toán

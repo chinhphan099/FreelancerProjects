@@ -1,0 +1,21 @@
+extends ../layouts/layout
+
+block vars
+  -title = 'Homepage'
+  -bodyClass = 'home'
+  -footer = 1
+
+block head
+  h1
+    +link('Lala Shop', 'index.html').logo
+      +img('Lala Shop', 'logo.png')
+
+block container
+  main
+    include ../modules/common/single-slider
+    .product
+      +heading('Deal tốt hôm nay', 'categories.html').pink-hd
+      include ../modules/common/carousel
+    .product
+      +heading('Sản phẩm nổi bật', 'categories.html')
+      include ../modules/home/product

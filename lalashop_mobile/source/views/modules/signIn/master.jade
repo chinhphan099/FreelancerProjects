@@ -1,0 +1,24 @@
+case signIn
+  when 'signIn'
+    +singleMenu([
+      {title: 'Đăng nhập', href: 'signIn.html', text: 'Đăng nhập', itemClass: 'active'},
+      {title: 'Đăng ký', href: 'signIn-register.html', text: 'Đăng ký'}
+    ]).sign-list
+  when 'register'
+    +singleMenu([
+      {title: 'Đăng nhập', href: 'signIn.html', text: 'Đăng nhập'},
+      {title: 'Đăng ký', href: 'signIn-register.html', text: 'Đăng ký', itemClass: 'active'}
+    ]).sign-list
+
+.sign-content
+  case signIn
+    when 'signIn'
+      +button({}).btn-fb Đăng nhập bằng facebook
+      p.or-text Hoặc
+      include signIn
+    when 'register'
+      +button({}).btn-fb Đăng nhập bằng facebook
+      p.or-text Hoặc
+      include register
+    when 'forgot-pass'
+      include forgot

@@ -1,0 +1,28 @@
+extends layouts/layout
+
+block vars
+  -title = 'Homepage'
+  -bodyClass = 'cate-page'
+  -mainNav = 1
+  -sub1 = 1
+  -sub2 = 1
+  -sub3 = 0
+
+block container
+  main
+    .tygh-wrap
+      .grid
+        .wrap-1180
+          .col-left
+            include blocks/categories
+          .col-right
+            include blocks/categories-horizontal
+
+    include blocks/breadcrumb
+    .block-content
+      .grid
+        .row
+          .col-md-3.main-left
+            include blocks/list-cate-left
+            include blocks/box-option
+          .col-md-9.main-right

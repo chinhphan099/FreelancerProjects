@@ -1,0 +1,32 @@
+extends ../layouts/layout
+
+block vars
+  -title = 'details-page'
+  -bodyClass = 'details-page'
+  -footer = 2
+block head
+  .main-title Mã: 123456789
+
+block container
+  main
+    include ../modules/details/master
+
+block layer
+  .notification
+    i.icon-check
+    .content
+      p.name
+        | 101471 - Giấy dán tường 3D dành cho bé
+      p.quantum Hiện đang có #[strong 2] sản phẩm trong giỏ hàng
+    .row
+      .col-xs-6
+        +button({}).btn-primary.full-width.no-padding
+          +link('Tiếp tục mua hàng', 'categories.html')
+      .col-xs-6
+        +button({}).btn-secondary.full-width.no-padding
+          +link('Xem giỏ hàng', 'cart.html')
+  .popup.popup-slider#slider
+    .popup-header
+      i.icon-close(data-popup="close")
+    .main
+      .relative

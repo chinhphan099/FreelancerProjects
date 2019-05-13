@@ -1,0 +1,66 @@
+.checkout-pay.checkout
+  h2.title-hd Hình thức thanh toán
+  +form({'id': 'payment_frm'})
+    .grid(data-expand='{"type": "noClose"}')
+      fieldset
+        +radio({'id': 'radio-01', 'name': 'pay', 'text': 'Thanh toán khi giao hàng', 'checked': 'checked'})(data-handle="" data-init="")
+      fieldset
+        +radio({'id': 'radio-02', 'name': 'pay', 'text': 'Thanh toán ATM nội địa'})(data-handle="banks")
+        ul.payments(data-content="banks")
+          li
+            +link('vietcombank', 'javascript:;')
+              +input({'type': 'radio', 'id': 'vietcombank', 'name': 'bank'})
+              +img('vietcombank','img-vietcombank.png')
+              i.icon-check
+          li
+            +link('dongabank', 'javascript:;')
+              +input({'type': 'radio', 'id': 'dongabank', 'name': 'bank'})
+              +img('dongabank','img-vietcombank.png')
+              i.icon-check
+          li
+            +link('vpbank', 'javascript:;')
+              +input({'type': 'radio', 'id': 'vpbank', 'name': 'bank'})
+              +img('vpbank','img-vietcombank.png')
+              i.icon-check
+          li
+            +link('oocb', 'javascript:;')
+              +input({'type': 'radio', 'id': 'oocb', 'name': 'bank'})
+              +img('oocb','img-vietcombank.png')
+              i.icon-check
+          li
+            +link('abbank', 'javascript:;')
+              +input({'type': 'radio', 'id': 'abbank', 'name': 'bank'})
+              +img('abbank','img-vietcombank.png')
+              i.icon-check
+          li
+            +link('vietinbank', 'javascript:;')
+              +input({'type': 'radio', 'id': 'vietinbank', 'name': 'bank'})
+              +img('vietinbank','img-vietcombank.png')
+              i.icon-check
+          li
+            +link('mb', 'javascript:;')
+              +input({'type': 'radio', 'id': 'mb', 'name': 'bank'})
+              +img('img-mb','img-vietcombank.png')
+              i.icon-check
+      fieldset
+        +radio({'id': 'radio-03', 'name': 'pay', 'text': 'Visa/ Master Card'})(data-handle="visa")
+        ul.payments(data-content="visa")
+          li
+            +link('visa', 'javascript:;')
+              +input({'type': 'radio', 'id': 'visa', 'name': 'bank'})
+              +img('visa','img-vietcombank.png')
+              i.icon-check
+          li
+            +link('mastercard', 'javascript:;')
+              +input({'type': 'radio', 'id': 'mastercard', 'name': 'bank'})
+              +img('mastercard','img-vietcombank.png')
+              i.icon-check
+      fieldset
+        +radio({'id': 'radio-04', 'name': 'pay', 'text': 'Chuyển khoản ngân hàng'})(data-handle="internet_banking")
+        ul.payments(data-content="internet_banking")
+          li
+            +link('Bank transfer', 'javascript:;')
+              +input({'type': 'radio', 'id': 'transfer', 'name': 'bank'})
+              +img('transfer','img-vietcombank.png')
+              i.icon-check
+    .btn-continue: +button({type: 'submit'}).btn-secondary.full-width Thanh toán

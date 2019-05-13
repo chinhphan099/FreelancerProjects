@@ -1,0 +1,66 @@
+case footer
+  when 1
+    footer
+      button.back-to-top(data-scrollto="body")
+        i.icon-up
+      .footer-upper(data-expand="")
+        .group
+          h2.title(data-active="" data-handle="cate")
+            | Danh mục
+            i.icon-plus
+            i.icon-minus
+          ul.f-list(data-content="cate")
+            li: +link('Decal dán tường', 'categories.html')
+            li: +link('Giấy decal cuộn', 'categories.html')
+            li: +link('Khung ảnh, kệ gỗ', 'categories.html')
+            li: +link('Xốp đá dán tường', 'categories.html')
+        .group
+          h2.title Liên lạc với Lalashop
+          .contact-info
+            +link('0866873579', 'tel:0866873579').phone
+              i.icon-phone
+              span.number 08 6687 3579
+            .social-contact
+              +link('Facebook', '//facebook.com')
+                +img('fb', 'icon-fb.png')
+              +link('Facebook', '//skype.com')
+                +img('fb', 'icon-skype.png')
+              +link('Facebook', '//zalo.com')
+                +img('fb', 'icon-zalo.png')
+              +link('Facebook', '//yahoo.com')
+                +img('fb', 'icon-yahoo.png')
+        .group
+          h2.title.cart-text
+            +link('Giỏ hàng', 'cart.html')
+              | Giỏ hàng (
+              span.pink 12
+              | )
+        ul.user-box
+          - if(loged) {
+            li: +link('TienTLQ', 'account-info.html')
+            li: +link('Thoát', '/')
+          - } else {
+            li: +link('Đăng ký', 'signIn-register.html')
+            li: +link('Đăng nhập', 'signIn.html')
+          - }
+      p.copyright &copy; 2015 Lalashop. All rights reserved.
+  when 2
+    footer
+      button.back-to-top(data-scrollto="body")
+        i.icon-up
+      .footer-upper
+        .group
+          h2.title.cart-text
+            +link('Giỏ hàng', 'cart.html')
+              | Giỏ hàng (
+              span.pink 12
+              | )
+        ul.user-box
+          - if(loged) {
+            li: +link('TienTLQ', 'account-info.html')
+            li: +link('Thoát', '/')
+          - } else {
+            li: +link('Đăng ký', 'signIn-register.html')
+            li: +link('Đăng nhập', 'signIn.html')
+          - }
+      p.copyright &copy; 2015 Lalashop. All rights reserved.

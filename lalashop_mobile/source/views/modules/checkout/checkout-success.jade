@@ -1,0 +1,21 @@
+.checkout-success.checkout
+  h1.title-hd.pink Cảm ơn bạn đã đặt hàng trên Lalashop
+  .content
+    .wrap-success
+      p Mã đơn hàng của bạn: 132343536
+      p Thông tin chi tiết đơn hàng đã được gửi đến email
+        +link("juno@gmail.com", "mailto:juno@gmail.com", " juno@gmail.com").link
+      br
+      p Thời gian giao hàng dự kiến từ 3 - 5 ngày ( không tính thứ 7, CN)
+      p Bộ phận giao hàng sẽ liên lạc với bạn trước khi đến
+      br
+      +button({}).btn-primary.full-width.is-link
+        +link('Tiếp tục mua sắm', '#')
+.product.buy-more
+  h2.heading
+    strong Sản phẩm bạn vừa mua
+  include bought-product
+.product
+  h2.heading
+    strong Sản phẩm liên quan
+  include ../common/carousel

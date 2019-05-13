@@ -1,0 +1,24 @@
+.sign-content.account-info
+	+form({id: 'account_info_frm'})(data-validates="account_info_frm")
+		fieldset.avatar-wrap
+			.inner
+				.custom-file
+					+input({type: 'file', id: 'avatar_file', value: 'avatar.jpg'})(data-upload="#avt" accept="image/*")
+					+img-upload('alt', 'avt.jpg')#avt
+					i.icon-edit
+		.content
+			fieldset
+				+input({type: 'email', id: 'txt_email', value: 'koichi@yahoo.com', placeholder: 'Nhập email'})
+			fieldset
+				+input({value: 'Koichi', id: 'txt_name', placeholder: 'Nhập tên'})
+			fieldset
+				+input({type: 'tel', id: 'txt_tel', value: '09012345657', placeholder: 'Nhập số điện thoại'})
+			fieldset
+				.custom-date
+					span
+					+input({type: 'date', id: 'txt_date', value: '1990-05-05'})
+					i.icon-down
+			fieldset
+				+custom-select('Giới tính', {id: 'gender_sb'}, [{value: 'male', text: 'Nam'}, {value: 'female', text: 'Nữ'}])
+		.grid
+			+button({type: 'submit'}).btn-secondary.full-width Lưu thông tin

@@ -1,0 +1,73 @@
+header.header
+  .grid
+    +link('Menu', 'javascript:;')(data-toggle-menu="").nav-left
+      i.icon-hamburger
+    .nav-right
+      .search-group
+        i.icon-search(data-show-search="")
+        .search-section
+          +form({'id': 'search_frm'})
+            +button({'id': 'cancel_search'}).cancel-search Huỷ
+            .search-box
+              +input({'id': 'txt_search', 'type': 'search', 'placeholder': 'search'})
+              +button({'id': 'btn_search', 'type': 'submit'})
+                i.icon-search
+          .autocomplete-suggestions
+            .autocomplete-suggestion Samsung galaxy content
+            .autocomplete-suggestion ios <strong>iphone</strong> 4s
+            .autocomplete-suggestion ios <strong>iphone</strong> 5s
+            .autocomplete-suggestion ios <strong>iphone</strong> 6s
+            .autocomplete-suggestion Samsung galaxy
+            .autocomplete-suggestion Samsung galaxy
+            .autocomplete-suggestion Samsung galaxy
+            .autocomplete-suggestion Samsung galaxy
+            .autocomplete-suggestion Samsung galaxy
+            .autocomplete-suggestion Samsung galaxy
+            .autocomplete-suggestion Samsung galaxy
+            .autocomplete-suggestion Samsung galaxy
+            .autocomplete-suggestion Samsung galaxy
+            .autocomplete-suggestion Samsung galaxy
+            .autocomplete-suggestion Samsung galaxy
+            .autocomplete-suggestion Samsung galaxy
+            .autocomplete-suggestion Samsung galaxy
+            .autocomplete-suggestion Samsung galaxy
+            .autocomplete-suggestion Samsung galaxy
+            .autocomplete-suggestion Samsung galaxy
+            .autocomplete-suggestion Samsung galaxy
+            .autocomplete-suggestion Samsung galaxy
+            .autocomplete-suggestion Samsung galaxy
+            .autocomplete-suggestion Samsung galaxy
+            .autocomplete-suggestion Samsung galaxy
+            .autocomplete-suggestion Samsung galaxy
+            .autocomplete-suggestion Samsung galaxy
+            .autocomplete-suggestion Samsung galaxy
+            .autocomplete-suggestion Samsung galaxy
+            .autocomplete-suggestion Samsung galaxy
+            .autocomplete-suggestion Samsung galaxy
+            .autocomplete-suggestion Samsung galaxy
+            .autocomplete-suggestion Samsung galaxy
+            .autocomplete-suggestion Samsung galaxy
+            .autocomplete-suggestion Samsung galaxy
+            .autocomplete-suggestion Samsung galaxy
+            .autocomplete-suggestion Samsung galaxy
+            .autocomplete-suggestion Samsung galaxy
+            .autocomplete-suggestion Samsung galaxy
+            .autocomplete-suggestion Samsung galaxy
+            .autocomplete-suggestion Samsung galaxy
+            .autocomplete-suggestion Samsung galaxy
+            .autocomplete-suggestion Samsung galaxy
+            .autocomplete-suggestion Samsung galaxy
+            .autocomplete-suggestion Samsung galaxy
+            .autocomplete-suggestion Samsung galaxy
+            .autocomplete-suggestion Samsung galaxy
+            .autocomplete-suggestion Samsung galaxy
+            .autocomplete-suggestion Samsung galaxy
+            .autocomplete-suggestion Samsung galaxy
+            .autocomplete-suggestion Samsung galaxy
+            .autocomplete-suggestion Samsung galaxy
+            .autocomplete-suggestion Samsung galaxy
+            .autocomplete-suggestion Samsung galaxy
+      +link('Cart', 'cart.html').cart-group
+        i.icon-cart
+          span.total 5
+    block head

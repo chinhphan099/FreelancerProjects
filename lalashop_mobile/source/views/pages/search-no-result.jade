@@ -1,0 +1,12 @@
+extends ../layouts/layout
+
+block vars
+  -title = 'search no result'
+  -bodyClass = 'search-page'
+
+block head
+  +mainHeading('Main title')
+
+block container
+  main
+    include ../modules/categories/master

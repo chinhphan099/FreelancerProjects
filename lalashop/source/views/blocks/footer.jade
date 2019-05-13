@@ -1,0 +1,61 @@
+footer
+  .grid.footer-upper
+    .col-sm-8
+      .subscribe-module
+        p.text Đăng nhập nhận khuyến mãi
+        .wrap
+          +form({'id': 'subscribe_form'})
+            .subscribe-box
+              +input({'id': 'txt-subscribe', 'placeholder': 'Email của bạn'})
+              span: +button({'id': 'subscribe-btn'}) Đăng ký
+      .footer-nav(data-expand="")
+        .row
+          .col-md-4.col-sm-4.inner
+            h2.title Liên hệ
+            address
+              | 416/10 đường Thach Lam, phường Phú Thạnh, quận Tân Bình
+              br
+              +link('094 222 386', 'tel:+8494222386')
+                i.icon-phone
+                span 094 222 386
+              br
+              +link('Lalashop@gmal.com', 'mailto:lalashop@gmal.com')
+                i.icon-mail-solid
+                span Lalashop@gmal.com
+          .col-md-3.col-md-offset-1.col-sm-4.inner
+            h2.title(data-active="" data-handle="ho-tro")
+              | Hỗ trợ
+              i.icon-plus
+              i.icon-minus
+            .content(data-content="ho-tro")
+              ul.f-list
+                li: +link('Hướng dẫn mua hàng')
+                li: +link('Quy định đổi trả')
+                li: +link('Chính sách bảo mật')
+              +link('Tìm địa điểm').find-shop
+                i.icon-pin
+                span Tìm địa điểm
+          .col-md-3.col-md-offset-1.col-sm-4.inner
+            h2.title(data-active="" data-handle="thong-tin")
+              | Thông tin
+              i.icon-plus
+              i.icon-minus
+            .content(data-content="thong-tin")
+              ul.f-list
+                li: +link('Giới thiệu')
+                li: +link('Hỏi đáp')
+                li: +link('Chính sách mua sỉ')
+              +link('Đã đăng ký với bộ công thương')(target="_blank" rel="nofollow").hidden-xs
+                +img('Đã đăng ký với bộ công thương', 'icon-moit.png')
+    .col-sm-4
+      .fanpage-box
+        <div class="fb-page" data-href="https://www.facebook.com/shop.lala" data-width="380" data-height="275" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/shop.lala"><a href="https://www.facebook.com/shop.lala">Decal dán tường Lala Shop</a></blockquote></div></div>
+  .grid.footer-under
+    p.copyright &copy; 2015 Lalashop. All rights reserved.
+    ul.cards.hidden-xs
+      li: +link('Visa Card').tmb-img
+        +img('Visa Card', 'card-visa.jpg')
+      li: +link('Discover Card').tmb-img
+        +img('Discover Card','card-discover.jpg')
+      li: +link('Master Card').tmb-img
+        +img('Master Card', 'card-master.jpg')

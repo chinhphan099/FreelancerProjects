@@ -1,0 +1,52 @@
+// Usage
+// .px2em(~"margin", 20px 30px 20px)
+// .px2em(~"font-size", 20px)
+// .px2em(~"font-size", 20px, 18px)
+.px2em(@property, @target: @font-size-base, @default: @font-size-base) {
+  @n: length(@target);
+  .put(@i) when (extract(@target, @i) = auto), (extract(@target, @i) = 0) {
+    @item: extract(@target, @i);
+    .put((@i + 1), ~"@{item}");
+  }
+  .put(@i) when (default()) {
+    @item: unit(extract(@target, @i) / @default, em);
+    .put((@i + 1), ~"@{item}");
+  }
+  .put(@i, @item) when (extract(@target, @i) = auto), (extract(@target, @i) = 0) and (@i <= @n) {
+    @nextItem: extract(@target, @i);
+    .put((@i + 1), ~"@{item} @{nextItem}");
+  }
+  .put(@i, @item) when (default()) and (@i <= @n) {
+    @nextItem: unit(extract(@target, @i) / @default, em);
+    .put((@i + 1), ~"@{item} @{nextItem}");
+  }
+  .put(@i, @item) when (@i > @n) {
+    @{property}: @item;
+  }
+  .put(1);
+}
+.px2rem(@property, @target: @font-size-base) {
+  @n: length(@target);
+  .put(@i){
+    @item: round((extract(@target, @i) / @font-size-base), 3) + 0rem;
+    & when (isunit(@item, rem)) {
+      .put((@i + 1), ~"@{item}");
+    }
+    & when not (isunit(@item, rem)) {
+      .put((@i + 1), ~"0");
+    }
+  }
+  .put(@i, @item) when (@i <= @n) {
+    @nextItem: round((extract(@target, @i) / @font-size-base), 3) + 0rem;
+    & when (isunit(@nextItem, rem)) {
+      .put((@i + 1), ~"@{item} @{nextItem}");
+    }
+    & when not (isunit(@nextItem, rem)) {
+      .put((@i + 1), ~"@{item} 0");
+    }
+  }
+  .put(@i, @item) when (@i > @n) {
+    @{property}: @item;
+  }
+  .put(1);
+}

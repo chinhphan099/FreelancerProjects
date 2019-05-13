@@ -1,0 +1,17 @@
+.grid.fixed-panel
+  .inner
+    .content
+      .panel-1.showing.hidden-xs
+        +link('Cart').pink
+          i.icon-cart
+          em 10
+        +link('Phone')
+          i.icon-phone-line
+        +link('Feedback')
+          i.icon-note
+          span Góp ý
+      .panel-2
+        +link('Go top')(data-scrollto="body")
+          i.icon-up
+        +link('Collapse')(data-collapse=".panel-1").toggle-panel.active.hidden-xs
+          i.icon-cross

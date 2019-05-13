@@ -1,0 +1,35 @@
+extends layouts/template
+
+block vars
+  -title = 'Sprite'
+
+block container
+  .grid#heading
+    h2 Heading
+    include sprite/heading
+  .grid#icon
+    h2 Icon
+    include sprite/icon
+  .grid#text
+    h2 Text
+    include sprite/text
+  .grid#button
+    h2 Button
+    include sprite/button
+  .grid#form-element
+    h2 Form Elements
+    include sprite/form-element
+  .grid#background
+    h2 Background
+    include sprite/background
+  article.nav-bar-temp
+    .grid
+      ul.nav-temp
+        +items([
+          {title: 'heading', href: '#heading'},
+          {title: 'icon', href: '#icon'},
+          {title: 'text', href: '#text'},
+          {title: 'button', href: '#button'},
+          {title: 'form-element', href: '#form-element'},
+          {title: 'background', href: '#background'}
+        ])

@@ -1,0 +1,13 @@
+extends ../layouts/layout
+
+block vars
+  -title = 'Accout Info'
+  -bodyClass = 'account-info'
+  -footer = 2
+
+block head
+  +mainHeading('Thông tin tài khoản')
+
+block container
+  main
+    include ../modules/account/master

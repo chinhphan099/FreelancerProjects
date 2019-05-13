@@ -1,0 +1,62 @@
+.main-info.grid
+  +form({id: 'cart_form'})
+    table.tb-details
+      caption: h1.main-heading Bộ móc treo tiện dụng ngôi nhà chim non
+      tr
+        td Mã sản phẩm:
+        td 123456789
+      tr.tr-price
+        td Giá:
+        td
+          p.price-wrap
+            span.price 500.000 đ
+            span.old-price 1.000.000 đ
+            span.percent
+              | Giảm
+              strong -50
+                sup %
+      tr
+        td
+        td
+          p.promotion-text Giảm 10% khi thanh toán qua thẻ Visa
+      tr
+        td Màu sắc
+        td
+          .colors
+            label(for="color-red")
+              +input({type: 'radio', id: 'color-red', name: 'colors', checked: 'checked'})
+              span: +img-upload('Red', 'red.jpg')
+              i.icon-check
+            label(for="color-turquoise")
+              +input({type: 'radio', id: 'color-turquoise', name: 'colors'})
+              span: +img-upload('Red', 'turquoise.jpg')
+              i.icon-check
+      tr
+        td Kích thước:
+        td
+          .custom-select
+            span
+            +select({id: 'size'}, [
+              {value: '1234'},
+              {value: '091923'}
+            ])
+            i.icon-down
+      tr
+        td Số lượng
+        td
+          .relative
+            +input({type: 'number', value: '1'})
+            i.icon-down
+      tfoot
+        tr
+          td(colspan="2")
+            .btn-wrap
+              table.btn-group
+                tbody
+                  tr
+                    td: +button({}).btn-primary.full-width(onclick="document.getElementsByTagName('html')[0].classList.add('open-popup')") Thêm vào giỏ
+                    td: +button({}).btn-secondary.full-width Mua ngay
+                    td: +button({}).btn-tertiary.full-width
+                      +link('094 222 386 ', '+tel:094222386 ')
+                        i.icon-phone
+                        | 094 222 386

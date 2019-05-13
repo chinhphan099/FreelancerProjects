@@ -1,0 +1,80 @@
+.bill-block
+  .box-options(data-expand='{"effect": "fade"}')
+    .sort-by(data-active="")
+      +link('Tất cả', 'javascript:;')(data-handle="sort-list").link-1
+        span Tất cả
+        i.icon-down
+    .sort-wrap(data-content="sort-list")
+      .sort-mask
+      ul.sort-list
+        li.active: +link('Tất cả', '#', 'Tất cả'): i.icon-check
+        li: +link('1 tháng', '#', '1 tháng')
+        li: +link('6 tháng', '#', '6 tháng')
+        li: +link('2015', '#', '2015')
+        li: +link('Trước 2015', '#', 'Trước 2015')
+  .list-view
+    .bill-group
+      +link('Đặt hàng', 'account-order.html').item-bill
+        i.icon-next
+        table.bill-table
+          tbody
+            tr
+              td Mã đơn hàng:
+              td 150234569
+            tr
+              td Người nhận:
+              td Koichi
+            tr
+              td Ngày:
+              td 11/12/2015
+            tr
+              td Tình trạng:
+              td Hoàn tất
+      +link('product name', 'details.html').item-product
+        .tmb-img
+          +img-upload('image-33','pro-600x600-0.jpg')
+        .info
+          p.title 12345-Đại dương 3D danh cho be gai
+      +link('product name', 'details.html').item-product
+        .tmb-img
+          +img-upload('image-33','pro-600x600-0.jpg')
+        .info
+          p.title 12345-Đại dương 3D danh cho be gai
+      .total
+        span.text Total
+        span.pink 500.000 đ
+    .bill-group
+     +link('Đặt hàng', 'account-order.html').item-bill
+        i.icon-next
+        table.bill-table
+          tbody
+            tr
+              td Mã đơn hàng:
+              td 150234569
+            tr
+              td Người nhận:
+              td Koichi
+            tr
+              td Ngày:
+              td 11/12/2015
+            tr
+              td Tình trạng:
+              td Hoàn tất
+      +link('product name', 'details.html').item-product
+        .tmb-img
+          +img-upload('image-33','pro-600x600-0.jpg')
+        .info
+          p.title 12345-Đại dương 3D danh cho be gai
+      +link('product name', 'details.html').item-product
+        .tmb-img
+          +img-upload('image-33','pro-600x600-0.jpg')
+        .info
+          p.title 12345-Đại dương 3D danh cho be gai
+      +link('product name', 'details.html').item-product
+        .tmb-img
+          +img-upload('image-33','pro-600x600-0.jpg')
+        .info
+          p.title 12345-Đại dương 3D danh cho be gai
+      .total
+        span.text Total
+        span.pink 500.000 đ

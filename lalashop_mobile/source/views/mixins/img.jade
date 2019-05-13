@@ -1,0 +1,5 @@
+mixin img(alt, src)
+  img(src=src ? 'images/' + src : 'images/transparent.png', alt!=alt ? alt : 'Alt')&attributes(attributes)
+
+mixin img-upload(alt, src)
+  img(src=src ? 'images/upload/' + src : 'images/transparent.png', alt!=alt ? alt : 'Alt')&attributes(attributes)

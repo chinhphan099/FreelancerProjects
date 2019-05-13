@@ -1,0 +1,14 @@
+ul.options
+  li.sort-by(data-active="")
+    +link('Sắp xếp', 'javascript:;')(data-handle="sort-list")
+      span Sắp xếp
+      i.icon-down
+  li.total 610 sản phẩm
+  li.view-switching
+      i.icon-big(data-view='{"class": "product-list big-view", "control": ".icon-list"}')
+      i.icon-list.hidden(data-view='{"class": "product-list list-view", "control": ".icon-grid"}')
+      i.icon-grid.hidden(data-view='{"class": "product-list grid-view", "control": ".icon-big"}')
+  li.filter(data-handle="filter" data-active="")
+    +link('Lọc', 'javascript:;')
+      span Lọc
+      i.icon-filter
