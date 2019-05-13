@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Chinh Phan | Drag and Drop</title>
+		<meta name="description" content="Building a cross frame drag-drop interface using HTML5 for precise insertions">
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		<link href="./assets/css/style.css" rel="stylesheet">
+	</head>
+	<body>
+		<button class="button" id="viewStyle">Get Style</button>
+		<div class="clientframe-container">
+			<iframe id="clientframe" src="./client.html" frameborder="0"></iframe>
+		</div>
+		<hr>
+		<div class="clientframe-container">
+			<iframe id="clientframe1" src="./client1.html" frameborder="0"></iframe>
+		</div>
+
+		<div class="overlay">
+			<div class="content">
+				<button class="close-btn" id="closePopup">X</button>
+			</div>
+		</div>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+			<script src="./assets/js/site.js"></script>
+	</body>
+</html>

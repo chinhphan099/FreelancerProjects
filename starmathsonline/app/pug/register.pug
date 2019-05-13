@@ -1,0 +1,58 @@
+extends layouts/layout
+
+block vars
+	-title = 'Register'
+	-bodyClass = 'register-page'
+	-mainNav = 4
+
+block main
+	main
+		+head-block('Helping our children study to achirve results!').only-text
+		.register-block
+			.container
+				.row.item-row
+					.col-xs-12.col-md-5
+						.thumb: img(src="images/upload/register-1.jpg", alt="")
+					.col-xs-12.col-md-6.col-md-offset-1
+						.content
+							h2 School Registration
+							p This registration enables the school administrator to:
+							ul
+								li Create teacher access to administer their class
+								li Create assist ance or supplementary teacher access
+								li View all class and year results
+							.btn-link
+								+link('Register', 'href').button.btn-primary
+				.row.item-row
+					.col-xs-12.col-md-5
+						.thumb: img(src="images/upload/register-2.jpg", alt="")
+					.col-xs-12.col-md-6.col-md-offset-1
+						.content
+							h2 Teacher Registration
+							p This registration will enable teachers to:
+							ul
+								li Create and manage their class
+								li Create student access to S.T.A.R. Maths Online
+								li A year planner for practice and homework for all terms
+								li Unlimited NAPLAN practice modules for years 3 & 5
+								li View student’s progress & results throughout the year
+								li Give parents access to view their child’s progress and results
+							.btn-link
+								+link('Register', 'href').button.btn-primary
+				.row.item-row
+					.col-xs-12.col-md-5
+						.thumb: img(src="images/upload/register-3.jpg", alt="")
+					.col-xs-12.col-md-6.col-md-offset-1
+						.content
+							h2 Parent Registration
+							p This registration will enable parents to:
+							ul
+								li View your child’s progress and results throughout the year
+								li Access to S.T.A.R. Maths Online for your child
+								li Create additional accounts if you have more than one child
+								li Pre-set homework for your child throughout the year
+								li Unlimited NAPLAN practice for years 3 & 5
+							.btn-link
+								+link('Register', 'href').button.btn-primary
+
+

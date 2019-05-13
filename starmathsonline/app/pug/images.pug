@@ -1,0 +1,43 @@
+extends layouts/template
+
+block vars
+  -title = 'Images'
+  -bodyClass = 'template'
+
+block main
+  ul.tmp-img(data-copies)
+    li(data-handler): +images('school-1.jpg', 'alt')
+    li(data-handler): +images('school-2.jpg', 'alt')
+    li(data-handler): +images('school-3.jpg', 'alt')
+    li(data-handler): +images('school-4.jpg', 'alt')
+    li(data-handler): +images('school-5.jpg', 'alt')
+    li(data-handler): +images('school-6.jpg', 'alt')
+    li(data-handler): +images('fb-like.jpg', 'alt')
+    li(data-handler): +images('fb-share.jpg', 'alt')
+    li(data-handler): +images('reason-1.jpg', 'alt')
+    li(data-handler): +images('reason-2.jpg', 'alt')
+    li(data-handler): +images('student-1.jpg', 'alt')
+    li(data-handler): +images('student-2.jpg', 'alt')
+    li(data-handler): +images('student-3.jpg', 'alt')
+    li(data-handler): +images('img-1.jpg', 'alt')
+    li(data-handler): +images('img-2.jpg', 'alt')
+    li(data-handler): +images('img-3.jpg', 'alt')
+    li(data-handler): +images('img-4.jpg', 'alt')
+    li(data-handler): +images('img-5.jpg', 'alt')
+    li(data-handler): +images('new-1.jpg', 'alt')
+    li(data-handler): +images('new-2.jpg', 'alt')
+    li(data-handler): +images('new-3.jpg', 'alt')
+    li(data-handler): +images('new-4.jpg', 'alt')
+    li(data-handler): +images('new-5.jpg', 'alt')
+    li(data-handler): +images('new-6.jpg', 'alt')
+    li(data-handler): +images('new-7.jpg', 'alt')
+    li(data-handler): +images('banner-video.jpg', 'alt')
+    li(data-handler): +images('bg-body.png', 'alt')
+    li(data-handler): +images('bg-body-2.png', 'alt')
+block menu
+  .tmp-main-nav-wrap
+    .tmp-main-nav
+      ul
+        li: +link('Style Guide', 'temp-style-guide.html').outlink
+        li: +link('Style Sprite', 'temp-sprite.html').outlink
+        li: +link('Style js', 'temp-js.html').outlink

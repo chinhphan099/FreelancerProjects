@@ -1,0 +1,21 @@
+extends layouts/layout
+
+block vars
+  -title = 'Gift page'
+  -bodyClass = 'gift-page'
+  -mainNav = 1
+  -sub1 = 1
+  -sub2 = 1
+  -sub3 = 0
+
+block main
+  main
+    .breadcrumbs-wrap
+      .container
+        +breadcrumbs([
+          {title: 'Home', href: 'index.html', text: 'Home'},
+          {title: 'Soundcorp Digital Gift Card'}
+        ])
+    include modules/pdp-main
+    include modules/tab-navigation
+    include modules/dpd-detail

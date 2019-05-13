@@ -1,0 +1,27 @@
+extends layouts/layout
+
+block vars
+	-title = 'Product Detail'
+	-bodyClass = 'product-detail-page'
+
+block main
+	main
+		.container
+			+promotion-top()
+			+breadcrumbs([{title: 'Maternity', href: 'products-listing-all.html'}, {title: 'Dresses', href: 'products-listing.html'}, {title: 'Floressa - Elicia Nursing Dress'}])
+
+			// Product Infomations
+			include modules/pdp-main
+
+			// Related Products
+			.related-produtcs-block.module-02
+				.heading: h2 More to love
+				.slider.carousel-slider(data-cslider='{"type": "carousel", "setPositionArrows": true}')
+					.slick
+						include modules/global/global-carousel
+					span.load
+
+			// Review Block
+			.reviews-block.module-02#reviewBlock
+				.heading: h2 Reviews
+				include modules/pdp-review-block

@@ -1,0 +1,63 @@
+extends layouts/layout
+
+block vars
+	-title = 'Homepage'
+	-bodyClass = 'home'
+	-mainNav = 0
+
+block main
+	main
+		+head-block('Helping our children study to achirve results!').home
+			.video-wrap(data-youtube='{"idOrLink": "//www.youtube.com/watch?v=9yZACdneuyI", "autoplay": 0}')
+				.video-container
+					.iframeYoutube
+					.thumb(style="background-image: url(images/upload/banner-video.jpg)" data-handle)
+				+button({})(class="control" data-handle)
+					i.icon-youtube
+		// Features
+		.features(data-sameheight="no4parent")
+			.container
+				.row.list.clearfix
+					.col-xs-12.col-md-4.item(data-parent)
+						.thumb: a(href="student.html" title="For Students"): img(src="images/upload/student-1.jpg", alt="")
+						h3.title For Students
+						.content(data-child="content")
+							p We can do amazing things when we love what we do! And S.T.A.R. Maths Online aims to help our children achieve just that!
+							p With fun and engaging gaming concepts, our software provides children with a different and relaxed learning environment so they can learn, practice and grow!
+					.col-xs-12.col-md-4.item(data-parent)
+						.thumb: a(href="parents.html" title="FOR PARENTS"): img(src="images/upload/student-2.jpg", alt="")
+						h3.title For parents
+						.content(data-child="content")
+							p S.T.A.R. Maths Online connects you and allows you to be part of your child’s educational journey!
+							p Whether it is notification to remind your child to do their homework or to praise them when they are achieving fantastic results. We’ll keep you in the loop so that you can watch them grow!
+					.col-xs-12.col-md-4.item(data-parent)
+						.thumb: a(href="teachers.html" title="FOR PARENTS"): img(src="images/upload/student-3.jpg", alt="")
+						h3.title For teachers
+						.content(data-child="content")
+							p We are here to help all educators out there! Which is why we’ve built a teacher’s portal to help you plan and manage your children easily and effortlessly!
+							p With simple and detailed reports, along with unlimited NAPLAN practice modules available for years 3 and 5. We are here to do all the mundane things so you can focus on what you do best!
+		// Reasons Block
+		.reasons-block.text-center(data-sameheight="no4parent")
+			.container
+				h2
+					span.icon: img(src="images/icon-star.png", alt="")
+					span.text WHY S.T.A.R. MATHS ONLINE?
+				.row.list
+					.col-xs-12.col-sm-4(data-parent)
+						.item(data-child="item")
+							h3 We follow the Australian Curriculum
+							.thumb: a(href="http://syllabus.bostes.nsw.edu.au/mathematics/mathematics-k10/content/" target="_blank" title="We follow the Australian Curriculum"): img(src="images/upload/reason-1.jpg", alt="")
+					.col-xs-12.col-sm-4(data-parent)
+						.item(data-child="item")
+							h3 We are here for the local community
+							.thumb: a(href="https://starmathsonline.com.au/gowest2016/" target="_blank" title="We are here for the local community"): img(src="images/upload/reason-2.jpg", alt="")
+					.col-xs-12.col-sm-4(data-parent)
+						.item(data-child="item")
+							h3 Our endless passion to help all children
+							.thumb: a(href="https://starmathsonline.com.au/finalistchampionofthewest/" target="_blank" title="Our endless passion to help all children"): img(src="images/upload/reason-3.jpg", alt="")
+		// School Testimonials Block
+		.school-testimonials
+			.container
+				h2 TEACHERS FROM OVER 300 SCHOOLS NOW REGISTERED #[span TO S.T.A.R MATHS ONLINE!]
+				.row
+					include modules/slider

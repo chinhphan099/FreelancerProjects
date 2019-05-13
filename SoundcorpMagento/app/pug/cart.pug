@@ -1,0 +1,164 @@
+extends layouts/layout
+
+block vars
+    -title = 'Cart'
+    -bodyClass = 'cart-page'
+    -mainNav = 1
+    -sub1 = 1
+    -sub2 = 1
+    -sub3 = 0
+
+block main
+    main
+        .container
+            .cart-wrap
+                +form({})
+                    .cart-title
+                        h1 Shopping cart
+                    .cart-ouline.clearfix
+                        .view-cart
+                            .cart-items-form
+                                table.shopping-cart-table
+                                    thead
+                                        tr
+                                            th Item
+                                            th.cart-price Price
+                                            th.qty Qty
+                                            th.subtotal Subtotal
+                                            th.action
+                                    tbody
+                                        tr
+                                            td
+                                                .cart-item
+                                                    +link("").thumb
+                                                        +img-upload('cart-1.jpg')
+                                                    .content
+                                                        h3.title
+                                                            +link('Allen & Heath QU16 Digital 16 Input Mixer for Studio + live')
+                                                        span.price $129.99
+
+                                            td.cart-price: span.price $129.99
+                                            td.qty
+                                                .custom-number(data-number='{"handle": "productid_1"}')
+                                                    button(type="button" class="button btn-secondary small btn-decrease" data-decrease=""): i.icon-minus
+                                                    input(type="number", id="qty", value="2", name="name", class="input-number" data-input="")
+                                                    button(type="button" class="button btn-secondary small btn-increase" data-increase=""): i.icon-plus
+                                            td.cart-price: span.price $129.99
+                                            td.action: +link().btn-delete: i.icon-remove
+                                        tr
+                                            td
+                                                .cart-item
+                                                    +link("").thumb
+                                                        +img-upload('cart-1.jpg')
+                                                    .content
+                                                        h3.title
+                                                            +link('Allen & Heath QU16 Digital 16 Input Mixer for Studio + live')
+                                                        span.price $129.99
+
+                                            td.cart-price: span.price $129.99
+                                            td.qty
+                                                .custom-number(data-number='{"handle": "productid_2"}')
+                                                    button(type="button" class="button btn-secondary small btn-decrease" data-decrease=""): i.icon-minus
+                                                    input(type="number", id="qty", value ="2", name ="name", class="input-number" data-input="")
+                                                    button(type="button" class="button btn-secondary small btn-increase" data-increase=""): i.icon-plus
+                                            td.cart-price: span.price $129.99
+                                            td.action: +link().btn-delete: i.icon-remove
+                                        tr
+                                            td
+                                                .cart-item
+                                                    +link("").thumb
+                                                        +img-upload('cart-1.jpg')
+                                                    .content
+                                                        h3.title
+                                                            +link('Allen & Heath QU16 Digital 16 Input Mixer for Studio + live')
+                                                        span.price $129.99
+
+                                            td.cart-price: span.price $129.99
+                                            td.qty
+                                                .custom-number(data-number='{"handle": "productid_3"}')
+                                                    button(type="button" class="button btn-secondary small btn-decrease" data-decrease=""): i.icon-minus
+                                                    input(type="number", id="qty", value ="2", name ="name", class="input-number" data-input="")
+                                                    button(type="button" class="button btn-secondary small btn-increase" data-increase=""): i.icon-plus
+                                            td.cart-price: span.price $129.99
+                                            td.action: +link().btn-delete: i.icon-remove
+
+
+                                .cart-footer.clearfix
+                                    +link('CONTINUE SHOPPING').button.small.btn-secondary
+                                    +link('Update cart').button.small.btn-secondary.btn-update-cart
+                        .pay-securely
+                            .cart-methods.top
+                                button(type="button").button.larger.btn-tertiary.expanded.pay-securely-now
+                                    span Pay Securely Now
+                                    i.icon-locked
+                            .cart-summary(data-collapse='{"type": "toggleSelf", "effect": "fade"}')
+                                h3.summary-title Summary
+                                .discount-item
+                                    span.relative(data-active data-handle="discount")
+                                        | Apply Discount Code
+                                        i.icon-arrow-dropdown
+                                        i.icon-arrow-dropup
+                                    .content(data-content="discount")
+                                        .discount-coupon-form
+                                            .fieldset
+                                                .custom-input
+                                                    button(type="button").button.btn-secondary Apply
+                                                    span: input(type="text" id="promoCode" name="promoCode" placeholder="Promo Code" required="required")
+                                .discount-item.shipping
+                                    span.relative(data-active data-handle="Estimate")
+                                        | Estimate Shipping
+                                        i.icon-arrow-dropdown
+                                        i.icon-arrow-dropup
+                                    .content(data-content="Estimate")
+                                        .shipping-form
+                                            .fieldset
+                                                label.label(for="country_id") Country #[span *]
+                                                +customSelect({id: 'country_id'}, [
+                                                    {value: 'Australia', text: 'Australia'},
+                                                    {value: 'Australia 1'},
+                                                    {value: 'Australia 2'}
+                                                ])
+                                            .fieldset
+                                                label.label(for="state_id") State/Province #[span *]
+                                                +customSelect({id: 'state_id'}, [
+                                                    {value: '', text: 'Please select'},
+                                                    {value: 'Australia 1'},
+                                                    {value: 'Australia 2'}
+                                                ])
+                                            .fieldset
+                                                label.label(for="postCode") Post Code/Zip Code #[span *]
+                                                +input({id: 'postCode', placeholder: ''})
+                                            .fieldset
+                                                label.label(for="radio_1") Best Way
+                                                +radio({name: 'shippingmethod', text: 'Table Rate $15.00', id: 'radio_1'}).circle
+                                            .fieldset
+                                                label.label(for="radio_2") Flat Rate
+                                                +radio({name: 'shippingmethod', text: 'Fixed $15.00', id: 'radio_2'}).circle
+                                .cart-totals
+                                    table.total-table
+                                        tbody
+                                            tr.pusher-t
+                                                td.title Subtotal
+                                                td.amount: span.price $44.95
+                                            tr.pusher-b
+                                                td.title Shipping
+                                                td.amount: span.price $0.00
+                                            tr.grand-totals
+                                                td GRAND Total
+                                                td.amount: span.price $0.00
+                                            tr.text-right
+                                                td(colspan="2") (incl. GST $20.90)
+                                .cart-payment
+                                    span or 4 payments of $137.25 interest &amp; fee free with
+                                    +img('afterpay.png')
+                                    +link('More info', '#oxipay').more-info
+                                      | More info
+                                      i.icon-arrow-right
+                            .cart-methods
+                                button(type="button").button.larger.btn-tertiary.expanded.pay-securely-now
+                                    span Pay Securely Now
+                                    i.icon-locked
+                                .check-paypal
+                                    span.or or
+                                    a(title="Check out with Paypal" href="#!").paypal-img: +img('check-paypal.png')
+

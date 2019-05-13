@@ -1,0 +1,440 @@
+// Label
+// Custom Input With Icon, Button
+// Custom Select
+// Checkbox & Radio
+// Custom Date
+// Button
+// Error Notification
+//--------------//
+
+// Label
+label {
+  display: block;
+  &.label {
+    padding-bottom: 8px;
+    font-weight: 900;
+    span {
+      color: @color17;
+    }
+  }
+}
+
+// Custom Input With Icon, Button
+@heightInput: 42px;
+.custom-input {
+  position: relative;
+  .border-radius(3px);
+  > i {
+    .position(50% null null 3px);
+    .translateY(-50%);
+    & + span {
+      input {
+        padding-left: 20px;
+      }
+    }
+  }
+  button {
+    float: right;
+    height: @heightInput;
+    min-width: 30px;
+    padding: 0 10px;
+    border: 1px solid @border-input;
+    .border-radius(0 3px 3px 0);
+    background: @color01;
+    border-left: none;
+    i {
+      .position(relative, 0 null);
+      color: @color12;
+    }
+  }
+  span {
+    display: block;
+    overflow: hidden;
+  }
+  input {
+    .size(100%, @heightInput);
+    .border-radius(3px 0 0 3px);
+    border-right: none;
+  }
+}
+
+.custom-number {
+  position: relative;
+  [data-increase] {
+    .position(5px 5px);
+  }
+  [data-decrease] {
+    .position(null 5px 5px);
+  }
+  i {
+    .font-size(10px);
+  }
+  // Min Small Desktop
+  @media (min-width: @lg-min) {
+    i {
+      .font-size(5px);
+    }
+  }
+}
+
+// Custom Date
+.custom-date {
+  position: relative;
+  background-color: @bgd-input;
+  .selected& {
+    background-color: @bgd-input !important;
+    span {
+      color: @color-input !important;
+      border-color: @border-input !important;
+    }
+    i {
+      color: @color-input !important;
+    }
+  }
+  .errors & {
+    span {
+      border-color: @color17 !important;
+    }
+  }
+  span {
+    display: block;
+    padding: 12px 20px 12px 10px;
+    border: 1px solid @border-input;
+    color: @placeholder;
+    .text-truncate();
+    .border-radius(3px);
+    height: 40px;
+  }
+  input {
+    .position();
+    .size(100%);
+    opacity: 0;
+  }
+  i {
+    .position(50% 10px);
+    .translateY(-50%);
+    font-size: 16px;
+    color: @color04;
+  }
+}
+
+// Custom Select
+.custom-select {
+  position: relative;
+  background-color: @bgd-input;
+  .selected& {
+    background-color: @bgd-input;
+    span {
+      color: @color-input;
+      border-color: @border-input;
+    }
+    i {
+      color: @color-input;
+    }
+  }
+  .errors & {
+    span {
+      border-color: @color17;
+    }
+  }
+  select {
+    .position();
+    z-index: 1;
+    .size(100%);
+    opacity: 0;
+  }
+  span {
+    display: block;
+    padding: 12px 20px 12px 10px;
+    color: @placeholder;
+    border: 1px solid @border-input;
+    .text-truncate();
+    .border-radius(3px);
+  }
+  i {
+    .position(50% 10px null null);
+    .font-size(18px);
+    .translateY(-50%);
+    color: @placeholder;
+  }
+}
+
+// Checkbox & Radio
+@space: 32px; // Space to put icon ticker.
+@size: 20px;
+
+.checkbox, .radio {
+  .position(relative);
+  display: table;
+  input {
+    position: absolute;
+    z-index: 2;
+    .size(@size);
+    opacity: 0;
+    &:checked {
+      & ~ label, & ~ a {
+        &:before {
+          background-color: silver;
+          border-color: silver;
+        }
+      }
+      & ~ i {
+        &:before {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  label, > a {
+    .position(relative);
+    z-index: 3;
+    display: table-cell;
+    height: @size;
+    padding-left: @space;
+    .font-size(14px);
+    color: @text-color;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+  i {
+    .position(0 null null 0);
+    z-index: 1;
+    .size(@size);
+    .font-size(13px);
+    color: @color12;
+    text-align: center;
+    &:before {
+      position: relative;
+      top: 4px;
+      z-index: 1;
+      opacity: 0;
+      .circle& {
+        display: block;
+        top: 6px;
+        left: 6px;
+        content: "";
+        background-color: @color12;
+        .size(8px);
+        .border-radius(50%);
+      }
+    }
+    &:after {
+      content: "";
+      .position(0 null null 0);
+      .size(100%);
+      background-color: @color01;
+      border: 1px solid @border-input;
+      .circle& {
+        .border-radius(50%);
+      }
+    }
+  }
+  &.center-mode {
+    margin: 0 auto;
+  }
+  &.expanded {
+    width: 100%;
+  }
+  &.right {
+    input {
+      right: 0;
+    }
+    label, > a {
+      padding-right: @space;
+      padding-left: 0;
+    }
+    i {
+      left: auto;
+      right: 0;
+    }
+  }
+  &.above, &.below {
+    display: inline-block;
+    label, > a {
+      padding: 0;
+    }
+    a ~ i {
+      z-index: 3;
+    }
+    input, i {
+      top: 0;
+      left: 50%;
+      .translateX(-50%);
+    }
+  }
+  &.above {
+    padding-top: @space;
+  }
+  &.below {
+    padding-bottom: @space;
+    input, i {
+      top: auto;
+      bottom: 0;
+    }
+  }
+}
+
+.radio {
+   i {
+
+   }
+}
+
+.radio-list, .checkbox-list {
+  margin-top: -10px;
+  li {
+    padding-top: 10px;
+  }
+}
+
+// Form group
+.form-group {
+  &:extend(.clearfix all);
+  .label01 {
+    height: 40px;
+    display: table;
+    span {
+      height: 100%;
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+}
+
+// Button
+.button {
+  padding: 0 1em;
+  margin: 0;
+  .lato-black();
+  .font-size(@font-button);
+  line-height: 38px;
+  border: 1px solid transparent;
+  background: none;
+  text-transform: uppercase;
+  .transition(all .25s ease);
+  i {
+    margin-left: 5px;
+    font-size: 15px;
+  }
+  // Full width
+  &.expanded {width: 100%;}
+
+  &.btn-primary {
+    border-color: @color12;
+    background-color: @color12;
+    color: @color01;
+    // size
+    &.tiny {
+      .font-size(11px);
+    }
+    &.small {
+      .font-size(13px);
+    }
+    &.larger {
+      .font-size(18px);
+    }
+    &:hover {
+      border-color: @color11;
+      background-color: @color11;
+    }
+  }
+  &.btn-secondary {
+    border-color: @color06;
+    background-color: @color06;
+    color: @color01;
+    // size
+    &.tiny {
+      .font-size(11px);
+    }
+    &.small {
+      line-height: 28px;
+      .font-size(12px);
+    }
+    &.larger {
+      line-height: 48px;
+      .font-size(18px);
+    }
+    &:hover {
+      border-color: @color04;
+      background-color: @color04;
+    }
+  }
+  &.btn-tertiary {
+    border-color: @color15;
+    background-color: @color15;
+    color: @color01;
+    // size
+    &.tiny {
+      .font-size(11px);
+    }
+    &.small {
+      .font-size(12px);
+    }
+    &.larger {
+      line-height: 48px;
+      .font-size(18px);
+      i {
+        margin-left: 10px;
+      }
+    }
+    &:hover {
+      border-color: @color14;
+      background-color: @color14;
+    }
+  }
+  &.btn-disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+    border-color: @color04;
+    background-color: @color04;
+    color: @color01;
+    // size
+    &.tiny {
+      .font-size(11px);
+    }
+    &.small {
+      .font-size(14px);
+    }
+    &.larger {
+      .font-size(16px);
+    }
+  }
+}
+@media (max-width: @sm-max) {
+  .button {
+    &.tiny {
+      .font-size(11px);
+    }
+    &.small {
+      .font-size(12px);
+    }
+    &.larger {
+      .font-size(16px);
+    }
+  }
+}
+
+
+// Error Notification
+.errors {
+  label {
+    color: @invalid;
+  }
+  p.error {
+    display: block;
+    padding-top: 3px;
+    color: @color17;
+    .font-size(12px);
+  }
+  input.error, textarea.error {
+    color: @invalid;
+    background-color: @bgd-invalid;
+    border-color: @color17;
+  }
+  .custom-select, .custom-date {
+    background-color: @bgd-invalid;
+    p, i {
+      color: @invalid;
+    }
+  }
+}

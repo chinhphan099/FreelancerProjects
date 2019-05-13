@@ -1,0 +1,142 @@
+extends layouts/layout
+
+block vars
+	-title = 'Leaderboard'
+	-bodyClass = 'leaderboard'
+	-mainNav = 5
+
+block main
+	main
+		+head-block("Competition Leaderboard").only-text
+			p.desc To find out on how you can be eligible for this competition, #[a(href="ipad-giveaway" title="click here") click here]
+		.leader-board
+			.container
+				.row
+					.col-xs-12.col-lg-6
+						h2 ELIGIBLE TEACHERS TO WIN A $500 OFFICEWORKS VOUCHER
+						.fieldset: +customInput({iconClass: 'icon-search'}, {id: 'searchTxt1', placeholder: 'Enter name to search ...', type: 'search'})
+						.tableBoard
+							table(cellpadding="0" cellspacing="0")
+								thead
+									tr
+										th Teacher
+										th School
+										th Time Spent <br/> on S.T.A.R
+										th Questions <br/>answered
+								tbody
+									tr
+										td Laura Pearson
+										td Ashtonfield Public School
+										td 225 hours
+										td 2520
+									tr
+										td Laura Pearson
+										td Pittsworth State School
+										td 215 hours
+										td 1652
+									tr
+										td Laura Pearson
+										td Ashtonfield Public School
+										td 225 hours
+										td 2520
+									tr
+										td Laura Pearson
+										td Pittsworth State School
+										td 215 hours
+										td 1652
+									tr
+										td Laura Pearson
+										td Ashtonfield Public School
+										td 225 hours
+										td 2520
+									tr
+										td Laura Pearson
+										td Pittsworth State School
+										td 215 hours
+										td 1652
+									tr
+										td Laura Pearson
+										td Ashtonfield Public School
+										td 225 hours
+										td 2520
+									tr
+										td Laura Pearson
+										td Pittsworth State School
+										td 215 hours
+										td 1652
+									tr
+										td Laura Pearson
+										td Ashtonfield Public School
+										td 225 hours
+										td 2520
+									tr
+										td Laura Pearson
+										td Pittsworth State School
+										td 215 hours
+										td 1652
+									tr
+										td(colspan='4' class='dataTables_empty') No data available in table
+					.col-xs-12.col-lg-6
+						h2 ELIGIBLE STUDENTS TO WIN AN IPAD AIR 2
+						.fieldset: +customInput({iconClass: 'icon-search'}, {id: 'searchTxt2', placeholder: 'Enter name to search ...', type: 'search'})
+						.tableBoard
+							table(cellpadding="0" cellspacing="0")
+								thead
+									tr.bg-orange-dark
+										th Teacher
+										th School
+										th Time Spent <br/> on S.T.A.R
+										th Questions <br/>answered
+								tbody
+									tr
+										td Laura Pearson
+										td Ashtonfield Public School
+										td 225 hours
+										td 2520
+									tr
+										td Laura Pearson
+										td Pittsworth State School
+										td 215 hours
+										td 1652
+									tr
+										td Laura Pearson
+										td Ashtonfield Public School
+										td 225 hours
+										td 2520
+									tr
+										td Laura Pearson
+										td Pittsworth State School
+										td 215 hours
+										td 1652
+									tr
+										td Laura Pearson
+										td Ashtonfield Public School
+										td 225 hours
+										td 2520
+									tr
+										td Laura Pearson
+										td Pittsworth State School
+										td 215 hours
+										td 1652
+									tr
+										td Laura Pearson
+										td Ashtonfield Public School
+										td 225 hours
+										td 2520
+									tr
+										td Laura Pearson
+										td Pittsworth State School
+										td 215 hours
+										td 1652
+									tr
+										td Laura Pearson
+										td Ashtonfield Public School
+										td 225 hours
+										td 2520
+									tr
+										td Laura Pearson
+										td Pittsworth State School
+										td 215 hours
+										td 1652
+									tr
+										td(colspan='4' class='dataTables_empty') No data available in table

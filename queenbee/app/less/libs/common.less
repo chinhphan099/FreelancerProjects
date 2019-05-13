@@ -1,0 +1,277 @@
+// Margins
+// Heading
+// Background Color
+// Text Color
+// Link Style
+// Panigation
+// Price
+// Breadcrumbs
+// Divider
+// Blockquote
+//--------------//
+
+.inputFocusing {
+	overflow-x: hidden;
+	body {
+		overflow-x: hidden;
+	}
+}
+
+.relative {position: relative;}
+
+// Margins
+// .margins(30 40 50);
+
+// Heading
+.heading-1 {}
+.heading-2 {}
+.heading-3 {}
+.heading-4 {}
+.heading-5 {}
+.heading-6 {}
+
+// Background Color
+.bgd-silver {
+	background-color: silver !important;
+}
+.bgd-light-grey {
+	background-color: @color02 !important;
+}
+.bgd-dark-grey {
+	background-color: @color09 !important;
+}
+
+// Text Color
+.red-text {
+	color: red !important;
+}
+
+// Link Style
+.link {
+	position: relative;
+	.font-size(20px);
+	text-decoration: underline;
+	.link-color(@color12);
+	&:hover {
+		text-decoration: none;
+	}
+	i {
+		.position(50% null);
+		.translateY(-38%);
+		font-size: .8em;
+	}
+}
+.hexa {
+	overflow: hidden;
+	position: relative;
+	margin: 0 auto;
+	&:before {
+		content: "";
+		.position(10px);
+		z-index: 1;
+		background: url('../images/hexa-border.png') no-repeat center center / 100% auto;
+	}
+	.desc {
+		.position(50% null null 50%);
+		z-index: 2;
+		.translate(-50%, -50%);
+		color: @color01;
+		text-align: center;
+		.brandname {
+			display: block;
+			.font-size(30px);
+			text-transform: uppercase;
+			padding-bottom: 20px;
+		}
+		span {
+			.javacom();
+			.font-size(26px);
+		}
+		&:hover {
+			color: @color09 !important;
+		}
+	}
+	@media (min-width: @lg-min) {
+		.size(420px, 364px);
+	}
+}
+
+// Panigation
+.pagination {
+	display: inline-block;
+	&:extend(.clearfix all);
+	li {
+		float: left;
+		margin: 0 5px;
+		text-align: center;
+		&.number {
+			ul {
+				margin: 0 -5px;
+			}
+		}
+		&.active {
+			a {
+				color: @color01;
+				background-color: @color04;
+			}
+		}
+		a {
+			display: block;
+			.size(30px);
+			.font-size(14px);
+			color: @color10;
+			border: 1px solid @color09;
+			line-height: 30px;
+			.transition(all .3s ease);
+			&:hover {
+				color: @color01;
+				background-color: @color05;
+			}
+			i {
+				line-height: 30px;
+			}
+		}
+		&.unavailable {
+			pointer-events: none;
+			span {
+				line-height: 24px;
+			}
+		}
+	}
+	.number {
+		a {
+			span {
+				display: none;
+			}
+		}
+	}
+}
+@media (max-width: @sm-max) {
+	.pagination {
+		width: 100%;
+		.prev-page {
+			float: left;
+		}
+		.next-page {
+			float: right;
+		}
+		.number {
+			display: block;
+			float: none;
+			overflow: hidden;
+			li {
+				display: none;
+				&.active {
+					display: inline-block;
+					float: none;
+				}
+			}
+			a {
+				span {
+					display: inline;
+				}
+			}
+		}
+	}
+}
+
+// Price
+.price {
+	display: block;
+	.font-size(16px);
+	&:extend(.clearfix all);
+	.new-price, .old-price {
+		display: inline-block;
+	}
+	.new-price {
+		.font-size(16px);
+		color: @color09;
+	}
+	.old-price {
+		margin-left: 5px;
+		.font-size(14px);
+		color: @color03;
+	}
+}
+
+// Breadcrumbs
+.breadcrumbs {
+	margin-bottom: 30px;
+	li {
+		display: inline-block;
+		margin: 0 2px;
+		&.active {
+			font-weight: normal;
+		}
+		.icon-home {
+			color: @color05;
+			.transition(color .25s ease);
+		}
+	}
+	a {
+		color: @color05;
+		.font-size(14px);
+		font-weight: 700;
+		&:hover {
+			color: @link-hover;
+			.icon-home {
+				color: @link-hover;
+			}
+		}
+	}
+	i {
+		position: relative;
+		top: 0;
+		color: @color03;
+	}
+}
+
+// Divider
+.divider {
+	position: relative;
+	text-align: center;
+	overflow: hidden;
+	clear: both;
+	span {
+		position: relative;
+		display: inline-block;
+		padding: 0 10px;
+		&:before, &:after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			width: 1000px;
+			border-top: 1px solid @color03;
+		}
+		&:before {
+			right: 100%;
+		}
+		&:after {
+			left: 100%;
+		}
+		&.empty {
+			font-size: 0;
+			padding: 0;
+		}
+	}
+}
+
+// Blockquote
+blockquote {
+	quotes: "\201C""\201D""\2018""\2019";
+	&:before, &:after {
+		.sans-serif();
+		font-size: 4em;
+		line-height: 0;
+	}
+	&:before {
+		content: open-quote;
+		margin-right: 0.15em;
+		vertical-align: -0.4em;
+	}
+	&:after {
+		content: close-quote;
+		margin-left: 0.15em;
+		vertical-align: -0.6em;
+	}
+}

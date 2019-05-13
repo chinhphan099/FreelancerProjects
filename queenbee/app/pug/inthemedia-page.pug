@@ -1,0 +1,25 @@
+extends layouts/layout
+
+block vars
+	-title = 'In The Media'
+	-bodyClass = 'media-page'
+
+block main
+	main
+		.container
+			+promotion-top()
+			+breadcrumbs([{title: 'In the media'}])
+			.heading-description
+				span.flower: img(src="images/flower-small-01.png", alt="")
+				.inner
+					h1 In the media
+					p Queen Bee is constantly featured in the media - we have received 11 magazine covers and feature in titles such as Cosmopolitan Pregnancy, InStyle Magazine, Mother and Baby, Pregnancy and Birth, Vogue Magazine, Practical Parenting, Practical Pregnancy, Babyology.com.au and many more...
+			.category-list
+				h4.text-center.text-uppercase
+					a(href="#" title="CLICK HERE TO SEE WHICH CELEBRITIES HAVE SHOPPED WITH QUEENBEE") CLICK HERE TO SEE WHICH CELEBRITIES HAVE SHOPPED WITH QUEENBEE
+				ul.list-01(data-popup='{"type": "ajax", "handle": ".media-popup"}')
+					+inthemedia-item('media-1.jpg', 'title')
+					+inthemedia-item('media-2.jpg', 'title')
+					+inthemedia-item('media-3.jpg', 'title')
+					+inthemedia-item('media-4.jpg', 'title')
+					+inthemedia-item('media-5.jpg', 'title')

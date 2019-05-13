@@ -1,0 +1,23 @@
+extends layouts/layout
+
+block vars
+  -title = 'Product Detail'
+  -bodyClass = 'product-detail-page'
+  -mainNav = 1
+  -sub1 = 1
+  -sub2 = 1
+  -sub3 = 0
+
+block main
+  main
+    .breadcrumbs-wrap
+      .container
+        +breadcrumbs([
+          {title: 'Home', href: 'index.html', text: 'Home'},
+          {title: 'Live Sound & PA', href: 'product-listing.html', text: 'Home'},
+          {title: 'Live Sound & PA', href: '#'}
+        ])
+    include modules/pdp-main
+    include modules/product-relate
+    include modules/tab-navigation
+    include modules/dpd-detail

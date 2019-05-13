@@ -1,0 +1,45 @@
+extends layouts/layout
+
+block vars
+	-title = 'Parents'
+	-bodyClass = ''
+	-mainNav = 2
+
+block main
+	main
+		+head-block("Your child's education at the heart of what we do!")
+			.video-wrap(data-youtube='{"idOrLink": "https://www.youtube.com/watch?v=9yZACdneuyI", "autoplay": 0}')
+				.video-container
+					.iframeYoutube
+					.thumb(style="background-image: url(images/upload/banner-video.jpg)" data-handle)
+				+button({})(class="control" data-handle)
+					i.icon-youtube
+		// Parent
+		.content-list
+			.container
+				.row
+					h2
+						span.text Reinforce your child’s maths skills
+					.col-xs-12.col-sm-6
+						.thumb: a(href="#" title="title"): img(src="images/upload/img-1.jpg", alt="")
+					.col-xs-12.col-sm-6
+						.content
+							p Sometimes learning things once may not be enough and supplementary learning can reinforce your child's education. S.T.A.R. Maths Online provides every child with unlimited resources for them to reinforce what they have learnt at school and for them to master their maths skills!
+				.row
+					h2
+						span.text Wath them learn, practice and grow!
+					.col-xs-12.col-sm-6.pull-right
+						.thumb: a(href="#" title="title"): img(src="images/upload/img-1.jpg", alt="")
+					.col-xs-12.col-sm-6
+						.content
+							p Being a parent isn't easy! But at the same time we would love to be part of their educational journey. S.T.A.R. Maths Online gives every parent the ability to be part of their child educational journey so that you can be there to watch your child learn, practice and grow!
+				.row
+					h2
+						span.text It’s fun and it’s FREE!
+					.col-xs-12.col-sm-6
+						.thumb: a(href="#" title="title"): img(src="images/upload/img-1.jpg", alt="")
+					.col-xs-12.col-sm-6
+						.content
+								p Maths is a fun subject and one that can inspire us to solve amazing problems when we grow up. Having a solid foundation when we are young is pivital for our development. Which is why, we've made S.T.A.R. Maths Online free, to help our childrren reach their full potential and create an inspiring future that we all want to see!
+
+

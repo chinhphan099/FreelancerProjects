@@ -1,0 +1,50 @@
+extends layouts/layout
+
+block vars
+	-title = 'Teachers'
+	-bodyClass = ''
+	-mainNav = 3
+
+block main
+	main
+		+head-block("We understand what it takes to be teacher and we're here to help")
+			.video-wrap(data-youtube='{"idOrLink": "https://www.youtube.com/watch?v=9yZACdneuyI", "autoplay": 0}')
+				.video-container
+					.iframeYoutube
+					.thumb(style="background-image: url(images/upload/banner-video.jpg)" data-handle)
+				+button({})(class="control" data-handle)
+					i.icon-youtube
+		// Teachers
+		.content-list
+			.container
+				.row
+					h2
+						span.text Removing unnecessary admin
+					.col-xs-12.col-sm-6
+						.thumb: a(href="#" title="title"): img(src="images/upload/img-1.jpg", alt="")
+					.col-xs-12.col-sm-6
+						.content
+							p We understand what it takes to be a teacher and we are here to help! S.T.A.R. Maths Online removes most of the administration need to help your children with thier maths subject. From planning out their term, preparing them for their NAPLAN exams to  their results of all the progress that they have achieved throughout the year. We've made sure that we're doing all the hard work so you can focus on those who need you most!
+				.row
+					h2
+						span.text Smart education to hlp your students
+					.col-xs-12.col-sm-6.pull-right
+						.thumb: a(href="#" title="title"): img(src="images/upload/img-1.jpg", alt="")
+					.col-xs-12.col-sm-6
+						.content
+							p When creating S.T.A.R. Maths Online, we want every child to receive individualised attention when they are learning maths. Which is at the heart of our software! S.T.A.R. Maths Online treats every child individually and tailor a curriculum that meets their need. Whether they are excelling or need further practice, we got them covered!
+				.row
+					h2
+						span.text The right infomation that you need
+					.col-xs-12.col-sm-6
+						.thumb: a(href="#" title="title"): img(src="images/upload/img-1.jpg", alt="")
+					.col-xs-12.col-sm-6
+						.content
+								p  In this digital age, having the right information can be so beneficial to assist us in what we would like to achieve. S.T.A.R. Maths Online provide teachers with all the right information so that you can decide how to best utilise your time to help those who need it most!
+		.school-testimonials.bgd-dark-grey
+			.container
+				h2 TEACHERS FROM OVER 300 SCHOOLS NOW REGISTERED #[span TO S.T.A.R MATHS ONLINE!]
+				.row
+					include modules/slider
+
+

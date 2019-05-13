@@ -1,0 +1,51 @@
+extends layouts/layout
+
+block vars
+	-title = 'Celebrities'
+	-bodyClass = 'celebrities-page'
+
+block main
+	main
+		.container
+			+promotion-top()
+			+breadcrumbs([{title: 'Celebrities who love Queen Bee'}])
+			.heading-description
+				span.flower: img(src="images/flower-small-01.png", alt="")
+				.inner
+					h1 Celebrities who love Queen Bee
+			.celebrities-list
+				ul.list-01(data-popup='{"handle": ".media-popup", "type": "ajax"}')
+					li
+						a(href="data-inthemedia.html" title="title of cele").thumb.media-popup
+							img(src="images/upload/cele-1.jpg", alt="")
+							span.view-full-size
+								| TARA MOSS
+								i.icon-next
+					li
+						a(href="data-inthemedia.html" title="title of cele").thumb.media-popup
+							img(src="images/upload/cele-2.jpg", alt="")
+							span.view-full-size
+								| TARA MOSS
+								i.icon-next
+					li
+						a(href="data-inthemedia.html" title="title of cele").thumb.media-popup
+							img(src="images/upload/cele-3.jpg", alt="")
+							span.view-full-size
+								| TARA MOSS
+								i.icon-next
+					li
+						a(href="data-inthemedia.html" title="title of cele").thumb.media-popup
+							img(src="images/upload/cele-4.jpg", alt="")
+							span.view-full-size
+								| TARA MOSS
+								i.icon-next
+					li
+						a(href="data-inthemedia.html" title="title of cele").thumb.media-popup
+							img(src="images/upload/cele-5.jpg", alt="")
+							span.view-full-size
+								| TARA MOSS
+								i.icon-next
+
+
+
+

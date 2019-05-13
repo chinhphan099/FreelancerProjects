@@ -1,0 +1,64 @@
+@import "../components/mixin.less";
+
+//------------------------------------------------------------------------------ Main Style
+main {
+	padding: 25px 0;
+	min-height: calc(~"100vh - 96px - 139px");
+}
+
+.title {
+	margin-bottom: 10px;
+	text-align: center;
+	h1 {
+		.font-size(18px);
+		.bold();
+	}
+	@media (min-width: 768px) {
+		h1 {
+			.font-size(24px);
+		}
+	}
+}
+
+//------------------------------------------------------------------------------ Decline Card
+.declineCard, .js-paypal-decline-message {
+	margin-bottom: 20px;
+	text-align: center;
+	p {
+		.font-size(18px);
+		color: #8a8a8a;
+	}
+	@media (min-width: 768px) {
+		p {
+			.font-size(24px);
+		}
+	}
+}
+
+.js-paypal-decline-message {
+    display: none;
+    &.editmode {
+        display: block;
+    }
+}
+
+//------------------------------------------------------------------------------ Button Back
+.goback-btn {
+	text-align: center;
+	button {
+		padding: 0 42px;
+		height: 50px;
+		.font-size(18px);
+		background-color: #7ad712;
+		background-image: linear-gradient(to bottom,#7ad712 0,#5fa80e 100%);
+		border: 0;
+		border-bottom: 4px #4d870b solid;
+		outline: 0;
+		&:hover {
+			background: linear-gradient(to bottom,#a8ff0f 0,#a8ff0f 100%);
+		}
+		@media (min-width: 768px) {
+			height: 68px;
+		}
+	}
+}

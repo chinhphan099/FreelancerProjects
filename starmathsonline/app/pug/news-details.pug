@@ -1,0 +1,55 @@
+extends layouts/layout
+
+block vars
+  -title = 'News Detail'
+  -bodyClass = 'news-page'
+  -mainNav = 6
+
+block main
+  main
+    +head-block("Primary maths software built with students and teachers at heart!", "June 27, 2017").only-text
+    // News Details
+    .news-details
+      .container
+        .editor
+          .row
+            .col-md-6.col-lg-7
+              .meta-post
+                .box: +img-upload("fb-like.jpg")
+                .box: +img-upload("fb-share.jpg")
+              p The biggest end-consumer show in Sweden, Sportfiske Mässan, was held from 17th until 19th of March 2017. Every two years, this exhibition show is taking place in Stockholm and in Jönköping every other year. This year, in the city of Jönköping, Elmia exhibition center was the place of this exhibition.
+              p The biggest end-consumer show in Sweden, Sportfiske Mässan, was held from 17th until 19th of March 2017. Every two years, this exhibition show is taking place in Stockholm and in Jönköping every other year. This year, in the city of Jönköping, Elmia exhibition center was the place of this exhibition.
+            .col-md-6.col-lg-5.text-center
+              +img-upload("img-2.jpg")
+          p In this show, approximately 15,000 people are visiting. Though this city is not big, this city is popular for the various exhibition shows, because this city is positioned at around middle of the southern Sweden. As this is not only the biggest show of this country but also the biggest in Scandinavia, the many people from neighbor countries were also visiting there.
+          p Sport fishing is very popular in Sweden and Scandinavia. It is said that as much as 20% of population do some sort of fishing at least once in a year. Reflecting this fact, the visitors of the shows were very active to get information that one wants to know. The visitors include various kind of people, old and young, men and women, and beginner anglers and very hard core anglers.
+          p In this show, Daiwa had set up our booth. And we could make a precious opportunity to communicate with anglers. Especially, we were proudly present our flagship products such as Steez SV TWS, Morethan SV TWS, Saltiga, Certate and Exist. And these products were under strong attention of hardcore anglers in Scandinavia. In the show, we also introduced our newly started lure brand PROREX, and its products. These PROREX products are targeting the monster predator fish, under Seek Your Monster message. Many people were getting the message through our presentation of PROREX brand in Daiwa booth.
+          p From this experience, we were firmly convinced by the fact that there are countless of keen anglers are in this country, and that we are sure that we can serve such users in the best possible way.
+          .row.text-center
+            .col-sm-4
+              +link()
+                +img-upload('img-3.jpg')
+            .col-sm-4
+              +link()
+                +img-upload('img-5.jpg')
+            .col-sm-4
+              +link()
+                +img-upload('img-4.jpg')
+          h1 h1 - In this show, approximately 15,000 people are visiting.
+          h2 h2 - Though this city is not big, this city is popular for the various exhibition shows
+          h3 h3 - because this city is positioned at around middle of the southern Sweden
+          h4 h4 - As this is not only the biggest show of this country but also the biggest in Scandinavia
+          h5 h5 - the many people from neighbor countries were also visiting there.
+          h6 h6 - Sport fishing is very popular in Sweden and Scandinavia.
+          p: strong “ It is said that as much as 20% of population do some sort of fishing at least once in a year. Reflecting this fact, the visitors of the shows were very active to get information that one wants to know. The visitors include various kind of people, old and young, men and women, and beginner anglers and very hard core anglers.
+          p: +link('click here')
+          p In this show, Daiwa had set up our booth. And we could make a precious opportunity to communicate with anglers. Especially, we were proudly present our flagship products such as Steez SV TWS, Morethan SV TWS, Saltiga, Certate and Exist. And these products were under strong attention of hardcore anglers in Scandinavia. In the show, we also introduced our newly started lure brand PROREX, and its products. These PROREX products are targeting the monster predator fish, under Seek Your Monster message. Many people were getting the message through our presentation of PROREX brand in Daiwa booth.
+          .video-wrap(data-youtube='{"idOrLink": "//www.youtube.com/watch?v=9yZACdneuyI", "autoplay": 0}')
+            .video-container
+              .iframeYoutube
+              .thumb(style="background-image: url(images/upload/banner-video.jpg)" data-handle)
+            +button({})(class="control" data-handle)
+              i.icon-youtube
+          p In this show, Daiwa had set up our booth. And we could make a precious opportunity to communicate with anglers. Especially, we were proudly present our flagship products such as Steez SV TWS, Morethan SV TWS, Saltiga, Certate and Exist. And these products were under strong attention of hardcore anglers in Scandinavia. In the show, we also introduced our newly started lure brand PROREX, and its products. These PROREX products are targeting the monster predator fish, under Seek Your Monster message. Many people were getting the message through our presentation of PROREX brand in Daiwa booth.
+        include modules/news-navigation
+        include modules/news-related

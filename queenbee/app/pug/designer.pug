@@ -1,0 +1,151 @@
+extends layouts/layout
+
+block vars
+	-title = 'Designers'
+	-bodyClass = 'designers-page'
+
+block main
+	main
+		.container
+			+promotion-top()
+			+breadcrumbs([{title: 'Designers'}])
+			.heading-description
+				span.flower: img(src="images/flower-small-01.png", alt="")
+				.inner
+					h1 Designers
+			.designer-block
+				ul.alpha-list
+					li: +link('#', 'javascript:;')(data-scrollto='{"handle": "#alpha-shape"}')
+					li: +link('A', 'javascript:;')(data-scrollto='{"handle": "#alpha-A"}')
+					li: +link('B', 'javascript:;')(data-scrollto='{"handle": "#alpha-B"}')
+					li: +link('C', 'javascript:;')(data-scrollto='{"handle": "#alpha-C"}')
+					li: +link('D', 'javascript:;')(data-scrollto='{"handle": "#alpha-D"}')
+					li: +link('E', 'javascript:;')(data-scrollto='{"handle": "#alpha-E"}')
+					li: +link('F', 'javascript:;')(data-scrollto='{"handle": "#alpha-F"}')
+					li: +link('G', 'javascript:;')(data-scrollto='{"handle": "#alpha-G"}')
+					li: +link('H', 'javascript:;')(data-scrollto='{"handle": "#alpha-H"}')
+					li: +link('I', 'javascript:;')(data-scrollto='{"handle": "#alpha-I"}')
+					li: +link('J', 'javascript:;')(data-scrollto='{"handle": "#alpha-J"}')
+					li: +link('K', 'javascript:;')(data-scrollto='{"handle": "#alpha-K"}')
+					li: +link('L', 'javascript:;')(data-scrollto='{"handle": "#alpha-L"}')
+					li: +link('M', 'javascript:;')(data-scrollto='{"handle": "#alpha-M"}')
+					li: +link('N', 'javascript:;')(data-scrollto='{"handle": "#alpha-N"}')
+					li: +link('O', 'javascript:;')(data-scrollto='{"handle": "#alpha-O"}')
+					li: +link('P', 'javascript:;')(data-scrollto='{"handle": "#alpha-P"}')
+					li: +link('Q', 'javascript:;')(data-scrollto='{"handle": "#alpha-Q"}')
+					li: +link('R', 'javascript:;')(data-scrollto='{"handle": "#alpha-R"}')
+					li: +link('S', 'javascript:;')(data-scrollto='{"handle": "#alpha-S"}')
+					li: +link('T', 'javascript:;')(data-scrollto='{"handle": "#alpha-T"}')
+					li: +link('U', 'javascript:;')(data-scrollto='{"handle": "#alpha-U"}')
+					li: +link('V', 'javascript:;')(data-scrollto='{"handle": "#alpha-V"}')
+					li: +link('W', 'javascript:;')(data-scrollto='{"handle": "#alpha-W"}')
+					li: +link('X', 'javascript:;')(data-scrollto='{"handle": "#alpha-X"}')
+					li: +link('Y', 'javascript:;')(data-scrollto='{"handle": "#alpha-Y"}')
+					li: +link('Z', 'javascript:;')(data-scrollto='{"handle": "#alpha-Z"}')
+				.brands-section.clearfix#alpha-shape
+					.charactor #
+					ul.brand-items
+						li: +link('#')
+							+img-upload('brand-1.png')
+						li: +link('#')
+							+img-upload('brand-2.png')
+				.brands-section.clearfix#alpha-A
+					.charactor A
+					ul.brand-items
+						li: +link('#')
+							+img-upload('brand-3.png')
+						li: +link('#')
+							+img-upload('brand-4.png')
+						li: +link('#')
+							+img-upload('brand-5.png')
+						li: +link('#')
+							+img-upload('brand-6.png')
+						li: +link('#')
+							+img-upload('brand-7.png')
+						li: +link('#')
+							+img-upload('brand-8.png')
+						li: +link('#')
+							+img-upload('brand-9.png')
+						li: +link('#')
+							+img-upload('brand-10.png')
+						li: +link('#')
+							+img-upload('brand-11.png')
+				.brands-section.clearfix#alpha-B
+					.charactor B
+					ul.brand-items
+						li: +link('#')
+							+img-upload('brand-6.png')
+						li: +link('#')
+							+img-upload('brand-7.png')
+						li: +link('#')
+							+img-upload('brand-8.png')
+						li: +link('#')
+							+img-upload('brand-9.png')
+				.brands-section.clearfix#alpha-C
+					.charactor C
+					ul.brand-items
+						li: +link('#')
+							+img-upload('brand-3.png')
+						li: +link('#')
+							+img-upload('brand-4.png')
+						li: +link('#')
+							+img-upload('brand-5.png')
+						li: +link('#')
+							+img-upload('brand-6.png')
+						li: +link('#')
+							+img-upload('brand-7.png')
+						li: +link('#')
+							+img-upload('brand-11.png')
+				.brands-section.clearfix#alpha-D
+					.charactor D
+					ul.brand-items
+						li: +link('#')
+							+img-upload('brand-8.png')
+						li: +link('#')
+							+img-upload('brand-9.png')
+						li: +link('#')
+							+img-upload('brand-10.png')
+						li: +link('#')
+							+img-upload('brand-11.png')
+				.brands-section.clearfix#alpha-E
+					.charactor E
+					ul.brand-items
+						li: +link('#')
+							+img-upload('brand-6.png')
+						li: +link('#')
+							+img-upload('brand-7.png')
+				.brands-section.clearfix#alpha-F
+					.charactor F
+					ul.brand-items
+						li: +link('#')
+							+img-upload('brand-5.png')
+						li: +link('#')
+							+img-upload('brand-10.png')
+						li: +link('#')
+							+img-upload('brand-11.png')
+						li: +link('#')
+							+img-upload('brand-3.png')
+						li: +link('#')
+							+img-upload('brand-4.png')
+				.brands-section.clearfix#alpha-G
+					.charactor G
+					ul.brand-items
+						li: +link('#')
+							+img-upload('brand-3.png')
+						li: +link('#')
+							+img-upload('brand-4.png')
+						li: +link('#')
+							+img-upload('brand-5.png')
+						li: +link('#')
+							+img-upload('brand-6.png')
+						li: +link('#')
+							+img-upload('brand-7.png')
+				.brands-section.clearfix#alpha-H
+					.charactor H
+					ul.brand-items
+						li: +link('#')
+							+img-upload('brand-9.png')
+						li: +link('#')
+							+img-upload('brand-10.png')
+						li: +link('#')
+							+img-upload('brand-11.png')

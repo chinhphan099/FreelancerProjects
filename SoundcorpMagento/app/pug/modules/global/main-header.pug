@@ -1,0 +1,92 @@
+.main-header
+	span.control-nav
+		i.icon-menu
+	.mini-cart
+		+link('Bag', 'bag.html')
+			i.icon-shopping-cart
+				if bodyClass == 'home'
+					span.total 4
+			if bodyClass == 'home'
+				span.subtotal.hidden-sm-down $25.00
+		.inner.bag-content.hidden-md-down
+			if bodyClass == 'home'
+				.mini-cart-totals.clearfix
+					span.total-item 3 items
+					span.cart-subtotal.right-text Cart Subtotal:
+						span.subtotal $123.60
+				.btn-wrap: +link('title', 'checkout.html').button.small.btn-tertiary.expanded: span: span Go to Checkout
+				.mini-cart-outer
+					- var n = 0;
+					ul.mini-cart-products
+						li.mini-item
+							.thumb
+								+img-upload('img-1.jpg')
+							.content
+								.control-item
+									a.icon-pencil(href="javascript:;")
+									a.icon-remove(href="javascript:;")
+								h4.name: +link('Allen & Heath QU16 Digital 16 Input Mixer for Studio + live', 'product-detail.html')
+								.info
+									| Price:&nbsp;
+									span.price $90
+								.info(data-number='{"maxLength": 3}')
+									| Qty:&nbsp;
+									input(type="number" value="1" data-input="")
+						while n < 3
+							- n++
+							li.mini-item
+								.thumb
+									+img-upload('img-1.jpg')
+								.content
+									.control-item
+										a.icon-pencil(href="javascript:;")
+										a.icon-remove(href="javascript:;")
+									h4.name: +link('Allen & Heath QU16 Digital 16 Input Mixer for Studio + live', 'product-detail.html')
+									.info
+										| Price:&nbsp;
+										span.price
+											ins.new-price.red $89.00
+											del.old-price $121.00
+									.info
+										| Qty:&nbsp;
+										strong 1
+					.view-cart.text-center: +link('VIEW AND EDIT CART', 'cart.html')
+			else
+				.cart-empty
+					span.fill-me-up Fill me up
+					.btn-wrap: +link('title', 'products-listing.html').button.small.btn-tertiary.expanded: span: span Go Shopping
+	.logo: +link('QueenBee', 'index.html'): +img('logo.png')
+	.head-search
+		+customInput({id: 'headSearchBtn', iconClass: 'icon-search'}, {id: "headSearchTxt", placeholder: 'Search your website.'})
+			.autosearch.hidden-md-down.hidden
+				.category-list
+					strong.text-uppercase Category
+					ul
+						li: +link('Controllers')
+						li: +link('Digital Audio')
+						li: +link('Headphones')
+						li: +link('Microphones')
+				.sugguest-items-wrap
+					ul.sugguest-items
+						li.mini-item
+							.thumb
+								+img-upload('img-1.jpg')
+							.content
+								h4.name: +link('Allen & Heath QU16 Digital 16 Input Mixer for Studio + live', 'product-detail.html')
+								.info
+									span.price
+										ins.new-price $89
+						- var n = 0
+						while n < 5
+							- n++
+							li.mini-item
+								.thumb
+									+img-upload('img-1.jpg')
+								.content
+									h4.name: +link('Allen & Heath QU16 Digital 16 Input Mixer for Studio + live', 'product-detail.html')
+									.info
+										span.price
+											ins.new-price.red $89
+											del.old-price RRP $100
+					p.see-all.text-center
+						| See all in #[a(href="" title="Live Sound & PA") Live Sound & PA]

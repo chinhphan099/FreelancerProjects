@@ -1,0 +1,98 @@
+.column
+  .payment-col
+    h2.checkout-title #[span 4] Order Review
+    .order-review-inner
+        table.order-review-table
+            thead
+                tr
+                    th.item Item
+                    th.qty Qty
+                    th.subtotal Subtotal
+                    th.action
+            tbody
+                tr
+                    td
+                        .cart-item
+                            +link("").thumb
+                                +img-upload('cart-1.jpg')
+                            .content
+                                h3.title
+                                    +link('Allen & Heath QU16 Digital 16 Input Mixer for Studio + live')
+                    td.qty
+                        .custom-number
+                            input(type="number", id="qty", value="2", name="name", class="input-number")
+                    td.cart-price: span.price $129.99
+                    td.action: +link().btn-delete: i.icon-remove
+                tr
+                    td
+                        .cart-item
+                            +link("").thumb
+                                +img-upload('cart-1.jpg')
+                            .content
+                                h3.title
+                                    +link('Allen & Heath QU16 Digital 16 Input Mixer for Studio + live')
+                    td.qty
+                        .custom-number
+                            input(type="number", id="qty", value="2", name="name", class="input-number")
+                    td.cart-price: span.price $129.99
+                    td.action: +link().btn-delete: i.icon-remove
+                tr
+                    td
+                        .cart-item
+                            +link("").thumb
+                                +img-upload('cart-1.jpg')
+                            .content
+                                h3.title
+                                    +link('Allen & Heath QU16 Digital 16 Input Mixer for Studio + live')
+                    td.qty
+                        .custom-number
+                            input(type="number", id="qty", value="2", name="name", class="input-number")
+                    td.cart-price: span.price $129.99
+                    td.action: +link().btn-delete: i.icon-remove
+        .cart-totals
+            table.total-table
+                tbody
+                    tr.pusher-t
+                        td.title Subtotal
+                        td.amount: span.price $44.95
+                    tr.pusher-b
+                        td.title Shipping
+                        td.amount: span.price $0.00
+                    tr.grand-totals
+                        td GRAND Total
+                        td.amount: span.price $0.00
+                    tr.text-right
+                        td(colspan="2") (incl. GST $20.90)
+        .cart-payment
+            span or 4 payments of $137.25 interest &amp; fee free with
+            +img('afterpay.png')
+            +link('More info', '#oxipay').more-info
+              | More info
+              i.icon-arrow-right
+        .review-bottom
+            .fieldset
+                label.label(for="yourYomment") Leave your comment
+                +textarea('yourYomment', '')
+            .fieldset
+                .checkbox
+                    input(type="checkbox" name="cb_01" id="cb_01" value="cb_01" checked="checked")
+                    label(for="cb_01") Authority to leave parcel if receiver not available #[span No signature required. If this is required please note parcel will be taken back to post office or newsagency for collection if no one is at home.]
+                    i.icon-check
+            .fieldset
+                .checkbox
+                    input(type="checkbox" name="cb_02" id="cb_02" value="cb_02")
+                    label(for="cb_02") Subscribe to our newsletter
+                    i.icon-check
+            .fieldset
+                .checkbox
+                    input(type="checkbox" name="cb_03" id="cb_03" value="cb_03")
+                    label(for="cb_03") I agree to the #[+link('Terms and conditions')]
+                    i.icon-check
+            .fieldset
+                button(type="submit").button.larger.btn-tertiary.expanded
+                    span PLACE ORDER NOW
+                    i.icon-locked
+            .fieldset
+                .geotrust-inner
+                    +img('geotrust-img.png')
+                    +img('blocked-img.png')

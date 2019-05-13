@@ -1,0 +1,183 @@
+if bodyClass == 'gift-page'
+  - var cls = 'gift-card'
+.product-wrapper.clearfix(class=cls)
+  .container
+    // Main info Block
+    .main-info.clearfix
+      if bodyClass == 'product-detail-page'
+        h1.product-name Arturia DrumBrute Analogue Drum Beat Production Machine
+        span.text-flag All-in-one analog Drum Machine with an intuitive sequencer
+        .clearfix.review-wrap
+          .review-box
+            span.rating
+              span.stars.stars-4
+            a.read-review(href="javascript:;" data-scrollto='{"handle": "#reviews"}') Read all review
+          .logo-right: +img('arturia-logo.png')
+      else
+        h1.product-name Soundcorp Digital Gift Card
+        .editor
+          ul
+            li Let them choose the perfect present from #[+link('Soundcorp.com.au.')]
+            li Enter the amount, and the recipent's details below to have a gift card emailed directly to the recipient within a few hours or on your selected date.
+
+    // Gallery Block
+    .gallery-block
+      // Sharing Toolbox
+      .controler.clearfix
+        .sharing-toolbox
+          .box: +img-upload('box-1.png')
+          .box: +img-upload('box-2.png')
+          .box: +img-upload('box-3.png')
+          .box: +img-upload('box-4.png')
+        .btn-wrap
+          +link('Wishlist', '#!').button.btn-secondary
+            i.icon-heart-outline
+            span.hidden-md-down  Wishlist
+          +link('Compare', '#!').button.btn-secondary
+            i.icon-compare
+            span.hidden-md-down  Compare
+
+      // Gallery
+      .gallery
+        if bodyClass == 'product-detail-page'
+          // Main Slider
+          .slider.thumb-slider(data-cslider='{"type": "syncing", "navFor": ".slider-nav", "view": "true", "hasPopup": true}')
+            .slick.slider-thumb
+              .item: +img-upload('pdp-1.jpg').img-view(data-zoom-image="images/upload/pdp-1.jpg")
+              .item: +img-upload('pdp-1.jpg').img-view(data-zoom-image="images/upload/pdp-1.jpg")
+              .item: +img-upload('pdp-1.jpg').img-view(data-zoom-image="images/upload/pdp-1.jpg")
+              .item: +img-upload('pdp-1.jpg').img-view(data-zoom-image="images/upload/pdp-1.jpg")
+              .item: +img-upload('pdp-1.jpg').img-view(data-zoom-image="images/upload/pdp-1.jpg")
+              .item: +img-upload('pdp-1.jpg').img-view(data-zoom-image="images/upload/pdp-1.jpg")
+            span.load
+
+          // Nav Slider
+          .slider.nav-slider(data-cslider='{"type": "syncing", "navFor": ".slider-thumb"}')
+            .slick.slider-nav
+              .item: +img-upload('pdp-thumb-1.jpg').img-view
+              .item: +img-upload('pdp-thumb-1.jpg').img-view
+              .item: +img-upload('pdp-thumb-1.jpg').img-view
+              .item: +img-upload('pdp-thumb-1.jpg').img-view
+              .item: +img-upload('pdp-thumb-1.jpg').img-view
+              .item: +img-upload('pdp-thumb-1.jpg').img-view
+            span.load
+        else
+          +img('gift-card.png')
+      if bodyClass == 'gift-page'
+        .warning-box
+          i.icon-alert-triangle
+          p Gift cards are not redeemable for cash and are not refundable, more details please see #[+link('Gift card terms and conditions')]
+
+    .details
+      // Detail Block
+      .add-to-bag-area
+        +form({id: 'addToBagFrm'})
+          .wrap-inner
+            .inner
+              if bodyClass == 'product-detail-page'
+                // Price Area
+                .price-area
+                  .price
+                    span.new-price.red $599
+                    span.old-price #[span normally] 799
+                    span.save-price
+                      i.icon-tag
+                      | save 20%
+                  .oxipay(data-popup='{"handle": ".more-info", "type": "inline"}')
+                    span or 4 payments of $137.25 interest &amp; fee free with
+                    +img('afterpay.png')
+                    +link('More info', '#oxipay').more-info
+                      | More info
+                      i.icon-arrow-right
+                  .popup#oxipay(style="display: none;")
+                    +link('Afterpay').hidden-sm-down
+                      +img('afterpay-info.png', '//www.afterpay.com/en-AU/terms')
+                    +link('Afterpay').hidden-md-up
+                      +img('afterpay-info-mb.jpg', '//www.afterpay.com/en-AU/terms')(style="max-width: 299px;")
+              else
+                .price-area
+                  .price
+                    span.new-price $599
+                  .value-box
+                    span.text Enter value
+                    input(type="text" value="100" class="value")
+                    span.price ($100 - $500)
+                .light-grey-box
+                  +checkbox({id: 'sendToFriend', text: 'Send gift card to friend'})
+                  .box-content
+                    .fieldset
+                      label.label(for="senderName") Sender Name
+                      +input({id: 'senderName', placeholder: 'Sender Name'})
+                    .fieldset
+                      label.label(for="recipientName") Recipient Name #[span *]
+                      +input({id: 'recipientName', placeholder: 'Recipient Name'})
+                    .fieldset
+                      label.label(for="recipientEmail") Recipient Email Address #[span *]
+                      +input({id: 'recipientEmail', type: 'email', placeholder: 'Recipient Email Address'})
+                    .fieldset(data-char="200")
+                      label.label(for="customMessage") Custom Message #[span *]
+                      +textarea('customMessage', 'Custom Message')
+                      span.count-char Characters Remaining:&nbsp;
+                    +checkbox({id: 'cb_02', text: 'Get notofication email when your friend receives Gift Card'})
+                    .row
+                      .col-xs-12.col-lg-6
+                        .fieldset
+                          label.label(for="daytoSend") Day To Send #[span *]
+                          +customDate({id: 'daytoSend'})
+                      .col-xs-12.col-lg-6
+                        .fieldset
+                          label.label(for="timeZone") Select Time Zone
+                          +customSelect({id: 'timeZone'}, [
+                            {value: 'Pacific Standard Time', selected: 'selected'},
+                            {value: '2'}
+                          ])
+                    .fieldset
+                      +button({id: 'previewGiftCard'}).button.btn-primary Preview gift card
+              // Pink Box
+              .add-to-bag-box
+                .wrap.clearfix
+                  .form-group.fieldset
+                    .inner-group
+                      +label('qty', 'Qty')
+                      +customSelect({id: 'qty'}, [
+                        {value: '1', selected: 'selected'},
+                        {value: '2'}
+                      ])
+                      if bodyClass == 'product-detail-page'
+                        span.notice.in-stock
+                          i.icon-check-circle
+                          |  In Stock
+                        // <span class="notice out-stock"><i class="icon-remove"></i> Out Stock</span>
+
+                    // Button Add to Bag
+                    +button({id: 'addToBagBtn', type: 'submit'}).button.btn-tertiary
+                      | Add to cart
+                      i.icon-shopping-cart
+                  .form-group.check-paypal
+                    span or
+                    a(title="Check out with Paypal" href="#!"): +img('check-paypal.png')
+
+      if bodyClass == 'product-detail-page'
+        .rent-area
+          +form({id: 'rentFrm'})
+            +img('rentplus.png').logoplus
+            h3 Or rent for:
+            .radio-list
+              fieldset
+                .radio.circle
+                  input(type="radio" name="guide_sb_group" id="radio_01" value="radio_01" required="required" aria-required="true")
+                  label(for="radio_01") #[b $10.85] / Week - Minimum 6 months rental
+                  i.icon-check
+              fieldset
+                .checkbox.circle
+                  input(type="radio" name="guide_sb_group" id="radio_02" value="radio_02" required="required" aria-required="true")
+                  label(for="radio_02") #[b $8.31] / Week - Minimum 12 months rental
+                  i.icon-check
+            .group-inner
+              .col-left
+                p Rental payments made monthly.
+                +link('Apply to Purchase Info')
+              .col-right
+                +button({id: 'secondary-1'}).button.btn-secondary.rent Why rent?
+                +button({id: 'primary-1'}).button.btn-primary.rent-now Rent now
+

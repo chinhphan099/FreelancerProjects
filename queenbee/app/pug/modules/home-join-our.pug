@@ -1,0 +1,13 @@
+.join-our
+	.queenbee.hidden-md-down: img(src="images/queenbee.png", alt="")
+	.head
+		h2.title
+			span.flower-small: img(src="images/flower-small.png", alt="")
+			span Join our hive
+		p Signup for new arrivals, VIP sales, Special offers & more
+	.subscribe(data-validates='{"isHideMessage": true}')
+		+form({id: 'joinOurFrm'})
+			.fieldset
+				.custom-input.mail-box
+					button(type="submit"): i.icon-next
+					span: input(type="email" id="joinOutEmailTxt" name="joinOutEmailTxt" placeholder="Your Mail..." required="required")

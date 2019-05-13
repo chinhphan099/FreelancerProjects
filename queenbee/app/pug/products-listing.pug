@@ -1,0 +1,13 @@
+extends layouts/layout
+
+block vars
+	-title = 'Product Listing'
+	-bodyClass = 'product-listing-page'
+
+block main
+	main
+		.container
+			+promotion-top()
+			+breadcrumbs([{title: 'Maternity', href: 'product-listing-all.html'}, {title: 'Pants, Leggings + Shorts', href: 'products-listing.html'}, {title: 'Maternity Leggings'}])
+			include modules/plp-category-list
+			include modules/plp-faqs

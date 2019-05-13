@@ -1,0 +1,43 @@
+extends layouts/layout
+
+block vars
+	-title = 'Contact'
+	-bodyClass = 'contact-page'
+	-mainNav = 7
+
+block main
+	main
+		+head-block('Contact Us').only-text
+		.contact-block
+			form(action="#")
+				.container
+					.row
+						.col-xs-12.col-md-6.col-left
+							.fieldset
+								label.label(for="Name") Name#[span *]
+								+input({id: 'Name', placeholder: 'First name & Last name'})
+							.fieldset
+								label.label(for="PhoneNumber") Phone Number#[span *]
+								+input({id: 'PhoneNumber', placeholder: 'Ex: +1.9876543210', type: 'tel'})
+							.fieldset
+								label.label(for="Roles") Roles#[span *]
+								+customSelect({id: 'Roles'}, [
+									{value: '', text: 'Choose role'},
+									{value: 'Option 1'},
+									{value: 'Option 2'}
+								])
+							.fieldset
+								label.label(for="School") Phone Number#[span *]
+								+input({id: 'School', placeholder: 'Ex: Baldivis Gardens Primary School'})
+							.fieldset.hidden-md-up
+								label.label(for="Enquiry") Enquiry#[span *]
+								+textarea('Enquiry', 'What do you want to say?')
+							.fieldset
+								button(type="submit").button.btn-secondary.expanded send
+						.col-xs-12.col-md-6.col-right.hidden-sm-down
+							.fieldset
+								label.label(for="Enquiry") Enquiry#[span *]
+								+textarea('Enquiry', 'What do you want to say?')
+
+
+

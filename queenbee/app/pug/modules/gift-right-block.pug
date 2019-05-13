@@ -1,0 +1,43 @@
+.col-md-6.right-block
+	h2.title Queen Bee Gift Voucher
+	.editor
+		strong Spoll her a gift she'll love
+		p Let her choose her own gift from our gorgeous range so she can find something that fits her perfectly
+		strong Give her a gift from Australia's leading online shopping boutique for Mums-to-be
+		p She'll be able to select her own beautiful (and much appreciated) gift from over 60 local and international labels, with all the latest looks from around the world.
+	+link('Read more...')
+	.gift-form
+		.note-text
+			h3
+				i.icon-arrow-down
+				|Get your Queen Bee Gift Voucher new
+			span just fill in your details and that's one less job left on your to-do list
+		.pink-module(data-validates='{"isHideMessage": true}')
+			+form({id: "addToBagFrm"})
+				.fieldset
+					+label('howlikeddl', 'How would you like the gift voucher sent?').label
+					+customSelect({id: 'howlikeddl'}, [
+						{value: '', text: 'Please select an option'},
+						{value: 'Option 1'},
+						{value: 'Option 2'}
+					])(required="required")
+				.fieldset
+					+label('amountTxt', 'Amount ($) <span>*</span>').label
+					.custom-number(data-number='{"handle": "amountTxt", "dot": true}')
+						+input({id: 'amountTxt', placeholder: '0.00', type: 'number'})(required="" data-input="" autocomplete="off")
+				.fieldset
+					+label('recipcientName', 'To Name <span>*</span>').label
+					+input({id: 'recipcientName', placeholder: "Recipient's name"})(required)
+				.fieldset
+					+label('recipcientMail', 'To Email Address').label
+					+input({id: 'recipcientMail', placeholder: "Recipient's name", type: 'email'})
+				.fieldset
+					+label('fromName', 'From (Name) <span>*</span>').label
+					+input({id: 'fromName', placeholder: "Your name"})(required)
+				.fieldset
+					+label('yourMessage', 'Message').label
+					+textarea('areaMessage', 'Your message')
+				.fieldset
+				+button({id: 'addToBagBtn', type: 'submit'}).button.btn-tertiary.expanded
+					| Add to cart
+					i.icon-cart-plus

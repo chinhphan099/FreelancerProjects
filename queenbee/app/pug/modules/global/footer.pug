@@ -1,0 +1,77 @@
+footer.footer
+	a(href="javascript;" data-scrollto='{"handle": "body"}').back-to-top: img(src="images/back-to-top.png", alt="Back to Top")
+	.footer-top.clearfix
+		.row-ft
+			.contacts
+				a(href="#" title="Queenbee Logo").logo-queenbee-footer
+					img(src="images/logo-queenbee-footer.png", alt="")
+				ul
+					li
+						a(href="tel:+1300 773 449")
+							| <i class="icon-phone"></i><a href="tel:+1300 773 449">1300 773 449 (AU)</a><span> or </span><a href="tel:+61 2 9486 3944">+61 2 9486 3944</a>
+					li
+						a(href="#!" title="Mail us")
+							i.icon-mail-alt
+							span Mail us
+			.menu-ft
+				.col-ft
+					h4 ABOUT QUEEN BEE
+					ul.nav
+						li: +link('Our Story', 'about.html')
+						li: +link('Our Blog', 'blog-landing.html')
+						li: +link('Press Coverage')
+						li: +link('Customer Reviews', 'testimonials.html')
+						li: +link('Affiliate Program', 'affiliate.html')
+						li: +link('Afterpay at Queen Bee')
+				.col-ft
+					h4 CUSTOMER SERVICE
+					ul.nav
+						li: +link('Shipping Information')
+						li: +link('International Delivery')
+						li: +link('Returns and Exchanges')
+						li: +link('FAQs')
+						li: +link('Size Guide')
+						li: +link('Afterpay at Queen Bee')
+				.col-ft
+					h4 MY ACCOUNT
+					ul.nav
+						li: +link('Login')
+						li: +link('Register')
+						li: +link('Order History')
+						li: +link('Wishlist')
+						li: +link('Change Password')
+			.col-subscribe(data-validates='{"isHideMessage": true}')
+				h4 NEWSLETTER SUBSCRIBE
+				p Signup for new arrivals, VIP sales, #[span Special offers &amp; more]
+				+form({id: 'footerSubcribeFrm'})
+					.fieldset
+						.custom-input.mail-box
+							button(type="submit"): i.icon-next
+							span: input(type="email" id="footerEmailTxt" name="footerEmailTxt" placeholder="Your Mail..." required="required")
+				ul.social-footer
+					li: a(href="https://www.facebook.com/queenbeematernity" title="facebook"): i.icon-fb
+					li: a(href="https://plus.google.com/+QueenbeeAumaternity/" title="Google"): i.icon-google
+					li: a(href="#" title="Youtube"): i.icon-youtube
+					li: a(href="http://www.instagram.com/queenbeematernity" title="Instagram"): i.icon-instagram
+					li: a(href="https://twitter.com/queenbeestyle" title="Twitter"): i.icon-twitter
+					li: a(href="#" title="Pinterest"): i.icon-pin
+		.celebrating-logo
+			a(href="#"): img(src="images/celebrating.png", alt="")
+	.footer-bottom
+		ul.list-payment
+			li: a(href="#!" title="paypal"): span: img(src="images/paypal.png", alt="")
+			li: a(href="#!" title="visa"): span: img(src="images/visa.png", alt="")
+			li: a(href="#!" title="mostercord"): span: img(src="images/mostercord.png", alt="")
+			li: a(href="#!" title="bank deposit"): span: img(src="images/direct-bank-deposit.png", alt="")
+		.inner-afterpay
+			.logo-afterpay
+				span.flower-small: img(src="images/flower-small.png", alt="")
+				a.afterpay-flogo(href="#!" title="Afterpay"): img(src="images/after-pay.png", alt="")
+			p Shop now. Wear now. Pay later
+		.copyRight
+			p Queen Bee Maternity Pty Ltd © 2005 - 2017. #[span All rights reserved]
+		nav
+			a(href="#" title="#") Terms &amp; Conditions
+			a(href="#" title="#") Privacy Policy
+
+

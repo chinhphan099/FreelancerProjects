@@ -1,0 +1,162 @@
+extends layouts/layout
+
+block vars
+    -title = 'Blog'
+    -bodyClass = 'blog-page'
+    -mainNav = 1
+    -sub1 = 1
+    -sub2 = 1
+    -sub3 = 0
+
+block main
+    main
+        .container
+            .breadcrumbs-wrap
+                +breadcrumbs([
+                    {title: 'Home', href: 'index.html', text: 'Home'},
+                    {title: 'Blog', href: '#'}
+                ])
+            .wrap-page.clearfix
+                .primary
+                    h2.title Blog
+                    .blog-listing
+                        .blog-item
+                            .thumb
+                                +link('Title', 'blog-details.html')
+                                    +img-upload('blog-1.jpg')
+                            .content
+                                h2: +link('USB Microphone Comparison Guide: Which Model is Best for You?', 'blog-details.html')
+                                .date: +link('Aug 15, 2016')
+                                .desc
+                                    p How many times has this happened to you: you are sitting in a coffee shop, out on the road or simply enjoying the company of friends when inspiration hits you and – you don’t have your recording equipment?...
+                                +link('Read now').read-now
+                        .blog-item
+                            .thumb
+                                +link('Title', 'blog-details.html')
+                                    +img-upload('blog-1.jpg')
+                            .content
+                                h2: +link('USB Microphone Comparison Guide: Which Model is Best for You?', 'blog-details.html')
+                                .date: +link('Aug 15, 2016')
+                                .desc
+                                    p How many times has this happened to you: you are sitting in a coffee shop, out on the road or simply enjoying the company of friends when inspiration hits you and – you don’t have your recording equipment?...
+                                +link('Read now').read-now
+                        .blog-item
+                            .thumb
+                                +link('Title', 'blog-details.html')
+                                    +img-upload('blog-1.jpg')
+                            .content
+                                h2: +link('USB Microphone Comparison Guide: Which Model is Best for You?', 'blog-details.html')
+                                .date: +link('Aug 15, 2016')
+                                .desc
+                                    p How many times has this happened to you: you are sitting in a coffee shop, out on the road or simply enjoying the company of friends when inspiration hits you and – you don’t have your recording equipment?...
+                                +link('Read now').read-now
+                        .blog-item
+                            .thumb
+                                +link('Title', 'blog-details.html')
+                                    +img-upload('blog-1.jpg')
+                            .content
+                                h2: +link('USB Microphone Comparison Guide: Which Model is Best for You?', 'blog-details.html')
+                                .date: +link('Aug 15, 2016')
+                                .desc
+                                    p How many times has this happened to you: you are sitting in a coffee shop, out on the road or simply enjoying the company of friends when inspiration hits you and – you don’t have your recording equipment?...
+                                +link('Read now').read-now
+                        .blog-item
+                            .thumb
+                                +link('Title', 'blog-details.html')
+                                    +img-upload('blog-1.jpg')
+                            .content
+                                h2: +link('USB Microphone Comparison Guide: Which Model is Best for You?', 'blog-details.html')
+                                .date: +link('Aug 15, 2016')
+                                .desc
+                                    p How many times has this happened to you: you are sitting in a coffee shop, out on the road or simply enjoying the company of friends when inspiration hits you and – you don’t have your recording equipment?...
+                                +link('Read now').read-now
+                        .blog-item
+                            .thumb
+                                +link('Title', 'blog-details.html')
+                                    +img-upload('blog-1.jpg')
+                            .content
+                                h2: +link('USB Microphone Comparison Guide: Which Model is Best for You?', 'blog-details.html')
+                                .date: +link('Aug 15, 2016')
+                                .desc
+                                    p How many times has this happened to you: you are sitting in a coffee shop, out on the road or simply enjoying the company of friends when inspiration hits you and – you don’t have your recording equipment?...
+                                +link('Read now').read-now
+                        .blog-item
+                            .thumb
+                                +link('Title', 'blog-details.html')
+                                    +img-upload('blog-1.jpg')
+                            .content
+                                h2: +link('USB Microphone Comparison Guide: Which Model is Best for You?', 'blog-details.html')
+                                .date: +link('Aug 15, 2016')
+                                .desc
+                                    p How many times has this happened to you: you are sitting in a coffee shop, out on the road or simply enjoying the company of friends when inspiration hits you and – you don’t have your recording equipment?...
+                                +link('Read now').read-now
+                        .blog-item
+                            .thumb
+                                +link('Title', 'blog-details.html')
+                                    +img-upload('blog-1.jpg')
+                            .content
+                                h2: +link('USB Microphone Comparison Guide: Which Model is Best for You?', 'blog-details.html')
+                                .date: +link('Aug 15, 2016')
+                                .desc
+                                    p How many times has this happened to you: you are sitting in a coffee shop, out on the road or simply enjoying the company of friends when inspiration hits you and – you don’t have your recording equipment?...
+                                +link('Read now').read-now
+                        .blog-item
+                            .thumb
+                                +link('Title', 'blog-details.html')
+                                    +img-upload('blog-1.jpg')
+                            .content
+                                h2: +link('USB Microphone Comparison Guide: Which Model is Best for You?', 'blog-details.html')
+                                .date: +link('Aug 15, 2016')
+                                .desc
+                                    p How many times has this happened to you: you are sitting in a coffee shop, out on the road or simply enjoying the company of friends when inspiration hits you and – you don’t have your recording equipment?...
+                                +link('Read now').read-now
+                    .pagination-wrap.text-center
+                        ul.pagination
+                            li.prev-page: +link('Previous', 'javascript:;').prev #[i.icon-arrow-left]
+                            li.next-page.hidden-md-up: +link('Next', 'javascript:;') #[i.icon-arrow-right]
+                            li.number
+                                ul.clearfix
+                                    li: +link('1') 1#[span /5]
+                                    li.active: +link('2') 2#[span /5]
+                                    li: +link('3') 3#[span /5]
+                                    li: +link('4') 4#[span /5]
+                                    li: +link('5') 5#[span /5]
+                            li.next-page.hidden-sm-down: +link('Next', 'javascript:;') #[i.icon-arrow-right]
+                .sidebar
+                    .sidebar-widget
+                        h3 Recent Posts
+                        .editor
+                            ul
+                                li: +link('USB Microphone Comparison Guide: Which Model is Best for You?', 'blog-details.html')
+                                li: +link('USB Microphone Comparison Guide: Which Model is Best for You?', 'blog-details.html')
+                                li: +link('USB Microphone Comparison Guide: Which Model is Best for You?', 'blog-details.html')
+                                li: +link('USB Microphone Comparison Guide: Which Model is Best for You Inflatable Swan?', 'blog-details.html')
+                    .sidebar-widget
+                        h3 Categories
+                        .editor
+                            ul
+                                li: +link('Live Sound & PA')
+                                li: +link('Studio Gear')
+                                li: +link('Headphones')
+                                li: +link('Accessories')
+                                li: +link('Specials')
+                    .sidebar-widget
+                        h3 Archives
+                        .editor
+                            ul
+                                li: +link('August 2017')
+                                li: +link('May 2017')
+                    .sidebar-widget
+                        h3 Tags
+                        .tags
+                            +link('USA')
+                            +link('Microphone').hashtag-l
+                            +link('Live')
+                            +link('Headphone')
+                            +link('Accessories')
+                            +link('Guitar').hashtag-m
+                            +link('Sale').hashtag-l
+                            +link('Studio')
+                            +link('Guitar')
+
+

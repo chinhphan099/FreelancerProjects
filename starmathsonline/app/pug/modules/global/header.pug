@@ -1,0 +1,33 @@
+header.header
+	.header-outer
+		.container
+			.main-header
+				.logo: +link('Star Math Online', 'index.html')
+					+img('logo.png', 'Star Math Online')
+				+link('', 'javascript:;').control.hidden-lg-up
+					i.icon-hamburger
+			nav.navigation-wrap
+				ul.navigation.clearfix
+					+items([
+						{title: 'Home', href: 'index.html'},
+						{title: 'For students', href: 'student.html'},
+						{title: 'Parents', href: 'parents.html'},
+						{title: 'Teachers', href: 'teachers.html'},
+						{title: 'Register', href: 'register.html'},
+						{title: 'Leaderboard', href: 'leaderboard.html'},
+						{title: 'News', href: 'news.html'},
+						{title: 'Contact us', href: 'contact-us.html'},
+						{
+							title: 'Logins',
+							text: '<span>Logins</span>',
+							href: 'javascript:;',
+							liClass: 'login-item menu-item-has-children',
+							subClass: 'sub-menu',
+							subList: [
+								{title: 'Student login'},
+								{title: 'Parent login'},
+								{title: 'Teacher login'},
+								{title: 'School login'}
+							]
+						}
+					], mainNav)

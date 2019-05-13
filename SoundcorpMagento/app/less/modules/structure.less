@@ -1,0 +1,492 @@
+// Header
+// Main
+// Footer
+//--------------//
+.inputFocusing {
+    overflow-x: hidden;
+    body {
+        overflow-x: hidden;
+    }
+}
+
+// Header
+header {
+}
+
+// Main
+main {
+}
+
+// Footer
+// ----------------------------------------------------------------------------------------
+footer {
+    color: @color01;
+    a {
+        color: @color01;
+        &:hover {
+            color: @color01;
+        }
+    }
+    h4 {
+        margin-bottom: 15px;
+        .lato-black();
+        .font-size(20px);
+        line-height: 1.3;
+        text-transform: uppercase;
+    }
+    .logo-footer {
+       margin-bottom: 40px;
+       text-align: center;
+    }
+    @media (min-width: @xl-min) {
+        .logo-footer {
+            margin-bottom: 50px;
+        }
+    }
+}
+
+// Back To Top
+// ----------------------------------------------------------------------------------------
+.back-to-top {
+    display: none;
+    .position(fixed, null 10px 244px null);
+    .size(45px);
+    background-color: #3d4950;
+    font-weight: 700px;
+    color: @color01;
+    text-align: center;
+    .border-radius(3px);
+    text-transform: uppercase;
+    z-index: 1;
+    i, span {
+        display: block;
+    }
+    i {
+        margin-top: 5px;
+    }
+    @media (min-width: @md-min) {
+        bottom: 170px;
+    }
+    @media (min-width: @md-min) {
+        right: 30px;
+        bottom: 90px;
+    }
+}
+
+// Newslleter footer
+// ----------------------------------------------------------------------------------------
+.newsletter-ft {
+    position: relative;
+    height: 300px;
+    margin-bottom: 30px;
+    .bgd {
+        .position();
+        .background-size(cover);
+        background-position: center;
+    }
+    .content {
+        margin: 0 auto;
+        max-width: 705px;
+        position: relative;
+        padding: 30px 10px 10px;
+        color: @color01;
+        text-align: center;
+    }
+    h2 {
+        margin-bottom: 20px;
+        .lato-light();
+        .font-size(24px);
+    }
+    p {
+        margin-bottom: 10px;
+        .font-size(14px);
+        .line-height(22px, 14px);
+    }
+    .custom-input {
+        margin-bottom: 30px;
+        i {
+            font-size: 15px;
+            color: @color12;
+        }
+        input,
+        button {
+            .transition(all .3s ease);
+            border-color: @color01;
+        }
+        button:hover {
+            background-color: @color12;
+            border-color: @color12;
+            i {
+                color: @color01;
+            }
+        }
+    }
+    @media (min-width: @md-min) {
+        height: 280px;
+        h2 {
+            .font-size(36px);
+        }
+        p {
+            margin-bottom: 0;
+        }
+        .contnet {
+            padding-top: 50px;
+        }
+        .social-ft {
+            i {
+                font-size: 36px;
+            }
+            .icon-blogspot,
+            .icon-youtube-square {
+                font-size: 32px;
+            }
+        }
+    }
+}
+
+// Social footer
+// ----------------------------------------------------------------------------------------
+.social-ft {
+    display: table;
+    margin: 0 auto;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    li {
+        display: table-cell;
+        vertical-align: middle;
+        color: @color01;
+    }
+    a {
+        color: @color01;
+        &:hover {
+            color: @color03;
+        }
+    }
+    i {
+        font-size: 32px;
+    }
+    .icon-blogspot,
+    .icon-youtube-square {
+        font-size: 28px;
+    }
+    @media (min-width: @md-min) {
+        
+    }
+}
+
+// Trustmaker footer
+// ----------------------------------------------------------------------------------------
+.trustmaker-ft {
+    text-align: center;
+    font-size: 0;
+    li {
+        display: block;
+        margin-bottom: 25px;
+    }
+    @media (min-width: @sm-min) {
+        padding-bottom: 25px;
+        .list {
+            display: table;
+            width: 100%;
+        }
+        li {
+            display: table-cell;
+            padding: 0 15px;
+            vertical-align: middle;
+        }
+    }
+    @media (max-width: @xs-max) {
+        padding-bottom: 10px;
+        li {
+            &:nth-child(2),
+            &:nth-child(3) {
+                width: 50%;
+                display: inline-block;
+                vertical-align: middle;
+            }
+            &:nth-child(2) {
+                padding-right: 5px;
+            }
+            &:nth-child(3) {
+                padding-left: 5px;
+            }
+        }
+    }
+}
+
+// Footer inner
+// ----------------------------------------------------------------------------------------
+.footer-inner {
+    .clearfix();
+    padding: 50px 10px 0;
+    color: @color01;
+    .social-ft {
+        max-width: 250px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .logo-soundcorp-business {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    @media (min-width: @sm-min) {
+        .social-ft {
+            margin-top: 25px;
+            margin-left: -10px;
+        }
+        .logo-soundcorp-business {
+            text-align: left;
+        }
+    }
+    @media (min-width: @md-min) {
+        .col {
+            margin-bottom: 20px;
+            & + .col {
+                margin-bottom: 0;
+            }
+        }
+    }
+    @media (min-width: @xl-min) {
+        padding: 55px 30px 0;
+        .col {
+            float: left;
+            width: 60%;
+            & + .col {
+                width: 40%;
+            }
+        }
+    }
+}
+
+// Custom Service
+// ----------------------------------------------------------------------------------------
+.customer-service {
+    @media (min-width: @md-min) {
+        width: 50%;
+        float: left;
+    }
+    @media (min-width: @xl-min) {
+        width: 45%;
+    }
+}
+
+
+// List Style
+// ----------------------------------------------------------------------------------------
+.list-ft {
+    li {
+        position: relative;
+        padding-left: 25px;
+        margin-bottom: 10px;
+        a:hover {
+            span {
+                text-decoration: underline;
+            }
+        }
+    }
+    i {
+        .position(2px null null 0);
+        font-size: 15px;
+    }
+    p {
+        line-height: 1.7;
+    }
+}
+.list-ft-service {
+    margin-bottom: 10px;
+    li {
+        width: 50%;
+        float: left;
+    }
+}
+
+
+// Menu Footer
+// ----------------------------------------------------------------------------------------
+.menu-ft {
+    @media (min-width: @md-min) {
+        float: left;
+        width: 50%;
+        .col-ft {
+            width: 50%;
+        }
+    }
+    @media (min-width: @xl-min) {
+        width: 55%;
+    }
+}
+
+.col-ft {
+    margin-bottom: 30px;
+    .nav {
+        li {
+            &:first-child {
+                a {
+                    padding-top: 0;
+                }
+            }
+        }
+        a {
+            display: block;
+            padding: 7px 0;
+            color: #eee;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    @media (min-width: @md-min) {
+        float: left;
+    }
+}
+
+// Account Footer
+// ----------------------------------------------------------------------------------------
+.acount-ft {
+    .acount {
+        margin-bottom: 20px;
+        a {
+            display: inline-block;
+            margin-right: 15px;
+            .size(78px, 30px);
+            color: #eee;
+            line-height: 30px;
+            border: 1px solid #eee;
+            .border-radius(3px);
+            text-transform: uppercase;
+            text-align: center;
+            &:hover {
+                color: @color01;
+                opacity: 0.8;
+            }
+        }
+    }
+    @media (min-width: @md-min) {
+        width: 50%;
+    }
+    @media (min-width: @xl-min) {
+        width: 46%;
+    }
+}
+
+// Showroom inner
+// ----------------------------------------------------------------------------------------
+.showroom {
+    .thumb {
+        margin-bottom: 20px;
+    }
+    img {
+        border: 2px solid @color01;
+        .border-radius(3px);
+    }
+    @media (min-width: @md-min) {
+        width: 50%;
+    }
+    @media (min-width: @xl-min) {
+        width: 54%;
+    }
+}
+
+// Footer Bottom
+// ----------------------------------------------------------------------------------------
+.footer-bottom  {
+    padding: 20px 10px 25px;
+    background-color: @color08;
+    .group-inner {
+        margin-bottom: 20px;
+        text-align: center;
+        a {
+            display: inline-block;
+            margin: 0 8px;
+        }
+    }
+    @media (min-width: @md-min) {
+        .group-inner {
+            padding-top: 10px;
+            text-align: right;
+        }
+    }
+    @media (min-width: @xl-min) {
+        padding: 15px 30px;
+        .group-inner {
+            float: left;
+            width: 30%;
+            margin-bottom: 0;
+            text-align: center;
+        }
+    }
+}
+
+
+// Payment
+// ----------------------------------------------------------------------------------------
+.payment {
+    h4 {
+        .font-size(16px);
+    }
+    @media (min-width: @md-min) {
+        float: left;
+    }
+    @media (min-width: @xl-min) {
+        width: 35%;
+    }
+}
+.list-payment {
+    display: table;
+    margin-bottom: 10px;
+    width: 100%;
+    li {
+        display: table-cell;
+        padding: 0 3px;
+        vertical-align: middle;
+        a {
+            display: block;
+        }
+        img {
+            .border-radius(3px);
+        }
+    }
+    @media (min-width: @md-min) {
+        max-width: 380px;
+    }
+    @media (min-width: @xl-min) {
+        max-width: 456px;
+        margin-bottom: 0;
+    }
+}
+
+
+// CopyRight
+// ----------------------------------------------------------------------------------------
+.copyRight {
+    text-align: center;
+    p {
+        margin-bottom: 12px;
+    }
+    a {
+        display: inline-block;
+        padding: 0 10px;
+        color: #eee;
+        & + a {
+            border-left: 1px solid #eee;
+        }
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    @media (min-width: @md-min) {
+
+    }
+    @media (min-width: @xl-min) {
+        float: right;
+        padding-top: 22px;
+        width: 35%;
+        text-align: right;
+        a {
+            & + a {
+                padding-right: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+extends layouts/layout
+
+block vars
+	-title = 'Gift'
+	-bodyClass = 'gift'
+
+block main
+	main
+		.gift-wrap.container
+			+breadcrumbs([{title: 'Queen Bee Gift Voucher'}])
+			.row
+				include modules/gift-left-block
+				include modules/gift-right-block

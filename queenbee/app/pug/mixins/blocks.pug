@@ -1,0 +1,172 @@
+mixin blocks(headingText)
+	.block&attributes(attributes)
+		h2.heading!= headingText
+		if block
+			block
+
+mixin price(newPrice, oldPrice)
+	span.price&attributes(attributes)
+		ins.new-price!=newPrice
+		del.old-price!=oldPrice
+
+mixin pagination()
+	.pagination-wrap&attributes(attributes)
+		ul.pagination
+			li.prev-page: +link('Previous', 'javascript:;').prev #[i.icon-arrow-left]
+			li.next-page.hidden-md-up: +link('Next', 'javascript:;') #[i.icon-arrow-right]
+			li.number
+				ul.clearfix
+					li: +link('1') 1#[span /5]
+					li.active: +link('2') 2#[span /5]
+					li.unavailable: span ...
+					li: +link('3') 3#[span /5]
+					li: +link('4') 4#[span /5]
+					li: +link('5') 5#[span /5]
+			li.next-page.hidden-sm-down: +link('Next', 'javascript:;') #[i.icon-arrow-right]
+
+mixin divider(text, spanClass)
+	.divider&attributes(attributes)
+		span(class!=spanClass)!=text
+
+//- Used in Style Guide page.
+mixin color(name, code)
+	li(data-handler="")
+		span.color(style="background-color: " + code)
+		code(data-copy!=name)!=code
+		span!=name
+
+mixin icons(classes)
+	ul.icons-list-temp
+		each classname in classes
+			li(data-handler="")
+				i(class=classname, data-copy="i." + classname)
+				//span.name!=classname
+
+mixin hexa(src, brandname,text)
+	.hexa
+		+img-upload(src, 'Alt_Of_Image')
+		a(href="products-listing.html" title!=brandname).desc
+			strong.brandname!=brandname
+			span!=text
+
+mixin product-item(img, imgHover, productName, starCls, sale, stock, news, bestSelling)
+	.item
+		.product-item
+			.img-tmb
+				a(href="product-detail.html").product-image
+					span.img-cate: +img-upload(img, productName).img-view
+					span.img-cate-hover: +img-upload(imgHover, productName)
+					span.shop-now: img(src="images/shop-now.png", alt="")
+				if sale
+					span.sale On sale
+				if news
+					span.productBags: span New Arrival
+				if stock
+					span.productBags.gray: span more stock soon
+			h2
+				+link(productName, 'product-detail.html')
+			if bestSelling
+				p.selling best selling cotton leggings
+			if sale
+				+price('$199.99', '$259.99')
+			else
+				span.price $199.99
+			.reviews
+				span.stars(class!=starCls)
+
+mixin about-item(title, src, desc)
+	li
+		.item
+			a(href="#" title=title).thumb
+				+img-upload('about-1.png', title)
+			.content
+				h3: a(href="#!" title=title)!=title
+				p!=desc
+				a(href="#" title="Read Now").read-now
+					| Read now
+					i.icon-next
+
+mixin slide-blog-item(src)
+	.item
+		.thumb
+			a(href="blog-detail.html" title="A SNEAK PEEK AT OUR 12TH BIRTHDAY COLLECTION CURATED FOR QUEEN BEE"): +img-upload(src)
+		.content
+			h2: a(href="blog-detail.html" title="A SNEAK PEEK AT OUR 12TH BIRTHDAY COLLECTION CURATED FOR QUEEN BEE") A SNEAK PEEK AT OUR 12TH BIRTHDAY COLLECTION CURATED FOR QUEEN BEE
+			.desc
+				p On a beautiful sunny weekend in Sydney we had a photoshoot with gorgeous model Georgia, pregnant with her second baby. It's our 12 year celebration collection, carefully curated in beautiful prints and fabrics especially hand picked by our wonderful design team. We had the pleasure of working with some amazing brands for this collaboration and they are exclusive to us! Here's a sneak peek below....
+				p Lovely chevron print shift dress below in a beautiful soft fabric - definitely one of our favourites! Pictured above is the Destiny Maxi Dress - it drapes elegantly as you walk...
+			a(href="blog-detail.html" title="Read Now").read-now
+				| Read now
+				i.icon-next
+
+mixin blog-list-item(title, src, heading,desc)
+	li(data-parent)
+		h2: +link(title, 'blog-landing.html')
+		.item(data-child)
+			a(href="blog-detail.html" title=title).thumb
+				+img-upload(src, title)
+			.content
+				h3: a(href="blog-detail.html" title="Title")!=heading
+				p!=desc
+			a(href="blog-detail.html" title="Read Now").read-now
+				| Read now
+				i.icon-next
+
+mixin blog-item(src, desc)
+	.blog-item.clearfix
+		.thumb
+			a(href="blog-detail.html", title="This IS HOW WE DO STRIPES AT QUEEN BEE")
+				+img-upload(src)
+		.content
+			h2: +link('This IS HOW WE DO STRIPES AT QUEEN BEE', 'blog-detail.html')
+			.meta-item-blog Posted on #[a(href="blog-cate.html" title="June 14, 2017") June 14, 2017] in #[a(href="#" title="Discover Your Style") Discover Your Style] | #[span 0 comments]
+			.desc!=desc
+			.read-now-wrap
+				a(href="blog-detail.html" title="Read now").read-now
+					| Read now
+					i.icon-next
+			.sharing-toolbox
+				.box: +img-upload('box-1.png')
+				.box: +img-upload('box-2.png')
+				.box: +img-upload('box-3.png')
+				.box: +img-upload('box-4.png')
+
+mixin blog-item(src, desc)
+	.blog-item.clearfix
+		.thumb
+			a(href="blog-detail.html", title="This IS HOW WE DO STRIPES AT QUEEN BEE")
+				+img-upload(src)
+		.content
+			h2: +link('This IS HOW WE DO STRIPES AT QUEEN BEE', 'blog-detail.html')
+			.meta-item-blog Posted on #[a(href="blog-cate.html" title="June 14, 2017") June 14, 2017] in #[a(href="#" title="Discover Your Style") Discover Your Style] | #[span 0 comments]
+			.desc!=desc
+			.read-now-wrap
+				a(href="blog-detail.html" title="Read now").read-now
+					| Read now
+					i.icon-next
+			.sharing-toolbox
+				.box: +img-upload('box-1.png')
+				.box: +img-upload('box-2.png')
+				.box: +img-upload('box-3.png')
+				.box: +img-upload('box-4.png')
+
+mixin inthemedia-item(src, title)
+	li
+		a(href="data-inthemedia.html" title=title).thumb.media-popup
+			+img-upload(src, title)
+			span.view-full-size
+				| View full size
+				i.icon-next
+
+mixin category-block(heading, desc)
+	.category-block.module-01
+		.heading
+			h2!=heading
+			p!=desc
+		.slider.carousel-slider(data-cslider='{"type": "carousel", "setPositionArrows": true}')
+			.slick
+				include ../modules/global/global-carousel
+			span.load
+
+mixin promotion-top()
+	.promo-top: p #[strong SALE20] Extra 20% Off sale items here today with code

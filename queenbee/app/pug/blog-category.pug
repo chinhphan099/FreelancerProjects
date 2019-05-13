@@ -1,0 +1,35 @@
+extends layouts/layout
+
+block vars
+	-title = 'Blog Category'
+	-bodyClass = 'blog-category-page'
+
+block main
+	main
+		.testimonials-wrap
+			.container
+				+promotion-top()
+				+breadcrumbs([{title: 'Maternity Style Blog'}])
+				.heading-description
+					span.flower: img(src="images/flower-small-01.png", alt="")
+					.inner
+						h1 Maternity Style Blog
+						p Our purpose is to inspire women with confidence and style during their journey into motherhood. Welcome to our maternity blog.purchases!
+
+				// Slider blog
+				.slider.slide-blog(data-cslider='{"type": "single", "dots": true, "arrows": false}')
+					.slick
+						+slide-blog-item('slide-img-1.jpg')
+						+slide-blog-item('slide-img-1.jpg')
+						+slide-blog-item('slide-img-1.jpg')
+					span.load
+
+				// Blog list
+				ul.blog-list(data-sameheight="no4parent")
+					+blog-list-item("Discover your style", "blog-1.jpg", "THIS IS HOW WE DO STRIPES AT QUEEN BEE", "We're excited to release our new chic stripe collection with so many styling options for your pregnancy.")
+					+blog-list-item("Well being", "blog-2.jpg", "A SNEAK PEEK AT OUR 12TH BIRTHDAY COLLECTION CURATED FOR QUEEN BEE", "On a beautiful sunny weekend in Sydney we had a photoshoot with gorgeous model Georgia, pregnant with...")
+					+blog-list-item("Well being", "blog-3.jpg", "SAFE AND NATURAL REMEDIES FOR SOOTHING COMMON PREGNANCY SYMPTOMS", "We're excited to release our new chic stripe collection with so many styling options for your pregnancy.")
+					+blog-list-item("Well being", "blog-4.jpg", "SAFE AND NATURAL REMEDIES FOR SOOTHING COMMON PREGNANCY SYMPTOMS", "We're excited to release our new chic stripe collection with so many styling options for your pregnancy.")
+					+blog-list-item("Well being", "blog-5.jpg", "SAFE AND NATURAL REMEDIES FOR SOOTHING COMMON PREGNANCY SYMPTOMS", "We're excited to release our new chic stripe collection with so many styling options for your pregnancy.")
+					+blog-list-item("Well being", "blog-6.jpg", "SAFE AND NATURAL REMEDIES FOR SOOTHING COMMON PREGNANCY SYMPTOMS", "We're excited to release our new chic stripe collection with so many styling options for your pregnancy.")
+

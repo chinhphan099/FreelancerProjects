@@ -1,0 +1,91 @@
+.shopby-product-list
+	.wrap-inner
+		.heading
+			span.flower-small: img(src="images/flower-small-01.png", alt="")
+			h1 Maternity Leggings
+			p so essential, don't stop at just one...
+		.category-alt
+			.inner
+				+link('title').button.small.btn-primary.filter
+					span
+						span
+							i.icon-filter
+							i.icon-cancel
+							| Filter
+				.filter-products
+					span.totall-product-count 236&nbsp;
+					| Products
+			.sorting
+				+customSelect({id: 'select_id'}, [
+					{value: '', text: 'Please select an option'},
+					{value: 'Option 1'},
+					{value: 'Option 2'}
+				])
+	.block-filter
+		h2.filter-by-text
+			i.icon-close
+			| Filter By
+		.filter-wrap(data-collapse='{"type": "toggleSelf", "duration": 300}')
+			.filter-group
+				h4.filter-choices(data-handle="sub1" data-active data-init)
+					i.icon-caret-down
+					i.icon-caret-up
+					| Sub Category
+				.filter-content(data-content="sub1")
+					ul.filter-list
+						li: +checkbox({id: 'cb_01', text: 'Dresses (35)'})
+						li: +checkbox({id: 'cb_02', text: 'Dresses'})
+						li: +checkbox({id: 'cb_03', text: 'Dresses'})
+						li: +checkbox({id: 'cb_04', text: 'Dresses'})
+						li: +checkbox({id: 'cb_05', text: 'Dresses'})
+						li: +checkbox({id: 'cb_06', text: 'Dresses'})
+						li: +checkbox({id: 'cb_07', text: 'Dresses'})
+						li: +checkbox({id: 'cb_08', text: 'Dresses'})
+						li: +checkbox({id: 'cb_09', text: 'Dresses'})
+						li: +checkbox({id: 'cb_10', text: 'Dresses'})
+						li: +checkbox({id: 'cb_11', text: 'Dresses'})
+						li: +checkbox({id: 'cb_12', text: 'Dresses'})
+						li: +checkbox({id: 'cb_13', text: 'Dresses'})
+						li: +checkbox({id: 'cb_14', text: 'Dresses'})
+						li: +checkbox({id: 'cb_15', text: 'Dresses'})
+						li: +checkbox({id: 'cb_15', text: 'Dresses'})
+						li: +checkbox({id: 'cb_16', text: 'Dresses'})
+						li: +checkbox({id: 'cb_17', text: 'Dresses'})
+						li: +checkbox({id: 'cb_18', text: 'Dresses'})
+						li: +checkbox({id: 'cb_19', text: 'Dresses'})
+			.filter-group
+				h4.filter-choices(data-handle="sub2" data-active data-init)
+					i.icon-caret-down
+					i.icon-caret-up
+					| Colour
+				.filter-content(data-content="sub2")
+					ul.filter-list
+						li: +checkbox({id: 'cb_20', text: 'Dresses (35)'})
+						li: +checkbox({id: 'cb_21', text: 'Dresses'})
+						li: +checkbox({id: 'cb_22', text: 'Dresses'})
+						li: +checkbox({id: 'cb_23', text: 'Dresses'})
+			.filter-group
+				h4.filter-choices(data-handle="sub3" data-active)
+					i.icon-caret-down
+					i.icon-caret-up
+					| Size
+				.filter-content(data-content="sub3")
+					ul.filter-list
+						li: +checkbox({id: 'cb_24', text: 'Dresses (35)'})
+						li: +checkbox({id: 'cb_25', text: 'Dresses'})
+						li: +checkbox({id: 'cb_26', text: 'Dresses'})
+						li: +checkbox({id: 'cb_27', text: 'Dresses'})
+			.filter-group
+				h4.filter-choices(data-handle="sub4" data-active)
+					i.icon-caret-down
+					i.icon-caret-up
+					| Price
+				.filter-content(data-content="sub4")
+					ul.filter-list
+						li: +checkbox({id: 'cb_28', text: 'Dresses (35)'})
+						li: +checkbox({id: 'cb_29', text: 'Dresses'})
+						li: +checkbox({id: 'cb_30', text: 'Dresses'})
+						li: +checkbox({id: 'cb_31', text: 'Dresses'})
+	.listing-products
+		.inner.clearfix
+			include global/global-carousel

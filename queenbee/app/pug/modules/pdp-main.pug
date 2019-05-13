@@ -1,0 +1,203 @@
+.product-wrapper.clearfix
+	// Main info Block
+	.main-info
+		h2.brand-name floressa
+		h1.product-name Floressa - Elicia Nursing Dress
+		span.text-flag new arrival
+		.clearfix
+			ul.items-inline
+				li: a(href="#" title="Pregnancy").icon-pregnancy
+				li: a(href="#" title="Pregnancy").icon-pregnancy-1
+				li: a(href="#" title="Pregnancy").icon-pregnancy-2
+			.review-box
+				span.rating
+					span.stars.stars-4 &nbsp;(3)
+				a.read-review.hidden-sm-down(href="javascript:;" data-scrollto='{"handle": "#reviewBlock"}') Read all review
+
+	// Gallery Block
+	.gallery-block
+		// Sharing Toolbox
+		.sharing-toolbox
+			.box: +img-upload('box-1.png')
+			.box: +img-upload('box-2.png')
+			.box: +img-upload('box-3.png')
+			.box: +img-upload('box-4.png')
+
+		// Gallery
+		.gallery
+			// Main Slider
+			.slider.thumb-slider(data-cslider='{"type": "syncing", "navFor": ".slider-nav", "view": "true", "hasPopup": true, "hasZoom": true, "smoothZoom": true}')
+				span.flag On Sale
+				.slick.slider-thumb
+					.item(data-zoom-id="zoom2"): +img-upload('pdp-1.jpg').img-view.zoomer(data-zoom-image="images/upload/pdp-1.jpg")
+					.item(data-zoom-id="zoom2"): +img-upload('pdp-1.jpg').img-view.zoomer(data-zoom-image="images/upload/pdp-1.jpg")
+					.item(data-zoom-id="zoom2"): +img-upload('pdp-1.jpg').img-view.zoomer(data-zoom-image="images/upload/pdp-1.jpg")
+					.item(data-zoom-id="zoom2"): +img-upload('pdp-1.jpg').img-view.zoomer(data-zoom-image="images/upload/pdp-1.jpg")
+				span.load
+				.pinchZoomWrap(data-pinchzoom='{"initUnder": 767}')
+					.pinchZoomInner
+						i.icon-cancel-circle(data-closezoom="")
+						div(data-handle="")
+
+			// Nav Slider
+			.slider.vertical-slider(data-cslider='{"type": "syncing", "navFor": ".slider-thumb"}')
+				.slick.slider-nav
+					.item: +img-upload('pdp-thumb-1.jpg').img-view
+					.item: +img-upload('pdp-thumb-1.jpg').img-view
+					.item: +img-upload('pdp-thumb-1.jpg').img-view
+					.item: +img-upload('pdp-thumb-1.jpg').img-view
+				span.load
+
+	// Detail Block
+	.details
+		.add-to-bag-area(data-validates='{"isHideMessage": true}')
+			+form({id: 'addToBagFrm'})
+				// Price Area
+				.price-area
+					+price('$1,145.00', 'RRP $1,299.00')
+					.afterpay(data-popup='{"handle": ".more-info", "type": "inline"}')
+						span or 4 payment of $29.99 with
+						+img('afterpay.png')
+						+link('More info', '#afterpay').more-info
+							| More info
+							i.icon-angle-right
+					.popup#afterpay(style="display: none;")
+						+link('Afterpay').hidden-sm-down
+							+img('afterpay-info.png', '//www.afterpay.com/en-AU/terms')
+						+link('Afterpay').hidden-md-up
+							+img('afterpay-info-mb.jpg', '//www.afterpay.com/en-AU/terms')(style="max-width: 299px;")
+
+				// Pink Box
+				.pink-box
+					.note-text
+						i.icon-arrow-down
+						span Click to select your size and colour
+
+					.wrap.clearfix
+						.form-group.fieldset
+							+label('qty', 'Size').hidden-md-down
+							+customSelect({id: 'sizeDdl'}, [
+								{value: '', text: 'Please select an option'},
+								{value: 'Option 1'},
+								{value: 'Option 2'}
+							])(required="required")
+						.right-wrap(data-popup='{"handle": ".size-chart", "type": "inline"}')
+							+link('Size chart', '#sizeChart').size-chart
+								+img('size-chart.png')
+							.popup#sizeChart(style="display: none;")
+								.editor
+									h2.text-center Size Guide
+									table(data-table='{"items": 3, "hasLeftTitle": true}')
+										tr
+											td.head-title Size chart
+											td XXS
+											td XS
+											td S
+											td M
+											td L
+											td XL
+											td XXL
+											td Size Comments
+										tr
+											td.head-title Australia
+											td 6
+											td 8
+											td 10
+											td 12
+											td 14
+											td 16
+											td 18
+											td
+										tr
+											td.head-title US
+											td 2
+											td 4
+											td 6
+											td 8
+											td 10
+											td 12
+											td 14
+											td
+
+					.wrap.clearfix
+						.form-group.fieldset
+							.product-code
+								| Product code: #[span FLOR-N096.XS]
+						.right-wrap
+							span.notice.in-stock
+								i.icon-ok-circle
+								|  In Stock
+
+					.wrap.clearfix
+						.form-group.fieldset
+							+label('qty', 'Quantity').hidden-md-down
+							.custom-number(data-number='{"handle": "qty", "maxLength": 3}')
+								+input({id: 'qty', value: '2', type: 'number'})(data-input="" autocomplete="off")
+								+btn({})(data-decrease="")
+									i.icon-minus
+								+btn({})(data-increase="")
+									i.icon-plus
+						.right-wrap
+							.add-wishlist: +link('ADD TO WISHLIST', 'javascript:;')#addToWishList
+
+					.wrap.clearfix
+						.form-group.fieldset
+							.product-code
+								| Product code: #[span FLOR-N096.XS]
+						.right-wrap
+							span.notice.out-stock
+								i.icon-cancel-circle
+								|  Out Stock
+
+					.wrap.clearfix
+						.form-group.fieldset
+							+label('pdpEmailTxt', 'Email').hidden-md-down
+							+input({id: 'pdpEmailTxt', placeholder: 'Year email here', type: 'email'})(required="")
+						.right-wrap
+							+button({id: 'notifyBtn', type: 'button'}).button.medium.btn-primary.expanded Notify Me
+							.add-wishlist: +link('ADD TO WISHLIST')
+
+				// Button Add to Bag
+				+button({id: 'addToBagBtn', type: 'submit'}).button.btn-tertiary.expanded
+					| Add to cart
+					i.icon-cart-plus
+
+		// Product Intros
+		.product-intro(data-collapse='{"breakpoint": 767, "effect": "fade"}')
+			ul.tablist.hidden-sm-down
+				li(data-active): a.tab-control(href="javascript:;" data-handle="Description" data-init) Description
+				li(data-active): a.tab-control(href="javascript:;" data-handle="Payment") Payment
+				li(data-active): a.tab-control(href="javascript:;" data-handle="Delivery") Delivery &amp; Returns
+			.tab-container
+				a.tab-control.hidden-md-up(href="javascript:;" data-active data-handle="Description")
+					| Description
+					i.icon-caret-down
+				.tab-content(data-content="Description")
+					.editor
+						p The prettiness of this print will have you enthralled
+						h4 ABOUT ME
+						p -  jersey maternity nursing dress has a crossover v-neckline with long sleeves and elegant side ruching to accommodate growing baby bump
+						p -  to nurse, pull aside the outer layer and lift up the inner crop layer for discreet breastfeeding
+						p -  floral posy
+						p -  95% polyester 5% spandex
+						p -  30 degree machine wash, do not bleach, dry flat, low heat iron, do not dry clean, wash with like colours
+						p -  length from shoulder to hem approx. 87cm
+						h4  STYLE ME
+						p WORK Perfect with ankle boots and your monogrammed tote
+						p SPECIAL Occasions call for heels and pearl earrings
+
+				a.tab-control.hidden-md-up(href="javascript:;" data-active data-handle="Payment")
+					| Payment
+					i.icon-caret-down
+				.tab-content(data-content="Payment")
+					.editor
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae vitae odit rem saepe, nisi quibusdam necessitatibus neque, voluptas modi maxime.
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae vitae odit rem saepe, nisi quibusdam necessitatibus neque, voluptas modi maxime.
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae vitae odit rem saepe, nisi quibusdam necessitatibus neque, voluptas modi maxime.
+				a.tab-control.hidden-md-up(href="javascript:;" data-active data-handle="Delivery")
+					| Delivery
+					i.icon-caret-down
+				.tab-content(data-content="Delivery")
+					.editor
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae vitae odit rem saepe, nisi quibusdam necessitatibus neque, voluptas modi maxime.
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae vitae odit rem saepe, nisi quibusdam necessitatibus neque, voluptas modi maxime.

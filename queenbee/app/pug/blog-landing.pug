@@ -1,0 +1,26 @@
+extends layouts/layout
+
+block vars
+	-title = 'Blog landing'
+	-bodyClass = 'blog-landing-page'
+
+block main
+	main
+		.container
+			+promotion-top()
+			+breadcrumbs([{href: 'blog-category.html', title: 'Maternity Style Blog'}, {title: 'Discover your style'}])
+			.heading-description
+				span.flower: img(src="images/flower-small-01.png", alt="")
+				.inner
+					h1 Discover your style
+					p We believe fashion can make women feel good about themselves and during pregnancy that encouragement is vital. Discover your style and embrace your changing body with confidence
+			.blog-wrap.clearfix
+				.primary
+					+blog-item("blog-1.jpg", "On a beautiful sunny weekend in Sydney we had a photoshoot with gorgeous model Georgia, pregnant with her second baby. It's our 12 year celebration collection, carefully curated in beautiful prints and fabrics especially hand picked by our wonderful design team. We had the pleasure of working with some amazing brands for this collaboration and they are exclusive to us! Here's a sneak peek below....")
+					+blog-item("blog-2.jpg", "On a beautiful sunny weekend in Sydney we had a photoshoot with gorgeous model Georgia, pregnant with her second baby. It's our 12 year celebration collection, carefully curated in beautiful prints and fabrics especially hand picked by our wonderful design team. We had the pleasure of working with some amazing brands for this collaboration and they are exclusive to us! Here's a sneak peek below....")
+					+blog-item("blog-3.jpg", "On a beautiful sunny weekend in Sydney we had a photoshoot with gorgeous model Georgia, pregnant with her second baby. It's our 12 year celebration collection, carefully curated in beautiful prints and fabrics especially hand picked by our wonderful design team. We had the pleasure of working with some amazing brands for this collaboration and they are exclusive to us! Here's a sneak peek below....")
+					+blog-item("blog-4.jpg", "On a beautiful sunny weekend in Sydney we had a photoshoot with gorgeous model Georgia, pregnant with her second baby. It's our 12 year celebration collection, carefully curated in beautiful prints and fabrics especially hand picked by our wonderful design team. We had the pleasure of working with some amazing brands for this collaboration and they are exclusive to us! Here's a sneak peek below....")
+					+blog-item("blog-5.jpg", "On a beautiful sunny weekend in Sydney we had a photoshoot with gorgeous model Georgia, pregnant with her second baby. It's our 12 year celebration collection, carefully curated in beautiful prints and fabrics especially hand picked by our wonderful design team. We had the pleasure of working with some amazing brands for this collaboration and they are exclusive to us! Here's a sneak peek below....")
+					+blog-item("blog-6.jpg", "On a beautiful sunny weekend in Sydney we had a photoshoot with gorgeous model Georgia, pregnant with her second baby. It's our 12 year celebration collection, carefully curated in beautiful prints and fabrics especially hand picked by our wonderful design team. We had the pleasure of working with some amazing brands for this collaboration and they are exclusive to us! Here's a sneak peek below....")
+				.sidebar
+					include modules/global/blog-sidebar

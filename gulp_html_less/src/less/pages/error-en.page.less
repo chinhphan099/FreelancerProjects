@@ -1,0 +1,77 @@
+@import "../components/mixin.less";
+/*------------------------------------------------------------------------------ Global Home*/
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+main {
+	padding: 60px 0;
+}
+.error-inner {
+	h2, h4 {
+		font-size: 55px;
+		font-weight: bold;
+		letter-spacing: 1px;
+		
+		.sub-text {
+			display: block;
+			font-size: 24px;
+		}
+	}
+	.btn {
+		.flex-display(inline-flex);
+		.align-items(center);
+		position: relative;
+		margin-top: 20px;
+		padding: 15px 30px;
+		background-color: #FF770D;
+		font-size: 17px;
+		color: #fff;
+		border-color: #FF770D;
+		font-weight: 500;
+		border-radius: 3px;
+		text-decoration: none;
+		&:after {
+			content: "\f105";
+			font-family: icomoon;
+			font-size: 22px;
+			margin-left: 20px;
+			line-height: 1;
+		}
+		&:hover {
+			background-color: #ff7e19;
+		}
+	}
+	@media (min-width: 768px) {
+		h2 {
+			display: none;
+		}
+		.w_item {
+			.flex-display();
+			.align-items(center);
+			& > div {
+				width: 50%;
+			}
+		}
+		
+	}
+	@media (min-width: 992px) {
+		h4 {
+			font-size: 90px;
+			.sub-text {
+				font-size: 40px;
+			}
+		}
+		p {
+			font-size: 17px;
+		}
+	}
+	@media (max-width: 767px) {
+		text-align: center;
+		h4 {
+			display: none;
+		}
+		.w_thumb {
+			margin-top: -30px;
+		}
+	}
+}

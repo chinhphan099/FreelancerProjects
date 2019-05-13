@@ -1,0 +1,79 @@
+html, body { height: 100%; padding: 0px; margin: 0px; overflow: hidden;}
+#clientframe, #clientframe1 {
+  height:100%;
+  width:100%;
+}
+.clientframe-container {
+  height: calc(50%);
+  width: 100%;
+}
+.container {
+  position: relative;
+}
+@keyframes changebg {
+  0% {background-color: white;}
+  50% {background-color: orange;}
+  100% {background-color: white;}
+}
+.button {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 9;
+  padding: 10px;
+  font-size: 20px;
+  background-color: #ccc;
+  border: none;
+  box-shadow: -1px 1px 5px black;
+  cursor: pointer;
+  -webkit-animation: changebg 2s linear infinite;
+     -moz-animation: changebg 2s linear infinite;
+      -ms-animation: changebg 2s linear infinite;
+       -o-animation: changebg 2s linear infinite;
+          animation: changebg 2s linear infinite;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0,0,0,.5);
+  text-align: center;
+  z-index: 11;
+  display: none;
+}
+.overlay:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 0;
+  height: 100%;
+}
+.overlay .content {
+  position: relative;
+  max-width: 85%;
+  width: 600px;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #fff;
+  padding: 20px;
+  line-height: 1.5;
+  font-size: 14px;
+  text-align: left;
+  padding-left: 20px;
+}
+.overlay .content .close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  outline: none;
+}
+.overlay .content h2 {
+  margin: 20px 0 5px;
+}

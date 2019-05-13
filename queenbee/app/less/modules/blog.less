@@ -1,0 +1,475 @@
+// Blog Global
+// ----------------------------------------------------------------------------------------
+.read-now {
+	i {
+		margin-left: 10px;
+		font-size: 15px;
+		color: @color23;
+		vertical-align: middle;
+	}
+	&:hover {
+		i {
+			color: @color09;
+		}
+	}
+	@media (min-width: @lg-min) {
+		i {
+			font-size: 18px;
+		}
+	}
+}
+
+// Blog Structure
+// ----------------------------------------------------------------------------------------
+.blog-wrap {
+	.sidebar {
+	}
+	@media (min-width: @lg-min) {
+		.primary {
+			float: left;
+			width: ~"calc(100% - 260px)";
+		}
+		.sidebar {
+			float: right;
+			width: 220px;
+		}
+	}
+}
+
+// Blog Landing - Blog item
+// ----------------------------------------------------------------------------------------
+.blog-item {
+	padding: 25px 0;
+	border-top: 1px solid @color17;
+	&:first-child {
+		padding-top: 0;
+		border-top: none;
+	}
+	.thumb {
+		text-align: center;
+	}
+	.content {
+		padding-top: 12px;
+	}
+	h2 {
+		padding-bottom: 15px;
+		.lato();
+		.font-size(14px);
+		.line-height(22px, 14px);
+		text-transform: uppercase;
+		font-weight: 700;
+	}
+	.meta-item-blog {
+		padding-bottom: 10px;
+		.font-size(12px);
+		color: @color03;
+		.line-height(22px, 12px);
+		a, span {
+			font-size: inherit;
+			color: inherit;
+			line-height: inherit;
+		}
+		a {
+			&:hover {
+				color: @color09;
+			}
+		}
+	}
+	.desc {
+		padding-bottom: 15px;
+		.font-size(13px);
+		color: @color15;
+		.line-height(20px, 13px);
+	}
+	.read-now-wrap {
+		padding-bottom: 15px;
+		.read-now {
+			.font-size(13px);
+		}
+	}
+	.sharing-toolbox {}
+	@media (min-width: @sm-min) {
+		.thumb {
+			float: left;
+			width: 240px;
+		}
+		.content {
+			overflow: hidden;
+			padding-top: 0;
+			padding-left: 23px;
+		}
+	}
+}
+
+// Blog detail
+// ----------------------------------------------------------------------------------------
+.blog-detail {
+	.heading {
+		.lato();
+		.font-size(20px);
+		font-weight: 700;
+		margin-bottom: 15px;
+		text-transform: uppercase;
+		.line-height(28px, 24px);
+	}
+	.meta-blog {
+		color: @color03;
+		.font-size(12px);
+		margin-bottom: 15px;
+		.line-height(22px, 12px);
+		a {
+			color: inherit;
+			&:hover {
+				color: @link-hover;
+			}
+		}
+	}
+	.sharing-toolbox {
+		margin-bottom: 15px;
+	}
+	.editor {
+		padding-top: 20px;
+	}
+	@media (min-width: @md-min) {
+		.heading {
+			.font-size(24px);
+		}
+	}
+}
+
+// Sidebar
+// ----------------------------------------------------------------------------------------
+.sidebar {
+	.group {
+		padding-bottom: 20px;
+	}
+	h3 {
+		padding-bottom: 10px;
+		margin-bottom: 15px;
+		border-bottom: 1px solid @color17;
+		.lato();
+		.font-size(14px);
+		.line-height(22px, 14px);
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+	.editor {
+		li {
+			&:before {
+				background-color: @color09;
+			}
+			a {
+				color: inherit;
+				&:hover {
+					color: @color09;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+
+// Blog cate - Slide Blog
+// ----------------------------------------------------------------------------------------
+.slide-blog {
+	padding-bottom: 30px;
+	margin-bottom: 30px;
+	border-bottom: 1px solid @color17;
+	.thumb {
+		margin-bottom: 20px;
+		border: 1px solid @color20;
+		img {
+			width: 100%;
+		}
+	}
+	.content {
+		text-align: left;
+	}
+	h2 {
+		margin-bottom: 10px;
+		.lato();
+		font-weight: 700;
+		line-height: 1.4;
+		text-transform: uppercase;
+	}
+	.desc {
+		margin-bottom: 15px;
+	}
+	p {
+		margin-bottom: 10px;
+	}
+	@media (min-width: @sm-min) {
+		.thumb {
+			float: left;
+			margin-right: 20px;
+			width: 180px;
+		}
+	}
+	@media (min-width: @md-min) {
+		.thumb {
+			margin-bottom: 0;
+			width: 250px;
+		}
+		.content {
+			overflow: hidden;
+		}
+	}
+	@media (min-width: @lg-min) {
+		padding-bottom: 35px;
+		.thumb {
+			width: 330px;
+		}
+		* {
+			.font-size(14px);
+		}
+	}
+	@media (max-width: @md-max) {
+		* {
+			.font-size(13px);
+		}
+	}
+}
+
+// Blog cate - Blog List
+// ----------------------------------------------------------------------------------------
+.blog-list {
+	.clearfix();
+	li {
+		margin-bottom: 20px;
+	}
+	.item {
+		position: relative;
+		display: inline-block;
+		margin-bottom: 10px;
+		padding: 15px;
+		background: @color01 ~"url('../images/box-border-blog.png') no-repeat 0 0 / 100% 100%";
+	}
+	.thumb {
+		display: block;
+		margin-bottom: 10px;
+		img {
+			width: 100%;
+		}
+	}
+	h2 {
+		.font-size(20px);
+		a {
+			font-size: inherit;
+		}
+	}
+	h3 {
+		margin-bottom: 10px;
+		.lato();
+		font-weight: 700;
+		line-height: 1.4;
+		text-transform: uppercase;
+	}
+	p {
+		margin-bottom: 15px;
+	}
+	.read-now {
+		float: right;
+	}
+	@media (min-width: @sm-min) {
+		margin-left: -5px;
+		margin-right: -5px;
+		li {
+			float: left;
+			padding: 0 5px;
+			width: 50%;
+			&:nth-child(2n+3) {
+				clear: left;
+			}
+		}
+		.item {
+			padding-bottom: 30px;
+		}
+		.read-now {
+			.position(null 20px 20px null);
+		}
+	}
+	@media (min-width: @lg-min) {
+		margin: 0 -10px 0;
+		li {
+			width: 33.33%;
+			margin-bottom: 30px;
+			padding-left: 10px;
+			padding-right: 10px;
+			&:nth-child(2n+3) {
+				clear: inherit;
+			}
+			&:nth-child(3n+4) {
+				clear: left;
+			}
+		}
+		.item {
+			padding-bottom: 40px;
+		}
+		h2 {
+			margin-bottom: 10px;
+			.font-size(24px);
+		}
+		* {
+			.font-size(14px);
+		}
+	}
+	@media (max-width: @md-max) {
+		h2 {
+			margin-bottom: 10px;
+			.font-size(18px);
+		}
+		* {
+			.font-size(12px);
+		}
+	}
+}
+
+// Affiliate - Inner content
+// ----------------------------------------------------------------------------------------
+.inner-content {
+	padding-bottom: 10px;
+	@media (min-width: @lg-min) {
+		padding-bottom: 30px;
+		.img {
+			margin: 20px 0;
+		}
+	}
+	@media (max-width: @md-max) {
+		p, * {
+			.font-size(13px);
+		}
+	}
+}
+
+// Affiliate - Section Content
+// ----------------------------------------------------------------------------------------
+.section-content {
+	padding-bottom: 20px;
+	.inner {
+		.clearfix();
+	}
+	.col-left {
+		margin-bottom: 20px;
+	}
+	ul {
+		li {
+			position: relative;
+			padding-left: 20px;
+			margin-bottom: 0.8em;
+			&:before {
+				content: "\e81c";
+				.position(2px null null 0);
+				display: inline-block;
+				font-family: "icomoon";
+				font-size: 11px;
+				color: @color09;
+			}
+		}
+	}
+	@media (min-width: @md-min) {
+		.col {
+			width: 50%;
+			float: left;
+		}
+		.col-right {
+			padding: 30px 0 0 20px;
+		}
+	}
+	@media (min-width: @lg-min) {
+		h2 {
+			margin-bottom: 15px;
+			.font-size(24px);
+		}
+	}
+	@media (max-width: @md-max) {
+		h2 {
+			margin-bottom: 10px;
+			.font-size(18px);
+			line-height: 1.4;
+		}
+		ul {
+			li {
+				.font-size(13px);
+			}
+		}
+	}
+}
+
+// Affiliate - Join Out Box
+// ----------------------------------------------------------------------------------------
+.join-out-box {
+	max-width: 380px;
+	padding: 15px 10px;
+	background-color: @color12;
+	border: 1px solid @color17;
+	text-align: center;
+	h4 {
+		margin-bottom: 20px;
+		line-height: 1.4;
+		font-weight: 700;
+	}
+	@media (max-width: @md-max) {
+		h4 {
+			.font-size(12px);
+		}
+	}
+	@media (max-width: @sm-max) {
+		margin: 0 auto;
+	}
+}
+
+// Affiliate - Affiliate List
+// ----------------------------------------------------------------------------------------
+.affiliate-list {
+	.col-left {
+		margin-bottom: 10px;
+	}
+	img {
+		display: block;
+		width: 100%;
+	}
+	.item {
+		margin-bottom: 10px;
+	}
+	@media (min-width: @sm-min) {
+		.col-left {
+			float: left;
+			width: 21.7%;
+			margin-bottom: 0;
+		}
+		.col-right {
+			float: left;
+			width: 78.3%;
+			padding-left: 5px;
+			margin-right: -5px;
+			.clearfix();
+			.item {
+				float: left;
+				width: 50%;
+				padding: 0 5px;
+				margin-bottom: 10px;
+			}
+		}
+	}
+	@media (min-width: @md-min) {
+		max-width: 920px;
+		margin: 0 auto;
+	}
+	@media (min-width: @lg-min) {
+		.col-left {
+			width: 21.5%;
+		}
+		.col-right {
+			margin-right: -10px;
+			padding-left: 10px;
+			width: 78.5%;
+			.item {
+				padding: 0 10px;
+				margin-bottom: 20px;
+				&:nth-child(2n+3) {
+					clear: left;
+				}
+			}
+		}
+	}
+}

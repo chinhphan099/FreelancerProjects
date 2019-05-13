@@ -1,0 +1,88 @@
+extends layouts/layout
+
+block vars
+	-title = 'Contact Us'
+	-bodyClass = 'contact-us-page'
+	-mainNav = 1
+	-sub1 = 1
+	-sub2 = 1
+	-sub3 = 0
+
+block main
+	main
+		.container
+			.breadcrumbs-wrap
+				+breadcrumbs([
+					{title: 'Home', href: 'index.html', text: 'Home'},
+					{title: 'Customer Service', href: '#', text: 'Customer Service'},
+					{title: 'Contact'}
+				])
+			.wrap-page.clearfix
+				.sidebar
+					.sidebar-widget
+						h3 Customer Service
+						ul.nav-left
+							li: +link('Shipping Info')
+							li: +link('Return Policy')
+							li: +link('FAQs', 'faq.html').active
+							li: +link('Contact Us', 'contact.html')
+				.primary
+					h2.title Contact Us
+					.contact-us-wrap
+						.row
+							.col-xs-12.col-lg-6
+								.group
+									h3 Customer Service
+									ul.list-address
+										li
+											+link('tel:0396942600')
+												i.icon-phone-outline
+												span (03) 9694 2600
+										li
+												i.icon-clock
+												| Customer Service Hours
+												p Mon to Fri: 9.00am – 5.30pm
+								.group
+									h3 SOUNDCORP HEAD OFFICE & RETAIL SHOWROOM
+									ul.list-address
+										li
+											i.icon-map-pin
+											| 2/570 City Road, South Melbourne, Vic 3205
+										li
+											+link('tel:0396942600')
+												i.icon-phone-outline
+												span (03) 9694 2600
+										li
+											i.icon-clock
+											| Opening Hours
+											p Mon – Fri 9.00am – 5.30pm <br/> Saturday: 10.00am to 4.00pm <br/>Sun/Public Holidays: Closed
+								.group
+									h3 Sydney Branch Office #[span (Appointment Required)]
+									ul.list-address
+										li
+											i.icon-map-pin
+											| 2/570 City Road, South Melbourne, Vic 3205
+										li
+											+link('tel:0396942600')
+												i.icon-phone-outline
+												span (03) 9694 2600
+								ul.social
+										li: a(href="#" title="facebook"): i.icon-fb
+										li: a(href="#" title="Twitter"): i.icon-twitter
+										li: a(href="#" title="Youtube"): i.icon-youtube-square
+										li: a(href="#" title="Instagram"): i.icon-instagram
+										li: a(href="#" title="Blogspot"): i.icon-blogspot
+							.col-xs-12.col-lg-6
+								p Can't find the information online or need further information? Simply fill out the form & we’ll aim to get back to you within 2 hours
+								form(action="#" method="post").form-contact-us
+									.fieldset
+										label.label(for="yourName") Your Name #[span *]
+										+input({id: 'yourName', placeholder: 'Your Name'})
+									.fieldset
+										label.label(for="yourEmail") Your email #[span *]
+										+input({id: 'yourEmail', placeholder: 'Your email'})
+									.fieldset
+										label.label(for="message") Message #[span *]
+										+textarea('message', 'Your message')
+									.fieldset: +img-upload('notrobot.jpg')
+									.fieldset: +button({id: 'larger-1'}).button.larger.btn-primary Submit

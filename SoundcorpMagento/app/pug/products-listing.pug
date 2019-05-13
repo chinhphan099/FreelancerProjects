@@ -1,0 +1,333 @@
+extends layouts/layout
+
+block vars
+  -title = 'Categories'
+  -bodyClass = 'product-listing-page'
+  -mainNav = 1
+  -sub1 = 1
+  -sub2 = 1
+  -sub3 = 0
+
+block main
+  main
+    .hero-banne(style="background-image: url(images/upload/banner-plp.jpg)")
+      .container
+        h1
+          i.icon-settings
+          span Live Sound & PA
+    .container
+      .breadcrumbs-wrap
+        +breadcrumbs([
+          {title: 'Home', href: 'index.html', text: 'Home'},
+          {title: 'Live Sound & PA', href: '#'}
+        ])
+      .shopby-product-list
+        .description
+          p
+            strong Soundcorp
+            |  takes pride in our great Live Sound product range and expert advice. We carry quality products that you can count on for dependability and quality. Our knowledgeable and friendly staff will help you find the live sound products to fit your needs. Whether you’re looking for pro-level items or entry-level gear, our prices are always competitive. Soundcorp has the best level of inventory in Australia. Along with our expert service and free shipping on most items, there's no reason to shop anywhere else...
+            +link('more').link-more
+        .category-alt.clearfix
+          .filter
+            +link('filter', 'javascript:;').button.radius.btn-primary
+              span filter
+              i.icon-filter
+          .filter-by-text
+            h2 Filter By
+            +link('hide', 'javascript:;').button.btn-secondary
+              span hide
+              i.icon-close
+          .filter-products
+            span.totall-product-count 236
+            | Products
+          .sorting
+            .fieldset
+              +customSelect({id: 'select_id'}, [
+                {value: '', text: 'Sort by name (A -> Z)'},
+                {value: 'Option 1'},
+                {value: 'Option 2'}
+              ])
+        .block-filter
+          .filter-top
+            span You are viewing:
+            .filter-alt
+              +link('Category')
+                span Amplifiers
+                i.icon-close
+              +link('viewing')
+                span Connectors
+                i.icon-close
+            +link('Clear filter').clear-ft
+          .filter-inner(data-collapse='{"type": "toggleSelf", "duration": 300}')
+            .filter-group
+              h4.filter-choices(data-init data-handle="Category" data-active)
+                | Category
+                i.icon-arrow-down
+                i.icon-arrow-up
+              .filter-content(data-content="Category")
+                ul.filter-list
+                  li: +checkbox({id: 'cb_01', text: 'Amplifiers', number: 35, checked: 'checked'})
+                  li: +checkbox({id: 'cb_02', text: 'CablesPremade', number: 12})
+                  li: +checkbox({id: 'cb_03', text: 'CablesPremade', number: 35})
+                  li: +checkbox({id: 'cb_04', text: 'Headphones', number: 35})
+                  li: +checkbox({id: 'cb_05', text: 'In Ear Monitors', number: 35})
+                  li: +checkbox({id: 'cb_06', text: 'Microphones ', number: 35})
+                  li: +checkbox({id: 'cb_07', text: 'Microphones ', number: 35})
+                  li: +checkbox({id: 'cb_08', text: 'Software', number: 35})
+                  li: +checkbox({id: 'cb_09', text: 'Software', number: 35})
+                  li: +checkbox({id: 'cb_10', text: 'Software', number: 35})
+                +link('less').view-more
+                  span less
+            .filter-group
+              h4.filter-choices(data-handle="Brand" data-active)
+                | Brand
+                i.icon-arrow-down
+                i.icon-arrow-up
+              .filter-content(data-content="Brand")
+                ul.filter-list
+                  li: +checkbox({id: 'cb_1', text: 'Ableton', number: 35})
+                  li: +checkbox({id: 'cb_12', text: 'Adam', number: 35})
+                  li: +checkbox({id: 'cb_13', text: 'Akg', number: 35})
+                  li: +checkbox({id: 'cb_14', text: 'Allen & Heath', number: 35})
+                  li: +checkbox({id: 'cb_15', text: 'Apogee', number: 35})
+                  li: +checkbox({id: 'cb_16', text: 'Art', number: 35})
+                  li: +checkbox({id: 'cb_17', text: 'Audio Technica', number: 35})
+                  li: +checkbox({id: 'cb_18', text: 'Audix', number: 35})
+                +link('more').view-more
+                  span more
+            .filter-group
+              h4.filter-choices(data-handle="Price" data-active)
+                | Price
+                i.icon-arrow-down
+                i.icon-arrow-up
+              .filter-content(data-content="Price")
+                ul.filter-list
+                  li: +checkbox({id: 'cb_21', text: '$0 - $99', number: 35})
+                  li: +checkbox({id: 'cb_22', text: '$100 - $99', number: 35})
+                  li: +checkbox({id: 'cb_23', text: '$100 - $99', number: 35})
+                  li: +checkbox({id: 'cb_24', text: '$100 - $99', number: 35})
+                  li: +checkbox({id: 'cb_25', text: '$100 - $99', number: 35})
+                  li: +checkbox({id: 'cb_26', text: '$100 - $99', number: 35})
+                +link('more').view-more
+                  span more
+            .filter-group
+              h4.filter-choices(data-handle="Specials" data-active)
+                | Specials
+                i.icon-arrow-down
+                i.icon-arrow-up
+              .filter-content(data-content="Specials")
+                ul.filter-list
+                  li: +checkbox({id: 'cb_31', text: 'yes (35)', number: 135})
+            .filter-group
+              h4.filter-choices(data-handle="Clearance" data-active)
+                | Clearance
+                i.icon-arrow-down
+                i.icon-arrow-up
+              .filter-content(data-content="Clearance")
+                ul.filter-list
+                  li: +checkbox({id: 'cb_32', text: 'yes (35)', number: 357})
+        .listing-products
+          .inner
+            .item
+              .product-item
+                .img-tmb
+                  a(href="product-details.html", title="Title")
+                    img(src="images/upload/product-1.jpg", alt="Title")
+                  span.sale Sale
+                h2
+                  +link('Akai MPK249 49 Key USB MIDI Keyboard Controller', 'product-details.html')
+                .price
+                  span.new-price.red $799
+                  span.old-price normally $799
+                  span.save-price
+                    i.icon-tag
+                    | save 20%
+                .group-inner.clearfix
+                  +link('Shop all brands ', 'href').button.radius.btn-primary
+                    span add to cart
+                    i.icon-shopping-cart
+                  .pull-right
+                    +link('Wishlist ', 'href').product-wishlist
+                      span.relative
+                        i.icon-heart-outline
+                        span.tooltip Add wishlist list
+                    +link('Compare ', 'href').product-compare
+                      span.relative
+                        i.icon-compare
+                        span.tooltip Compare
+            .item
+              .product-item
+                .img-tmb
+                  a(href="product-details.html", title="Title")
+                    img(src="images/upload/product-1.jpg", alt="Title")
+                  span.sale Sale
+                h2
+                  +link('Akai MPK249 49 Key USB MIDI Keyboard Controller', 'product-details.html')
+                .price
+                  span.new-price $1399
+                  span.old-price rrp $799
+                .group-inner.clearfix
+                  +link('Shop all brands ', 'href').button.radius.btn-primary
+                    span add to cart
+                    i.icon-shopping-cart
+                  .pull-right
+                    +link('Wishlist ', 'href').product-wishlist
+                      span.relative
+                        i.icon-heart-outline
+                        span.tooltip Add wishlist list
+                    +link('Compare ', 'href').product-compare
+                      span.relative
+                        i.icon-compare
+                        span.tooltip Compare
+            .item
+              .product-item
+                .img-tmb
+                  a(href="product-details.html", title="Title")
+                    img(src="images/upload/product-1.jpg", alt="Title")
+                h2
+                  +link('Akai MPK249 49 Key USB MIDI Keyboard Controller', 'product-details.html')
+                .price
+                  span.new-price $1399
+                  span.old-price normally $799
+                  span.save-price
+                    i.icon-tag
+                    | save 20%
+                .group-inner.clearfix
+                  +link('Shop all brands ', 'href').button.radius.btn-primary
+                    span add to cart
+                    i.icon-shopping-cart
+                  .pull-right
+                    +link('Wishlist ', 'href').product-wishlist
+                      span.relative
+                        i.icon-heart-outline
+                        span.tooltip Add wishlist list
+                    +link('Compare ', 'href').product-compare
+                      span.relative
+                        i.icon-compare
+                        span.tooltip Compare
+            .item
+              .product-item
+                .img-tmb
+                  a(href="product-details.html", title="Title")
+                    img(src="images/upload/product-1.jpg", alt="Title")
+                  span.sale Sale
+                h2
+                  +link('Akai MPK249 49 Key USB MIDI Keyboard Controller', 'product-details.html')
+                .price
+                  span.new-price $1399
+                  span.old-price rrp $799
+                .group-inner.clearfix
+                  +link('Shop all brands ', 'href').button.radius.btn-primary
+                    span add to cart
+                    i.icon-shopping-cart
+                  .pull-right
+                    +link('Wishlist ', 'href').product-wishlist
+                      span.relative
+                        i.icon-heart-outline
+                        span.tooltip Add wishlist list
+                    +link('Compare ', 'href').product-compare
+                      span.relative
+                        i.icon-compare
+                        span.tooltip Compare
+            .item
+              .product-item
+                .img-tmb
+                  a(href="product-details.html", title="Title")
+                    img(src="images/upload/product-1.jpg", alt="Title")
+                  span.sale Sale
+                h2
+                  +link('Akai MPK249 49 Key USB MIDI Keyboard Controller', 'product-details.html')
+                .price
+                  span.new-price.red $799
+                  span.old-price normally $799
+                  span.save-price
+                    i.icon-tag
+                    | save 20%
+                .group-inner.clearfix
+                  +link('Shop all brands ', 'href').button.radius.btn-primary
+                    span add to cart
+                    i.icon-shopping-cart
+                  .pull-right
+                    +link('Wishlist ', 'href').product-wishlist
+                      i.icon-heart-outline
+                    +link('Wishlist ', 'href').product-compare
+                      i.icon-compare
+            .item
+              .product-item
+                .img-tmb
+                  a(href="product-details.html", title="Title")
+                    img(src="images/upload/product-1.jpg", alt="Title")
+                  span.sale Sale
+                h2
+                  +link('Akai MPK249 49 Key USB MIDI Keyboard Controller', 'product-details.html')
+                .price
+                  span.new-price $1399
+                  span.old-price rrp $799
+                .group-inner.clearfix
+                  +link('Shop all brands ', 'href').button.radius.btn-primary
+                    span add to cart
+                    i.icon-shopping-cart
+                  .pull-right
+                    +link('Wishlist ', 'href').product-wishlist
+                      span.relative
+                        i.icon-heart-outline
+                        span.tooltip Add wishlist list
+                    +link('Compare ', 'href').product-compare
+                      span.relative
+                        i.icon-compare
+                        span.tooltip Compare
+            .item
+              .product-item
+                .img-tmb
+                  a(href="product-details.html", title="Title")
+                    img(src="images/upload/product-1.jpg", alt="Title")
+                h2
+                  +link('Akai MPK249 49 Key USB MIDI Keyboard Controller', 'product-details.html')
+                .price
+                  span.new-price.red $1399
+                  span.old-price normally $799
+                  span.save-price
+                    i.icon-tag
+                    | save 20%
+                .group-inner.clearfix
+                  +link('Shop all brands ', 'href').button.radius.btn-primary
+                    span add to cart
+                    i.icon-shopping-cart
+                  .pull-right
+                    +link('Wishlist ', 'href').product-wishlist
+                      span.relative
+                        i.icon-heart-outline
+                        span.tooltip Add wishlist list
+                    +link('Compare ', 'href').product-compare
+                      span.relative
+                        i.icon-compare
+                        span.tooltip Compare
+            .item
+              .product-item
+                .img-tmb
+                  a(href="product-details.html", title="Title")
+                    img(src="images/upload/product-1.jpg", alt="Title")
+                  span.sale Sale
+                h2
+                  +link('Akai MPK249 49 Key USB MIDI Keyboard Controller', 'product-details.html')
+                .price
+                  span.new-price $1399
+                  span.old-price rrp $799
+                .group-inner.clearfix
+                  +link('Shop all brands ', 'href').button.radius.btn-primary
+                    span add to cart
+                    i.icon-shopping-cart
+                  .pull-right
+                    +link('Wishlist ', 'href').product-wishlist
+                      span.relative
+                        i.icon-heart-outline
+                        span.tooltip Add wishlist list
+                    +link('Compare ', 'href').product-compare
+                      span.relative
+                        i.icon-compare
+                        span.tooltip Compare
+
+
+
+
+

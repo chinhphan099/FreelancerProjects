@@ -1,0 +1,101 @@
+mixin blocks(headingText)
+  .block&attributes(attributes)
+    h2.heading!= headingText
+    if block
+      block
+
+mixin price(newPrice, oldPrice)
+  span.price&attributes(attributes)
+    ins.new-price!=newPrice
+    del.old-price!=oldPrice
+
+mixin pagination()
+  .pagination-wrap&attributes(attributes)
+    ul.pagination
+      li.prev-page: +link('Previous', 'javascript:;').prev #[i.icon-arrow-left]
+      li.next-page.hidden-md-up: +link('Next', 'javascript:;') #[i.icon-arrow-right]
+      li.number
+        ul.clearfix
+          li: +link('1') 1#[span /5]
+          li.active: +link('2') 2#[span /5]
+          li.unavailable: span ...
+          li: +link('3') 3#[span /5]
+          li: +link('4') 4#[span /5]
+          li: +link('5') 5#[span /5]
+      li.next-page.hidden-sm-down: +link('Next', 'javascript:;') #[i.icon-arrow-right]
+
+mixin divider(text, spanClass)
+  .divider&attributes(attributes)
+    span(class!=spanClass)!=text
+
+//- Used in Style Guide page.
+mixin color(name, code)
+  li(data-handler="")
+    span.color(style="background-color: " + code)
+    code(data-copy!=name)!=code
+    span!=name
+
+mixin icons(classes)
+  ul.icons-list-temp
+    each classname in classes
+      li(data-handler="")
+        i(class='icon-' + classname, data-copy="i.icon-" + classname)
+        //span.name!=classname
+
+mixin submenu()
+  h5.title.hidden-md-down
+    i.icon-grid
+    | Shop live sound PA
+  ul.sub-nav
+    li: +link('1 In The Oven', 'products-listing.html')
+    li: +link('Ambra', 'products-listing.html')
+    li: +link('Amoralia London', 'products-listing.html')
+    li: +link('Amoralia London', 'products-listing.html')
+    li: +link('Belabumbum Lingerie', 'products-listing.html')
+    li: +link('Bella Buttercup', 'products-listing.html')
+    li: +link('Bijou', 'products-listing.html')
+    li: +link('Blanqi', 'products-listing.html')
+    li: +link('Blossom & Pear', 'products-listing.html')
+    li: +link('Bristols 6', 'products-listing.html')
+    li: +link('Cake Lingerie', 'products-listing.html')
+    li: +link('Crave Maternity UK', 'products-listing.html')
+    li: +link('Deshabille', 'products-listing.html')
+  ul.sub-nav
+    li: +link('Dogeared Jewels & Gifts', 'products-listing.html')
+    li: +link('Dote Nursingwear', 'products-listing.html')
+    li: +link('Esprit', 'products-listing.html')
+    li: +link('Everly Grey', 'products-listing.html')
+    li: +link('Every Mother Counts', 'products-listing.html')
+    li: +link('Fertilemind', 'products-listing.html')
+    li: +link('Fillyboo', 'products-listing.html')
+    li: +link('Floressa®', 'products-listing.html')
+    li: +link('GAIA Skin Naturals', 'products-listing.html')
+    li: +link('HOTmilk Lingerie', 'products-listing.html')
+    li: +link('Illuminate Candles', 'products-listing.html')
+    li: +link('Ilybean', 'products-listing.html')
+    li: +link('Imanimo', 'products-listing.html')
+  ul.sub-nav
+    li: +link('La Leche League', 'products-listing.html')
+    li: +link('LAmade', 'products-listing.html')
+    li: +link('Leota', 'products-listing.html')
+    li: +link('Liebemutter', 'products-listing.html')
+    li: +link('Mamagama', 'products-listing.html')
+    li: +link('MAVI Maternity Jeans', 'products-listing.html')
+    li: +link('MAVI Maternity Jeans', 'products-listing.html')
+    li: +link('MAVI Maternity Jeans', 'products-listing.html')
+    li: +link('MAVI Maternity Jeans', 'products-listing.html')
+    li: +link('My Little', 'products-listing.html')
+    li: +link('Native Wilds', 'products-listing.html')
+    li: +link('Nearly Nude', 'products-listing.html')
+  ul.sub-nav
+    li: +link('Noppies', 'products-listing.html')
+    li: +link('Noppies Baby', 'products-listing.html')
+    li: +link('Paula Janz', 'products-listing.html')
+    li: +link('Pomkin', 'products-listing.html')
+    li: +link('Poup ke', 'products-listing.html')
+    li: +link('Preggers', 'products-listing.html')
+    li: +link('PregO Maternity Swimwear', 'products-listing.html')
+    li: +link('Quack Nursing Wear', 'products-listing.html')
+    li: +link('Queen Bee®', 'products-listing.html')
+    li: +link('Queen Mum', 'products-listing.html')
+    li: +link('Ripe Maternity', 'products-listing.html')

@@ -1,0 +1,140 @@
+footer.footer
+	+link('Back to top', '')(data-scrollto='{"handle": "body"}').back-to-top
+		i.icon-arrow-up
+		span Top
+	.newsletter-ft
+		.bgd(style="background-image: url('images/bg-newsletter-desktop.jpg')").hidden-sm-down
+		.bgd(style="background-image: url('images/bg-newsletter-mobile.jpg')").hidden-md-up
+		.content
+			h2 Newsletter Subscribe
+			p Sign up to our monthly newsletter and get special offers and the latest news delivered to your inbox!
+			+form({id: 'footerSubcribeFrm'})
+				.fieldset
+					.custom-input.mail-box
+						button(type="submit"): i.icon-email
+						span: input(type="email" id="footerEmailTxt" name="footerEmailTxt" placeholder="Your email here..." required="required")
+			ul.social-ft
+				li: a(href="#" title="facebook"): i.icon-fb
+				li: a(href="#" title="Twitter"): i.icon-twitter
+				li: a(href="#" title="Youtube"): i.icon-youtube-square
+				li: a(href="#" title="Instagram"): i.icon-instagram
+				li: a(href="#" title="Blogspot"): i.icon-blogspot
+	.trustmaker-ft
+		.container
+			ul.list
+				li: img(src="images/authorised.png", alt="")
+				li: img(src="images/namm.png", alt="")
+				li: img(src="images/infocomm.png", alt="")
+				li: img(src="images/bestprice.png", alt="")
+	.footer-inner.bgd-blue.clearfix
+		.logo-footer.hidden-sm-down
+			a(href="", title="Soundcorp"): img(src="images/soundcorp-footer.png", alt="")
+			.row
+				.col-xs-12
+		.row-ft.clearfix
+			.col.clearfix
+				.customer-service
+					h4 Customer Service
+					ul.list-ft.list-ft-service.clearfix
+						li: a(href="", title="Shipping Info") 
+								i.icon-shipping
+								span Shipping Info
+						li: a(href="", title="FAQs") 
+								i.icon-help
+								span FAQs
+						li: a(href="", title="Return Policy") 
+								i.icon-refresh
+								span Return Policy
+						li: a(href="", title="Contact Us") 
+								i.icon-email
+								span Contact Us
+					ul.list-ft
+						li: a(href="tel:+1300 773 449")
+								i.icon-phone-outline
+								span (03) 9694 2600
+						li  
+							i.icon-clock
+							| Customer Service Hours
+							p Mon to Fri: 9.00am – 5.30pm
+					ul.social-ft
+						li: a(href="#" title="facebook"): i.icon-fb
+						li: a(href="#" title="Twitter"): i.icon-twitter
+						li: a(href="#" title="Youtube"): i.icon-youtube-square
+						li: a(href="#" title="Instagram"): i.icon-instagram
+						li: a(href="#" title="Blogspot"): i.icon-blogspot
+					.logo-soundcorp-business
+						a(href="", title="Soundcorp business"): img(src="images/soundcorp-business.png", alt="")
+
+				.menu-ft
+					.col-ft
+						h4 Categories
+						ul.nav
+							li: +link('Shop By Brand', '')
+							li: +link('Shop By Brand', '')
+							li: +link('Studio Gear', '')
+							li: +link('Headphones', '')
+							li: +link('Microphones', '')
+							li: +link('Sale', '')
+							li: +link('Clearance', '')
+					.col-ft
+						h4 About
+						ul.nav
+							li: +link('About Soundcorp', '')
+							li: +link('Testimonials', '')
+							li: +link('Careers', '')
+							li: +link('Meet The Team', '')
+							li: +link('Feedback', '')
+			.col.clearfix
+				.col-ft.acount-ft
+					h4 My Account
+					.acount
+						+link('Login', '')
+						+link('Sign Up', '')
+					ul.nav
+						li: +link('Order History', '')
+						li: +link('My Wishlist', '')
+						li: +link('Change Password', '')
+						li: +link('Track My Order', '')
+				.col-ft.showroom
+					h4 Melbourne Retail Showroom
+					.thumb
+						img(src="images/showroom.jpg", alt="")
+					ul.list-ft
+						li
+							i.icon-help
+							span 2/570 City Road, South Melbourne, Vic 3205
+						li: a(href="tel:+1300 773 449")
+								i.icon-phone-outline
+								span (03) 9694 2600
+						li
+							i.icon-clock
+							| Opening Hours
+							p Mon – Fri 9.00am – 5.30pm <br/> Saturday: 10.00am to 4.00pm <br/> Sun/Public Holidays: Closed
+	.footer-bottom.clearfix
+		.payment
+			h4 Safe & Secure Shopping
+			ul.list-payment
+				li: a(href="#!" title="paypal"): span: img(src="images/paypal.jpg", alt="")
+				li: a(href="#!" title="visa"): span: img(src="images/visa.jpg", alt="")
+				li: a(href="#!" title="mastercard"): span: img(src="images/mastercard.jpg", alt="")
+				li: a(href="#!" title="gift-card"): span: img(src="images/gift-card.jpg", alt="")
+				li: a(href="#!" title="oxypay"): span: img(src="images/oxypay.jpg", alt="")
+				li: a(href="#!" title="rentplus"): span: img(src="images/rentplus.jpg", alt="")
+				//- li.hidden-md-down: a(href="#!" title="paypal-verified"): span: img(src="images/paypal-verified.png", alt="")
+		.group-inner
+			+link('gt secured seal', '') 
+				img(src="images/gt-secured-seal.png", alt="")
+			+link('verified seal', '')
+				img(src="images/verified-seal.png", alt="")
+		.copyRight
+			p © 2017 Soundcorp.com.au. All Rights Reserved.
+			.links
+				+link('Terms & Conditions', '')
+				+link('Privacy Policy', '')
+
+
+
+
+
+
+

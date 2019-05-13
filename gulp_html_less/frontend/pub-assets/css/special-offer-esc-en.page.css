@@ -1,0 +1,320 @@
+body {
+  background-color: #f0f0f0;
+  font-family: montserrat;
+  line-height: 1.5;
+  color: #0a0a0a;
+  font-weight: 600;
+}
+body .container {
+  background-color: #fff;
+}
+@media (min-width: 768px) {
+  body {
+    background-color: #f0f0f0;
+  }
+}
+main {
+  padding: 25px 0;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: montserrat;
+}
+.section-1 .container {
+  padding: 20px 15px;
+}
+@media (min-width: 992px) {
+  .section-1 .container {
+    padding: 30px 70px;
+  }
+}
+.w_indicator_steps {
+  border-radius: 0;
+  margin-top: 0;
+  line-height: 18px;
+}
+.w_indicator_steps .w_item {
+  padding: 15px 10px;
+  font-size: 16px;
+  font-size: 1.067rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.w_indicator_steps .w_item:nth-child(2) {
+  color: #fff;
+  background-color: black;
+}
+@media (max-width: 767px) {
+  .w_indicator_steps {
+    max-width: 100%;
+  }
+  .w_indicator_steps .w_item {
+    padding: 10px;
+    font-size: 11px;
+    line-height: 15px;
+  }
+  .w_indicator_steps .step-text {
+    font-size: 9px;
+  }
+}
+.heading-content {
+  padding-top: 10px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+.heading-content h2 {
+  font-size: 20px;
+  color: #5923bd;
+}
+.heading-content h4 {
+  font-size: 18px;
+  line-height: 1.4;
+}
+@media (min-width: 768px) {
+  .heading-content h2 {
+    font-size: 24px;
+  }
+}
+.title-h3 {
+  padding: 10px;
+  background-color: #333;
+  text-align: center;
+}
+.title-h3 h3 {
+  margin-bottom: 0;
+  font-size: 16px;
+  color: #fff;
+}
+@media (min-width: 768px) {
+  .title-h3 h3 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .title-h3 {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+}
+.upsell-gallery {
+  margin: 0 auto 25px;
+  max-width: 260px;
+}
+.upsell-gallery .w_title {
+  margin: 10px 0;
+  font-size: 13px;
+  font-weight: 400;
+  text-align: left;
+}
+.upsell-gallery .thumb-slider .slick-track {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.upsell-gallery .thumb-slider .slick-slide {
+  width: 60px !important;
+  margin-right: 12px;
+}
+.upsell-gallery .thumb-slider .slick-slide.slick-current {
+  border: 2px solid #000;
+}
+.content-right h2 {
+  font-size: 25px;
+}
+.content-right .box-list {
+  margin: 20px 0;
+  padding: 25px;
+  border-radius: 5px;
+  background: #efecf6;
+}
+.content-right .box-list h5 {
+  font-size: 16px;
+  color: #5923bd;
+}
+.content-right ul {
+  list-style: none;
+  padding: 0;
+}
+.content-right ul li {
+  position: relative;
+  padding-left: 25px;
+}
+.content-right ul li:before {
+  position: absolute;
+  left: 0;
+  top: calc(50% - 10px);
+  content: "\f00c";
+  font-family: icomoon;
+  color: #5923bd;
+  line-height: 1;
+  font-size: 18px;
+  font-weight: 100;
+}
+.box-alert {
+  padding: 10px 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  color: #111111;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+.box-alert p {
+  margin-bottom: 0;
+}
+.upsell-inner {
+  padding: 20px 0 0;
+}
+@media (min-width: 768px) {
+  .upsell-inner {
+    margin-bottom: 25px;
+    border: 1px solid #ddd;
+    display: -ms-flexbox;
+    display: -ms-flex;
+    display: -webkit-box;
+    display: flex;
+    -ms-justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .upsell-inner .content-right {
+    width: calc(100% - 300px);
+  }
+  .upsell-inner .upsell-gallery {
+    margin: 0;
+  }
+}
+@media (min-width: 992px) {
+  .upsell-inner {
+    padding: 30px 80px 20px;
+  }
+  .upsell-inner .box-alert {
+    margin: 0 20px;
+  }
+}
+.main-image {
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .main-image {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+@media (max-width: 767px) {
+  .main-image {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+}
+.btn-no-thanks {
+  margin: 50px 0 60px;
+  text-align: center;
+}
+.btn-no-thanks a {
+  font-family: lato;
+  font-size: 16px;
+  color: #0000ee;
+  text-decoration: underline;
+  text-align: center;
+  font-weight: 500;
+}
+@media (max-width: 575px) {
+  .btn-no-thanks br {
+    display: none;
+  }
+}
+.currency-widget {
+  margin-bottom: 40px;
+  font-family: lato;
+}
+.currency-widget p:last-child {
+  margin-top: -5px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 16px;
+}
+.currency-widget p:last-child:before {
+  top: 2px;
+  content: "\f023";
+  font: normal normal normal 16px/1 icomoon;
+  margin-right: 8px;
+  color: #ff9b00;
+  position: relative;
+}
+.btn-upsell-order {
+  margin: 40px auto;
+  text-align: center;
+}
+.btn-upsell-order button {
+  display: inline-block;
+  padding: 20px;
+  font-weight: bold;
+  position: relative;
+  color: #2c3711;
+  font-size: 18px;
+  background: #1fba34;
+  border-radius: 3px;
+  font-style: italic;
+  background: -webkit-gradient(linear, left top, left bottom, from(#a3f80f), to(#8cd40c));
+  background: -o-linear-gradient(#a3f80f 0%, #8cd40c 100%);
+  background: linear-gradient(#a3f80f 0%, #8cd40c 100%);
+  border: none;
+  border-bottom: 6px solid #6da515;
+  -webkit-transition: background .3s ease;
+  -o-transition: background .3s ease;
+  transition: background .3s ease;
+  text-shadow: 1px 1px 1px #fff;
+}
+.btn-upsell-order button:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#a8ff0f), to(#a8ff0f));
+  background: -o-linear-gradient(top, #a8ff0f 0%, #a8ff0f 100%);
+  background: linear-gradient(to bottom, #a8ff0f 0%, #a8ff0f 100%);
+}
+.btn-upsell-order button p {
+  line-height: 1.4;
+}
+.btn-upsell-order button p > span {
+  display: block;
+}
+.btn-upsell-order button p > span:last-child {
+  font-weight: 600;
+}
+@media (min-width: 768px) {
+  .btn-upsell-order {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .btn-upsell-order button {
+    min-width: 550px;
+    max-width: 600px;
+    min-height: 110px;
+  }
+}
+@media (max-width: 543px) {
+  .btn-upsell-order button {
+    display: block;
+  }
+}
+.video-block {
+  max-width: 650px;
+  margin: 0 auto;
+}
+footer {
+  padding: 0;
+  background-color: transparent;
+}
+footer .address-footer {
+  display: none;
+}
+footer .container {
+  padding: 30px 15px;
+}
+@media (min-width: 768px) {
+  footer {
+    border: none;
+  }
+}

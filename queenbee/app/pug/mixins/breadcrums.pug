@@ -1,0 +1,16 @@
+mixin breadcrumbs(arr)
+	ul.breadcrumbs.hidden-md-down&attributes(attributes)
+		li
+			a(href="index.html" title="Home")
+				i.icon-home
+		li
+			i.icon-angle-right
+		- var n = arr.length
+		each item,index in arr
+			if (index < n-1)
+				li
+					+link(item.title, item.href)
+				li
+					i.icon-angle-right
+			else
+				li.active!= item.text ? item.text : item.title

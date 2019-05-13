@@ -1,0 +1,17 @@
+.slider.two-box-slider(data-cslider='{"type": "single", "initUnder": 543}')
+	.slick
+		.item
+			+img-upload('box-1.jpg').img-view
+			.content
+				h2.title Maternity
+				+link('title', 'products-listing.html').button.btn-primary: span: span
+					| Shop now
+					i.icon-angle-right
+		.item
+			+img-upload('box-2.jpg').img-view
+			.content.white-state
+				h2.title Nursing
+				+link('title', 'products-listing.html').button.btn-primary: span: span
+					| Shop now
+					i.icon-angle-right
+	span.load

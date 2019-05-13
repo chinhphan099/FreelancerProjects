@@ -1,0 +1,139 @@
+// Editor
+// ----------------------------------------------------------------------------------------
+.editor {
+	line-height: 1.5em;
+	color: @color05;
+	* {
+		line-height: inherit;
+		color: inherit;
+	}
+	h2, h3 {
+		margin: 1em 0;
+		.javacom();
+		line-height: 1;
+	}
+	h2 {
+		.font-size(20px);
+	}
+	h3 {
+		.font-size(18px);
+	}
+	p, address {
+		line-height: 1.5em;
+		margin-bottom: 1em;
+	}
+	a {
+		color: @color09;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	img {
+		margin-bottom: 5px;
+	}
+	ul, ol {
+		.clearfix();
+		margin-bottom: 0.5em;
+		li {
+			margin-bottom: 0.5em;
+			line-height: 1.5em;
+		}
+	}
+	ul {
+		li {
+			position: relative;
+			text-indent: 16px;
+			&:before {
+				content: "";
+				.position(8px 0 0 0);
+				.size(5px);
+				.border-radius(50%);
+				background-color: @color05;
+			}
+		}
+	}
+	ol {
+		padding: 0 1em;
+		li {
+			list-style-type: decimal;
+		}
+	}
+	table {
+		table-layout: fixed;
+		margin: 1.5em 0;
+		tr {
+			&:nth-child(odd) {
+				td {
+					background-color: @color20;
+				}
+			}
+			&:first-child {
+				td {
+					font-weight: 700;
+					background-color: @color16;
+				}
+			}
+		}
+		td {
+			padding: 6px 10px;
+			&[data-prev],
+			&[data-next],
+			&.empty {
+				display: none;
+			}
+		}
+	}
+	@media (max-width: @sm-max) {
+		table {
+			&[data-table] {
+				td {
+					display: none;
+					text-align: center;
+					&.active {
+						display: table-cell;
+					}
+					&.head-title {
+						display: table-cell;
+						text-align: left;
+					}
+					&.empty {
+						display: table-cell;
+					}
+				}
+				[data-prev],
+				[data-next] {
+					display: table-cell;
+					cursor: pointer;
+					&.disabled {
+						a {
+							color: @color13;
+						}
+					}
+					a {
+						color: @link-hover;
+						font-size: 20px;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+	@media (min-width: @sm-min) {
+		table {
+			tr {
+				td {
+					padding-left: 10px;
+					padding-right: 10px;
+				}
+			}
+		}
+	}
+	@media (min-width: @md-min) {
+		h2 {
+			.font-size(30px);
+		}
+		h3 {
+			.font-size(24px);
+		}
+	}
+}

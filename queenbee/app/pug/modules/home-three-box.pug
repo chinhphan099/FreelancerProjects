@@ -1,0 +1,19 @@
+.three-box
+	.slider.three-box-slider(data-cslider='{"type": "single", "initUnder": 543}')
+		.slick
+			.item
+				+img-upload('three-box-1.jpg').img-view
+				+link('Jeans', 'products-listing.html').content
+					h2.title Jeans
+					h3.sub-title Maternity
+			.item
+				+img-upload('three-box-2.jpg').img-view
+				+link('Pants and Leggings', 'products-listing.html').content.white-state
+					h2.title Pants &amp; Leggings
+					h3.sub-title Nursing
+			.item
+				+img-upload('three-box-3.jpg').img-view
+				+link('Hosiery and tights', 'products-listing.html').content.white-state
+					h2.title Hosiery &amp; tights
+					h3.sub-title Maternity
+		span.load

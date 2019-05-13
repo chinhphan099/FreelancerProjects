@@ -1,0 +1,24 @@
+extends layouts/layout
+
+block vars
+	-title = 'Blog detail'
+	-bodyClass = 'blog-detail-page'
+
+block main
+	main
+		.container
+			+promotion-top()
+			+breadcrumbs([{href: 'blog-category.html', title: 'Maternity Style Blog'}, {href: 'blog-landing.html', title: 'Discover your style'}, {title: 'This is how we do stripes at queen bee'}])
+			.blog-wrap.clearfix
+				.primary
+					.blog-detail
+						h1.heading THIS IS HOW WE DO STRIPES AT QUEEN BEE
+						.meta-blog Posted on #[a(href="blog-cate.html" title="June 14, 2017") June 14, 2017] in #[a(href="#" title="Discover Your Style") Discover Your Style] | #[span 0 comments]
+						.sharing-toolbox
+							.box: +img-upload('box-1.png')
+							.box: +img-upload('box-2.png')
+							.box: +img-upload('box-3.png')
+							.box: +img-upload('box-4.png')
+						include modules/blog-detail
+				.sidebar
+					include modules/global/blog-sidebar

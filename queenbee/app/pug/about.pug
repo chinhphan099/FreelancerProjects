@@ -1,0 +1,37 @@
+extends layouts/layout
+
+block vars
+	-title = 'About'
+	-bodyClass = 'about-page'
+
+block main
+	main
+		.about-wrap
+			.container
+				+promotion-top()
+				+breadcrumbs([{title: 'About Queen Bee'}])
+				.heading-description
+					span.flower: img(src="images/flower-small-01.png", alt="")
+					.inner
+						h1 About Queen Bee
+						p Our purpose is to inspire women with confidence and style during their journey into motherhood.
+
+				// About Infos
+				.about-info
+					.thumb: +img-upload("about.jpg", "- CELEBRATING 12 YEARS IN 2017 -")
+					.content
+						.editor
+							h2.title: a(href="#" title="- CELEBRATING 12 YEARS IN 2017 -") - CELEBRATING 12 YEARS IN 2017 -
+							p Queen Bee® began as a small home based business after the birth of Sharon's first son in May 2005. As a passionate breastfeeding mum she wanted Australia to discover stylish nursing wear with hidden openings that allowed discreet nursing in public. Not long after the range expanded to include designer maternity wear.
+							p Now in our 12th year with a dedicated team, Queen Bee® is Australia's leading pregnancy and motherhood online style boutique. Boasting over 60 local and international labels, we stock a beautiful range of maternity clothes for all occasions, from swimwear, maternity jeans to formal wear and everything in between. Queen Bee® is the go to destination where you can buy everything you need to see you through pregnancy and beyond. We make shopping online a pleasure - providing detailed product information and size charts, fast delivery, excellent customer service and an easy returns policy - read our live reviews here.
+							p Today, Queen Bee® has become more than just an online shopping destination, we are a constant source of inspiration and advice for expecting and new mums. Our Maternity Style Blog is a daily must read for well-being and health tips, celebrity pregnancy news, plus style and lifestyle ideas to encourage and inspire. Discover how we can transform your wardrobe as you embark on your journey to motherhood in style.
+							p: img(src="images/upload/love.png", alt="")
+
+				// About list block
+				.about-list-block.module-02
+					.heading: h2 Our purpose is to inspire women with confidence and style during their journey into motherhood.
+					ul.about-list
+						+about-item('Integrity', 'about-1.png', 'A healthy, confident and happy mum to be = a happy family. We believe emotional health and well-being are important elements for a positive journey into motherhood')
+						+about-item('Be inspired', 'about-2.png', 'We encourage mums and mums to be to think positive and take inspiration from our community. Positive affirmations have the ability to motivate us and make our day')
+						+about-item('Integrity', 'about-3.png', 'We believe in ethical business. we encourage teamwork and trust within QB. We recycle and embrace karma - we like to give back to the community by sponsoring children and supporting causes')
+						+about-item('Discover', 'about-4.png', 'We believe fashion can make women feel good about themselves and during pregnancy that encouragement is vital. Discover your style and embrace your changing body with confidence')

@@ -1,0 +1,148 @@
+h3.temp-h3.divider#button: span Button
+table.tb-temp
+  thead
+    tr
+      th
+      th: strong Tiny Size
+      th: strong Small Size
+      th: strong Normal Size
+      th: strong Larger Size
+      th: strong Expanded
+  tbody
+    tr
+      td
+        strong Primary Button
+        p .button
+        p .tiny .small .larger
+        p .btn-primary
+        p .expanded
+      td
+        p(data-handler=""): +button({id: 'tiny-1'})(data-copy="+button({id: 'tiny-1'}).button.tiny.btn-primary Text").button.tiny.btn-primary Tiny
+        br
+        p(data-handler="")
+          +link('Link', '#!')(data-copy="+link('title', 'href').button.tiny.btn-primary").button.tiny.btn-primary
+      td
+        p(data-handler=""): +button({id: 'small-1'})(data-copy="+button({id: 'small-1'}).button.small.btn-primary Text").button.small.btn-primary Small
+        br
+        p(data-handler="")
+          +link('Link', '#!')(data-copy="+link('title', 'href').button.small.btn-primary").button.small.btn-primary
+      td
+        p(data-handler=""): +button({id: 'primary-1'})(data-copy="+button({id: 'primary-1'}).button.btn-primary Text").button.btn-primary Normal
+        br
+        p(data-handler="")
+          +link('Link', '#!')(data-copy="+link('title', 'href').button.btn-primary").button.btn-primary
+      td
+        p(data-handler=""): +button({id: 'larger-1'})(data-copy="+button({id: 'larger-1'}).button.larger.btn-primary Text").button.larger.btn-primary Larger
+        br
+        p(data-handler="")
+          +link('Link', '#!')(data-copy="+link('title', 'href').button.larger.btn-primary").button.larger.btn-primary
+      td
+        p(data-handler=""): +button({id: 'expanded-1'})(data-copy="+button({id: 'expanded-1'}).button.btn-primary.expanded Text").button.btn-primary.expanded Expanded
+        br
+        p(data-handler="")
+          +link('Link', '#!')(data-copy="+link('title', 'href').button.expanded.btn-primary").button.expanded.btn-primary
+    tr
+      td
+        strong Secondary Button
+        p .button
+        p .tiny .small .larger
+        p .btn-secondary
+        p .expanded
+      td
+        p(data-handler=""): +button({id: 'tiny-2'})(data-copy="+button({id: 'tiny-2'}).button.tiny.btn-secondary Text").button.tiny.btn-secondary Tiny
+        br
+        p(data-handler="")
+          +link('Link', '#!')(data-copy="+link('title', 'href').button.tiny.btn-secondary").button.tiny.btn-secondary
+      td
+        p(data-handler=""): +button({id: 'small-2'})(data-copy="+button({id: 'small-2'}).button.small.btn-secondary Text").button.small.btn-secondary Small
+        br
+        p(data-handler="")
+          +link('Link', '#!')(data-copy="+link('title', 'href').button.small.btn-secondary").button.small.btn-secondary
+      td
+        p(data-handler=""): +button({id: 'secondary-1'})(data-copy="+button({id: 'secondary-1'}).button.btn-secondary Text").button.btn-secondary Normal
+        br
+        p(data-handler="")
+          +link('Link', '#!')(data-copy="+link('title', 'href').button.btn-secondary").button.btn-secondary
+      td
+        p(data-handler=""): +button({id: 'larger-2'})(data-copy="+button({id: 'larger-2'}).button.larger.btn-secondary Text").button.larger.btn-secondary Larger
+        br
+        p(data-handler="")
+          +link('Link', '#!')(data-copy="+link('title', 'href').button.larger.btn-secondary").button.larger.btn-secondary
+      td
+        p(data-handler=""): +button({id: 'expanded-2'})(data-copy="+button({id: 'expanded-2'}).button.btn-secondary.expanded Text").button.btn-secondary.expanded Expanded
+        br
+        p(data-handler="")
+          +link('Link', '#!')(data-copy="+link('title', 'href').button.expanded.btn-secondary").button.expanded.btn-secondary
+    tr
+      td
+        strong Tertiary Button
+        p .button
+        p .tiny .small .larger
+        p .btn-tertiary
+        p .expanded
+      td
+        p(data-handler=""): +button({id: 'tiny-3'})(data-copy="+button({id: 'tiny-3'}).button.tiny.btn-tertiary Text").button.tiny.btn-tertiary Tiny
+        br
+        p(data-handler="")
+          +link('Link', '#!')(data-copy="+link('title', 'href').button.tiny.btn-tertiary").button.tiny.btn-tertiary
+      td
+        p(data-handler=""): +button({id: 'small-3'})(data-copy="+button({id: 'small-3'}).button.small.btn-tertiary Text").button.small.btn-tertiary Small
+        br
+        p(data-handler="")
+          +link('Link', '#!')(data-copy="+link('title', 'href').button.small.btn-tertiary").button.small.btn-tertiary
+      td
+        p(data-handler=""): +button({id: 'tertiary-1'})(data-copy="+button({id: 'tertiary-1'}).button.btn-tertiary Text").button.btn-tertiary Normal
+        br
+        p(data-handler="")
+          +link('Link', '#!')(data-copy="+link('title', 'href').button.btn-tertiary").button.btn-tertiary
+      td
+        p(data-handler=""): +button({id: 'larger-3'})(data-copy="+button({id: 'larger-3'}).button.larger.btn-tertiary Text").button.larger.btn-tertiary Larger
+        br
+        p(data-handler="")
+          +link('Link', '#!')(data-copy="+link('title', 'href').button.larger.btn-tertiary").button.larger.btn-tertiary
+      td
+        p(data-handler=""): +button({id: 'expanded-3'})(data-copy="+button({id: 'expanded-3'}).button.btn-tertiary.expanded Text").button.btn-tertiary.expanded Expanded
+        br
+        p(data-handler="")
+          +link('Link', '#!')(data-copy="+link('title', 'href').button.expanded.btn-tertiary").button.expanded.btn-tertiary
+    tr
+      td
+        strong Disabled button
+        p .button
+        p .tiny .small .larger
+        p .btn-disabled
+        p .hollow
+      td
+        p(data-handler=""): +button({id: 'disabled-tiny-1'})(disabled="disabled" data-copy="+button({id: 'disabled-tiny-1'})(disabled='disabled').button.btn-disabled.tiny Text").button.btn-disabled.tiny Disabled
+        br
+        p(data-handler=""): +button({id: 'disabled-tiny-12'})(disabled="disabled" data-copy="+button({id: 'disabled-tiny-12'})(disabled='disabled').button.btn-disabled.tiny.hollow Text").button.btn-disabled.tiny.hollow Disabled
+      td
+        p(data-handler=""): +button({id: 'disabled-small-1'})(disabled="disabled" data-copy="+button({id: 'disabled-small-1'})(disabled='disabled').button.btn-disabled.small Text").button.btn-disabled.small Disabled
+        br
+        p(data-handler=""): +button({id: 'disabled-small-12'})(disabled="disabled" data-copy="+button({id: 'disabled-small-12'})(disabled='disabled').button.btn-disabled.small.hollow Text").button.btn-disabled.small.hollow Disabled
+      td
+        p(data-handler=""): +button({id: 'disabled-primary-1'})(disabled="disabled" data-copy="+button({id: 'disabled-primary-1'})(disabled='disabled').button.btn-disabled Text").button.btn-disabled Disabled
+        br
+        p(data-handler=""): +button({id: 'disabled-primary-12'})(disabled="disabled" data-copy="+button({id: 'disabled-primary-12'})(disabled='disabled').button.btn-disabled.hollow Text").button.btn-disabled.hollow Disabled
+      td
+        p(data-handler=""): +button({id: 'disabled-larger-1'})(disabled="disabled" data-copy="+button({id: 'disabled-larger-1'})(disabled='disabled').button.btn-disabled.larger Text").button.btn-disabled.larger Disabled
+        br
+        p(data-handler=""): +button({id: 'disabled-larger-12'})(disabled="disabled" data-copy="+button({id: 'disabled-larger-12'})(disabled='disabled').button.btn-disabled.larger.hollow Text").button.btn-disabled.larger.hollow Disabled
+      td
+        p(data-handler=""): +button({id: 'disabled-expanded-1'})(disabled="disabled" data-copy="+button({id: 'disabled-expanded-1'})(disabled='disabled').button.btn-disabled.expanded Text").button.btn-disabled.expanded Disabled
+        br
+        p(data-handler=""): +button({id: 'disabled-expanded-12'})(disabled="disabled" data-copy="+button({id: 'disabled-expanded-12'})(disabled='disabled').button.btn-disabled.expanded.hollow Text").button.btn-disabled.expanded.hollow Disabled
+    tr
+      td(colspan="6")
+        code.highlight
+          | +button({id: 'larger-1'})
+          br
+          | Options:
+          br
+          | - id
+          br
+          | - name == id
+          br
+          | - type: button
+          br
+          | - class: Class of button

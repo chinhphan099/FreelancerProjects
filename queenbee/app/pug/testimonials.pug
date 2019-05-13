@@ -1,0 +1,118 @@
+extends layouts/layout
+
+block vars
+	-title = 'testimonials'
+	-bodyClass = 'testimonials-page'
+
+block main
+	main
+		.testimonials-wrap
+			.container
+				+promotion-top()
+				+breadcrumbs([{title: 'Customer Reviews'}])
+				.heading-description
+					span.flower: img(src="images/flower-small-01.png", alt="")
+					.inner
+						h1 Customer Reviews
+						p Welcome to our page of live customer reviews - read what other ladies thought about their purchases!
+				ul.testimonials-list
+					li
+						.item
+							a(href="#" title="title of cele").thumb
+								img(src="images/upload/testimonials-1.png", alt="")
+							.content
+								h2: a(href="#!" title="Title") Esprit - Over Bump Leggings in Black
+								.group-reviews
+									span.rating: span.stars.stars-3
+									span Iam 8 months pregnant
+									span purchased size 8 pre-pregnancy size 8
+								p “Great leggings I'm normally a size 12 ordered a L/XL and they fit perfectly I love how's you can fold down the belly band or leave it up will definitely purchase a second pair - samantha”
+								a(href="#" title="Fiona") Fiona
+					li
+						.item
+							a(href="#" title="title of cele").thumb
+								img(src="images/upload/testimonials-2.jpg", alt="")
+							.content
+								h2: a(href="#!" title="Title") Esprit - Over Bump Leggings in Black
+								.group-reviews
+									span.rating: span.stars.stars-3
+									span Iam 8 months pregnant
+									span purchased size 8 pre-pregnancy size 8
+								p “Lovely soft fabric, gives a good shape, but also very comfortable to sleep in. Will be buying another one soon. Easy one handed clips, super stretchy, even with E sized boobs”
+								a(href="#" title="Holly") Holly
+					li
+						.item
+							a(href="#" title="title of cele").thumb
+								img(src="images/upload/testimonials-3.jpg", alt="")
+							.content
+								h2: a(href="#!" title="Title") Esprit - Over Bump Leggings in Black
+								.group-reviews
+									span.rating: span.stars.stars-3
+									span Iam 8 months pregnant
+									span purchased size 8 pre-pregnancy size 8
+								p “I LOVE this set! I also purchased the matching pants & love the soft cotton, which makes them so comfortable .. looks great too.. would definitely recommend!”
+								a(href="#" title="Emma") Emma
+					li
+						.item
+							a(href="#" title="title of cele").thumb
+								img(src="images/upload/testimonials-4.jpg", alt="")
+							.content
+								h2: a(href="#!" title="Title") Esprit - Over Bump Leggings in Black
+								.group-reviews
+									span.rating: span.stars.stars-3
+									span Iam 8 months pregnant
+									span purchased size 8 pre-pregnancy size 8
+								p “Love this dress, so soft and comfy, easy access for nursing too.”
+								a(href="#" title="Des") Des
+					li
+						.item
+							a(href="#" title="title of cele").thumb
+								img(src="images/upload/testimonials-1.png", alt="")
+							.content
+								h2: a(href="#!" title="Title") Blanqi - High Performance Belly Lift & Support Leggings
+								.group-reviews
+									span.rating: span.stars.stars-3
+									span Iam 8 months pregnant
+									span purchased size 8 pre-pregnancy size 8
+								p
+									|“Perfect fit leggings, even for a petite like me. Most pregnancy leggings bunch up over your stomach and have way too much excess fabric. Not these ones, they are perfect. They skim over your stomach and fit like a
+									a(href="#" title="More").btn-more more...
+								a(href="#" title="Fiona") Fiona
+					li
+						.item
+							a(href="#" title="title of cele").thumb
+								img(src="images/upload/testimonials-2.jpg", alt="")
+							.content
+								h2: a(href="#!" title="Title") Esprit - Over Bump Leggings in Black
+								.group-reviews
+									span.rating: span.stars.stars-3
+									span Iam 8 months pregnant
+									span purchased size 8 pre-pregnancy size 8
+								p “Great leggings I'm normally a size 12 ordered a L/XL and they fit perfectly I love how's you can fold down the belly band or leave it up will definitely purchase a second pair - samantha”
+								a(href="#" title="Fiona") Fiona
+					li
+						.item
+							a(href="#" title="title of cele").thumb
+								img(src="images/upload/testimonials-3.jpg", alt="")
+							.content
+								h2: a(href="#!" title="Title") Esprit - Over Bump Leggings in Black
+								.group-reviews
+									span.rating: span.stars.stars-3
+									span Iam 8 months pregnant
+									span purchased size 8 pre-pregnancy size 8
+								p “Great leggings I'm normally a size 12 ordered a L/XL and they fit perfectly I love how's you can fold down the belly band or leave it up will definitely purchase a second pair - samantha”
+								a(href="#" title="Fiona") Fiona
+					li
+						.item
+							a(href="#" title="title of cele").thumb
+								img(src="images/upload/testimonials-4.jpg", alt="")
+							.content
+								h2: a(href="#!" title="Title") Esprit - Over Bump Leggings in Black
+								.group-reviews
+									span.rating: span.stars.stars-3
+									span Iam 8 months pregnant
+									span purchased size 8 pre-pregnancy size 8
+								p
+									| “Love the nightie and appreciate that it can be worn through pregnancy and then breastfeeding”
+									a(href="#" title="More").btn-more more...
+								a(href="#" title="Kylie") Kylie

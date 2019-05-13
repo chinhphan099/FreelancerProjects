@@ -1,0 +1,92 @@
+// Typography
+@fonticon: "icomoon";
+@sans-serif: Helvetica, Arial, sans-serif; // Font ko chân
+@serif: Georgia, "Times New Roman", Times, serif; // Font có chân
+@monospace: Monaco, Menlo, Consolas, "Courier New", monospace;
+@ElleFutura: ElleFutura, @sans-serif;
+@ElleFutura-Bold: ElleFutura-Bold, @sans-serif;
+@ElleFutura-Medium: ElleFutura-Medium, @sans-serif;
+@font-family-base: @ElleFutura;
+@font-size: 15px;
+@font-button: 14px;
+@line-height-tag-p: round((20 / 14), 3);
+@h1-size: 28px;
+@h2-size: 24px;
+@h3-size: 22px;
+@h4-size: 20px;
+@h5-size: 18px;
+@h6-size: 16px;
+@h1-size-mobile: 22px;
+@h2-size-mobile: 20px;
+@h3-size-mobile: 19px;
+@h4-size-mobile: 18px;
+@h5-size-mobile: 17px;
+@h6-size-mobile: 16px;
+
+.ElleFutura() {font-family: @ElleFutura;}
+.ElleFutura-Bold() {font-family: @ElleFutura-Bold;}
+.ElleFutura-Medium() {font-family: @ElleFutura-Medium;}
+.fonticon() {font-family: @fonticon;}
+.sans-serif() {font-family: @sans-serif;}
+.serif() {font-family: @serif;}
+.monospace() {font-family: @monospace;}
+
+// Path image
+@img: "../images"; // background-image: url("@{img}/img-1.png");
+
+// Color
+@color00: transparent;
+@color01: #fff;
+@color02: #f1f1f1;
+@color03: #ddd;
+@color04: #ccc;
+@color05: #e4e4e4;
+@color06: #bbb;
+@color07: #aaa;
+@color08: #999;
+@color09: #f5f5f5;
+@color10: #333;
+@color11: #000;
+@color12: #ff0000;
+@color13: #027cee;
+@color14: #f26c10;
+@color15: #343434;
+@color16: #454545;
+@color17: #666;
+@color18: #fff77c;
+
+// Important
+@bgd-body: #fff;
+@bgd-input: #fff;
+@bgd-invalid: #ddd;
+
+@text-color: #343434;
+@color-input: #343434;
+@border-input: #e4e4e4;
+@placeholder: #999;
+@invalid: #ff0000; //color invalid input
+
+// Link
+@link: #ff0000;
+@link-hover: #333;
+
+// Grid System
+@grid-columns: 12;
+@grid-gutter: 30px;
+
+@xs-min: 0;
+@sm-min: 544px;
+@md-min: 768px;
+@lg-min: 992px;
+@xl-min: 1200px;
+
+@xs-max: (@sm-min - 1);
+@sm-max: (@md-min - 1);
+@md-max: (@lg-min - 1);
+@lg-max: (@xl-min - 1);
+
+// With of .container
+@grid-sm: 576px;
+@grid-md: 720px;
+@grid-lg: 940px;
+@grid-xl: 1200px;

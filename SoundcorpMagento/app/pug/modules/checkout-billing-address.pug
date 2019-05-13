@@ -1,0 +1,103 @@
+.column
+  .billing-address
+    h2.checkout-title #[span 1] Billing address
+    .content
+      .row
+        .col-xl-6
+          .fieldset
+            label(class="label" for="billingfirstnametxt") First name #[span *]
+            +input({id: 'billingfirstnametxt', placeholder: 'Your first name'})
+        .col-xl-6
+          .fieldset
+            label(class="label" for="billinglastnametxt") Last name #[span *]
+            +input({id: 'billinglastnametxt', placeholder: 'Your last name'})
+      .fieldset
+        label(class="label" for="billingemailtxt") Email Address #[span *]
+        +input({id: 'billingemailtxt', placeholder: 'Your email'})
+      .fieldset
+        label(class="label" for="billingcompanytxt") Company #[span *]
+        +input({id: 'billingcompanytxt', placeholder: 'Your company name'})
+      .fieldset
+        label(class="label" for="billingstresstxt") Street Address #[span *]
+        +input({id: 'billingstresstxt'})
+      .fieldset
+        label(class="label" for="billingcountryddl") Country #[span *]
+        +customSelect({id: 'billingcountryddl'}, [
+          {value: '', text: 'Please select an option'},
+          {value: 'Option 1', selected: 'selected'},
+          {value: 'Option 2'}
+        ])
+      .fieldset
+        label(class="label" for="billingcitytxt") City #[span *]
+        +input({id: 'billingcitytxt', placeholder: 'Your city'})
+      .row
+        .col-xl-6
+          .fieldset
+            label(class="label" for="billingpostaltxt") Zip/Postal Code #[span *]
+            +input({id: 'billingpostaltxt', placeholder: 'Your post code'})
+        .col-xl-6
+          .fieldset
+            label(class="label" for="billingstateddl") State/Province #[span *]
+            +customSelect({id: 'billingstateddl'}, [
+              {value: '', text: 'Please select an option'},
+              {value: 'Option 1', selected: 'selected'},
+              {value: 'Option 2'}
+            ])
+      .grey-box
+        +checkbox({id: 'createaccount', text: 'Create an account for later use'})(data-toggleshow="#create-account-block")
+      .create-account-block#create-account-block
+        .row
+          .col-xl-6
+            .fieldset
+              label(class="label" for="passwordtxt") Password #[span *]
+              +input({id: 'passwordtxt', type: 'password'})
+          .col-xl-6
+            .fieldset
+              label(class="label" for="confirmpasstxt") Confirm Password #[span *]
+              +input({id: 'confirmpasstxt', type: 'password'})
+      .grey-box
+        +checkbox({id: 'sameaddress', text: 'My billing & shipping address are the same', checked: 'checked'})(data-toggleshow="#shipping-address")
+  .shipping-address#shipping-address
+    h2.checkout-title Shipping address
+    .content
+      .row
+        .col-xl-6
+          .fieldset
+            label(class="label" for="shippingfirstnametxt") First name #[span *]
+            +input({id: 'shippingfirstnametxt', placeholder: 'Your first name'})
+        .col-xl-6
+          .fieldset
+            label(class="label" for="shippinglastnametxt") Last name #[span *]
+            +input({id: 'shippinglastnametxt', placeholder: 'Your last name'})
+      .fieldset
+        label(class="label" for="shippingemailtxt") Email Address #[span *]
+        +input({id: 'shippingemailtxt', placeholder: 'Your email', type: 'email'})
+      .fieldset
+        label(class="label" for="shippingcompanytxt") Company #[span *]
+        +input({id: 'shippingcompanytxt', placeholder: 'Your company name'})
+      .fieldset
+        label(class="label" for="shippingstresstxt") Street Address #[span *]
+        +input({id: 'shippingstresstxt'})
+      .fieldset
+        label(class="label" for="shippingcountryddl") Country #[span *]
+        +customSelect({id: 'shippingcountryddl'}, [
+          {value: '', text: 'Please select an option'},
+          {value: 'Option 1', selected: 'selected'},
+          {value: 'Option 2'}
+        ])
+      .fieldset
+        label(class="label" for="shippingcitytxt") City #[span *]
+        +input({id: 'shippingcitytxt', placeholder: 'Your city'})
+      .row
+        .col-xl-6
+          .fieldset
+            label(class="label" for="shippingpostaltxt") Zip/Postal Code #[span *]
+            +input({id: 'shippingpostaltxt', placeholder: 'Your post code'})
+        .col-xl-6
+          .fieldset
+            label(class="label" for="shippingstateddl") State/Province #[span *]
+            +customSelect({id: 'shippingstateddl'}, [
+              {value: '', text: 'Please select an option'},
+              {value: 'Option 1', selected: 'selected'},
+              {value: 'Option 2'}
+            ])

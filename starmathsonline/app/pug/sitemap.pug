@@ -1,0 +1,59 @@
+extends layouts/sitemap
+
+block main
+  +rowTitle('Guide')
+  +rowContentList([
+    {
+    name: 'Style Guide',
+    link: 'temp-style-guide.html',
+      progress: '100'
+    }
+  ])
+  +rowTitle('Pages')
+  +rowContentList([
+    {
+      name: 'Index',
+      link: 'index.html',
+      progress: '100'
+    },
+    {
+      name: 'Students',
+      link: 'student.html',
+      progress: '50'
+    },
+    {
+      name: 'Parents',
+      link: 'parents.html',
+      progress: '50'
+    },
+    {
+      name: 'Teachers',
+      link: 'teachers.html',
+      progress: '50'
+    },
+    {
+      name: 'Register',
+      link: 'register.html',
+      progress: '50'
+    },
+    {
+      name: 'News',
+      link: 'news.html',
+      progress: '80'
+    },
+    {
+      name: 'News Details',
+      link: 'news-details.html',
+      progress: '80'
+    },
+    {
+      name: 'Contact Us',
+      link: 'contact-us.html',
+      progress: '80'
+    },
+    {
+      name: 'Leaderboard',
+      link: 'leaderboard.html',
+      progress: '80'
+    }
+  ])

@@ -1,0 +1,75 @@
+extends layouts/layout
+
+block vars
+	-title = 'News'
+	-bodyClass = 'news-page'
+	-mainNav = 6
+
+block main
+	main
+		+head-block("S.T.A.R NEWS").only-text
+		// News
+		.news-list
+			.container
+				article.row
+					.col-xs-12.col-md-4.col-sm-5
+						.thumb: a(href="news-details.html" title="title"): img(src="images/upload/new-1.jpg", alt="")
+					.col-xs-12.col-md-8.col-sm-7
+						.content
+							h2: a(href="news-details.html" title="FEATURED IN THE LOCAL DAILY TELEGRAPH!") FEATURED IN THE LOCAL DAILY TELEGRAPH!
+							span.meta February 25, 2017
+							p A big thank you to Stacy Thomas for sending our article to the local Daily Telegraph! As the article states, S.T.A.R. Maths Online will be a free primary maths software available to all parents, teachers and schools! You can read the full article by clicking here.
+				article.row
+					.col-xs-12.col-md-4.col-sm-5
+						.thumb: a(href="news-details.html" title="title"): img(src="images/upload/new-2.jpg", alt="")
+					.col-xs-12.col-md-8.col-sm-7
+						.content
+							h2: a(href="news-details.html" title="FEATURED IN THE LOCAL DAILY TELEGRAPH!") BENEFITS OF GAMIFICATION IN LEARNING
+							span.meta June 25, 2017
+							p Most of us may have heard of the word gamification and its application in the company, business and even eLearning. Its popularity arises because when applied correctly can turn some of the most mundane tasks to be one which is fun and engaging. Below are some insights on gamification when applied to eLearning. […]
+				article.row
+					.col-xs-12.col-md-4.col-sm-5
+						.thumb: a(href="news-details.html" title="title"): img(src="images/upload/new-3.jpg", alt="")
+					.col-xs-12.col-md-8.col-sm-7
+						.content
+							h2: a(href="news-details.html" title="FEATURED IN THE LOCAL DAILY TELEGRAPH!") FEATURED IN THE LOCAL DAILY TELEGRAPH!
+							span.meta February 25, 2017
+							p A big thank you to Stacy Thomas for sending our article to the local Daily Telegraph! As the article states, S.T.A.R. Maths Online will be a free primary maths software available to all parents, teachers and schools! You can read the full article by clicking here.
+				article.row
+					.col-xs-12.col-md-4.col-sm-5
+						.thumb: a(href="news-details.html" title="title"): img(src="images/upload/new-4.jpg", alt="")
+					.col-xs-12.col-md-8.col-sm-7
+						.content
+							h2: a(href="news-details.html" title="FEATURED IN THE LOCAL DAILY TELEGRAPH!") BENEFITS OF GAMIFICATION IN LEARNING
+							span.meta June 25, 2017
+							p Most of us may have heard of the word gamification and its application in the company, business and even eLearning. Its popularity arises because when applied correctly can turn some of the most mundane tasks to be one which is fun and engaging. Below are some insights on gamification when applied to eLearning. […]
+				article.row
+					.col-xs-12.col-md-4.col-sm-5
+						.thumb: a(href="news-details.html" title="title"): img(src="images/upload/new-5.jpg", alt="")
+					.col-xs-12.col-md-8.col-sm-7
+						.content
+							h2: a(href="news-details.html" title="FEATURED IN THE LOCAL DAILY TELEGRAPH!") FEATURED IN THE LOCAL DAILY TELEGRAPH!
+							span.meta February 25, 2017
+							p A big thank you to Stacy Thomas for sending our article to the local Daily Telegraph! As the article states, S.T.A.R. Maths Online will be a free primary maths software available to all parents, teachers and schools! You can read the full article by clicking here.
+				article.row
+					.col-xs-12.col-md-4.col-sm-5
+						.thumb: a(href="news-details.html" title="title"): img(src="images/upload/new-6.jpg", alt="")
+					.col-xs-12.col-md-8.col-sm-7
+						.content
+							h2: a(href="news-details.html" title="FEATURED IN THE LOCAL DAILY TELEGRAPH!") BENEFITS OF GAMIFICATION IN LEARNING
+							span.meta June 25, 2017
+							p Most of us may have heard of the word gamification and its application in the company, business and even eLearning. Its popularity arises because when applied correctly can turn some of the most mundane tasks to be one which is fun and engaging. Below are some insights on gamification when applied to eLearning. […]
+				article.row
+					.col-xs-12.col-md-4.col-sm-5
+						.thumb: a(href="news-details.html" title="title"): img(src="images/upload/new-7.jpg", alt="")
+					.col-xs-12.col-md-8.col-sm-7
+						.content
+							h2: a(href="news-details.html" title="FEATURED IN THE LOCAL DAILY TELEGRAPH!") FEATURED IN THE LOCAL DAILY TELEGRAPH!
+							span.meta February 25, 2017
+							p A big thank you to Stacy Thomas for sending our article to the local Daily Telegraph! As the article states, S.T.A.R. Maths Online will be a free primary maths software available to all parents, teachers and schools! You can read the full article by clicking here.
+				.text-center.view-more
+					a(href="javascript:;" title="View more").btn-view-more
+						span.icon: img(src="images/loading.svg", alt="Loading")
+						span.text View more
+
+

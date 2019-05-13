@@ -1,0 +1,92 @@
+h3.temp-h3.divider#button: span Button
+table.tb-temp
+  thead
+    tr
+      th
+      th: strong Small Size
+      th: strong Normal Size
+      th: strong Expanded
+  tbody
+    tr
+      td
+        strong Primary Button
+        p .button
+        p .btn-primary
+        p .expanded
+      td
+        p(data-handler=""): +button({id: 'small-1'})(data-copy="+button({id: 'small-1'}).button.small.btn-primary Text").button.small.btn-primary Small
+        br
+        p(data-handler="")
+          +link('Link', '#!')(data-copy="+link('title', 'href').button.small.btn-primary").button.small.btn-primary: span: span Button
+        br
+        p(data-handler=""): +button({id: 'medium-1'})(data-copy="+button({id: 'medium-1'}).button.medium.btn-primary Text").button.medium.btn-primary Medium 40 Height
+        br
+        p(data-handler="")
+          +link('Link', '#!')(data-copy="+link('title', 'href').button.medium.btn-primary").button.medium.btn-primary: span: span Link
+      td
+        p(data-handler=""): +button({id: 'primary-1'})(data-copy="+button({id: 'primary-1'}).button.btn-primary Text").button.btn-primary Normal
+        br
+        p(data-handler="")
+          +link('Link', '#!')(data-copy="+link('title', 'href').button.btn-primary: span: span Link").button.btn-primary: span: span Link
+      td
+        p(data-handler=""): +button({id: 'expanded-1'})(data-copy="+button({id: 'expanded-1'}).button.btn-primary.expanded Text").button.btn-primary.expanded Expanded
+        br
+        p(data-handler="")
+          +link('Link', '#!')(data-copy="+link('title', 'href').button.expanded.btn-primary: span: span Link").button.expanded.btn-primary: span: span Link
+    tr
+      td
+        strong Secondary Button
+        p .button
+        p .btn-secondary
+        p .expanded
+      td
+        p(data-handler=""): +button({id: 'small-2'})(data-copy="+button({id: 'small-2'}).button.small.btn-secondary Text").button.small.btn-secondary Small
+        br
+        p(data-handler="")
+          +link('Link', '#!')(data-copy="+link('title', 'href').button.small.btn-secondary: span: span Link").button.small.btn-secondary: span: span Link
+      td
+        p(data-handler=""): +button({id: 'secondary-1'})(data-copy="+button({id: 'secondary-1'}).button.btn-secondary Text").button.btn-secondary Normal
+        br
+        p(data-handler="")
+          +link('Link', '#!')(data-copy="+link('title', 'href').button.btn-secondary").button.btn-secondary: span: span Link
+      td
+        p(data-handler=""): +button({id: 'expanded-2'})(data-copy="+button({id: 'expanded-2'}).button.btn-secondary.expanded Text").button.btn-secondary.expanded Expanded
+        br
+        p(data-handler="")
+          +link('Link', '#!')(data-copy="+link('title', 'href').button.expanded.btn-secondary").button.expanded.btn-secondary: span: span Link
+    tr
+      td
+        strong Tertiary Button
+        p .button
+        p .btn-tertiary
+        p .expanded
+      td
+        p(data-handler=""): +button({id: 'small-3'})(data-copy="+button({id: 'small-3'}).button.small.btn-tertiary Text").button.small.btn-tertiary Small
+        br
+        p(data-handler="")
+          +link('Link', '#!')(data-copy="+link('title', 'href').button.small.btn-tertiary: span: span Link").button.small.btn-tertiary: span: span Link
+      td
+        p(data-handler=""): +button({id: 'tertiary-1'})(data-copy="+button({id: 'tertiary-1'}).button.btn-tertiary Text").button.btn-tertiary Normal
+        br
+        p(data-handler="")
+          +link('Link', '#!')(data-copy="+link('title', 'href').button.btn-tertiary: span: span Link").button.btn-tertiary: span: span Link
+      td
+        p(data-handler=""): +button({id: 'expanded-3'})(data-copy="+button({id: 'expanded-3'}).button.btn-tertiary.expanded Text").button.btn-tertiary.expanded Expanded
+        br
+        p(data-handler="")
+          +link('Link', '#!')(data-copy="+link('title', 'href').button.expanded.btn-tertiary: span: span Link").button.expanded.btn-tertiary: span: span Link
+
+    tr
+      td(colspan="4")
+        code.highlight
+          | +button({id: 'larger-1'})
+          br
+          | Options:
+          br
+          | - id
+          br
+          | - name == id
+          br
+          | - type: button
+          br
+          | - class: Class of button

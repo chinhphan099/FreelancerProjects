@@ -1,0 +1,18 @@
+extends layouts/layout
+
+block vars
+  -title = 'Home'
+  -bodyClass = 'home'
+  -mainNav = 1
+  -sub1 = 1
+  -sub2 = 1
+  -sub3 = 0
+
+block main
+  main
+    include modules/slideshow
+    include modules/trustmakers
+    include modules/category-boxes
+    include modules/best-sellers
+    include modules/testimonial
+    include modules/brands

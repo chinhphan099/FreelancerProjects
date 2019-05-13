@@ -1,0 +1,15 @@
+table.tb-temp
+  thead
+    tr
+      th: strong Font Family
+      th: strong View
+  tbody
+    tr(data-handler="")
+      td: code #[span(data-copy="") .lato();] - Font Default
+      td: p.lato Lorem ipsum dolor sit amet.
+    tr(data-handler="")
+      td: code(data-copy="") .javacom();
+      td: p.javacom Lorem ipsum dolor sit amet.
+    tr(data-handler="")
+      td: code(data-copy="") .fonticon();
+      td: p #[i.icon-shipping]

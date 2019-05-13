@@ -1,0 +1,20 @@
+extends layouts/layout
+
+block vars
+	-title = 'Product Listing'
+	-bodyClass = 'all cate-page'
+
+block main
+	main
+		.container
+			+promotion-top()
+			+breadcrumbs([{title: 'Maternity'}])
+			.heading-description
+				span.flower: img(src="images/flower-small-01.png", alt="")
+				.inner
+					h1 Maternity Dresses
+					p Queen Bee is your premier online maternity shopping destination, with over 60 designer labels and new stock arriving weekly. All items are in stock and ready to ship from our Sydney warehouse. Simply order before 2pm for same business day order dispatch
+			+category-block('Baby Shower Dresses', 'All items are in stock and ready to ship from our Sydney warehouse.')
+			+category-block('Special Occasion Dresses', 'All items are in stock and ready to ship from our Sydney warehouse.')
+			+category-block('Baby Shower Dresses', 'All items are in stock and ready to ship from our Sydney warehouse.')
+			+category-block('Special Occasion Dresses', 'All items are in stock and ready to ship from our Sydney warehouse.')

@@ -1,0 +1,110 @@
+extends layouts/layout
+
+block vars
+    -title = 'Blog Details'
+    -bodyClass = 'blog-detail-page'
+    -mainNav = 1
+    -sub1 = 1
+    -sub2 = 1
+    -sub3 = 0
+
+block main
+    main
+        .container
+            .breadcrumbs-wrap
+                +breadcrumbs([
+                    {title: 'Home', href: 'index.html', text: 'Home'},
+                    {title: 'blog', href: 'blog-lissting.html', text: 'Home'},
+                    {title: 'USB Microphone Comparison Guide: Which Model is Best for You?', href: '#'}
+                ])
+            .wrap-page.clearfix
+                .primary
+                    .blog-details
+                        h1 USB Microphone Comparison Guide: Which Model is  Best for You?
+                        ul.meta
+                            li
+                                span  Posted:
+                                +link('16 August 2016')
+                            li
+                                span  Categories:
+                                +link('16 August 2016')
+                            li
+                                span  Tags:
+                                +link('microphone')
+                                +link('usb')
+                            li
+                                span  Author:
+                                +link('Soundcorp')
+                        .editor
+                            p: +img-upload('blog-detail-1.jpg')
+                            p How many times has this happened to you: you are sitting in a coffee shop, out on the road or simply enjoying the company of friends when inspiration hits you and – you don’t have your recording equipment? You scramble to make the recording on your phone but the quality just isn’t there.
+                            p Lugging around microphones, headphones, stands, shock mounts, pop filters, phantom power, cords and cables just isn’t practical all the time, which is why you need a USB Microphone.
+                            p: strong What is a USB Microphone and How Do I Choose One?
+                            p A USB Microphone is a high quality microphone that can quickly connect to your PC, MAC or iPad via a USB port without the need for additional equipment. A USB Microphone works with your computer’s software to quickly and effectively record voiceovers, podcasts, live music, interviews, live music and vocals. Being both portable and affordable, a USB Microphone is ideal for anyone on the go.
+                            p A USB Microphone is a high quality microphone that can quickly connect to your PC, MAC or iPad via a USB port without the need for additional equipment. A USB Microphone works with your computer’s software to quickly and effectively record voiceovers, podcasts, live music, interviews, live music and vocals. Being both portable and affordable, a USB Microphone is ideal for anyone on the go.
+                            p: strong USB Microphone Types
+                            p There are two main microphone types: Condenser and Dynamic mics. So what is the difference and which one do you need?
+                            p Condenser microphones are the most common type of USB microphones. In this case, the diaphragm is a thin film that is nickel or gold plated and is mounted next to a conductive back plate. A polarized voltage is applied to the diaphragm that charges it with a fixed static charge. As sound hits the diaphragm, it moves closer and further away from the back plate creating an electrical charge.
+                            p The sensitivity of this microphone makes it an excellent choice for voiceovers, podcasts, interviews and acoustic instrument recording.
+                            p Dynamic microphones, also sometimes called moving coil microphones, work using a process called electromagnetic induction. In this situation, the diaphragm is attached to a coil of wire which is in turn mounted to a free-moving magnet. Sound passing to the diaphragm will cause it to vibrate. This causes the magnet to also vibrate, creating a small electrical current.
+                            p This type of microphone is less sensitive to input, making it more ideal for live sound venues and amplified instruments.
+                            p: strong USB Microphone Polar Pattern Types
+                            p Polar patterns determine how a microphone picks up sound. There are three main types of polar patterns: Cardioid, Omnidirectional and Bi-Directional. You will want to choose a pattern type that corresponds with your microphone’s primary use.
+                            p Cardioid microphones are a unidirectional microphone that will pick up audio from the front and sides of the microphone and reject sounds from the rear. These are isolation microphones which make them excellent for vocal or speech applications or where you would want to reduce background noise.
+                            p Omnidirectional microphones are a non-directional microphone that will pick up audio from all directions. These are best for live music venues with a large stage or where you want to pick up as much of the background as possible.
+                            p Omnidirectional microphones are a non-directional microphone that will pick up audio from all directions. These are best for live music venues with a large stage or where you want to pick up as much of the background as possible.
+                            p: strong USB Microphone Diaphragm Size
+                            p The size of the diaphragm determines sensitivity and the quality of sound. As with the above, you will want to choose one that is best suited for your application.
+                            p Large diaphragms, 1 inch or larger, will be more sensitive and have a smoother, deeper sound quality. These are an excellent choice for a room mic.
+                            p Small diaphragms, under 1 inch, are less sensitive but also have a wider frequency making them better for voiceovers and podcasts.
+                            p: strongUSB Microphones Compared
+                            p Now that you have a basic understanding of USB Microphones, let’s choose the best one for your application. The below chart will help you easily identify the best microphone for your use based on specs, features and price. If you still have questions, you can always contact the friendly Pro Audio team at Soundcorp who can help you choose.
+                        .post-navigation.clearfix
+                            .pull-left
+                                span Share now
+                                .sharing-toolbox
+                                    .box: +img-upload('box-1.png')
+                                    .box: +img-upload('box-2.png')
+                                    .box: +img-upload('box-3.png')
+                                    .box: +img-upload('box-4.png')
+                            .pull-right
+                                a(href="#", title="Next").next
+                                    span Next
+                                    i.icon-arrow-right
+                .sidebar
+                    .sidebar-widget
+                        h3 Recent Posts
+                        .editor
+                            ul
+                                li: +link('USB Microphone Comparison Guide: Which Model is Best for You?', 'blog-details.html')
+                                li: +link('USB Microphone Comparison Guide: Which Model is Best for You?', 'blog-details.html')
+                                li: +link('USB Microphone Comparison Guide: Which Model is Best for You?', 'blog-details.html')
+                                li: +link('USB Microphone Comparison Guide: Which Model is Best for You Inflatable Swan?', 'blog-details.html')
+                    .sidebar-widget
+                        h3 Categories
+                        .editor
+                            ul
+                                li: +link('Live Sound & PA')
+                                li: +link('Studio Gear')
+                                li: +link('Headphones')
+                                li: +link('Accessories')
+                                li: +link('Specials')
+                    .sidebar-widget
+                        h3 Archives
+                        .editor
+                            ul
+                                li: +link('August 2017')
+                                li: +link('May 2017')
+                    .sidebar-widget
+                        h3 Tags
+                        .tags
+                            .tags
+                                +link('USA')
+                                +link('Microphone').hashtag-l
+                                +link('Live')
+                                +link('Headphone')
+                                +link('Accessories')
+                                +link('Guitar').hashtag-m
+                                +link('Sale').hashtag-l
+                                +link('Studio')
+                                +link('Guitar')

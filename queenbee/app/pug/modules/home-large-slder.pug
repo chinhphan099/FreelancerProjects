@@ -1,0 +1,18 @@
+.slider-wrap
+	span.flower.hidden-md-down.flower-1: img(src="images/flower-medium-left.png", alt="")
+	span.flower.hidden-md-down.flower-2: img(src="images/flower-small-01.png", alt="")
+	.slider.single-slider(data-cslider='{"type": "single", "fade": true}')
+		.slick
+			.item
+				+link('Special occasions', 'products-listing.html')
+					+img-upload('banner.jpg').img-view
+			.item
+				+link('Special occasions', 'products-listing.html')
+					+img-upload('banner.jpg').img-view
+			.item
+				+link('Special occasions', 'products-listing.html')
+					+img-upload('banner.jpg').img-view
+			.item
+				+link('Special occasions', 'products-listing.html')
+					+img-upload('banner.jpg').img-view
+		span.load

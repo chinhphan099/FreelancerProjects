@@ -1,0 +1,199 @@
+.dpd-detail-wrapper
+	.container
+		.product-intro(data-collapse='{"initUnder": 991, "effect": "fade"}')
+			.tab-container
+				a.tab-control#description(href="javascript:;" data-active data-handle="Description" data-init)
+					i.icon-files-empty
+					| Description
+					.icon
+						i.icon-arrow-up
+						i.icon-arrow-down
+				.tab-contents.tab-description(data-content="Description")
+					.editor
+						p Arturia DrumBrute Analogue Drum Beat Production Machine Details
+						p: strong AUTHORISED AUSTRALIAN ARTURIA DEALER
+						p Soundcorp is an Authorised Australian Dealer of all Arturia Products! We provide a same day dispatch service for all orders placed before 1:00pm AEST.
+						p: strong.blue 1 YEAR WARRANTY
+						p The Arturia DrumBrute is an all-in-one analogue drum machine designed with performance and in-depth sound editing at its heart. Whether for step-sequenced beat making, real-time sound tweaking, or finger drumming performance, DrumBrute sets a new precedent for ergonomics, sequencing, editing, and pure sonic power. DrumBrute will surprise even the most hardcore analogue fans, opening up exciting new avenues of sound creation using its heavy kicks, punchy snares, lightning hi-hats, and shimmering cymbals.
+						br
+						h4 Features:
+						ul.style-list
+							li 17 pure analog drum sounds
+								ul
+									li Kick 1, kick 2, snare, clap, hi-hat 1, hi-hat 2, conga hi, conga low, tom hi, tom low, maracas, rimshot, clave, tambourine, cymbal, reverse cymbal, zap.
+									li Wide-range controls allow for many new and unique sounds
+									li 2 different flavors of kick drums
+									li Arturia's unique analogue Reverse Cymbal
+							li  64 patterns with up to 64 steps each
+								ul
+									li Separate accent per drum
+									li Song mode for chaining patterns
+							li  Pattern effects
+								ul
+									li Swing that can be global or per instrument
+									li Randomness per instrument for generating variations
+									li Steiner Parker output filter with bypass
+							li  Pattern effects
+							li  Multiple sync options
+							li USB MIDI interface
+							li Individual audio outputs
+							li Headphone output with both 3.5mm and 1/4” jacks
+							li Create polyrhythms
+								ul
+									li Each drum track can be a separate length
+
+				if bodyClass == 'product-detail-page'
+					a.tab-control#specifications(href="javascript:;" data-active data-handle="Specifications")
+						i.icon-stack
+						| Specifications
+						.icon
+							i.icon-arrow-up
+							i.icon-arrow-down
+					.tab-contents(data-content="Specifications")
+						.tab-pecifications
+							.editor
+								table.table-specifications
+									tr
+										td Sounds
+										td 17 drum instruments
+									tr
+										td Sequencer
+										td 64 patterns (4 banks of 16) with 64 steps each
+									tr
+										td Outputs
+										td 12 x 1/8" (individual drum outs), 1 x 1/4" (mix out), 1 x 1/4", 1 x 1/8" (headphones)
+									tr
+										td MIDI I/O
+										td In/Out
+									tr
+										td Other I/O
+										td 2 x 1/8" (clock in/out)
+									tr
+										td Product dimensions
+										td 418 mm x 276 mm x 40 mm
+									tr
+										td Weight
+										td 2580 g
+
+					a.tab-control#includes(href="javascript:;" data-active data-handle="Includes")
+						i.icon-cube
+						| Includes
+						.icon
+							i.icon-arrow-up
+							i.icon-arrow-down
+					.tab-contents(data-content="Includes")
+						.editor
+							p 1   x   Arturia DrumBute
+							p 1   x   Arturia DrumBute
+
+					a.tab-control#shipping(href="javascript:;" data-active data-handle="Shipping")
+						i.icon-shipping
+						| Shipping
+						.icon
+							i.icon-arrow-up
+							i.icon-arrow-down
+					.tab-contents(data-content="Shipping")
+						.editor
+							h4 Postage Prices
+							p Free Delivery - 3 to 5 Days
+							p Express Delivey ($20) - 1 to 3 Days
+							p Store Pick Up (South Melbourne) - Free
+							h4 Store Pick Up (South Melbourne) - Free
+							p Soundcorp will ship all goods the first business day once all funds have cleared.
+							h4 Refunds and Returns
+							p Defective or dead on arrival items, will be exchanged within 14 days. Return shipping is the responsibility of the customer.
+
+					a.tab-control#price-match(href="javascript:;" data-active data-handle="Price Match")
+						i: +img('icon-price-match.png')
+						| Price Match
+						.icon
+							i.icon-arrow-up
+							i.icon-arrow-down
+					.tab-contents(data-content="Price Match").price-match-block
+						.editor
+							p: strong Soundcorp will match or beat any advertised price on products in-store and on-line.
+							p: strong Complete the details below and a customer support representative will contact you directly with our offer.necessitatibus neque, voluptas modi maxime.
+							ul
+								li Limited to products offered by authorised Australian dealers.
+								li Excludes stock liquidations & commercial quantity's.
+								li Product for price match must be identical and brand new in the box.
+								li Product for price match must be identical and brand new in the box.
+								li Product for price match must be identical and brand new in the box.
+						form(action="#" method="post").form-price-match
+							.row
+								.col-xs-12.col-lg-6
+									.fieldset
+										label.label(for="yourName") Your Name #[span *]
+										+input({id: 'yourName', placeholder: 'Your Name'})
+								.col-xs-12.col-lg-6
+									.fieldset
+										label.label(for="email") Email #[span *]
+										+input({id: 'email', placeholder: 'Email'})
+							.row
+								.col-xs-12.col-lg-6
+									.fieldset
+										label.label(for="telephone") Telephone #[span *]
+										+input({id: 'telephone', placeholder: 'Telephone'})
+							.row
+								.col-xs-12.col-lg-6
+									.fieldset
+										label.label(for="productName") Product Name #[span *]
+										+input({id: 'productName', placeholder: 'Product Name'})
+							.row
+								.col-xs-12.col-lg-6
+									.fieldset
+										label.label(for="prlink") Competitor's product link #[span *]
+										+input({id: "prlink", placeholder: "Competitor's product link"})
+								.col-xs-12.col-lg-6
+									.fieldset
+										label.label(for="compePrice") Competitor's price  #[span *]
+										+input({id: "compePrice", placeholder: "Competitor's price "})
+							.row
+								.col-xs-12.col-lg-6
+									.fieldset
+										label.label(for="Information ") Information  #[span *]
+										+textarea('Information', 'Information')
+							.row
+								.col-xs-12.col-lg-6
+									.fieldset: +img-upload('notrobot.jpg')
+							.row
+								.col-xs-12.col-lg-6
+									.fieldset: +button({id: 'larger-1'}).button.larger.btn-primary Submit
+
+				a.tab-control#reviews(href="javascript:;" data-active data-handle="Reviews")
+					i.icon-star-outline
+					| Reviews
+					.icon
+						i.icon-arrow-up
+						i.icon-arrow-down
+				.tab-contents(data-content="Reviews")
+					.tab-review
+						.total-reviews
+							span Overall:
+							span.reviews
+								span.stars.stars-5
+							span 4.6 from 86 reviews
+						ul.list-review
+							li
+								.total-review
+									span.total-review-point  4/5
+									.reviews
+										span.stars.stars-5
+								.infomation
+									p: strong Lorem ipsum dolor sit amet, consectetur adipisicing elit
+									p Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+									.day
+										b Aaron
+										| - 9th of November, 2016
+							li
+								.total-review
+									span.total-review-point  4/5
+									.reviews
+										span.stars.stars-5
+								.infomation
+									p: strong Lorem ipsum dolor sit amet, consectetur adipisicing elit
+									p Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+									.day
+										b Aaron
+										| - 9th of November, 2016
+						+link('Write Your Own Review', 'href').button.btn-primary

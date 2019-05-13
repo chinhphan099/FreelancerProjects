@@ -1,0 +1,62 @@
+.column
+  .shipping-method
+    h2.checkout-title #[span 2] Shipping Method
+    .content
+      .grey-box
+        span.blue-text Please enter a delivery address to view available shipping methods
+      .fieldset
+        label(class="label" for="radio_1") Best way
+        +radio({name: 'shippingmethod', id: 'radio_1', text: 'Table Rate $15.00', checked: 'checked'}).circle
+      .fieldset
+        label(class="label" for="radio_2") Flat Rate
+        +radio({name: 'shippingmethod', id: 'radio_2', text: 'Fixed $15.00'}).circle
+  .payment-method
+    h2.checkout-title #[span 3] Payment Method
+    .content
+      .fieldset
+        ul.radio-list
+          li
+            .radio.circle
+              input#paypal(type='radio', name='paymentmethod', value='paypal', checked="checked")
+              label(for='paypal')
+                +img('paypal-logo.png')
+              i.icon-check
+          li
+            .radio.circle(data-show="#visa-block")
+              input#visa(type='radio', name='paymentmethod', value='visa')
+              label(for='visa')
+                +img('visa-logo.png')
+                +img('mastercard-logo.png')
+              i.icon-check
+          li
+            .radio.circle
+              input#oxipay(type='radio', name='paymentmethod', value='oxipay')
+              label(for='oxipay')
+                +img('oxipay-logo.png')
+              i.icon-check
+      .visa-block#visa-block
+        .fieldset
+          label(class="label" for="nameoncard") Name on Card #[span *]
+          +input({id: 'nameoncard'})
+        .fieldset
+          label(class="label" for="cardtype") Creadit Card Type #[span *]
+          +input({id: 'cardtype'})
+        .fieldset
+          label(class="label" for="cardnumber") Creadit Card Number #[span *]
+          +input({id: 'cardnumber'})
+        .row
+          .col-xl-6
+            .fieldset(data-number='{"maxLength": 2}')
+              label(class="label" for="cardmonth") Month #[span *]
+              +input({id: 'cardmonth', type: 'number'})(data-input)
+          .col-xl-6
+            .fieldset(data-number='{"maxLength": 4}')
+              label(class="label" for="year") Year #[span *]
+              +input({id: 'cardyear', type: 'number'})(data-input)
+        .fieldset(data-number="")
+          label(class="label" for="cardverify") Card Verification Number #[span *]
+          .row
+            .col-xs-7
+              +input({id: 'cardverify', type: 'number'})(data-input)
+            .col-xs-5
+              +link('What is this?').whatisthis-text

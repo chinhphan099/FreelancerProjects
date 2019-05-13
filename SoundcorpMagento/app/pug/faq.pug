@@ -1,0 +1,139 @@
+extends layouts/layout
+
+block vars
+    -title = 'FAQs'
+    -bodyClass = 'faq-page'
+    -mainNav = 1
+    -sub1 = 1
+    -sub2 = 1
+    -sub3 = 0
+
+block main
+    main
+        .container
+            .breadcrumbs-wrap
+                +breadcrumbs([
+                    {title: 'Home', href: 'index.html', text: 'Home'},
+                    {title: 'Customer Service', href: '#', text: 'Customer Service'},
+                    {title: 'FAQs'}
+                ])
+            .wrap-page.clearfix
+                .sidebar
+                    .sidebar-widget
+                        h3 Customer Service
+                        ul.nav-left
+                            li: +link('Shipping Info')
+                            li: +link('Return Policy')
+                            li: +link('FAQs', 'faq.html').active
+                            li: +link('Contact Us', 'contact.html')
+                .primary
+                    h2.title FAQs
+                    .faqs(data-collapse='{"type": "toggleSelf"}')
+                        .item
+                            h3 Delivery
+                            .panel-group
+                                .panel
+                                    .panel-title(data-handle="quest1" data-active)
+                                        +link('Title of title') Do you ship internationally?
+                                    .panel-collapse(data-content="quest1")
+                                        .editor
+                                            p You can contact Soundcorp via email or phone.
+                                            p You can contact Soundcorp via email or phone.
+                                            p All customer queries will be responded to within 1 business day.
+                                .panel
+                                    .panel-title(data-handle="quest2" data-active)
+                                        +link('Title of title') How do I contact #[strong Soundcorp]?
+                                    .panel-collapse(data-content="quest2")
+                                        .editor
+                                            p You can contact Soundcorp via email or phone.
+                                            p You can contact Soundcorp via email or phone.
+                                            p All customer queries will be responded to within 1 business day.
+                                .panel
+                                    .panel-title(data-handle="quest3" data-active)
+                                        +link('Title of title') Is #[strong Soundcorp] an authorised dealer?
+                                    .panel-collapse(data-content="quest3")
+                                        .editor
+                                            p You can contact Soundcorp via email or phone.
+                                            p You can contact Soundcorp via email or phone.
+                                            p All customer queries will be responded to within 1 business day.
+                                .panel
+                                    .panel-title(data-handle="quest4" data-active)
+                                        +link('Title of title') Is the site secure?
+                                    .panel-collapse(data-content="quest4")
+                                        .editor
+                                            p You can contact Soundcorp via email or phone.
+                                            p You can contact Soundcorp via email or phone.
+                                            p All customer queries will be responded to within 1 business day.
+                                .panel
+                                    .panel-title(data-handle="quest5" data-active)
+                                        +link('Title of title') What currency will I be charged in?
+                                    .panel-collapse(data-content="quest5")
+                                        .editor
+                                            p You can contact Soundcorp via email or phone.
+                                            p You can contact Soundcorp via email or phone.
+                                            p All customer queries will be responded to within 1 business day.
+                                .panel
+                                    .panel-title(data-handle="quest6" data-active)
+                                        +link('Title of title') What is the privacy policy?
+                                    .panel-collapse(data-content="quest6")
+                                        .editor
+                                            p You can contact Soundcorp via email or phone.
+                                            p You can contact Soundcorp via email or phone.
+                                            p All customer queries will be responded to within 1 business day.
+
+                        .item
+                            h3 Returns
+                            .panel-group
+                                .panel
+                                    .panel-title(data-handle="quest7" data-active)
+                                        +link('Title of title') What is the #[strong Soundcorp] return policy?
+                                    .panel-collapse(data-content="quest7")
+                                        .editor
+                                            p You can contact Soundcorp via email or phone.
+                                            p You can contact Soundcorp via email or phone.
+                                            p All customer queries will be responded to within 1 business day.
+                                .panel
+                                    .panel-title(data-handle="quest8" data-active)
+                                        +link('Title of title') What is your price match guarantee?
+                                    .panel-collapse(data-content="quest8")
+                                        .editor
+                                            p You can contact Soundcorp via email or phone.
+                                            p You can contact Soundcorp via email or phone.
+                                            p All customer queries will be responded to within 1 business day.
+                                .panel
+                                    .panel-title(data-handle="quest9" data-active)
+                                        +link('Title of title') What is your customer service policy?
+                                    .panel-collapse(data-content="quest9")
+                                        .editor
+                                            p You can contact Soundcorp via email or phone.
+                                            p You can contact Soundcorp via email or phone.
+                                            p All customer queries will be responded to within 1 business day.
+                                .panel
+                                    .panel-title(data-handle="quest10" data-active)
+                                        +link('Title of title') What is your refund policy?
+                                    .panel-collapse(data-content="quest10")
+                                        .editor
+                                            p You can contact Soundcorp via email or phone.
+                                            p You can contact Soundcorp via email or phone.
+                                            p All customer queries will be responded to within 1 business day.
+
+                        .item
+                            h3 order
+                            .panel-group
+                                .panel
+                                    .panel-title(data-handle="quest11" data-active)
+                                        +link('Title of title') Do you ship internationally?
+                                    .panel-collapse(data-content="quest11")
+                                        .editor
+                                            p You can contact Soundcorp via email or phone.
+                                            p You can contact Soundcorp via email or phone.
+                                            p All customer queries will be responded to within 1 business day.
+                                .panel
+                                    .panel-title(data-handle="quest12" data-active)
+                                        +link('Title of title') How do I contact #[strong Soundcorp]?
+                                    .panel-collapse(data-content="quest12")
+                                        .editor
+                                            p You can contact Soundcorp via email or phone.
+                                            p You can contact Soundcorp via email or phone.
+                                            p All customer queries will be responded to within 1 business day.
+

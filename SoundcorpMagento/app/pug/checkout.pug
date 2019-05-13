@@ -1,0 +1,23 @@
+extends layouts/layout
+
+block vars
+    -title = 'Checkout Page'
+    -bodyClass = 'checkout-page'
+    -mainNav = 1
+    -sub1 = 1
+    -sub2 = 1
+    -sub3 = 0
+
+block main
+    main
+      .checkout-block
+        .container
+          .cart-title
+            h1 Checkout
+          .login-area
+            span Already register?
+            +link('Click here to login', '#!').button.btn-primary
+          .one-step-checkout
+            include modules/checkout-billing-address
+            include modules/checkout-shipping-payment
+            include modules/checkout-payment-col

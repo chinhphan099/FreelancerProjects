@@ -1,0 +1,92 @@
+.main-header
+	.left-block.pull-left
+		span.control-nav
+			i.icon-menu
+			i.icon-close
+		.head-search
+			i.icon-search
+			i.icon-close
+			+customInput({id: 'headSearchBtn', iconClass: 'icon-next'}, {id: "headSearchTxt", placeholder: 'Search your website.'})
+		+link('1300 773 449').head-phone.hidden-md-down.pull-left
+	.right-block.pull-right
+		.currency-list
+			span.current
+				| USD
+				i.icon-caret-down
+			ul
+				li(rel="aud") AUD
+				li(rel="usd").active USD
+				li(rel="usd") USD
+				li(rel="aud") AUD
+		.group.user-control.hidden-md-down
+			+link('User', 'login.html')
+				i.icon-account
+			//- .inner.user-login
+			//-   | Form
+		.group.my-wishlist.hidden-md-down
+			+link('Wish list', 'wishlist.html')
+				i.icon-wishlist
+		.group.mini-cart
+			+link('Bag', 'bag.html')
+				i.icon-cart
+				- if(bodyClass = 'home') {
+					span.total 4
+				- }
+			.inner.bag-content.hidden-md-down
+				- if(bodyClass != 'home') {
+					.cart-empty
+						span.fill-me-up Fill me up
+						.text-center: +link('title', 'products-listing.html').button.small.btn-tertiary: span: span Go Shopping
+				- } else {
+					.mini-cart-totals.clearfix
+						span.total-item 3 items
+						span.cart-subtotal.right-text Cart Subtotal:
+							span.subtotal $123.60
+					.text-center: +link('title', 'checkout.html').button.small.btn-tertiary: span: span Go to Checkout
+					.mini-cart-outer
+						- var n = 0;
+						ul.mini-cart-products
+							li.mini-item
+								.thumb
+									+img-upload('img-1.jpg')
+								.content
+									.control-item
+										a.icon-pencil(href="javascript:;")
+										a.icon-cancel-circle(href="javascript:;")
+									h4.name: +link('Oasis Long Maternity', 'product-detail.html')
+									span.type Leggings in Black
+									.info
+										| Price:&nbsp;
+										span.price $90
+									.info(data-number='{"maxLength": 3}')
+										| Qty:&nbsp;
+										input(type="number" value="1" data-input="")
+							while n < 3
+								- n++
+								li.mini-item
+									.thumb
+										+img-upload('img-1.jpg')
+									.content
+										.control-item
+											a.icon-pencil(href="javascript:;")
+											a.icon-cancel-circle(href="javascript:;")
+										h4.name: +link('Trimester™ - Oasis Long Maternity', 'product-detail.html')
+										span.type Leggings in Black
+										.info
+											| Price:&nbsp;
+											+price('$89', '$100')
+										.info
+											| Qty:&nbsp;
+											strong 1
+						.view-cart.text-center: +link('VIEW AND EDIT CART', 'cart.html')
+				- }
+	.logo: +link('QueenBee', 'index.html'): +img('logo.png')
+
+
+
+
+
+
+
+
+

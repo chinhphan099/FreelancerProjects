@@ -1,0 +1,44 @@
+extends layouts/layout
+
+block vars
+	-title = 'For Student'
+	-bodyClass = ''
+	-mainNav = 1
+
+block main
+	main
+		+head-block("Smart education made fun!")
+			.video-wrap(data-youtube='{"idOrLink": "https://www.youtube.com/watch?v=9yZACdneuyI", "autoplay": 0}')
+				.video-container
+					.iframeYoutube
+					.thumb(style="background-image: url(images/upload/banner-video.jpg)" data-handle)
+				+button({})(class="control" data-handle)
+					i.icon-youtube
+		.container
+			.content-list
+				.row
+					h2
+						span.text Maths Made Smart
+					.col-xs-12.col-sm-6
+						.thumb: a(href="#" title="title"): img(src="images/upload/img-1.jpg", alt="")
+					.col-xs-12.col-sm-6
+						.content
+							p When creating S.T.A.R. Maths Online, we want every child to receive individualised attention when they are learning maths. Which is at the heart of our software! S.T.A.R. Maths Online treats every child individually and tailor a curriculum that meets their need. Whether they are excelling or need further practice, we got them covered!
+				.row
+					h2
+						span.text Maths Made Fun
+					.col-xs-12.col-sm-6.pull-right
+						.thumb: a(href="#" title="title"): img(src="images/upload/img-1.jpg", alt="")
+					.col-xs-12.col-sm-6
+						.content
+							p S.T.A.R. Maths Online is designed so that our children can have fun while they are learning. From colorful designs to interactive characters and pets, we want our children to feel like Maths is not a chore but a fun subject that they would enjoying using it everyday!
+				.row
+					h2
+						span.text Maths Made Free
+					.col-xs-12.col-sm-6
+						.thumb: a(href="#" title="title"): img(src="images/upload/img-1.jpg", alt="")
+					.col-xs-12.col-sm-6
+						.content
+								p Maths is a fun subject and one that can inspire us to solve amazing problems when we grow up. Having a solid foundation when we are young is pivital for our development. Which is why, we've made S.T.A.R. Maths Online free, to help our childrren reach their full potential and create an inspiring future that we all want to see!
+
+

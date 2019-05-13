@@ -1,0 +1,45 @@
+nav.navigation
+	.container
+		ul.menu(data-collapse='{"initUnder": 991}')
+			li.has-child(data-active)
+				+link('New', 'products-listing.html')
+					| Live sound &amp; PA
+					i.icon-arrow-down(data-handle="new")
+				.menu-group
+					.outer(data-content="new")
+						.inner
+							+submenu()
+			li.has-child(data-active)
+				+link('Maternity', 'products-listing.html')
+					| Studio gear
+					i.icon-arrow-down(data-handle="Maternity")
+				.menu-group
+					.outer(data-content="Maternity")
+						.inner
+							+submenu()
+			li.has-child(data-active)
+				+link('Nursing', 'products-listing.html')
+					| Headphones
+					i.icon-arrow-down(data-handle="Nursing")
+				.menu-group
+					.outer(data-content="Nursing")
+						.inner
+							+submenu()
+			li.has-child(data-active)
+				+link('Baby', 'products-listing.html')
+					| Accessories
+					i.icon-arrow-down(data-handle="Baby")
+				.menu-group
+					.outer(data-content="Baby")
+						.inner
+							+submenu()
+			li.has-child(data-active)
+				+link('Designer', 'products-listing.html')
+					| Shop by brand
+					i.icon-arrow-down(data-handle="Designer")
+				.menu-group
+					.outer(data-content="Designer")
+						.inner
+							+submenu()
+			li: +link('Specials', 'specials.html')
+			li: +link('Clearance', 'clearance.html')

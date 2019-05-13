@@ -1,0 +1,11 @@
+.tab-navigation-wrap.hidden-md-down
+	.tab-navigation
+		.container
+			ul.tabs
+				li.active: +link('Description', '#description')(data-scrollto='{"handle": "#description"}')
+				if bodyClass == 'product-detail-page'
+					li: +link('Specifications', '#specifications')(data-scrollto='{"handle": "#specifications"}')
+					li: +link('Includes', '#includes')(data-scrollto='{"handle": "#includes"}')
+					li: +link('shipping', '#shipping')(data-scrollto='{"handle": "#shipping"}')
+					li: +link('Pricematch', '#price-match').bgd(data-scrollto='{"handle": "#price-match"}')
+				li: +link('Reviews', '#reviews')(data-scrollto='{"handle": "#reviews"}')

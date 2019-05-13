@@ -1,0 +1,18 @@
+.quick-link
+	ul
+		li: +link('AV Solutions Division')
+		li: +link('Melbourne')
+		li: +link('Sydney')
+		li: +link('Login')
+			i.icon-user
+			| Login
+		li: +link('Wishlist')
+			i.icon-heart-outline
+			| Wishlist
+	.need-help
+		+link('Call us')
+			i.icon-phone-outline
+			span.phone-number
+				+img('icon-help.png').icon
+				| Need help? Call us
+				strong (03) 9694 2600

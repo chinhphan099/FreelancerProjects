@@ -1,0 +1,8 @@
+
+@font-face {
+  font-family: 'Javacom';
+  src: url('Javacom.eot?#iefix') format('embedded-opentype'),  url('Javacom.otf')  format('opentype'),
+	     url('Javacom.woff') format('woff'), url('Javacom.ttf')  format('truetype'), url('Javacom.svg#Javacom') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

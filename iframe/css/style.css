@@ -1,0 +1,20 @@
+@charset "UTF-8";
+/* Iframe */
+.iframe-wrapper {
+  position: relative;
+  background: url("../images/loading.svg") 50% 20% / 50px no-repeat;
+}
+.iframe-wrapper iframe {
+  opacity: 0;
+  -webkit-transition: opacity .25s ease;
+  -moz-transition: opacity .25s ease;
+  -ms-transition: opacity .25s ease;
+  -o-transition: opacity .25s ease;
+  transition: opacity .25s ease;
+}
+.iframe-wrapper.show-iframe {
+  background: transparent;
+}
+.iframe-wrapper.show-iframe iframe {
+  opacity: 1;
+}

@@ -1,0 +1,19 @@
+extends layouts/layout
+
+block vars
+	-title = 'Homepage'
+	-bodyClass = 'home'
+
+block main
+	main
+		.container
+			+promotion-top()
+			include modules/home-two-box
+			include modules/home-hexa-box
+			include modules/home-three-box
+			include modules/home-large-slder
+			include modules/home-shipping-block
+			include modules/home-shop-out-latest
+			include modules/home-brands-block
+			include modules/home-join-our
+			include modules/home-instagram-block

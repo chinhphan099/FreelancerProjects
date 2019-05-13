@@ -1,0 +1,56 @@
+extends layouts/layout
+
+block vars
+	-title = 'Affiliate'
+	-bodyClass = 'affiliate-page'
+
+block main
+	main
+		.affiliate-wrap
+			.container
+				+promotion-top()
+				+breadcrumbs([{title: 'Affiliate Program'}])
+				.heading-description
+					span.flower: img(src="images/flower-small-01.png", alt="")
+					.inner
+						h1 Affiliate Program
+				.inner-content
+					.editor
+						p Queen Bee is Australia's leading pregnancy and motherhood online style boutique. Boasting over 60 local and international labels, we stock a beautiful range of designer maternity clothes for all occasions, from swimwear, #[a(href="#0" title="maternity jeans") maternity jeans] to formal wear and everything in between. Queen Bee is the go to destination where you can buy everything you need to see you through pregnancy and beyond with new arrivals every week.
+						p Our #[a(href="#" title="Maternity Style Blog") Maternity Style Blog] is a daily must read for well-being and health tips, #[a(href="#" title="celebrity pregnancy news") celebrity pregnancy news], plus style and lifestyle ideas to encourage and inspire. Discover how we can transform your wardrobe with our beautiful maternity clothes as you embark on your journey to motherhood in style. dressing pregnant ladies since May 2005 - enjoy a stylish pregnancy
+						p.text-center: img(src="images/upload/banner-affiliate.jpg", alt="").img
+
+				// Section content
+				.section-content
+					h2 Discover the benefits of our Queen Bee affiliate program
+					.inner
+						.col.col-left
+							ul
+								li Earn 10% commission
+								li Professional banners for your site
+								li High conversion rate with our trusted well established company
+								li 30 day cookie
+								li Daily updated product feed
+								li Commission paid monthly
+								li Custom made banners available and promotions for your blog
+						.col.col-right
+							.join-out-box
+								h4 TO JOIN OUR EXCITING AFFILIATE PROGRAM #[a(href="#" title="Click") CLICK] ON OUR NETWORK PARTNER
+								a(href="#"): img(src="images/commission-factory.jpg", alt="")
+				.affiliate-list
+					.col-left
+						a(href="#" title="title"): +img-upload("affiliate-1.jpg")
+					.col-right
+						.item
+							a(href="#" title="title"): +img-upload("affiliate-2.jpg")
+						.item
+							a(href="#" title="title"): +img-upload("affiliate-3.jpg")
+						.item
+							a(href="#" title="title"): +img-upload("affiliate-4.jpg")
+						.item
+							a(href="#" title="title"): +img-upload("affiliate-5.jpg")
+
+
+
+
+

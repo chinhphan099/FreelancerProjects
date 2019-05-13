@@ -1,0 +1,172 @@
+// Editor
+// ----------------------------------------------------------------------------------------
+.editor {
+	.line-height(24px, 15px);
+	margin-bottom: 30px;
+	color: @color17;
+	.font-size(14px);
+	p, li {
+		font-size: inherit;
+	}
+	.row {
+		margin-bottom: 20px;
+		img {
+			margin-top: 20px;
+		}
+	}
+	.meta-post {
+		border-bottom: 1px solid @color05;
+		padding-bottom: 20px;
+		margin-bottom: 20px;
+		.box {
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 5px;
+		}
+	}
+	h1 {
+		.line-height(30px, 28px);
+		padding-bottom: 20px;
+	}
+	h2 {
+		.line-height(30px, 24px);
+		padding-bottom: 20px;
+	}
+	h3 {
+		.line-height(30px, 22px);
+		padding-bottom: 15px;
+	}
+	h4 {
+		.line-height(30px, 20px);
+		padding-bottom: 15px;
+	}
+	h5 {
+		.line-height(30px, 18px);
+		padding-bottom: 15px;
+	}
+	h6 {
+		.line-height(30px, 16px);
+		padding-bottom: 10px;
+	}
+	strong {
+		color: @color10;
+	}
+	a {
+		color: @color14;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	* {
+		line-height: inherit;
+		color: inherit;
+	}
+	.video-wrap {
+		width: 100%;
+		max-width: 770px;
+		margin: 0 auto 30px;
+	}
+	@media (min-width: @md-min) {
+		.font-size(15px);
+		.video-wrap {
+			margin-bottom: 50px;
+		}
+	}
+}
+
+// Post Navigation
+// ----------------------------------------------------------------------------------------
+.post-navigation {
+	padding: 25px 0;
+	margin-bottom: 50px;
+	border-top: 1px solid #e4e4e4;
+	border-bottom: 1px solid #e4e4e4;
+	.display(flex);
+	.flex-wrap(wrap);
+	.justify-content(space-between);
+	.text-left,
+	.text-right {
+		.display(flex);
+		width: 100%;
+		.align-items(center);
+		.control {
+			position: relative;
+			padding: 0 15px;
+			&:before {
+				.position(50% null);
+				.translateY(-50%);
+				.fonticon();
+				font-size: 34px;
+			}
+		}
+		a {
+			display: inline-block;
+			color: @color10;
+			.ElleFutura-Bold();
+			.font-size(12px);
+			line-height: 1.4;
+			&:hover {
+				color: @color14;
+			}
+		}
+	}
+	.text-left {
+		padding-right: 10%;
+		padding-bottom: 20px;
+		.control {
+			font-size: 0;
+			color: @color17;
+			&:before {
+				left: 0;
+				content: "\f3d2";
+				color: #e9e9e9;
+			}
+		}
+	}
+	.text-right {
+		padding-left: 10%;
+		.justify-content(flex-end);
+		.control {
+			color: @color10;
+			font-size: 0;
+			&:before {
+				right: 0;
+				content: "\f3d3";
+				color: @color10;
+			}
+		}
+	}
+	@media (min-width: @md-min) {
+		.text-left,
+		.text-right {
+			width: 47%;
+			padding: 0;
+			.control {
+				.font-size(15px);
+				padding: 0 20px;
+			}
+			a {
+				.font-size(14px);
+				.line-height(24px, 14px);
+			}
+		}
+	}
+	@media (min-width: @lg-min) {
+		.text-left,
+		.text-right {
+			width: 40%;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+

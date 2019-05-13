@@ -1,0 +1,522 @@
+// Typography
+@fonticon: "icomoon";
+@sans-serif: Helvetica, Arial, sans-serif; // Font ko chân
+@serif: Georgia, "Times New Roman", Times, serif; // Font có chân
+@monospace: Monaco, Menlo, Consolas, "Courier New", monospace;
+@font-family-base: @sans-serif;
+@font-size: 15px;
+@font-button: 16px;
+@line-height-tag-p: round((22 / 14), 3);
+@h1-size: 36px;
+@h2-size: 30px;
+@h3-size: 24px;
+@h4-size: 18px;
+@h5-size: 14px;
+@h6-size: 12px;
+
+
+.fonticon() {font-family: @fonticon;}
+.sans-serif() {font-family: @sans-serif;}
+.serif() {font-family: @serif;}
+.monospace() {font-family: @monospace;}
+.bold() {font-weight: 700;}
+
+// Path image
+@img: "/pub-assets/fileuploads/images"; // background-image: url("@{img}/img-1.png");
+
+
+// Color
+@color00: transparent;
+@color01: #fff;
+@color02: #000;
+@color03: #333;
+@color04: #666;
+@color05: #999;
+@color06: #ddd;
+
+
+// Important
+@bgd-body: #fff;
+@bgd-input: #fff;
+@bgd-invalid: #fff;
+
+@text-color: #333;
+@color-input: #000;
+@border-input: #ddd;
+@placeholder: #666;
+@invalid: #cc4b37; //color invalid input
+
+// Link
+@link: #1B60D6;
+@link-hover: #333;
+
+@xs-min: 0;
+@sm-min: 544px;
+@md-min: 768px;
+@lg-min: 992px;
+@xl-min: 1200px;
+
+@xs-max: (@sm-min - 1);
+@sm-max: (@md-min - 1);
+@md-max: (@lg-min - 1);
+@lg-max: (@xl-min - 1);
+
+// With of .container
+@container: 1000px;
+
+// CSS reset
+.cssreset() {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  background: transparent;
+}
+// Link color
+.link-color(@color, @color-hover: @color) {
+  color: @color;
+  transition: all .25s ease;
+  &:hover {
+    color: @color-hover;
+  }
+}
+// Hide text
+.text-hide() {
+  font-size: 0;
+  color: transparent;
+  text-shadow: none;
+  border: none;
+}
+.antialiased() {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+// https://css-tricks.com/almanac/properties/f/font-feature-settings/
+.font-feature(@target) {
+  -webkit-font-feature-settings: @target;
+  -moz-font-feature-settings: @target;
+  -ms-font-feature-settings: @target;
+  -o-font-feature-settings: @target;
+  font-feature-settings: @target;
+}
+// Center-align a block level element
+.center-block() {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+// Font-size: PX to REM
+.font-size(@target: @font-size, @default: @font-size) {
+  font-size: @target;
+  font-size: round((@target / @default), 3) + 0rem;
+}
+// Line height
+.line-height(@target: @font-size, @default: @font-size) {
+  line-height: round((@target / @default), 3) + 0em;
+}
+// Sizing shortcuts
+.size(@width, @height: @width) {
+  width: @width;
+  height: @height;
+}
+// Placeholder text
+.placeholder(@color: @placeholder-color) {
+  &:-moz-placeholder {color: @color;}
+  &::-moz-placeholder {color: @color; opacity: 1;}
+  &:-ms-input-placeholder {color: @color !important;}
+  &::-webkit-input-placeholder {color: @color;}
+}
+// Text truncate ...
+.text-truncate() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.invisible() {
+  opacity: 0;
+  visibility: hidden;
+}
+.visible() {
+  opacity: 1;
+  visibility: visible;
+}
+// Clearfix
+.clearfix() {
+  &:before, &:after {
+    display: table;
+    content: "";
+    clear: both;
+  }
+}
+.box-decoration-break(@value: clone) {//clone, slice, unset - Use padding, margin for inline tag.
+  -webkit-box-decoration-break: @value;
+       -o-box-decoration-break: @value;
+          box-decoration-break: @value;
+}
+// Box Shadows
+.box-shadow(@args) {
+  -webkit-box-shadow: @args;
+          box-shadow: @args;
+}
+// Text Shadow
+.text-shadow(@args) {
+  text-shadow: @args;
+}
+// Position
+.position(@position: null, @coordinates: null) {
+  & when (@coordinates = null) {
+    & when (@position = null) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    & when not (@position = null) {
+      & when not (isnumber(@position)) and (length(@position) = 1) {
+        position: @position;
+      }
+
+      & when (length(@position) = 1) and (isnumber(@position)) {
+        @top: @position;
+        position: absolute;
+        top: @top;
+        right: @top;
+        bottom: @top;
+        left: @top;
+      }
+
+      & when (length(@position) > 1) {
+        @coordinates: @position;
+        @top: extract(@coordinates, 1);
+        @right: extract(@coordinates, 2);
+        @bottom: extract(@coordinates, 3);
+        @left: extract(@coordinates, 4);
+        position: absolute;
+        & when (isnumber(@top)) {top: @top;}
+        & when (isnumber(@right)) {right: @right;}
+        & when (isnumber(@bottom)) {bottom: @bottom;}
+        & when (isnumber(@left)) {left: @left;}
+      }
+    }
+  }
+
+  & when not (@coordinates = null) {
+    position: @position;
+    & when (length(@coordinates) = 1) {
+      @top: @coordinates;
+      top: @top;
+      right: @top;
+      bottom: @top;
+      left: @top;
+    }
+
+    & when (length(@coordinates) > 1) {
+      @top: extract(@coordinates, 1);
+      @right: extract(@coordinates, 2);
+      @bottom: extract(@coordinates, 3);
+      @left: extract(@coordinates, 4);
+      & when (isnumber(@top)) {top: @top;}
+      & when (isnumber(@right)) {right: @right;}
+      & when (isnumber(@bottom)) {bottom: @bottom;}
+      & when (isnumber(@left)) {left: @left;}
+    }
+  }
+}
+
+// Triangle
+.triangle-base() {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  -moz-transform: scale(.9999);
+}
+.triangle(@direction, @size, @color) {
+  .triangle(@direction, @size * 2, @size, @color);
+}
+.triangle(@direction, @width, @height, @color) when (@direction = up) {
+  .triangle-base();
+  border-left: (@width / 2) solid transparent;
+  border-right: (@width / 2) solid transparent;
+  border-bottom: @height solid @color;
+}
+.triangle(@direction, @width, @height, @color) when (@direction = down) {
+  .triangle-base();
+  border-left: (@width / 2) solid transparent;
+  border-right: (@width / 2) solid transparent;
+  border-top: @height solid @color;
+}
+.triangle(@direction, @width, @height, @color) when (@direction = left) {
+  .triangle-base();
+  border-top: (@height / 2) solid transparent;
+  border-bottom: (@height / 2) solid transparent;
+  border-right: @width solid @color;
+}
+.triangle(@direction, @width, @height, @color) when (@direction = right) {
+  .triangle-base();
+  border-top: (@height / 2) solid transparent;
+  border-bottom: (@height / 2) solid transparent;
+  border-left: @width solid @color;
+}
+.triangle(@direction, @width, @height, @color) when (@direction = upleft) {
+  .triangle-base();
+  border-top: @height solid @color;
+  border-right: @width solid transparent;
+}
+.triangle(@direction, @width, @height, @color) when (@direction = upright) {
+  .triangle-base();
+  border-top: @height solid @color;
+  border-left: @width solid transparent;
+}
+.triangle(@direction, @width, @height, @color) when (@direction = downleft) {
+  .triangle-base();
+  border-bottom: @height solid @color;
+  border-right: @width solid transparent;
+}
+.triangle(@direction, @width, @height, @color) when (@direction = downright) {
+  .triangle-base();
+  border-bottom: @height solid @color;
+  border-left: @width solid transparent;
+}
+// Background Image Retina
+.img-retina(@image; @retina; @width-retina: 100%; @height-retina: 100%) {
+  background-image: url("@{image}");
+  @media
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min--moz-device-pixel-ratio: 2),
+  only screen and (-o-min-device-pixel-ratio: 2/1),
+  only screen and (min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 192dpi),
+  only screen and (min-resolution: 2dppx) {
+    background-image: url("@{retina}");
+    background-size: @width-retina @height-retina;
+  }
+}
+
+// Custome default sroll bar
+.scrollbar(@width, @thumbBg, @trackBg) {
+  &::-webkit-scrollbar {
+    width: @width;
+  }
+  &::-webkit-scrollbar-thumb {
+    .border-radius(0);
+    background: @thumbBg;
+  }
+  &::-webkit-scrollbar-track {
+    .border-radius(0);
+    background: @trackBg;
+  }
+}
+
+// Background Size
+.background-size(@args) {
+  -webkit-background-size: @args;
+          background-size: @args;
+}
+
+// Reset filter
+.reset-filter() {
+  filter: "progid:DXImageTransform.Microsoft.gradient(enabled = false)";
+}
+
+// Opacity
+.opacity(@factor) {
+  @iefactor: @factor*100;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=@{iefactor})";
+  filter: ~"alpha(opacity=(@{iefactor}))";
+  -webkit-opacity: @factor;
+     -moz-opacity: @factor;
+          opacity: @factor;
+}
+
+// Border Radius
+.border-radius(@args) {
+  -webkit-border-radius: @args;
+          border-radius: @args;
+}
+
+// user-select
+.user-select(@factor) {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+//Calc
+.calc(@expression) {
+  width: -moz-calc(@expression);
+  width: -o-calc(@expression);
+  width: -webkit-calc(@expression);
+  width: calc(@expression);
+}
+
+// Transforms
+.transform(@args) {
+  -webkit-transform: @args;
+     -moz-transform: @args;
+      -ms-transform: @args;
+       -o-transform: @args;
+          transform: @args;
+}
+
+.transform-origin(@args) {
+  -webkit-transform-origin: @args;
+     -moz-transform-origin: @args;
+      -ms-transform-origin: @args;
+       -o-transform-origin: @args;
+          transform-origin: @args;
+}
+
+.transform-style(@style) {
+  -webkit-transform-style: @style;
+     -moz-transform-style: @style;
+      -ms-transform-style: @style;
+       -o-transform-style: @style;
+          transform-style: @style;
+}
+
+.rotate(@deg: 45deg) {
+  .transform(rotate(@deg));
+}
+
+.scale(@factor: .5) {
+  .transform(scale(@factor));
+}
+
+.skew(@x, @y) {
+  -webkit-transform: skew(@x, @y);
+     -moz-transform: skew(@x, @y);
+      -ms-transform: skewX(@x) skewY(@y); // See https://github.com/twitter/bootstrap/issues/4885
+       -o-transform: skew(@x, @y);
+          transform: skew(@x, @y);
+  -webkit-backface-visibility: hidden; // See https://github.com/twitter/bootstrap/issues/5319
+}
+
+.translate(@x, @y) {
+  .transform(translate(@x, @y));
+}
+.translateX(@x) {
+  .transform(translateX(@x));
+}
+.translateY(@y) {
+  .transform(translateY(@y));
+}
+.translateZ(@z) {
+  .transform(translateY(@z));
+}
+
+.translate3d(@x, @y, @z) {
+  .transform(translate3d(@x, @y, @z));
+}
+
+.translateHardware(@x, @y) {
+  .translate(@x, @y);
+  -webkit-transform: translate3d(@x, @y, 0);
+     -moz-transform: translate3d(@x, @y, 0);
+      -ms-transform: translate3d(@x, @y, 0);
+       -o-transform: translate3d(@x, @y, 0);
+          transform: translate3d(@x, @y, 0);
+}
+// Transitions
+.transition(@args: 200ms) {
+  -webkit-transition: @args;
+     -moz-transition: @args;
+      -ms-transition: @args;
+       -o-transition: @args;
+          transition: @args;
+}
+// Animation
+.animation(@args) {
+  -webkit-animation: @args;
+     -moz-animation: @args;
+      -ms-animation: @args;
+       -o-animation: @args;
+          animation: @args;
+}
+
+// Appearance
+.appearance (@value) {
+  -webkit-appearance: @value;
+     -moz-appearance: @value;
+          appearance: @value;
+}
+
+// Flexbox display
+.flex-display(@display: flex) {
+  display: ~"-webkit-@{display}";
+  display: ~"-ms-@{display}box";
+  display: ~"-ms-@{display}";
+  display: @display;
+}
+
+.flex(@columns: initial) {
+  -webkit-flex: @columns;
+      -ms-flex: @columns;
+          flex: @columns;
+}
+
+.flex-direction(@direction: row) {
+  -webkit-flex-direction: @direction;
+      -ms-flex-direction: @direction;
+          flex-direction: @direction;
+}
+.flex-wrap(@wrap: nowrap) {
+  -webkit-flex-wrap: @wrap;
+      -ms-flex-wrap: @wrap;
+          flex-wrap: @wrap;
+}
+
+.flex-flow(@flow) {
+  -webkit-flex-flow: @flow;
+      -ms-flex-flow: @flow;
+          flex-flow: @flow;
+}
+
+.flex-order(@order: 0) {
+  -webkit-order: @order;
+      -ms-order: @order;
+          order: @order;
+}
+
+.flex-grow(@grow: 0) {
+  -webkit-flex-grow: @grow;
+      -ms-flex-grow: @grow;
+          flex-grow: @grow;
+}
+
+.flex-shrink(@shrink: 1) {
+  -webkit-flex-shrink: @shrink;
+      -ms-flex-shrink: @shrink;
+          flex-shrink: @shrink;
+}
+.flex-basis(@width: auto) {
+  -webkit-flex-basis: @width;
+      -ms-flex-basis: @width;
+          flex-basis: @width;
+}
+.justify-content(@justify: flex-start) {
+  -webkit-justify-content: @justify;
+      -ms-justify-content: @justify;
+          justify-content: @justify;
+}
+.align-content(@align: stretch) {
+  -webkit-align-content: @align;
+      -ms-align-content: @align;
+          align-content: @align;
+}
+.align-items(@align: stretch) {
+  -webkit-align-items: @align;
+      -ms-align-items: @align;
+          align-items: @align;
+}
+.align-self(@align: auto) {
+  -webkit-align-self: @align;
+      -ms-align-self: @align;
+          align-self: @align;
+}
+
+
+
