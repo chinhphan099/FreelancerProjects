@@ -1,0 +1,197 @@
+//---------------------------------------------------
+//  LESS Prefixer
+//  https://github.com/JoelSutherland/LESS-Prefixer
+//---------------------------------------------------
+//
+
+// keyframes
+.keyframes(@name; @arguments) {
+  @keyframes @name {@arguments();}
+}
+
+// Background Size
+.background-size(@args) {
+  background-size: @args;
+}
+
+// Border Radius
+.border-radius(@args) {
+  border-radius: @args;
+}
+
+// Box Shadows
+.box-shadow(@args) {
+  box-shadow: @args;
+}
+
+.inner-shadow(@args) {
+  .box-shadow(inset @args);
+}
+
+// Box Sizing
+.box-sizing(@args: border-box) {
+  box-sizing: @args;
+}
+
+.border-box() {
+  .box-sizing(border-box);
+}
+
+.content-box() {
+  .box-sizing(content-box);
+}
+
+// user-select
+.user-select(@factor) {
+  user-select: none;
+}
+
+// Reset filter
+.reset-filter() {
+  filter: "progid:DXImageTransform.Microsoft.gradient(enabled = false)";
+}
+
+// Opacity
+.opacity(@factor) {
+  opacity: @factor;
+}
+
+// Text Shadow
+.text-shadow(@args) {
+  text-shadow: @args;
+}
+
+// Animation
+.animation(@args) {
+  animation: @args;
+}
+
+.animation-delay(@delay) {
+  animation-delay: @delay;
+}
+
+.animation-direction(@direction) {
+  animation-direction: @direction;
+}
+
+.animation-duration(@duration) {
+  animation-duration: @duration;
+}
+
+.animation-fill-mode(@mode) {
+  animation-fill-mode: @mode;
+}
+
+.animation-iteration-count(@count) {
+  animation-iteration-count: @count;
+}
+
+.animation-name(@name) {
+  animation-name: @name;
+}
+
+.animation-play-state(@state) {
+  animation-play-state: @state;
+}
+
+.animation-timing-function(@function) {
+  animation-timing-function: @function;
+}
+
+// Columns
+.columns(@args) {
+  columns: @args;
+}
+
+.column-count(@count) {
+  column-count: @count;
+}
+
+.column-gap(@gap) {
+  column-gap: @gap;
+}
+
+.column-width(@width) {
+  column-width: @width;
+}
+
+.column-rule(@args) {
+  column-rule: @args;
+}
+
+// Transforms
+.transform(@args) {
+  transform: @args;
+}
+
+.transform-origin(@args) {
+  transform-origin: @args;
+}
+
+.transform-style(@style) {
+  transform-style: @style;
+}
+
+.rotate(@deg: 45deg) {
+  .transform(rotate(@deg));
+}
+
+.scale(@factor: .5) {
+  .transform(scale(@factor));
+}
+
+.skew(@x, @y) {
+  -webkit-transform: skew(@x, @y);
+     -moz-transform: skew(@x, @y);
+      -ms-transform: skewX(@x) skewY(@y); // See https://github.com/twitter/bootstrap/issues/4885
+       -o-transform: skew(@x, @y);
+          transform: skew(@x, @y);
+  -webkit-backface-visibility: hidden; // See https://github.com/twitter/bootstrap/issues/5319
+}
+
+.translate(@x, @y) {
+  .transform(translate(@x, @y));
+}
+.translateX(@x) {
+  .transform(translateX(@x));
+}
+.translateY(@y) {
+  .transform(translateY(@y));
+}
+.translateZ(@z) {
+  .transform(translateY(@z));
+}
+
+.translate3d(@x, @y, @z) {
+  .transform(translate3d(@x, @y, @z));
+}
+
+.translateHardware(@x, @y) {
+  .translate(@x, @y);
+  -webkit-transform: translate3d(@x, @y, 0);
+     -moz-transform: translate3d(@x, @y, 0);
+      -ms-transform: translate3d(@x, @y, 0);
+       -o-transform: translate3d(@x, @y, 0);
+          transform: translate3d(@x, @y, 0);
+}
+
+// Transitions
+.transition(@args: 200ms) {
+  transition: @args;
+}
+
+.transition-delay(@delay: 0) {
+  transition-delay: @delay;
+}
+
+.transition-duration(@duration: 200ms) {
+  transition-duration: @duration;
+}
+
+.transition-property(@property: all) {
+  transition-property: @property;
+}
+
+.transition-timing-function(@function: ease) {
+  transition-timing-function: @function;
+}

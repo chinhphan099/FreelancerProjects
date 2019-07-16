@@ -1,0 +1,119 @@
+h3.temp-h3.divider#input: span Input
+table.tb-temp
+  thead
+    tr
+      th: strong Mixin
+      th: strong View
+  tbody
+    tr
+      td(data-handler="")
+        code.highlight
+          span(data-copy="") fieldset: +input({id: 'input_1', placeholder: 'Placeholder', type: 'number'})
+      td
+        fieldset(data-number="qty")
+          +label('number_1', 'Quanty Desktop').label
+          +input({id: 'number_1', placeholder: 'Placeholder', type: 'number'})(data-input="")
+          +button({})(data-decrease="")
+            i.icon-minus
+          +button({})(data-increase="")
+            i.icon-plus
+        hr
+        fieldset(data-number="number")
+          +label('number_2', 'Quanty Mobile').label
+          +input({id: 'number_2', placeholder: 'Placeholder', type: 'number'})(data-input="")
+          +button({})(data-decrease="")
+            i.icon-minus
+          +button({})(data-increase="")
+            i.icon-plus
+    tr
+      td(data-handler="")
+        code.highlight
+          span(data-copy="") fieldset: +input({id: 'input_1', placeholder: 'Placeholder'})
+      td
+        fieldset
+          +label('input_2', 'Normal State').label
+          +input({id: 'input_2', placeholder: 'Placeholder'})
+        hr
+        fieldset.errors
+          +label('input_1', 'Error State').label
+          +input({id: 'input_1', placeholder: 'Placeholder'}).error
+          span.error Error Message.
+    tr
+      td(colspan="2")
+        code.highlight
+          | Options:
+          br
+          | - id
+          br
+          | - name == id
+          br
+          | - type: text
+          br
+          | - value
+          br
+          | - placeholder
+    tr
+      td(data-handler="")
+        code.highlight: span(data-copy="") fieldset: +customDate({id: 'date', placeholder: "Input_Date"})
+      td
+        fieldset
+          +customDate({id: 'date', placeholder: "Input_Date"})
+        hr
+        fieldset.errors
+          +customDate({id: 'date1', placeholder: "Input_Date"})
+          span.error Error Message.
+    tr
+      td(data-handler="")
+        code.highlight: span(data-copy="") fieldset: +customDate({id: 'date2', value: "1990-06-05", placeholder: 'Input_Date'})
+      td
+        fieldset
+          +customDate({id: 'date2', value: "1990-06-05", placeholder: "Input_Date"})
+
+h3.temp-h3.divider#custom-input: span Custom Input
+table.tb-temp
+  thead
+    tr
+      th: strong Custom Input
+      th: strong View
+  tbody
+    tr
+      td(data-handler="")
+        code.highlight
+          h4.temp-h4 icon with input
+          span(data-copy="") fieldset: +customInput({iconClass: 'icon-user'}, {id: "input_user"})
+      td
+        fieldset
+          +customInput({iconClass: 'icon-user'}, {id: "input_user"})
+    tr
+      td(data-handler="")
+        code.highlight
+          h4.temp-h4 Button icon with input
+          span(data-copy="") fieldset: +customInput({id: 'search_btn_2', iconClass: 'icon-search'}, {id: "txt_search_2"})
+      td
+        fieldset: +customInput({id: 'search_btn_2', iconClass: 'icon-search'}, {id: "txt_search_2"})
+    tr
+      td(data-handler="")
+        code.highlight
+          h4.temp-h4 Button text with input
+          span(data-copy="") fieldset: +customInput({id: 'search_btn_0', text: 'Submit', btnClass: 'button'}, {id: "txt_search"})
+          br
+          br
+          | Note:
+          br
+          | - Type of button default is #[span.red-text submit], Can change by option: #[span.red-text type]
+      td
+        fieldset: +customInput({id: 'search_btn_0', text: 'Submit', btnClass: 'button'}, {id: "txt_search"})
+    tr
+      td(data-handler="")
+        code.highlight
+          h4.temp-h4 Button text, icon with input
+          span(data-copy="") +customInput({id: 'search_btn_1', type: 'button', text: 'button', iconClass: 'icon-right'}, {id: "txt_search_1"})
+      td
+        fieldset: +customInput({id: 'search_btn_1', type: 'button', text: 'button', iconClass: 'icon-right'}, {id: "txt_search_1"})
+    tr
+      td
+        code.highlight: +label('txt_user', 'Error State')
+      td
+        fieldset.errors
+          +customInput({iconClass: 'icon-user'}, {id: "txt_user"}).error
+          span.error Error Message.

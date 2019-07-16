@@ -1,0 +1,154 @@
+// Header
+// Main
+// Footer
+//--------------//
+
+// Header
+header {
+	position: relative;
+	.banner {
+		img {
+			display: block;
+		}
+	}
+}
+.navigation {
+	li {
+		a {
+			.semi-bold();
+			display: block;
+			color: @color12;
+			text-transform: uppercase;
+		}
+	}
+}
+
+// Tablet
+@media (min-width: @md-min) {
+	header {
+		.banner {
+			max-height: 330px;
+		}
+		.main-nav {
+			max-height: 1220px;
+			text-align: center;
+			border-top: 1px solid #aaaaaa;
+			border-bottom: 1px solid #aaaaaa;
+		}
+	}
+	.navigation {
+		li {
+			display: inline-block;
+			&:hover, &.active {
+				a {
+					color: @color17;
+				}
+			}
+			a {
+				.font-desktop(12px);
+				padding: 15px 12px;
+			}
+		}
+	}
+}
+// Desktop
+@media (min-width: @lg-min) {
+	.navigation {
+		li {
+			a {
+				.font-desktop(15px);
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+		}
+	}
+}
+
+// Large mobile
+@media (max-width: @sm-max) {
+	.header {
+		.banner {
+			position: relative;
+			.box-shadow(0px 0px 5px 0px rgba(0,0,0,0.3));
+			z-index: 3;
+		}
+		.hamburger {
+			.position(null 10px 10px null);
+			padding: 2px 10px;
+			background-color: @color17;
+			color: @color01;
+			.border-radius(3px);
+			z-index: 4;
+			i, span {
+				display: inline-block;
+				vertical-align: middle;
+			}
+			i {
+				margin-right: 8px;
+				font-size: 26px;
+			}
+		}
+		.main-nav {
+			display: none;
+			.position(100% 0 null 0);
+			background-color: @color01;
+			z-index: 2;
+			&.active-menu-mobile {
+				display: block;
+			}
+		}
+	}
+	.navigation {
+		li {
+			a {
+				padding: 10px;
+				.font-mobile(12px);
+				border-bottom: 1px dashed @color02;
+			}
+		}
+	}
+}
+
+// Main
+main {
+  padding: 40px 0;
+}
+// Large mobile
+@media (max-width: @sm-max) {
+	main {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+}
+
+
+// Footer
+footer {
+  .clearfix();
+  padding: 50px 0 40px;
+  background: url('../images/bg-footer.jpg') top center / cover;
+  color: @color01;
+  .ftext, .copyright {
+  	.lato();
+  	.light();
+    .font-desktop(12px);
+  }
+  .ftext {
+    float: left;
+    margin-bottom: 0;
+  }
+  .copyright {
+    float: right;
+    margin-bottom: 0;
+  }
+}
+@media (max-width: @sm-max) {
+  footer {
+    padding: 20px 0;
+    .ftext, .copyright {
+      float: none;
+      text-align: center;
+    }
+  }
+}
+

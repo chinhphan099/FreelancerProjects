@@ -1,0 +1,8 @@
+.top-link
+  +link('Tư vấn khách hàng')
+  |  | #[span Vấn đề 1]
+.head-box
+  span.notice Đặt câu hỏi, chúng tôi sẽ giải đáp thắc mắc của bạn !
+  .form-wrap
+    +form({id: 'searchFrm1'})
+      fieldset: +customInput({id: 'search_btn_2', iconClass: 'icon-search-strong'}, {id: "txt_search_2", placeholder: "Nhập nội dung cần tìm"})

@@ -1,0 +1,12 @@
+extends ../layouts/layout
+
+block vars
+  -title = 'Homepage'
+  -bodyClass = 'home'
+  -mainNav = 0
+  -activeHam = true
+
+block main
+  main
+    include ../modules/banner
+    include ../modules/contactForm

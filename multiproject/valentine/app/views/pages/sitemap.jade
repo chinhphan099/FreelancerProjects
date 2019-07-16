@@ -1,0 +1,34 @@
+extends ../layouts/sitemap
+
+block main
+  +rowTitle('Guide')
+  +rowContentList([
+    {
+    name: 'Style Guide',
+    link: 'temp-style-guide.html',
+      progress: '100'
+    },
+    {
+    name: 'Temp Sprite',
+    link: 'temp-sprite.html',
+      progress: '100'
+    }
+  ])
+  +rowTitle('Pages')
+  +rowContentList([
+    {
+      name: 'Index',
+      link: 'index.html',
+      progress: '100'
+    },
+    {
+      name: 'Index Active Mobile',
+      link: 'index-active-mobile.html',
+      progress: '100'
+    },
+    {
+      name: 'Detail',
+      link: 'detail.html',
+      progress: '100'
+    }
+  ])

@@ -1,0 +1,17 @@
+-var classActive = activeMobileMenu ? 'active-menu-mobile': ''
+header.header
+  .banner
+      +img-upload('banner.png')
+  button(type="button").hidden-md-up.hamburger
+    i.ion-navicon
+    span Menu
+  nav.main-nav.clearfix(class=classActive)
+    ul.navigation
+      +items([
+        {title: 'Trang Chủ', href: 'index.html'},
+        {title: 'Dưỡng trắng da', href: '#'},
+        {title: 'chống lão hóa', href: '#'},
+        {title: 'chống lão hóa', href: '#'},
+        {title: 'dưỡng tóc', href: '#'},
+        {title: 'ngăn rụng tóc', href: '#'}
+      ], mainNav)

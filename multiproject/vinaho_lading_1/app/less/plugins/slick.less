@@ -1,0 +1,126 @@
+[data-cslider] {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  .load {
+    .position();
+    background: url("../images/loading.svg") center center / 50px no-repeat;
+  }
+  &:hover {
+    .slick-arrow {
+      opacity: 1;
+    }
+  }
+}
+.slick {
+  position: relative;
+  opacity: 0;
+  .transition(opacity .5s ease);
+  //height: 600px;
+  overflow: hidden;
+  &.slick-initialized, &.no-slide {
+    opacity: 1;
+    height: auto;
+    + .load {
+      display: none;
+    }
+  }
+  .item {
+    position: relative;
+    float: left;
+    width: 100vw;
+    background-color: #E0E0E0;
+    text-align: center;
+    .transition(~"opacity 2s ease");
+    .no-slide& {
+      opacity: 1;
+    }
+    &.slick-current {
+      opacity: 1;
+    }
+    .carousel-slider &, .variablewidth-slider & {
+      &.slick-active {
+        opacity: 1;
+      }
+    }
+    .img-view {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}
+.no-slide {
+  .slick-track {
+    width: 100% !important;
+    text-align: center;
+    transform: inherit !important;
+  }
+  .slick-slide {
+    float: none;
+    display: inline-block;
+  }
+}
+.slick-list {
+  position: relative;
+  overflow: hidden;
+}
+.slick-track {
+  overflow: hidden;
+  width: 2000%;
+}
+.slick-dots {
+  text-align: center;
+  li {
+    display: inline-block;
+    button {
+      .size(10px);
+      margin: 0 5px;
+      font-size: 0;
+      background-color: grey;
+      .border-radius(50%);
+      border: none;
+    }
+  }
+  .slick-active {
+    button {
+      background-color: black;
+    }
+  }
+}
+.slick-prev {
+  left: 10px;
+  &:before {
+    content: "\f3d2";
+  }
+}
+.slick-next {
+  right: 10px;
+  &:before {
+    content: "\f3d3";
+  }
+}
+.slick-arrow {
+  position: absolute;
+  top: 0;
+  z-index: 1001;
+  .text-hide();
+  opacity: 0;
+  &:before {
+    color: @color13;
+    .font-desktop(60px);
+    display: inline-block;
+    font-family: "Ionicons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-rendering: auto;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+.slick-disabled {
+  opacity: 0.5;
+}

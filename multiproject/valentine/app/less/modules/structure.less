@@ -1,0 +1,251 @@
+// Header
+// Main
+// Footer
+//--------------//
+
+// Header
+header {
+  .position(0 0 null 0);
+  z-index: 9;
+  height: 60px;
+  line-height: 60px;
+  background-color: rgba(255,255,255,.6);
+  .logo-wrap {
+    float: left;
+  }
+}
+// Mobile
+@media (max-width: @sm-max) {
+  header {
+    position: fixed;
+    height: 45px;
+    line-height: 40px;
+    background-color: @color01;
+    border-bottom: 1px solid @color13;
+    .ion-navicon {
+      .position(8px 15px);
+      .font-mobile(28px);
+      color: @color12;
+      line-height: 0;
+    }
+    .logo-wrap {
+      .position(0 null null 10px);
+      a {
+        display: block;
+        width: 150px;
+        padding-top: 5px;
+      }
+    }
+  }
+}
+
+
+
+.main-nav {
+  .navigation {
+    font-size: 0;
+    white-space: nowrap;
+  }
+  li {
+    .lato();
+    .font-desktop(14px);
+    a {
+      display: block;
+      color: #323131;
+      text-transform: uppercase;
+    }
+    &.active {
+      a {
+        color: @color01;
+      }
+    }
+  }
+}
+// Tablet and larger
+@media (min-width: @md-min) {
+  .main-nav {
+    float: right;
+    text-align: right;
+    li {
+      display: inline-block;
+      transform: skew(-20deg);
+      -webkit-backface-visibility: hidden;
+      .transition(background-color .25s ease);
+      a {
+        transform: skew(20deg);
+        -webkit-backface-visibility: hidden;
+        padding: 0 35px;
+        .transition(background-color .25s ease);
+        &:hover {
+          color: @color01;
+        }
+      }
+      &.active,
+      &:hover {
+        background-color: @color12;
+      }
+    }
+  }
+}
+// Small desktop
+@media (max-width: @lg-max) {
+  .main-nav {
+    li {
+      a {
+        padding: 0 20px;
+      }
+      &.active {
+        background-color: @color12;
+      }
+    }
+  }
+}
+// Tablet
+@media (max-width: @md-max) {
+  .main-nav {
+    li {
+      a {
+        padding: 0 10px;
+      }
+    }
+  }
+}
+// Mobile
+@media (max-width: @sm-max) {
+  .main-nav {
+    display: none;
+    .position(100% 0 null 0);
+    margin-top: 1px;
+    .active-mobile-menu & {
+      display: block;
+    }
+    li {
+      background-color: @color01;
+      border-bottom: 1px solid @color13;
+      a {
+        padding: 0 20px;
+      }
+    }
+  }
+}
+
+
+// Main
+main {
+  min-height: ~"calc(100vh - 630px)";
+}
+@media (max-width: @sm-max) {
+  main {
+    padding-top: 45px;
+  }
+}
+
+// Footer
+footer {
+  padding-top: 40px;
+  background-size: cover;
+  background-position: center top;
+  color: white;
+  .flogo {
+    float: left;
+    a {
+      display: block;
+      max-width: 280px;
+    }
+  }
+  .watchword {
+    float: right;
+    padding-top: 10px;
+    padding-right: 45px;
+    .font-desktop(18px);
+    .bold();
+    letter-spacing: 10px;
+  }
+  .foot-line {
+    margin-top: 17px;
+    overflow: hidden;
+    img {
+      display: block;
+      width: auto;
+      max-width: inherit;
+      float: right;
+    }
+  }
+  .bottom-footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .flinks {
+    float: left;
+    font-size: 0;
+    letter-spacing: 0;
+    li {
+      position: relative;
+      display: inline-block;
+      .font-desktop(12px);
+      line-height: @line-height-tag-p;
+      & + li {
+        margin-left: 30px;
+        &:before {
+          content: "|";
+          .position(null null null -18px);
+        }
+      }
+      a {
+        .link-color(@color01, @color12);
+      }
+    }
+  }
+  .copyright {
+    float: right;
+    .font-desktop(12px);
+  }
+}
+@media (max-width: @md-max) {
+  footer .watchword {
+    letter-spacing: 3px;
+  }
+}
+// small desktop
+@media (max-width: @lg-max) {
+  footer {
+    .flinks {
+      float: none;
+      text-align: center;
+    }
+    .copyright {
+      float: none;
+      text-align: center;
+    }
+  }
+}
+// Mobile
+@media (max-width: @sm-max) {
+  footer {
+    padding-top: 25px;
+    .flogo {
+      float: none;
+      a {
+        max-width: 140px;
+        margin: 0 auto;
+      }
+    }
+    .watchword {
+      float: none;
+      text-align: center;
+      letter-spacing: 3px;
+      padding-right: 0;
+      .font-mobile(13px);
+    }
+    .foot-line {
+      img {
+        height: 15px;
+        margin-right: -50px;
+      }
+    }
+    .copyright {
+      padding-top: 10px;
+      line-height: 1.5;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+extends ../layouts/layout
+
+block vars
+  -title = 'Detail'
+  -bodyClass = 'detail-page'
+  -mainNav = 1
+  -sub1 = 1
+  -sub2 = 1
+  -sub3 = 0
+
+block main
+  main
+    .container
+      .row
+        .col-md-8.main-left
+          include ../modules/post-detail
+        .col-md-4.main-right
+          include ../modules/featured-news

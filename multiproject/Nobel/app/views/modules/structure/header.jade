@@ -1,0 +1,28 @@
+- var className = activeHam ? 'active-menu-mobile' : ''
+// Add class .active-menu-mobile into .header on click event of icon Search
+header.header(class=className)
+  .inner
+    i.icon-hamburger.hidden-md-up
+    h1.logo-wrap
+      +link('Logo', 'index.html')
+        +img('logo.png')
+    nav.nav.clearfix
+      ul.navigation
+        li.nav-left
+          ul
+            li.active: +link('Giới thiệu')
+            li: +link('Chi tiết sản phẩm', 'detail.html')
+            li: +link('Cách sử dụng')
+        li.nav-right
+          ul
+            li: +link('Tư vấn khách hàng')
+            li: +link('Đại lý')
+      .social
+        +link('youtube') #[i.icon-youtube-text]
+        +link('googleplus') #[i.icon-googleplus-outline]
+        +link('facebook') #[i.icon-facebook]
+        +link('twitter') #[i.icon-twitter]
+    // Add class .open-search into .search-block on click event
+    .search-block
+      +form({})
+        +customInput({id: 'search_btn_3', iconClass: 'icon-search-strong'}, {id: "txt_search_3"})

@@ -1,0 +1,46 @@
+table.tb-temp
+  thead
+    tr
+      td: strong Mixin
+      td: strong View
+  tbody
+    tr
+      td Single Menu
+      td
+        +singleMenu([
+          {title: 'Home', href: 'index.html'},
+          {title: 'Sitemap', href: 'sitemap.html'}
+        ]).main-nav.clearfix
+    tr
+      td Multiple Menu
+      td
+        nav.nav.clearfix
+          ul.navigation
+            +items([
+              {title: 'Home', href: '#'},
+              {
+                title: 'javascript',
+                href:'#',
+                subList: [
+                  {title: 'AJAX'},
+                  {
+                    title: 'RSS',
+                    subClass: 'hehe',
+                    subList: [
+                      {title: 'Local'},
+                      {
+                        title: 'Online',
+                        subList: [
+                          {title: 'rss 1'},
+                          {title: 'rss 2'}
+                        ],
+                        subActive: sub3
+                      }
+                    ],
+                    subActive: sub2
+                  },
+                  {title: 'XML'},
+                ], subActive: sub1
+              },
+              {title: 'Sitemap', href: 'sitemap.html'}
+            ], mainNav)

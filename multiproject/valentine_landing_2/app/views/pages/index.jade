@@ -1,0 +1,15 @@
+extends ../layouts/layout
+
+block vars
+  -title = 'Homepage'
+  -bodyClass = 'home'
+  -mainNav = 1
+
+block main
+  main
+    +hero('banner-0.jpg', 'banner-4.jpg')
+    +hero('banner-1.jpg', 'banner-5.jpg')
+    include ../modules/beauty-tip
+    include ../modules/post-block
+    include ../modules/post-block-1
+    include ../modules/ingredient

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="130px" height="130px" viewBox="0 0 130 130" style="enable-background:new 0 0 130 130;" xml:space="preserve">
+<rect style="fill:none;" width="130" height="130"/>
+<g transform="translate(50 50)">
+	<g transform="rotate(0) translate(34 0)">
+		<circle style="fill:#096033;" cx="16.8" cy="10" r="9.6">
+		
+			<animate  fill="remove" begin="0s" attributeName="opacity" accumulate="none" dur="1s" additive="replace" from="1" to="0.1" restart="always" calcMode="linear" repeatCount="indefinite">
+			</animate>
+		
+			<animateTransform  fill="remove" type="scale" begin="0s" attributeName="transform" accumulate="none" dur="1s" additive="replace" from="1.5" to="1" restart="always" calcMode="linear" repeatCount="indefinite">
+			</animateTransform>
+		</circle>
+	</g>
+	<g transform="rotate(45) translate(34 0)">
+		<circle style="fill:#096033;" cx="20.942" cy="0" r="9.6">
+		
+			<animate  fill="remove" begin="0.12s" attributeName="opacity" accumulate="none" dur="1s" additive="replace" from="1" to="0.1" restart="always" calcMode="linear" repeatCount="indefinite">
+			</animate>
+		
+			<animateTransform  fill="remove" type="scale" begin="0.12s" attributeName="transform" accumulate="none" dur="1s" additive="replace" from="1.5" to="1" restart="always" calcMode="linear" repeatCount="indefinite">
+			</animateTransform>
+		</circle>
+	</g>
+	<g transform="rotate(90) translate(34 0)">
+		<circle style="fill:#096033;" cx="16.8" cy="-10" r="9.6">
+		
+			<animate  fill="remove" begin="0.25s" attributeName="opacity" accumulate="none" dur="1s" additive="replace" from="1" to="0.1" restart="always" calcMode="linear" repeatCount="indefinite">
+			</animate>
+		
+			<animateTransform  fill="remove" type="scale" begin="0.25s" attributeName="transform" accumulate="none" dur="1s" additive="replace" from="1.5" to="1" restart="always" calcMode="linear" repeatCount="indefinite">
+			</animateTransform>
+		</circle>
+	</g>
+	<g transform="rotate(135) translate(34 0)">
+		<circle style="fill:#096033;" cx="6.8" cy="-14.142" r="9.6">
+		
+			<animate  fill="remove" begin="0.37s" attributeName="opacity" accumulate="none" dur="1s" additive="replace" from="1" to="0.1" restart="always" calcMode="linear" repeatCount="indefinite">
+			</animate>
+		
+			<animateTransform  fill="remove" type="scale" begin="0.37s" attributeName="transform" accumulate="none" dur="1s" additive="replace" from="1.5" to="1" restart="always" calcMode="linear" repeatCount="indefinite">
+			</animateTransform>
+		</circle>
+	</g>
+	<g transform="rotate(180) translate(34 0)">
+		<circle style="fill:#096033;" cx="-3.2" cy="-10" r="9.6">
+		
+			<animate  fill="remove" begin="0.5s" attributeName="opacity" accumulate="none" dur="1s" additive="replace" from="1" to="0.1" restart="always" calcMode="linear" repeatCount="indefinite">
+			</animate>
+		
+			<animateTransform  fill="remove" type="scale" begin="0.5s" attributeName="transform" accumulate="none" dur="1s" additive="replace" from="1.5" to="1" restart="always" calcMode="linear" repeatCount="indefinite">
+			</animateTransform>
+		</circle>
+	</g>
+	<g transform="rotate(225) translate(34 0)">
+		<circle style="fill:#096033;" cx="-7.342" cy="0" r="9.6">
+		
+			<animate  fill="remove" begin="0.62s" attributeName="opacity" accumulate="none" dur="1s" additive="replace" from="1" to="0.1" restart="always" calcMode="linear" repeatCount="indefinite">
+			</animate>
+		
+			<animateTransform  fill="remove" type="scale" begin="0.62s" attributeName="transform" accumulate="none" dur="1s" additive="replace" from="1.5" to="1" restart="always" calcMode="linear" repeatCount="indefinite">
+			</animateTransform>
+		</circle>
+	</g>
+	<g transform="rotate(270) translate(34 0)">
+		<circle style="fill:#096033;" cx="-3.2" cy="10" r="9.6">
+		
+			<animate  fill="remove" begin="0.75s" attributeName="opacity" accumulate="none" dur="1s" additive="replace" from="1" to="0.1" restart="always" calcMode="linear" repeatCount="indefinite">
+			</animate>
+		
+			<animateTransform  fill="remove" type="scale" begin="0.75s" attributeName="transform" accumulate="none" dur="1s" additive="replace" from="1.5" to="1" restart="always" calcMode="linear" repeatCount="indefinite">
+			</animateTransform>
+		</circle>
+	</g>
+	<g transform="rotate(315) translate(34 0)">
+		<circle style="fill:#096033;" cx="6.8" cy="14.142" r="9.6">
+		
+			<animate  fill="remove" begin="0.87s" attributeName="opacity" accumulate="none" dur="1s" additive="replace" from="1" to="0.1" restart="always" calcMode="linear" repeatCount="indefinite">
+			</animate>
+		
+			<animateTransform  fill="remove" type="scale" begin="0.87s" attributeName="transform" accumulate="none" dur="1s" additive="replace" from="1.5" to="1" restart="always" calcMode="linear" repeatCount="indefinite">
+			</animateTransform>
+		</circle>
+	</g>
+</g>
+</svg>

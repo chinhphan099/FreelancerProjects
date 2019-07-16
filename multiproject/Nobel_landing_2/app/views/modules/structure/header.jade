@@ -1,0 +1,19 @@
+header.header
+	.inner
+		| #[i.icon-hamburger.hidden-md-up]
+		if (bodyClass == 'index')
+			h1.logo-wrap: +link('Sống khoẻ', 'index.html')
+		else
+			.logo-wrap: +link('Sống khoẻ', 'index.html')
+		nav.main-nav.clearfix
+			ul.navigation
+				+items([
+					{title: 'Trang chủ', href: 'index.html'},
+					{title: 'Bệnh tiểu đường', href: 'sitemap.html'},
+					{title: 'Bệnh nhân tiểu đường', href: 'sitemap.html'}
+				], mainNav)
+		| #[i.icon-search-strong.search-mobile.hidden-md-up]
+		// add class .open-search into .search-wrap
+		.search-wrap
+			+form({id: 'searchFrm'})
+				+customInput({id: 'searchBtn', iconClass: 'icon-search-strong'}, {id: "searchTxt"})

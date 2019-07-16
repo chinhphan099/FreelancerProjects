@@ -1,0 +1,32 @@
+- if (bodyClass == 'home') {
+  section.fully-img
+    .slider.single-slider(data-cslider='{"type": "single"}')
+      .slick
+        .item
+          +img-upload('banner-1.jpg').hidden-sm-down.img-view
+          +img-upload('banner-1-mobile.jpg').hidden-md-up.img-view
+          .caption
+            p.wow.zoomInRight.animated(data-wow-duration=".6s") Giải pháp hiệu quả cho bệnh ho
+            span.wow.zoomInRight.animated(data-wow-duration=".6s" data-wow-delay=".3s") Từ thiên nhiên
+        .item
+          +img-upload('banner-1.jpg').hidden-sm-down.img-view
+          +img-upload('banner-1-mobile.jpg').hidden-md-up.img-view
+          .caption
+            p Giải pháp hiệu quả cho bệnh ho
+            span Từ thiên nhiên
+        .item
+          +img-upload('banner-1.jpg').hidden-sm-down.img-view
+          +img-upload('banner-1-mobile.jpg').hidden-md-up.img-view
+          .caption
+            p Giải pháp hiệu quả cho bệnh ho
+            span Từ thiên nhiên
+      span.load
+- } else {
+  section.fully-img.has-button
+    +img-upload('banner-desktop.jpg').hidden-sm-down
+    +img-upload('banner-mobile.jpg').hidden-md-up
+    .caption
+      p.wow.fadeInRight.animated(data-wow-duration=".3s") Giải pháp hiệu quả cho bệnh ho
+      span.wow.fadeInRight.animated(data-wow-duration=".3s" data-wow-delay=".6s") Từ thiên nhiên
+      a(href='#!', title='Đặt mua').button.btn-tertiary.larger.radius.wow.fadeInRight.animated(data-wow-duration=".3s" data-wow-delay=".9s") Đặt mua
+- }

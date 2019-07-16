@@ -1,0 +1,59 @@
+mixin blocks(headingText)
+  .block&attributes(attributes)
+    h2.heading!= headingText
+    if block
+      block
+
+mixin price(newPrice, oldPrice)
+  span.price&attributes(attributes)
+    ins.new-price!=newPrice
+    del.old-price!=oldPrice
+
+mixin pagination()
+  .pagination-wrap&attributes(attributes)
+    ul.pagination
+      li.prev-page: +link('Previous', 'javascript:;').prev: i.ion-ios-arrow-left
+      li.next-page.hidden-md-up: +link('Next', 'javascript:;'): i.ion-ios-arrow-right
+      li.number
+        ul.clearfix
+          li: +link('1') 1#[span /5]
+          li.active: +link('2') 2#[span /5]
+          li.unavailable: span ...
+          li: +link('3') 3#[span /5]
+          li: +link('4') 4#[span /5]
+          li: +link('5') 5#[span /5]
+      li.next-page.hidden-sm-down: +link('Next', 'javascript:;'): i.ion-ios-arrow-right
+
+mixin divider(text)
+  .divider
+    span!=text
+
+//- Used in Style Guide page.
+mixin color(name, code)
+  li(data-handler="")
+    span.color(style="background-color: #{code}")
+    code(data-copy="#{name}")!=code
+    span!=name
+
+mixin icons(classes)
+  ul.icons-list-temp
+    each classname in classes
+      li(data-handler="")
+        i(class="icon-#{classname}" data-copy="i.icon-#{classname}")
+        span.name #{classname}
+
+mixin hero(desktop, mobile)
+  section.fully-img
+    +img-upload(desktop).hidden-sm-down
+    +img-upload(mobile).hidden-md-up
+
+mixin post-item(image, title, time, desc)
+  .post-item&attributes(attributes)
+    .thumb
+      +link()
+        +img-upload(image)
+    .content
+      h3.title
+        +link(title)
+      span.time!=time
+      p.desc!=desc

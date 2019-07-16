@@ -1,0 +1,55 @@
+section.contact-form(style="background-image: url(images/upload/bg-contact.jpg)")
+  .container
+    h4.text-center.text-uppercase Liên hệ với chúng tôi
+    p.lead-text.text-center Hãy liên hệ với chúng tôi để nhận những tư vấn bổ ích và chính xác nhất
+    .content.clearfix
+      .form-wrap
+        +form({})
+          fieldset
+            +label('username', 'Họ tên:')
+            +input({id: 'username'})
+          fieldset
+            +label('address', 'Địa chỉ:')
+            +input({id: 'address'})
+          fieldset
+            +label('email', 'Email:')
+            +input({id: 'email', type: 'email'})
+          fieldset
+            +label('message', 'Nội dung:')
+            +textarea('message')
+          +button({id: 'sendBtn'}).button.btn-secondary Gửi liên hệ
+      .infos-block
+        ul.infos
+          li
+            span.pentagon
+              i.ion-ios-location
+            span.text Tầng 7 - N2,Tòa ACCI, số 210 Lê Trọng Tấn, Thanh Xuân, Hà Nội
+          li
+            span.pentagon
+              i.ion-printer
+            span.text Fax: 0435 501 492
+          li
+            span.pentagon
+              i.ion-ios-telephone
+            span.text Hotline: #[a(href="tel:0462 908 885" title="0462 908 885") 0462 908 885]
+          li
+            span.pentagon
+              i.ion-email
+            span.text Email: #[a(href="mailto:info@hvt.vn" title="info@hvt.vn") info@hvt.vn]
+          li
+            span.pentagon
+              i.ion-earth
+            span.text Website: #[a(href="//www.helios.vn" title="www.helios.vn") www.helios.vn]
+        ul.socials
+          li
+            +link('Facebook', '//facebook.com')(style="background-image: url(images/icon-twitter.png)")
+              +img('icon-fb.png')
+          li
+            +link('twitter', '//twitter.com')(style="background-image: url(images/icon-fb.png)")
+              +img('icon-twitter.png')
+          li
+            +link('googleplus', '//googleplus.com')(style="background-image: url(images/icon-fb.png)")
+              +img('icon-googleplus.png')
+          li
+            +link('skype', '//skype.com')(style="background-image: url(images/icon-fb.png)")
+              +img('icon-skype.png')

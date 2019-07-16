@@ -1,0 +1,27 @@
+extends ../layouts/template
+
+block vars
+  -title = 'Style Sprite'
+  -bodyClass = 'template'
+
+block main
+  .tmp-main
+    include ../guide/sprite/master
+block menu
+  .tmp-main-nav-wrap
+    .tmp-main-nav
+      ul
+        +items([
+          {title: 'Image', href: '#image'},
+          {title: 'Heading', href: '#heading'},
+          {title: 'Link & Text', href: '#link-text'},
+          {title: 'Breadcrumbs', href: '#breadcrumbs'},
+          {title: 'Price', href: '#price'},
+          {title: 'Divider', href: '#divider'},
+          {title: 'Blockquote', href: '#blockquote'},
+          {title: 'Useful Tag', href: '#useful-tag'},
+          {title: 'Menu', href: '#menu'},
+          {title: 'Pagination', href: '#pagination'},
+          {title: 'Style Guide', href: 'temp-style-guide.html', linkClass: 'outlink'},
+          {title: 'Guide js', href: 'temp-js.html', linkClass: 'outlink'}
+        ])

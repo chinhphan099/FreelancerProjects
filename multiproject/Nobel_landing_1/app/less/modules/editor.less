@@ -1,0 +1,69 @@
+// Text Editor
+.fully-img {
+	img {
+		display: block;
+		width: 100%;
+	}
+}
+.category {
+	padding: 20px 0;
+	.inner {
+		padding-top: 15px;
+	}
+}
+@media (min-width: @md-min) {
+	.category {
+		padding: 35px 0;
+	}
+}
+
+.item-cate {
+	padding-bottom: 20px;
+	h3 {
+		padding-top: 10px;
+	}
+	em {
+		display: block;
+		padding: 10px 0;
+		.font-mobile(12px);
+		line-height: 1.2;
+	}
+	a {
+		.link-color(@text-color, @link);
+	}
+	.read-more-link {
+		text-align: right;
+		a {
+			.font-mobile(14px);
+			.link-color(@link, @link-hover);
+		}
+	}
+	.thumb {
+		overflow: hidden;
+		img {
+			display: block;
+			width: 100%;
+			.transition(all .25s ease);
+		}
+		&:hover {
+			img {
+				.scale(1.2);
+			}
+		}
+	}
+}
+@media (min-width: @md-min) {
+	.item-cate {
+		em {
+			.font-desktop(12px);
+		}
+		.read-more-link {
+			a {
+				.font-desktop(17px);
+			}
+		}
+	}
+}
+
+
+

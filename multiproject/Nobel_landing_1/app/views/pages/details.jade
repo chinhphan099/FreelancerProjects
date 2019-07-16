@@ -1,0 +1,35 @@
+extends ../layouts/layout
+
+block vars
+  -title = 'details'
+  -bodyClass = 'details'
+  -mainNav = 0
+  -sub1 = 1
+  -sub2 = 1
+  -sub3 = 0
+
+block main
+  main
+    .container
+      ul.breadcrumbs
+        li
+         +link('bệnh tiểu đường')
+        li.slash &#47;
+        li.active tin tức 1
+      .post-details
+        h1 LỜI KHUYÊN LÝ TƯỞNG CHO BỆNH NHÂN TIỂU ĐƯỜNG
+        .meta
+          +link('01/11/2016', '#href')
+          |  Viết bởi
+          +link(' Sao Thái Dương 7', '#href')
+          |  font size | #[a(href="#!") +] | #[a(href="#!") -] | In Email
+        p Mùa đông, thời tiết lạnh giá sẽ làm cho nhiều loại vi khuẩn phát triển và gây bệnh, đặc biệt là virus gây cảm cúm, thậm chí virus này có thể gây thành dịch bệnh. Để giúp mọi người có được sức khỏe tốt và tránh được các mầm mống gây bệnh, các nhà khoa học thuộc trung tâm nghiên cứu kháng bệnh Paris (Pháp) đã liệt ra một số thực phẩm có khả năng chống bệnh mùa đông rất tốt, số thực phẩm có khả năng chống bệnh mùa đông rất tốt.
+        p.thumb-img
+          +img-upload('banner-4.jpg', 'alt')
+          span Thêm hương vị vào nước
+        p Nhiều người nghĩ để có sức khỏe, cần có thời gian dài luyện tập. Nhưng có nhiều thói quen tốt chỉ cần thực hiện trong 60 giây hoặc ít hơn. Thắt dây an toàn, rửa tay, tự kiểm tra vú hay tinh hoàn, uống axit folic khi mang thai đều giúp bạn bảo vệ sức khỏe mà không tốn nhiều thời gian. Và một số việc tốt cho sức khỏe khác bạn cũng chỉ cần làm trong một phút như: nhảy dây để tăng nhịp tim, đứng thẳng để ngừa đau lưng, mỉm cười hay cười to để cải thiện tâm trạng, và mỗi ngày viết ra 5 điều bạn biết ơn để xây dựng tinh thần lạc quan và khả năng phục hồi cơ thể. Tập tục lâu đời của người Nhật là để giày ở trước cửa nhà. Thói quen này là cách thể hiện sự trân trọng sự tinh khiết của một gia đình, và cũng có thể là một điều thiết thực và nhanh chóng để giữ nhà sạch hơn và tránh đưa các chất ô nhiễm từ bên ngoài vào. Khi bỏ giày bên ngoài trở thành thói quen hằng ngày, nó ngăn chặn mọi thứ từ bụi bẩn tới đất, đá, hóa chất và những loại có khả năng gây dị ứng vào nhà bạn.
+        p Ngoài ra, bỏ giày bên ngoài nhà còn cho bạn cảm giác nghỉ ngơi thực sự - bỏ lại tất cả mọi thứ liên quan tới một ngày dài mệt nhọc - khi bước vào tổ ấm yên bình của gia đình.
+      .comment-block
+        +img-upload('banner-5.jpg', 'alt')
+    include ../modules/related-news
+

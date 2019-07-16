@@ -1,0 +1,15 @@
+extends ../layouts/layout
+
+block vars
+  -title = 'Homepage'
+  -bodyClass = 'home'
+  -mainNav = 0
+
+block main
+  main
+    include ../modules/banner
+    include ../modules/functional-foods-block
+    include ../modules/faculty
+    include ../modules/price
+    include ../modules/review
+    include ../modules/contactForm

@@ -1,0 +1,17 @@
+extends ../layouts/layout
+
+block vars
+  -title = 'List landing'
+  -bodyClass = 'list-landing'
+  -mainNav = 0
+  -sub1 = 1
+  -sub2 = 1
+  -sub3 = 0
+
+block main
+  main
+    include ../modules/banner03
+    include ../modules/breakcrumb
+    .container
+      include ../modules/featured
+      include ../modules/portfolio-list

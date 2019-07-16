@@ -1,0 +1,18 @@
+extends ../layouts/template
+
+block vars
+  -title = 'Guide js'
+  -bodyClass = 'template'
+
+block main
+  .tmp-main
+    include ../guide/js/master
+block menu
+  .tmp-main-nav-wrap
+    .tmp-main-nav
+      ul
+        +items([
+          {title: 'Slider', href: '#slider'},
+          {title: 'Style Guide', href: 'temp-style-guide.html', linkClass: 'outlink'},
+          {title: 'Guide Sprite', href: 'temp-sprite.html', linkClass: 'outlink'}
+        ])

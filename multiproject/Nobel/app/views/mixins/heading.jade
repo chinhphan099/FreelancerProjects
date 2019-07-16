@@ -1,0 +1,8 @@
+mixin heading(headingText)
+  .heading
+    h2.title!=headingText
+
+mixin title-1(number, title)
+  .title-1.wow.fadeInUp.animated(data-wow-duration="1s" data-wow-delay=".5s")
+    i!=number
+    span!=title

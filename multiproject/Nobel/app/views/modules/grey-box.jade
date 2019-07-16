@@ -1,0 +1,19 @@
+section.grey-box.text-center
+  .container
+    .row.no-gutter
+      .col-md-6.wow.fadeInLeft.animated(data-wow-duration="1s" data-wow-delay=".5s")
+        .content
+          h3 Viên tiểu đường
+          h2 Nobel
+          p.desc Viên tiểu đường Nobel là sản phẩm của công ty cổ phần Sao Thái Dương. Viên tiểu đường Nobel có tác dụng hạ đường huyết, giảm các nguy cơ biến chứng của bệnh tiểu đường, bảo vệ chức năng gan một cách tốt nhất.
+      .col-md-6.wow.fadeInRight.animated(data-wow-duration="1s" data-wow-delay=".6s")
+        .video-wrap(data-video="")
+          .video-container
+            // Or ifame youtube
+            video
+              source(src="http://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4")
+              source(src="http://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg")
+            .thumb(style="background-image: url(images/upload/img-13.png)")
+          +button({})(class="control" data-handle="")
+            i.icon-play-circle
+            i.icon-pause-circle

@@ -1,0 +1,40 @@
+extends ../layouts/template
+
+block vars
+  -title = 'Images'
+  -bodyClass = 'template'
+
+block main
+  ul.tmp-img(data-copies)
+    li(data-handler): +images('banner-0.jpg', 'alt')
+    li(data-handler): +images('banner-1.jpg', 'alt')
+    li(data-handler): +images('banner-2.jpg', 'alt')
+    li(data-handler): +images('banner-3.jpg', 'alt')
+    li(data-handler): +images('img-1.png', 'alt')
+    li(data-handler): +images('img-2.png', 'alt')
+    li(data-handler): +images('img-3.png', 'alt')
+    li(data-handler): +images('img-4.png', 'alt')
+    li(data-handler): +images('img-5.png', 'alt')
+    li(data-handler): +images('img-6.png', 'alt')
+    li(data-handler): +images('img-7.png', 'alt')
+    li(data-handler): +images('img-8.png', 'alt')
+    li(data-handler): +images('img-9.png', 'alt')
+    li(data-handler): +images('img-10.png', 'alt')
+    li(data-handler): +images('img-11.png', 'alt')
+    li(data-handler): +images('img-12.png', 'alt')
+    li(data-handler): +images('img-13.png', 'alt')
+    li(data-handler): +images('img-14.png', 'alt')
+    li(data-handler): +images('img-15.png', 'alt')
+    li(data-handler): +images('img-16.png', 'alt')
+    li(data-handler): +images('img-17.png', 'alt')
+    li(data-handler): +images('img-18.png', 'alt')
+    li(data-handler): +images('img-19.png', 'alt')
+block menu
+  .tmp-main-nav-wrap
+    .tmp-main-nav
+      ul
+        +items([
+          {title: 'Style Guide', href: 'temp-style-guide.html', linkClass: 'outlink'},
+          {title: 'Temp JS', href: 'temp-js.html', linkClass: 'outlink'},
+          {title: 'Guide Sprite', href: 'temp-sprite.html', linkClass: 'outlink'}
+        ])

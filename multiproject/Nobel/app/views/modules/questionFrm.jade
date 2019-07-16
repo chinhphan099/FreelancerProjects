@@ -1,0 +1,9 @@
++form({id: 'questionFrm'})
+  .row
+    .col-sm-6
+      fieldset: +input({id: 'fullname', placeholder: 'Họ và tên:'})
+    .col-sm-6
+      fieldset: +input({id: 'email', placeholder: 'Email hoặc số điện thoại:'})
+  fieldset: +input({id: 'subject', placeholder: 'Chủ đề'})
+  fieldset: +textarea('content', 'Nội dung')
+  +button({id: 'Sendbtn'}).button.small.btn-secondary Gửi

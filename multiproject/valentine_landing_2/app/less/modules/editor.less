@@ -1,0 +1,40 @@
+// Text Editor
+.grey-box {
+  padding: 20px 20px 5px;
+  background-color: @color02;
+  margin-bottom: 20px;
+  overflow: hidden;
+  .thumb {
+    float: left;
+    max-width: 150px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+  }
+  .content {
+    h4 {
+      .semiBold();
+      .font-desktop(14px);
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    small {
+      .light();
+      .font-desktop(12px);
+      .line-height(18px, 12px);
+    }
+  }
+}
+
+@media (max-width: @xs-max) {
+  .grey-box {
+    padding: 10px;
+    .thumb {
+      float: none;
+      max-width: inherit;
+      margin-right: 0;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

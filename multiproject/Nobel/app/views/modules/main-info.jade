@@ -1,0 +1,35 @@
+section.main-details
+  .container
+    .row.no-gutter
+      .col-md-6
+        .view: +img-upload('img-35.png', 'alt')
+        .gallery-wrap
+          ul.gallery
+            li: +img-upload('img-35.png', 'alt')
+            li: +img-upload('img-35.png', 'alt')
+            li: +img-upload('img-35.png', 'alt')
+      .col-md-6
+        .content
+          h1.title Viên tiểu đường Nobel
+          .info
+            p Mã sản phẩm : FT180
+            p Loại sản phẩm : Viên nang cứng
+            p Nhà sản xuất : Công ty cổ phần Sao Thái Dương
+            p Quy cách sản phẩm : Hộp 12 vỉ x viên nang
+            p Hàm lượng : 120g
+          .price-wrap
+            span.price-text Giá bán:
+            +price('20.000 đ', '30.000 đ')
+          +button({id: 'addToBag'}).button.small.btn-secondary Đặt mua
+          .shipping
+            | #[i.icon-shipping]
+            span Giao hàng trong vòng 2-3 ngày
+          ul.social-interactive
+            li: +img-upload('fb-like.png', 'alt')
+            li: +img-upload('fb-share.png', 'alt')
+            li: +img-upload('google-plus.png', 'alt')
+            li: +img-upload('icon-twitter.png', 'alt')
+            li: +img-upload('share.png', 'alt')
+          .hotline-pro
+            span.text-uppercase Tư vấn sản phẩm:
+            span.number 043.646.2740 - 043.646.2741 - 043.644.4646

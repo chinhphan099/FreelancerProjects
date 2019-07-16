@@ -1,0 +1,18 @@
+section.home-contact
+  .container
+    +title-1('4', 'Thông tin liên hệ')
+    .content
+      address.wow.fadeInLeft.animated(data-wow-duration="1s" data-wow-delay=".5s")
+        | Liên hệ với chúng tôi qua số #[strong HOTLINE : 04. 36444. 219]
+        br
+        | Địa chỉ : 92 Vĩnh Hưng, Hoàng Mai, Hà Nội.
+        br
+        | Điện thoại tư vấn : 043. 6444. 646 - 3. 6462. 740 - 3.6462. 741
+        br
+        | Email : hotro@thaiduong.com.vn
+      +form({id: 'contactFrm'}).wow.fadeInUp.animated(data-wow-duration="1s" data-wow-delay=".6s")
+        fieldset: +input({id: 'fullname', placeholder: 'Họ và tên:'})
+        fieldset: +input({id: 'email', placeholder: 'Email:', type: 'email'})
+        fieldset: +input({id: 'address', placeholder: 'Địa chỉ:'})
+        fieldset: +textarea('message', 'Nội dung:')
+        +button({id: 'sendBtn'}).button.small.btn-secondary Gửi

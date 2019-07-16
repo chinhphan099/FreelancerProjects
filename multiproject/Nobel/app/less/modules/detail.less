@@ -1,0 +1,218 @@
+.main-details {
+  padding-top: 30px;
+  .view {
+    padding-bottom: 35px;
+    margin-right: 20px;
+    text-align: center;
+  }
+  .gallery-wrap {
+    overflow: hidden;
+    padding-right: 20px;
+  }
+  .gallery {
+    margin: 0 -10px;
+    .clearfix();
+    li {
+      float: left;
+      width: 33.333%;
+      padding: 0 10px;
+    }
+  }
+  .content {
+    padding-top: 30px;
+    .title {
+      padding-bottom: 10px;
+      color: #3d3d3d;
+      text-transform: uppercase;
+    }
+    .info {
+      border-top: 1px solid #adadad;
+      border-bottom: 1px solid #adadad;
+      padding: 10px 0;
+      p {
+        margin-bottom: 7px;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+    .price-wrap {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      .price-text {
+        padding-right: 10px;
+        display: inline-block;
+        text-transform: uppercase;
+        color: #3d3d3d;
+        .font-mobile(20px);
+      }
+    }
+    .social-interactive {
+      padding: 10px 0;
+      border-top: 1px solid #adadad;
+      border-bottom: 1px solid #adadad;
+      .clearfix();
+      li {
+        float: left;
+        margin-right: 10px;
+      }
+    }
+    .shipping {
+      padding: 20px 0 10px;
+      i {
+        color: @color13;
+        margin-right: 10px;
+        .font-mobile(20px);
+      }
+      span {
+        color: #3d3d3d;
+        .font-mobile(16px);
+      }
+    }
+    .hotline-pro {
+      padding-top: 10px;
+      color: #171717;
+      .number {
+        display: block;
+        padding-top: 5px;
+        .bold();
+        color: @color12;
+      }
+    }
+  }
+}
+
+@media (min-width: @md-min) {
+  .main-details {
+    padding-top: 60px;
+    .view {
+      text-align: center;
+      padding-bottom: 70px;
+    }
+    .gallery {
+      li {
+      }
+    }
+    .content {
+      padding-top: 0;
+      .title {
+        .font-desktop(30px);
+      }
+      .info {
+        p {
+        }
+      }
+      .shipping {
+        i {
+          .font-desktop(30px);
+        }
+        span {
+          .font-desktop(21px);
+        }
+      }
+      .price-wrap {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        .price-text {
+          .font-desktop(25px);
+        }
+      }
+      .hotline-pro {
+        padding-top: 15px;
+        .font-desktop(25px);
+      }
+    }
+  }
+}
+
+
+.detail-block {
+  padding-top: 45px;
+  padding-bottom: 30px;
+  .title {
+    padding-bottom: 20px;
+    .bold();
+    color: @color12;
+  }
+  .tabs {
+    padding-bottom: 10px;
+    .clearfix();
+    li {
+      float: left;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      &.active {
+        a {
+          background-color: @color13;
+          border-color: @color13;
+          color: @color01;
+        }
+      }
+    }
+    a {
+      display: block;
+      color: #464646;
+      border: 1px solid #919191;
+      padding: 5px;
+      .font-mobile(15px);
+    }
+  }
+  .tab-container {
+    p {
+      .font-desktop(13px);
+    }
+  }
+  .three-img {
+    padding-bottom: 20px;
+    text-align: center;
+    img {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media (min-width: @md-min) {
+  .detail-block {
+    padding-top: 60px;
+    .title {
+      padding-bottom: 30px;
+      .font-desktop(25px);
+    }
+    .tabs {
+      padding-bottom: 10px;
+      li {
+        margin-right: 18px;
+      }
+      a {
+        padding: 10px;
+        .font-desktop(20px);
+        &:hover {
+          background-color: @color13;
+          color: @color01;
+          border-color: @color13;
+        }
+      }
+    }
+    .tab-container {
+      p {
+        .font-desktop(16px);
+      }
+    }
+    .three-img {
+      padding-bottom: 10px;
+    }
+  }
+}
+@media (min-width: @lg-min) {
+  .detail-block {
+    .tabs {
+      a {
+        .font-desktop(25px);
+      }
+    }
+  }
+}
+
+
+
+

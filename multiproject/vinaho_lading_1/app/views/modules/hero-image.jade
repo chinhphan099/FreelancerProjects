@@ -1,0 +1,14 @@
+section.hero-image
+  .slider.single-slider(data-cslider='{"type": "single"}')
+    .slick
+      .item
+        +img-upload('banner-0.jpg').img-view
+      .item
+        +img-upload('banner-0.jpg').img-view
+      .item
+        +img-upload('banner-0.jpg').img-view
+    span.load
+  .inner.text-right
+    span.text-uppercase Khơi nguồn cuộc sống Việt
+    +link().btn-scroll-down
+      +img('scroll-down.png')

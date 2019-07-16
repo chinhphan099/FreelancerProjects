@@ -1,0 +1,23 @@
+extends ../layouts/layout
+
+block vars
+  -title = 'Detail'
+  -bodyClass = 'detail-page'
+  -mainNav = 0
+  -sub1 = 1
+  -sub2 = 1
+  -sub3 = 0
+
+block main
+  main
+    include ../modules/banner
+    include ../modules/breakcrumb
+    .container
+      .row
+        .col-md-8
+          include ../modules/post-detail
+        .col-md-4.sidebar
+          .widget
+            include ../modules/categories
+          .widget
+            include ../modules/confidential

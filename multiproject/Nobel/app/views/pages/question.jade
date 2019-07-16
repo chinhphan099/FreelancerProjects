@@ -1,0 +1,19 @@
+extends ../layouts/layout
+
+block vars
+  -title = 'Question'
+  -bodyClass = 'question'
+  -mainNav = 1
+  -sub1 = 1
+  -sub2 = 1
+  -sub3 = 0
+
+block main
+  main
+    section.question-block
+      .container
+        .wow.fadeInRight.animated(data-wow-duration="1s")
+          include ../modules/search-box
+        .wow.fadeInLeft.animated(data-wow-duration="1s")
+          h1.title Đặt câu hỏi
+          include ../modules/questionFrm

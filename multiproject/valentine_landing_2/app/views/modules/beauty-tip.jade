@@ -1,0 +1,26 @@
+- var classGreyBg = bodyClass === 'home' ? 'bgd-light-grey' : ''
+section.beauty-tip(class=classGreyBg)
+  .container
+    .row.no-gutter.content
+      .col-xl-8.col-md-6.custom-col
+        .thumbnail(style="background-image: url(images/upload/img-1.jpg)")
+          +img-upload('img-1.jpg')
+      .col-xl-4.col-md-6.col-xs-12.pull-right
+        .post
+          .heading.text-center
+            span.lead-text Bí quyết làm đẹp
+            h2.heading-2: +link('Những ý tưởng màu tóc nhuộm đẹp cho năm mới')
+          .divider
+            span
+              i.ion-ios-circle-outline
+              i.ion-ios-circle-outline
+              i.ion-ios-circle-outline
+          p.desc Những màu tóc nhuộm đẹp nằm trong bảng màu sau đây sẽ là sự lựa chọn không bao giờ nhàm chán cho các nàng thích thay đổi trong dịp năm mới.
+          .postmeta
+            span.date 12/2/2016
+            | &nbsp;|&nbsp;
+            span: +link('12 comment')
+            span.author Author: #[a(href="#!" title="PT Thu Phương") PT Thu Phuong]
+          .images
+            +img-upload('img-12.jpg')
+            +img-upload('img-13.jpg')

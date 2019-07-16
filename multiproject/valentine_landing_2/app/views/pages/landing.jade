@@ -1,0 +1,14 @@
+extends ../layouts/layout
+
+block vars
+  -title = 'Landing'
+  -bodyClass = 'landing-page'
+  -mainNav = 1
+
+block main
+  main
+    +hero('banner-2.jpg', 'banner-4.jpg')
+    include ../modules/breakcrumb
+    include ../modules/beauty-tip
+    include ../modules/post-block-2
+    include ../modules/ingredient

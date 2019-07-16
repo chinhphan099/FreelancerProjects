@@ -1,0 +1,197 @@
+table.tb-temp.ver-top
+  tr
+    th
+    th: strong Code
+    th
+  tr
+    td
+    td(style="width: 70%;")
+      .divider: span.red-text Single Slider
+      code.code
+        span.tab0 .slider.single-slider(data-cslider='{"type": "single"}')
+        span.tab1 .slick
+        span.tab2 .item: +img-upload('banner-0.jpg').img-view
+        span.tab2 .item: +img-upload('banner-1.jpg').img-view
+        span.tab2 .item: +img-upload('banner-2.jpg').img-view
+        span.tab2 .item: +img-upload('banner-3.jpg').img-view
+        span.tab1 span.load
+    td
+  tr
+    td(colspan="3")
+      .slider.single-slider(data-cslider='{"type": "single"}')
+        .slick
+          .item: +img-upload('banner-0.jpg').img-view
+          .item: +img-upload('banner-1.jpg').img-view
+          .item: +img-upload('banner-2.jpg').img-view
+          .item: +img-upload('banner-3.jpg').img-view
+          .item: +img-upload('banner-0.jpg').img-view
+          .item: +img-upload('banner-1.jpg').img-view
+          .item: +img-upload('banner-2.jpg').img-view
+          .item: +img-upload('banner-3.jpg').img-view
+        span.load
+  tr
+    td
+    td
+      .divider: span.red-text Carousel Slider / Hover Button to Change
+      code.code
+        span.tab0 .slider.carousel-slider(data-cslider='{"type": "carousel"#[strong.red-text , "hoverOnSlide": true]}')
+        span.tab1 .slick
+        span.tab2 .item: +img-upload('banner-0.jpg').img-view
+        span.tab2 .item: +img-upload('banner-1.jpg').img-view
+        span.tab2 .item: +img-upload('banner-2.jpg').img-view
+        span.tab2 .item: +img-upload('banner-3.jpg').img-view
+        span.tab1 span.load
+    td
+  tr
+    td(colspan="3")
+      .slider.carousel-slider(data-cslider='{"type": "carousel", "hoverOnSlide": true}')
+        .slick
+          .item: +img-upload('banner-0.jpg').img-view
+          .item: +img-upload('banner-1.jpg').img-view
+          .item: +img-upload('banner-2.jpg').img-view
+          .item: +img-upload('banner-3.jpg').img-view
+          .item: +img-upload('banner-0.jpg').img-view
+          .item: +img-upload('banner-1.jpg').img-view
+          .item: +img-upload('banner-2.jpg').img-view
+          .item: +img-upload('banner-3.jpg').img-view
+        span.load
+  tr
+    td
+    td
+      .divider: span.red-text VariableWidth Slider
+      code.code
+        span.tab0 .slider.variablewidth-slider(data-cslider='{"type": "variableWidth"}')
+        span.tab1 .slick
+        span.tab2 .item: +img-upload('banner-0.jpg').img-view
+        span.tab2 .item: +img-upload('banner-1.jpg').img-view
+        span.tab2 .item: +img-upload('banner-2.jpg').img-view
+        span.tab2 .item: +img-upload('banner-3.jpg').img-view
+        span.tab1 span.load
+    td
+  tr
+    td(colspan="3")
+      .slider.variablewidth-slider(data-cslider='{"type": "variableWidth"}')
+        .slick
+          .item: +img-upload('banner-0.jpg').img-view
+          .item: +img-upload('banner-1.jpg').img-view
+          .item: +img-upload('banner-2.jpg').img-view
+          .item: +img-upload('banner-3.jpg').img-view
+          .item: +img-upload('banner-0.jpg').img-view
+          .item: +img-upload('banner-1.jpg').img-view
+          .item: +img-upload('banner-2.jpg').img-view
+          .item: +img-upload('banner-3.jpg').img-view
+        span.load
+  tr
+    td
+    td
+      .divider: span.red-text CenterMode Slider
+      code.code
+        span.tab0 .slider.centermode-slider(data-cslider='{"type": "centermode"}')
+        span.tab1 .slick
+        span.tab2 .item: +img-upload('banner-0.jpg').img-view
+        span.tab2 .item: +img-upload('banner-1.jpg').img-view
+        span.tab2 .item: +img-upload('banner-2.jpg').img-view
+        span.tab2 .item: +img-upload('banner-3.jpg').img-view
+        span.tab1 span.load
+    td
+  tr
+    td(colspan="3")
+      .slider.centermode-slider(data-cslider='{"type": "centerMode"}')
+        .slick
+          .item: +img-upload('banner-0.jpg').img-view
+          .item: +img-upload('banner-1.jpg').img-view
+          .item: +img-upload('banner-2.jpg').img-view
+          .item: +img-upload('banner-3.jpg').img-view
+          .item: +img-upload('banner-0.jpg').img-view
+          .item: +img-upload('banner-1.jpg').img-view
+          .item: +img-upload('banner-2.jpg').img-view
+          .item: +img-upload('banner-3.jpg').img-view
+        span.load
+  tr
+    td
+    td
+      .divider: span.red-text Cyncing Slider - View
+      code.code
+        span.tab0 .slider.syncing-slider(data-cslider='{"type": "syncing", "navFor": ".slider-nav", "view": "true"}')
+        span.tab1 .slick#[strong.red-text .slider-thumb]
+        span.tab2 .item: +img-upload('banner-0.jpg').img-view
+        span.tab2 .item: +img-upload('banner-1.jpg').img-view
+        span.tab1 span.load
+    td
+  tr
+    td(colspan="3")
+      .slider.syncing-slider(data-cslider='{"type": "syncing", "navFor": ".slider-nav", "view": "true"}')
+        .slick.slider-thumb
+          .item: +img-upload('banner-0.jpg').img-view
+          .item: +img-upload('banner-1.jpg').img-view
+        span.load
+  tr
+    td
+    td
+      .divider: span.red-text Cyncing Slider - Thumb
+      code.code
+        span.tab0 .slider.syncing-slider(data-cslider='{"type": "syncing", "navFor": ".slider-thumb"}')
+        span.tab1 .slick#[strong.red-text .slider-nav]
+        span.tab2 .item: +img-upload('banner-0.jpg').img-view
+        span.tab2 .item: +img-upload('banner-1.jpg').img-view
+        span.tab1 span.load
+    td
+  tr
+    td(colspan="3")
+      .slider.syncing-slider(data-cslider='{"type": "syncing", "navFor": ".slider-thumb"}')
+        .slick.slider-nav
+          .item: +img-upload('banner-0.jpg').img-view
+          .item: +img-upload('banner-1.jpg').img-view
+        span.load
+  tr
+    td
+    td
+      .divider: span.red-text Vertical Slider
+      code.code
+        span.tab0 .slider.vertical-slider(data-cslider='{"type": "vertical"}')
+        span.tab1 .slick
+        span.tab2 .item: +img-upload('banner-0.jpg').img-view
+        span.tab2 .item: +img-upload('banner-1.jpg').img-view
+        span.tab2 .item: +img-upload('banner-2.jpg').img-view
+        span.tab2 .item: +img-upload('banner-3.jpg').img-view
+        span.tab1 span.load
+    td
+  tr
+    td(colspan="3")
+      .slider.vertical-slider(data-cslider='{"type": "vertical"}')
+        .slick
+          .item: +img-upload('banner-0.jpg').img-view
+          .item: +img-upload('banner-1.jpg').img-view
+          .item: +img-upload('banner-2.jpg').img-view
+          .item: +img-upload('banner-3.jpg').img-view
+          .item: +img-upload('banner-0.jpg').img-view
+          .item: +img-upload('banner-1.jpg').img-view
+          .item: +img-upload('banner-2.jpg').img-view
+          .item: +img-upload('banner-3.jpg').img-view
+        span.load
+  tr
+    td
+    td
+      .divider: span.red-text Vertical Slider
+      code.code
+        span.tab0 .slider.vertical-slider(data-cslider='{"type": "single", "initUnder": 767}')
+        span.tab1 .slick
+        span.tab2 .item: +img-upload('banner-0.jpg').img-view
+        span.tab2 .item: +img-upload('banner-1.jpg').img-view
+        span.tab2 .item: +img-upload('banner-2.jpg').img-view
+        span.tab2 .item: +img-upload('banner-3.jpg').img-view
+        span.tab1 span.load
+    td
+  tr
+    td(colspan="3")
+      .slider.vertical-slider(data-cslider='{"type": "single", "initUnder": 767}')
+        .slick
+          .item: +img-upload('banner-0.jpg').img-view
+          .item: +img-upload('banner-1.jpg').img-view
+          .item: +img-upload('banner-2.jpg').img-view
+          .item: +img-upload('banner-3.jpg').img-view
+          .item: +img-upload('banner-0.jpg').img-view
+          .item: +img-upload('banner-1.jpg').img-view
+          .item: +img-upload('banner-2.jpg').img-view
+          .item: +img-upload('banner-3.jpg').img-view
+        span.load

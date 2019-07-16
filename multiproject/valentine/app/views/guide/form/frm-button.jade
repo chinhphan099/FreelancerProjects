@@ -1,0 +1,276 @@
+h3.temp-h3.divider#button: span Button
+table.tb-temp
+  thead
+    tr
+      th
+      th: strong Tiny Size
+      th: strong Small Size
+      th: strong Normal Size
+      th: strong Larger Size
+      th: strong Expanded
+  tbody
+    tr
+      td
+        strong Primary Button
+        p .button
+        p .tiny .small .larger
+        p .btn-primary
+        p .expanded
+      td
+        p(data-handler=""): +button({id: 'tiny-1'})(data-copy="+button({id: 'tiny-1'}).button.tiny.btn-primary Text").button.tiny.btn-primary Tiny
+        br
+        p(data-handler=""): +button({id: 'tiny-11'})(data-copy="+button({id: 'tiny-11'}).button.tiny.btn-primary.radius Text").button.tiny.btn-primary.radius Radius
+        br
+        p(data-handler="")
+          a(href="#!", title="Link")
+            +button({id: 'link-tiny-1'})(data-copy="a(href='#!', title='Link'): +button({id: 'link-tiny-1'}).button.tiny.btn-primary Text").button.tiny.btn-primary Link
+      td
+        p(data-handler=""): +button({id: 'small-1'})(data-copy="+button({id: 'small-1'}).button.small.btn-primary Text").button.small.btn-primary Small
+        br
+        p(data-handler=""): +button({id: 'small-11'})(data-copy="+button({id: 'small-11'}).button.small.btn-primary.radius Text").button.small.btn-primary.radius Radius
+        br
+        p(data-handler="")
+          a(href="#!", title="Link")
+            +button({id: 'link-small-1'})(data-copy="a(href='#!', title='Link'): +button({id: 'link-small-1'}).button.small.btn-primary Text").button.small.btn-primary Link
+      td
+        p(data-handler=""): +button({id: 'primary-1'})(data-copy="+button({id: 'primary-1'}).button.btn-primary Text").button.btn-primary Normal
+        br
+        p(data-handler=""): +button({id: 'primary-11'})(data-copy="+button({id: 'primary-11'}).button.btn-primary.radius Text").button.btn-primary.radius Radius
+        br
+        p(data-handler="")
+          a(href="#!", title="Link")
+            +button({id: 'link-primary-1'})(data-copy="a(href='#!', title='Link'): +button({id: 'link-primary-1'}).button.btn-primary Text").button.btn-primary Link
+      td
+        p(data-handler=""): +button({id: 'larger-1'})(data-copy="+button({id: 'larger-1'}).button.larger.btn-primary Text").button.larger.btn-primary Larger
+        br
+        p(data-handler=""): +button({id: 'larger-11'})(data-copy="+button({id: 'larger-11'}).button.larger.btn-primary.radius Text").button.larger.btn-primary.radius Radius
+        br
+        p(data-handler="")
+          a(href="#!", title="Link")
+            +button({id: 'link-larger-1'})(data-copy="a(href='#!', title='Link'): +button({id: 'link-larger-1'}).button.larger.btn-primary Text").button.larger.btn-primary Link
+      td
+        p(data-handler=""): +button({id: 'expanded-1'})(data-copy="+button({id: 'expanded-1'}).button.btn-primary.expanded Text").button.btn-primary.expanded Expanded
+        br
+        p(data-handler=""): +button({id: 'expanded-11'})(data-copy="+button({id: 'expanded-11'}).button.btn-primary.expanded.radius Text").button.btn-primary.expanded.radius Radius
+        br
+        p(data-handler="")
+          a(href="#!", title="Link")
+            +button({id: 'link-expanded-1'})(data-copy="a(href='#!', title='Link'): +button({id: 'link-expanded-1'}).button.btn-primary.expanded Text").button.btn-primary.expanded Link
+    tr
+      td
+        strong Primary Hollow Button
+        p .button
+        p .tiny .small .larger
+        p .btn-primary
+        p .expanded
+        p .hollow
+      td
+        p(data-handler=""): +button({id: 'hollow-tiny-1'})(data-copy="+button({id: 'hollow-tiny-1'}).button.tiny.btn-primary.hollow Text").button.tiny.btn-primary.hollow Tiny
+        br
+        p(data-handler="")
+          a(href="#!", title="Link")
+            +button({id: 'link-hollow-tiny-1'})(data-copy="a(href='#!', title='Link'): +button({id: 'link-hollow-tiny-1'}).button.tiny.btn-primary.hollow Text").button.tiny.btn-primary.hollow Link
+      td
+        p(data-handler=""): +button({id: 'hollow-small-1'})(data-copy="+button({id: 'hollow-small-1'}).button.small.btn-primary.hollow Text").button.small.btn-primary.hollow Small
+        br
+        p(data-handler="")
+          a(href="#!", title="Link")
+            +button({id: 'link-hollow-small-1'})(data-copy="a(href='#!', title='Link'): +button({id: 'link-hollow-small-1'}).button.small.btn-primary.hollow Text").button.small.btn-primary.hollow Link
+      td
+        p(data-handler=""): +button({id: 'hollow-primary-1'})(data-copy="+button({id: 'hollow-primary-1'}).button.btn-primary.hollow Text").button.btn-primary.hollow Normal
+        br
+        p(data-handler="")
+          a(href="#!", title="Link")
+            +button({id: 'link-hollow-primary-1'})(data-copy="a(href='#!', title='Link'): +button({id: 'link-hollow-primary-1'}).button.btn-primary.hollow Text").button.btn-primary.hollow Link
+      td
+        p(data-handler=""): +button({id: 'hollow-larger-1'})(data-copy="+button({id: 'hollow-larger-1'}).button.larger.btn-primary.hollow Text").button.larger.btn-primary.hollow Larger
+        br
+        p(data-handler="")
+          a(href="#!", title="Link")
+            +button({id: 'link-hollow-larger-1'})(data-copy="a(href='#!', title='Link'): +button({id: 'link-hollow-larger-1'}).button.larger.btn-primary.hollow Text").button.larger.btn-primary.hollow Link
+      td
+        p(data-handler=""): +button({id: 'hollow-expanded-1'})(data-copy="+button({id: 'hollow-expanded-1'}).button.btn-primary.hollow.expanded Text").button.btn-primary.hollow.expanded Expanded
+        br
+        p(data-handler="")
+          a(href="#!", title="Link")
+            +button({id: 'link-hollow-expanded-1'})(data-copy="a(href='#!', title='Link'): +button({id: 'link-hollow-expanded-1'}).button.btn-primary.hollow.expanded Text").button.btn-primary.hollow.expanded Link
+    tr
+      td
+        strong Secondary Button
+        p .button
+        p .tiny .small .larger
+        p .btn-secondary
+        p .expanded
+      td.bgd-dark-grey
+        p(data-handler=""): +button({id: 'tiny-2'})(data-copy="+button({id: 'tiny-2'}).button.tiny.btn-secondary Text").button.tiny.btn-secondary Tiny
+        br
+        p(data-handler="")
+          a(href="#!", title="Link")
+            +button({id: 'link-tiny-2'})(data-copy="a(href='#!', title='Link'): +button({id: 'link-tiny-2'}).button.tiny.btn-secondary Text").button.tiny.btn-secondary Link
+      td.bgd-dark-grey
+        p(data-handler=""): +button({id: 'small-2'})(data-copy="+button({id: 'small-2'}).button.small.btn-secondary Text").button.small.btn-secondary Small
+        br
+        p(data-handler="")
+          a(href="#!", title="Link")
+            +button({id: 'link-small-2'})(data-copy="a(href='#!', title='Link'): +button({id: 'link-small-2'}).button.small.btn-secondary Text").button.small.btn-secondary Link
+      td.bgd-dark-grey
+        p(data-handler=""): +button({id: 'secondary-1'})(data-copy="+button({id: 'secondary-1'}).button.btn-secondary Text").button.btn-secondary Normal
+        br
+        p(data-handler="")
+          a(href="#!", title="Link")
+            +button({id: 'link-secondary-1'})(data-copy="a(href='#!', title='Link'): +button({id: 'link-secondary-1'}).button.btn-secondary Text").button.btn-secondary Link
+      td.bgd-dark-grey
+        p(data-handler=""): +button({id: 'larger-2'})(data-copy="+button({id: 'larger-2'}).button.larger.btn-secondary Text").button.larger.btn-secondary Larger
+        br
+        p(data-handler="")
+          a(href="#!", title="Link")
+            +button({id: 'link-larger-2'})(data-copy="a(href='#!', title='Link'): +button({id: 'link-larger-2'}).button.larger.btn-secondary Text").button.larger.btn-secondary Link
+      td.bgd-dark-grey
+        p(data-handler=""): +button({id: 'expanded-2'})(data-copy="+button({id: 'expanded-2'}).button.btn-secondary.expanded Text").button.btn-secondary.expanded Expanded
+        br
+        p(data-handler="")
+          a(href="#!", title="Link")
+            +button({id: 'link-expanded-2'})(data-copy="a(href='#!', title='Link'): +button({id: 'link-expanded-2'}).button.btn-secondary.expanded Text").button.btn-secondary.expanded Link
+    tr
+      td
+        strong Secondary Hollow Button
+        p .button
+        p .tiny .small .larger
+        p .btn-secondary
+        p .expanded
+        p .hollow
+      td
+        p(data-handler=""): +button({id: 'hollow-tiny-2'})(data-copy="+button({id: 'hollow-tiny-2'}).button.tiny.btn-secondary.hollow Text").button.tiny.btn-secondary.hollow Tiny
+        br
+        p(data-handler="")
+          a(href="#!", title="Link")
+            +button({id: 'link-hollow-tiny-2'})(data-copy="a(href='#!', title='Link'): +button({id: 'link-hollow-tiny-2'}).button.tiny.btn-secondary.hollow Text").button.tiny.btn-secondary.hollow Link
+      td
+        p(data-handler=""): +button({id: 'hollow-small-2'})(data-copy="+button({id: 'hollow-small-2'}).button.small.btn-secondary.hollow Text").button.small.btn-secondary.hollow Small
+        br
+        p(data-handler="")
+          a(href="#!", title="Link")
+            +button({id: 'link-hollow-small-2'})(data-copy="a(href='#!', title='Link'): +button({id: 'link-hollow-small-2'}).button.small.btn-secondary.hollow Text").button.small.btn-secondary.hollow Link
+      td
+        p(data-handler=""): +button({id: 'hollow-secondary-1'})(data-copy="+button({id: 'hollow-secondary-1'}).button.btn-secondary.hollow Text").button.btn-secondary.hollow Normal
+        br
+        p(data-handler="")
+          a(href="#!", title="Link")
+            +button({id: 'link-hollow-secondary-1'})(data-copy="a(href='#!', title='Link'): +button({id: 'link-hollow-secondary-1'}).button.btn-secondary.hollow Text").button.btn-secondary.hollow Link
+      td
+        p(data-handler=""): +button({id: 'hollow-larger-2'})(data-copy="+button({id: 'hollow-larger-2'}).button.larger.btn-secondary.hollow Text").button.larger.btn-secondary.hollow Larger
+        br
+        p(data-handler="")
+          a(href="#!", title="Link")
+            +button({id: 'link-hollow-larger-2'})(data-copy="a(href='#!', title='Link'): +button({id: 'link-hollow-larger-2'}).button.larger.btn-secondary.hollow Text").button.larger.btn-secondary.hollow Link
+      td
+        p(data-handler=""): +button({id: 'hollow-expanded-2'})(data-copy="+button({id: 'hollow-expanded-2'}).button.btn-secondary.hollow.expanded Text").button.btn-secondary.hollow.expanded Expanded
+        br
+        p(data-handler="")
+          a(href="#!", title="Link")
+            +button({id: 'link-hollow-expanded-2'})(data-copy="a(href='#!', title='Link'): +button({id: 'link-hollow-expanded-2'}).button.btn-secondary.hollow.expanded Text").button.btn-secondary.hollow.expanded Link
+    tr
+      td
+        strong Tertiary Button
+        p .button
+        p .tiny .small .larger
+        p .btn-tertiary
+        p .expanded
+      td
+        p(data-handler=""): +button({id: 'tiny-3'})(data-copy="+button({id: 'tiny-3'}).button.tiny.btn-tertiary Text").button.tiny.btn-tertiary Tiny
+        br
+        p(data-handler="")
+          a(href="#!", title="Link")
+            +button({id: 'link-tiny-3'})(data-copy="a(href='#!', title='Link'): +button({id: 'link-tiny-3'}).button.tiny.btn-tertiary Text").button.tiny.btn-tertiary Link
+      td
+        p(data-handler=""): +button({id: 'small-3'})(data-copy="+button({id: 'small-3'}).button.small.btn-tertiary Text").button.small.btn-tertiary Small
+        br
+        p(data-handler="")
+          a(href="#!", title="Link")
+            +button({id: 'link-small-3'})(data-copy="a(href='#!', title='Link'): +button({id: 'link-small-3'}).button.small.btn-tertiary Text").button.small.btn-tertiary Link
+      td
+        p(data-handler=""): +button({id: 'tertiary-1'})(data-copy="+button({id: 'tertiary-1'}).button.btn-tertiary Text").button.btn-tertiary Normal
+        br
+        p(data-handler="")
+          a(href="#!", title="Link")
+            +button({id: 'link-tertiary-1'})(data-copy="a(href='#!', title='Link'): +button({id: 'link-tertiary-1'}).button.btn-tertiary Text").button.btn-tertiary Link
+      td
+        p(data-handler=""): +button({id: 'larger-3'})(data-copy="+button({id: 'larger-3'}).button.larger.btn-tertiary Text").button.larger.btn-tertiary Larger
+        br
+        p(data-handler="")
+          a(href="#!", title="Link")
+            +button({id: 'link-larger-3'})(data-copy="a(href='#!', title='Link'): +button({id: 'link-larger-3'}).button.larger.btn-tertiary Text").button.larger.btn-tertiary Link
+      td
+        p(data-handler=""): +button({id: 'expanded-3'})(data-copy="+button({id: 'expanded-3'}).button.btn-tertiary.expanded Text").button.btn-tertiary.expanded Expanded
+        br
+        p(data-handler="")
+          a(href="#!", title="Link")
+            +button({id: 'link-expanded-3'})(data-copy="a(href='#!', title='Link'): +button({id: 'link-expanded-3'}).button.btn-tertiary.expanded Text").button.btn-tertiary.expanded Link
+    tr
+      td
+        strong Tertiary Hollow Button
+        p .button
+        p .tiny .small .larger
+        p .btn-tertiary
+        p .expanded
+        p .hollow
+      td
+        p(data-handler=""): +button({id: 'hollow-tiny-3'})(data-copy="+button({id: 'hollow-tiny-3'}).button.tiny.btn-tertiary.hollow Text").button.tiny.btn-tertiary.hollow Tiny
+        br
+        p(data-handler="")
+          a(href="#!", title="Link")
+            +button({id: 'link-hollow-tiny-3'})(data-copy="a(href='#!', title='Link'): +button({id: 'link-hollow-tiny-3'}).button.tiny.btn-tertiary.hollow Text").button.tiny.btn-tertiary.hollow Link
+      td
+        p(data-handler=""): +button({id: 'hollow-small-3'})(data-copy="+button({id: 'hollow-small-3'}).button.small.btn-tertiary.hollow Text").button.small.btn-tertiary.hollow Small
+        br
+        p(data-handler="")
+          a(href="#!", title="Link")
+            +button({id: 'link-hollow-small-3'})(data-copy="a(href='#!', title='Link'): +button({id: 'link-hollow-small-3'}).button.small.btn-tertiary.hollow Text").button.small.btn-tertiary.hollow Link
+      td
+        p(data-handler=""): +button({id: 'hollow-tertiary-1'})(data-copy="+button({id: 'hollow-tertiary-1'}).button.btn-tertiary.hollow Text").button.btn-tertiary.hollow Normal
+        br
+        p(data-handler="")
+          a(href="#!", title="Link")
+            +button({id: 'link-hollow-tertiary-1'})(data-copy="a(href='#!', title='Link'): +button({id: 'link-hollow-tertiary-1'}).button.btn-tertiary.hollow Text").button.btn-tertiary.hollow Link
+      td
+        p(data-handler=""): +button({id: 'hollow-larger-3'})(data-copy="+button({id: 'hollow-larger-3'}).button.larger.btn-tertiary.hollow Text").button.larger.btn-tertiary.hollow Larger
+        br
+        p(data-handler="")
+          a(href="#!", title="Link")
+            +button({id: 'link-hollow-larger-3'})(data-copy="a(href='#!', title='Link'): +button({id: 'link-hollow-larger-3'}).button.larger.btn-tertiary.hollow Text").button.larger.btn-tertiary.hollow Link
+      td
+        p(data-handler=""): +button({id: 'hollow-expanded-3'})(data-copy="+button({id: 'hollow-expanded-3'}).button.btn-tertiary.hollow.expanded Text").button.btn-tertiary.hollow.expanded Expanded
+        br
+        p(data-handler="")
+          a(href="#!", title="Link")
+            +button({id: 'link-hollow-expanded-3'})(data-copy="a(href='#!', title='Link'): +button({id: 'link-hollow-expanded-3'}).button.btn-tertiary.hollow.expanded Text").button.btn-tertiary.hollow.expanded Link
+    tr
+      td
+        strong Disabled button
+        p .button
+        p .tiny .small .larger
+        p .btn-disabled
+      td
+        p(data-handler=""): +button({id: 'disabled-tiny-1'})(disabled="disabled" data-copy="+button({id: 'disabled-tiny-1'})(disabled='disabled').button.btn-disabled.tiny Text").button.btn-disabled.tiny Disabled
+      td
+        p(data-handler=""): +button({id: 'disabled-small-1'})(disabled="disabled" data-copy="+button({id: 'disabled-small-1'})(disabled='disabled').button.btn-disabled.small Text").button.btn-disabled.small Disabled
+      td
+        p(data-handler=""): +button({id: 'disabled-primary-1'})(disabled="disabled" data-copy="+button({id: 'disabled-primary-1'})(disabled='disabled').button.btn-disabled Text").button.btn-disabled Disabled
+      td
+        p(data-handler=""): +button({id: 'disabled-larger-1'})(disabled="disabled" data-copy="+button({id: 'disabled-larger-1'})(disabled='disabled').button.btn-disabled.larger Text").button.btn-disabled.larger Disabled
+      td
+        p(data-handler=""): +button({id: 'disabled-expanded-1'})(disabled="disabled" data-copy="+button({id: 'disabled-expanded-1'})(disabled='disabled').button.btn-disabled.expanded Text").button.btn-disabled.expanded Disabled
+    tr
+      td(colspan="6")
+        code.highlight
+          | +button({id: 'larger-1'})
+          br
+          | Options:
+          br
+          | - id
+          br
+          | - name == id
+          br
+          | - type: button
+          br
+          | - class: Class of button

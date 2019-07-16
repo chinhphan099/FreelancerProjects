@@ -1,0 +1,15 @@
+extends ../layouts/layout
+
+block vars
+  -title = 'Homepage'
+  -bodyClass = 'home'
+  -mainNav = 0
+  -activeHam = true
+
+block main
+  main
+    include ../modules/hero-image
+    include ../modules/banner01
+    include ../modules/banner02
+    include ../modules/news-home
+    include ../modules/usage

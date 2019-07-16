@@ -1,0 +1,19 @@
+- var activeHamburger = ''
+if activeHam
+  - activeHamburger = 'active-mobile-menu'
+header.header(class=activeHamburger)
+  .container
+    i.ion-navicon.hidden-md-up
+    h1.logo-wrap
+      +link('Thái Dương', 'index.html')
+        +img('logo.png')
+    nav.main-nav
+      ul.navigation
+        +items([
+          {title: 'Trang chủ', href: 'index.html'},
+          {title: 'Giới thiệu', href: '#!'},
+          {title: 'Sản phẩm', href: 'detail.html'},
+          {title: 'Tin tức', href: '#!'},
+          {title: 'Cảm nhận', href: '#!'},
+          {title: 'Liên hệ', href: '#!'}
+        ], mainNav)

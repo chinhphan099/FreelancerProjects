@@ -1,0 +1,51 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | HRM</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/vendor/modernizr.js"></script>
+  </head>
+  <body class="home-page">
+    <div id="container">
+      <header id="header">
+        <div class="row">
+          <h1><a href="index.html" class="logo"><img src="images/logo.png" alt="Sutrix HRM"></a></h1>
+        </div>
+      </header>
+      <main id="main">
+        <div class="login-form">
+          <div class="row">
+            <div class="medium-4 column medium-centered">
+              <form action="dashboard.html" name="login-form" id="login-form" method="post" data-abide>
+                <div class="row">
+                  <div class="small-4 columns"><label for="username">Username:</label></div>
+                  <div class="small-8 columns">
+                    <input type="text" name="username" id="username" required value="admin">
+                    <small class="error">Input your username</small>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="small-4 columns"><label for="password">Password:</label></div>
+                  <div class="small-8 columns">
+                    <input type="password" name="password" id="password" required value="admin">
+                    <small class="error">Input your password</small>
+                  </div>
+                </div>
+                <div class="row text-center"><button type="submit" name="ok" id="ok" class="pusher-t-10">OK</button></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+table.tb-temp
+  thead
+    tr
+      th: strong Font Family
+      th: strong View
+  tbody
+    tr(data-handler="")
+      td: code #[span(data-copy="") .OpenSans();] - Font Default
+      td: p.OpenSans Lorem ipsum dolor sit amet.
+    tr(data-handler="")
+      td: code #[span(data-copy="") .light();]
+      td: p.light Lorem ipsum dolor sit amet.
+    tr(data-handler="")
+      td: code(data-copy="") .semi-bold();
+      td: p.semi-bold Lorem ipsum dolor sit amet.
+    tr(data-handler="")
+      td: code(data-copy="") .lato();
+      td: p.lato Lorem ipsum dolor sit amet.

@@ -1,0 +1,186 @@
+extends ../layouts/layout
+
+block vars
+  -title = 'Cach Su Dung'
+  -bodyClass = 'use-page'
+  -mainNav = 1
+  -sub1 = 1
+  -sub2 = 1
+  -sub3 = 0
+
+block main
+  main
+    include ../modules/hero-banner
+    .container
+      .general-principles
+        .title-1.wow.fadeInUp.animated(data-wow-duration="1s"): span Nguyên tắc Chung
+        .row-item-1
+          .desc.wow.fadeInLeft.animated(data-wow-duration="1s")
+            p Liều sử dụng: với tất cả bệnh nhân đều uống 2 - 3 viên tiểu đường Nolbe/lần, ngày 3 - 4 lần, uống trước khi ăn 10 - 30 phút, số lần uống bằng số bữa ăn trong ngày.
+          .thumb.wow.fadeInRight.animated(data-wow-duration="1s")
+            +img-upload('img-9.png', 'alt')
+        ul.list-item.wow.fadeInUp.animated(data-wow-duration="1s")
+          li
+            .thumb
+              +img('transparent.png')(style="background-image:url(images/upload/img-18.png)")
+            .desc
+              p Với bệnh nhân nặng (tụy không đủ insulin), cần phối hợp thuốc tân dược như Insilin, Glimepiride, Giclazide........
+          li
+            .thumb
+              +img('transparent.png')(style="background-image:url(images/upload/img-2.png)")
+            .desc
+              p Để đạt được hiệu quả điều trị tốt cần tuân thủ chế độ ăn uống, tập thể dục, kiểm soát cân nặng. Hàng ngày nên ăn 1 - 2 bát cháo gạo lứt + 10g muối vừng.
+          li
+            .thumb
+              +img('transparent.png')(style="background-image:url(images/upload/img-22.png)")
+            .desc
+              p Để đạt được hiệu quả điều trị tốt cần tuân thủ chế độ ăn uống, tập thể dục, kiểm soát cân nặng. Hàng ngày nên ăn 1 - 2 bát cháo gạo lứt + 10g muối vừng.
+        .row-item-2
+          .inner
+            .main-title.wow.fadeInUp.animated(data-wow-duration="1s") Nguyên tắc phối hợp viên tiểu đường Nobel và thuốc tân dược trong các trường hợp nặng
+            .group-inner
+              .item.wow.fadeInLeft.animated(data-wow-duration="1s")
+                +img-upload('img-23.png', 'alt')
+              .item.wow.fadeInRight.animated(data-wow-duration="1s")
+                i.icon-plus
+                +img-upload('img-22.png', 'alt')
+        ul.list-circle.wow.fadeInRight.animated(data-wow-duration="1s")
+          li Trước ngày sử dụng cần kiểm tra đường huyết trước ăn bữa sáng để xác định chỉ số đườgn huyết. Trong quá trình dò liều thuốc tân dược cần kiểm tra chỉ số đường huyết trước ăn bữa sáng và trước ăn bữa tối để điều chỉnh của thuốc tân dược .
+          li Những ngày ăn uống ít hoặc không ăn được cần giảm hoặc dừng uống thuốc tân dược của ngày đó.
+          li Nếu đườgn huyết trước ăn bữa tối dưới 6 mmol/l thì nên bỏ thuốc tân dược của bữa đó.
+        .title-1.wow.fadeInUp.animated(data-wow-duration="1s"): span Lưu ý
+        ul.list-circle.list-1.wow.fadeInRight.animated(data-wow-duration="1s")
+          li Trong quá tình sử dụng, đặc biệt các tuần đầu, có thể xảy ra hiện tượng tụt đườgn huyết (mệt mỏi, vã mồ hôi, bủn rủn chân tay, cồn cào buồn nôn, nôn, chóng mặt....) phải pha ngay nước đường uống và giảm ngay liều sử dụng.
+          li Những trườgn hợp sử dụng kết hợp viên tiểu đường Nobel và thuốc tân dược mà vẫn chưa kiểm soát được đường huyết. Thì nên tiêm Insulin, để kiểm soát đường huyết ở mức 5 - 6mmol/l trong khoản g1 tháng để tụy phục hồi. Sau đó có thể thay thế dần tiêm Insulin bằng thuốc tân dược.
+      .manual-block
+        .heading
+          .divider.wow.fadeInUp.animated(data-wow-duration="1s")
+            span
+              i.icon-star
+              i.icon-star
+              i.icon-star
+          h2.title.wow.fadeInUp.animated(data-wow-duration="1s") TÙY VÀO TÌNH TRẠNG CỤ
+              span THỂ BỆNH NHÂN SỬ DỤNG THEO HƯỚNG DẪN SỬ DỤNG SAU
+        .row-item.bgd-gray.wow.fadeInLeft.animated(data-wow-duration="1s")
+          .thumb
+            span ĐƯỜNG HUYẾT 7mmol/l
+            +img-upload('img-24.png', 'alt')
+          .content
+            h2 Với bệnh nhân đang uống thuốc tân dược, nếu đường huyết trước bữa ăn sáng dưới 7mmol/l: bỏ
+            p.desc luôn thuốc tân dược trị tiểu đường đang sử dụng và sử dụng:
+            ul
+              li Viên tiểu đườgn Nobel 2 - 3  viên/lần, ngày 3 - 4 lần (số lần uống bằng số bữa ăn trong n
+              li Sau 3 ngày, nếu đườgn huyết vẫn trên 7mmol/l, thì uống phối hợp với thuốc Glimepiride: liều khởi đầu 1mg/ngày, chia 2 lần uống trước ăn sáng và tối 15 phút. Theo dõi chỉ số đường huyết trước ăn bữa sáng để tăng hoặc giảm liều Glimepiride, mỗi lần tăng hoặc giảm 1 đến 2 mg/ngày, dò liều đến khi chỉ số đường huyết trước bữa sáng đạt từ 5 - 7mmol/l (liều Glimepiride tối đa là
+            .note
+              h3 LƯU Ý
+              p.orange-text Có thể sử dụng Gliclazide thay thế Glimepiride (40mg Glilazide tương đương 1mg Glimepiride). Theo dõi chỉ số đường huyết để dò liều Gliclazide phù hợp, mỗi lần tăng hoặc giảm từ 40 - 80mg/ngày
+        .row-item.right.wow.fadeInRight.animated(data-wow-duration="1s")
+          .content
+            h2 Với bệnh nhân đang uống thuốc tân dược, nếu đường huyết trước bữa ăn sáng dưới 7mmol/l: bỏ
+            p.desc luôn thuốc tân dược trị tiểu đường đang sử dụng và sử dụng:
+            ul
+              li luôn thuốc tân dược trị tiểu đường đang sử dụng và sử dụng:
+              li Sau 3 ngày, nếu đườgn huyết vẫn trên 7mmol/l, thì uống phối hợp với thuốc Glimepiride: liều khởi đầu 1mg/ngày, chia 2 lần uống trước ăn sáng và tối 15 phút. Theo dõi chỉ số đường huyết trước ăn bữa sáng để tăng hoặc giảm liều Glimepiride, mỗi lần tăng hoặc giảm 1 đến 2 mg/ngày, dò liều đến khi chỉ số đường huyết trước bữa sáng đạt từ 5 - 7mmol/l (liều Glimepiride tối đa là
+            .note
+              h3 LƯU Ý
+              p.orange-text Có thể sử dụng Gliclazide thay thế Glimepiride (40mg Glilazide tương đương 1mg Glimepiride). Theo dõi chỉ số đường huyết để dò liều Gliclazide phù hợp, mỗi lần tăng hoặc giảm từ 40 - 80mg/ngày
+          .thumb
+            span ĐƯỜNG HUYẾT 7mmol/l
+            +img-upload('img-25.png', 'alt')
+        .row-item.bgd-gray.wow.fadeInLeft.animated(data-wow-duration="1s")
+          .thumb
+            span ĐƯỜNG HUYẾT 7mmol/l
+            +img-upload('img-28.png', 'alt')
+          .content
+            h2 Với bệnh nhân đang uống thuốc tân dược, nếu đường huyết trước bữa ăn sáng dưới 7mmol/l: bỏ
+            p.desc luôn thuốc tân dược trị tiểu đường đang sử dụng và sử dụng:
+            ul
+              li Viên tiểu đườgn Nobel 2 - 3  viên/lần, ngày 3 - 4 lần (số lần uống bằng số bữa ăn trong n
+              li Sau 3 ngày, nếu đườgn huyết vẫn trên 7mmol/l, thì uống phối hợp với thuốc Glimepiride: liều khởi đầu 1mg/ngày, chia 2 lần uống trước ăn sáng và tối 15 phút. Theo dõi chỉ số đường huyết trước ăn bữa sáng để tăng hoặc giảm liều Glimepiride, mỗi lần tăng hoặc giảm 1 đến 2 mg/ngày, dò liều đến khi chỉ số đường huyết trước bữa sáng đạt từ 5 - 7mmol/l (liều Glimepiride tối đa là
+            .note
+              h3 LƯU Ý
+              p.orange-text Có thể sử dụng Gliclazide thay thế Glimepiride (40mg Glilazide tương đương 1mg Glimepiride). Theo dõi chỉ số đường huyết để dò liều Gliclazide phù hợp, mỗi lần tăng hoặc giảm từ 40 - 80mg/ngày
+        .row-item.right.wow.fadeInRight.animated(data-wow-duration="1s")
+          .content
+            h2 Với bệnh nhân đang uống thuốc tân dược, nếu đường huyết trước bữa ăn sáng dưới 7mmol/l: bỏ
+            p.desc luôn thuốc tân dược trị tiểu đường đang sử dụng và sử dụng:
+            ul
+              li luôn thuốc tân dược trị tiểu đường đang sử dụng và sử dụng:
+              li Sau 3 ngày, nếu đườgn huyết vẫn trên 7mmol/l, thì uống phối hợp với thuốc Glimepiride: liều khởi đầu 1mg/ngày, chia 2 lần uống trước ăn sáng và tối 15 phút. Theo dõi chỉ số đường huyết trước ăn bữa sáng để tăng hoặc giảm liều Glimepiride, mỗi lần tăng hoặc giảm 1 đến 2 mg/ngày, dò liều đến khi chỉ số đường huyết trước bữa sáng đạt từ 5 - 7mmol/l (liều Glimepiride tối đa là
+            .note
+              h3 LƯU Ý
+              p.orange-text Trong quá trình thay thuốc tiêm Insulin bằng Glimepiride thì nên kiểm tra đườgn huyết trước khi quyết định thay mũi tiêm cuối cùng trong ngày: Nếu đường huyết dưới 7mmol/l thì thay mũi tiêm cuối cùng đó bằng Glimepiride. Nếu đườgn huyết trên 7mmol/l thì duy trì tiêm. Có thể sử dụng Gliclazide thay thế Glimepiride (40mg Glilazide tương đương 1mg Glimepiride). Theo dõi chỉ số đường huyết để dò liều Gliclazide phù hợp, mỗi lần tăng hoặc giảm từ 40 - 80mg/ngày
+          .thumb
+            span ĐƯỜNG HUYẾT 7mmol/l
+            +img-upload('img-2.png', 'alt')
+        .row-item.bgd-gray.wow.fadeInLeft.animated(data-wow-duration="1s")
+          .thumb
+            span ĐƯỜNG HUYẾT 7mmol/l
+            +img-upload('img-26.png', 'alt')
+          .content
+            h2 Với bệnh nhân đang uống thuốc tân dược, nếu đường huyết trước bữa ăn sáng dưới 7mmol/l: bỏ
+            p.desc luôn thuốc tân dược trị tiểu đường đang sử dụng và sử dụng:
+            ul
+              li luôn thuốc tân dược trị tiểu đường đang sử dụng và sử dụng:
+              li Sau 3 ngày, nếu đườgn huyết vẫn trên 7mmol/l, thì uống phối hợp với thuốc Glimepiride: liều khởi đầu 1mg/ngày, chia 2 lần uống trước ăn sáng và tối 15 phút. Theo dõi chỉ số đường huyết trước ăn bữa sáng để tăng hoặc giảm liều Glimepiride, mỗi lần tăng hoặc giảm 1 đến 2 mg/ngày, dò liều đến khi chỉ số đường huyết trước bữa sáng đạt từ 5 - 7mmol/l (liều Glimepiride tối đa là
+            .note
+              h3 LƯU Ý
+              p.orange-text Có thể sử dụng Gliclazide thay thế Glimepiride (40mg Glilazide tương đương 1mg Glimepiride). Theo dõi chỉ số đường huyết để dò liều Gliclazide phù hợp, mỗi lần tăng hoặc giảm từ 40 - 80mg/ngày
+        .row-item.right.wow.fadeInRight.animated(data-wow-duration="1s")
+          .content
+            h2 Với bệnh nhân đang uống thuốc tân dược, nếu đường huyết trước bữa ăn sáng dưới 7mmol/l: bỏ
+            p.desc luôn thuốc tân dược trị tiểu đường đang sử dụng và sử dụng:
+            ul
+              li luôn thuốc tân dược trị tiểu đường đang sử dụng và sử dụng:
+              li Sau 3 ngày, nếu đườgn huyết vẫn trên 7mmol/l, thì uống phối hợp với thuốc Glimepiride: liều khởi đầu 1mg/ngày, chia 2 lần uống trước ăn sáng và tối 15 phút. Theo dõi chỉ số đường huyết trước ăn bữa sáng để tăng hoặc giảm liều Glimepiride, mỗi lần tăng hoặc giảm 1 đến 2 mg/ngày, dò liều đến khi chỉ số đường huyết trước bữa sáng đạt từ 5 - 7mmol/l (liều Glimepiride tối đa là
+            .note.orange-text
+              h3 LƯU Ý
+              p Có thể sử dụng Gliclazide thay thế Glimepiride (40mg Glilazide tương đương 1mg Glimepiride). Theo dõi chỉ số đường huyết để dò liều Gliclazide phù hợp, mỗi lần tăng hoặc giảm từ 40 - 80mg/ngày
+              p Sau một thời gian sử dụng, khi đường huyết ổn định ở mức 5 -7mmol/l, tụy sẽ hồi phục dần, sản sinh được Insulin để kiểm soát đường huyết. Khi đó, có thể giảm dần liều Ginepiride. Thực tế, rất nhiều trườgn hợp đã bỏ hẳn được Glimepiride và chỉ dùng viên tiểu đườgn Nobel
+
+          .thumb
+            span ĐƯỜNG HUYẾT 7mmol/l
+            +img-upload('img-27.png', 'alt')
+      .respect-block
+        .title-1.wow.fadeInUp.animated(data-wow-duration="1s"): span Trân trọng
+        p.desc.wow.fadeInLeft.animated(data-wow-duration="1s") Xử lý tụt đường huyết:  trong quá trình sử dụng, đặc biệt thời gian đầu, có thể gập hiện tượng tụt đường huyết với các biểu hiện như: mệt mỏi, vã mồ hôi, bủn rủn chân tay, coồn cào, buồn nôn, nôn, chóng mặt,.....) thì phải pha ngay nước đường uống và ngưng sử dụng thuốc tân dược của ngày hôm đó. Những trường hợp hạ đường huyết trầm trọng phải cấp cứu bằng cách cho uống nước đường và đưa ngay vào bệnh viện
+      .contraindicated-block
+        .title-1.wow.fadeInUp.animated(data-wow-duration="1s"): span Chống chỉ định
+        h2.title-hd Chống chỉ định của Glimepiride và Gliclazide
+        ul.list-contraindicated
+          li.wow.fadeInUp.animated(data-wow-duration="1s")
+            .thumb
+              +link()
+                +img-upload('img-29.png', 'alt')
+            h3.title
+              +link('Mẫn cảm với Glimepiride, Gliclazide Sulfonylurea hoặc bất kỳ thành phần nào của thuốc')
+          li.wow.fadeInUp.animated(data-wow-duration="1s" data-wow-delay=".2s")
+            .thumb
+              +img-upload('img-30.png', 'alt')
+            h3.title
+              +link('Suy gan, thận nặng')
+          li.wow.fadeInUp.animated(data-wow-duration="1s" data-wow-delay=".4s")
+            .thumb
+              +img-upload('img-31.png', 'alt')
+            h3.title
+              +link('Phụ nữ có thai và cho con bú')
+        h3.title-hd.fadeInLeft.animated(data-wow-duration="1s" data-wow-delay=".8s") Chống chỉ định của viên tiểu đường Nobel
+        ul.list-contraindicated
+          li.fadeInUp.animated(data-wow-duration="1s" data-wow-delay=".2s")
+            .thumb
+              +img-upload('img-29.png', 'alt')
+            h3.title
+              +link('Phụ nữ mang thai')
+          li.fadeInUp.animated(data-wow-duration="1s" data-wow-delay=".4s")
+            .thumb
+              +img-upload('img-30.png', 'alt')
+            h3.title
+              +link('Người đang chảy máu cấp tính hoặc sốt xuất huyết')
+          li.fadeInUp.animated(data-wow-duration="1s" data-wow-delay=".6s")
+            .thumb
+              +img-upload('img-31.png', 'alt')
+            h3.title
+              +link('Người đang sử dụng thuốc chống đông máu')
+
+
+

@@ -1,0 +1,20 @@
+extends ../layouts/layout
+
+block vars
+  -title = 'Homepage'
+  -bodyClass = 'home'
+  -mainNav = 1
+  -sub1 = 1
+  -sub2 = 1
+  -sub3 = 0
+
+block main
+  main
+    include ../modules/hero-banner
+    include ../modules/block-post
+    include ../modules/mechanism
+    include ../modules/ingredient
+    include ../modules/pathological
+    include ../modules/grey-box
+    include ../modules/home-feedback
+    include ../modules/home-contact

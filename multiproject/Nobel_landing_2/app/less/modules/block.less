@@ -1,0 +1,303 @@
+// post-details
+.post-details {
+	margin-bottom: 20px;
+	h1 {
+		margin-bottom: 12px;
+		line-height: 1.4;
+	}
+	.meta {
+		color: @color15;
+		.font-mobile(12px);
+		margin-bottom: 12px;
+		line-height: 1.4;
+		a {
+			.link-color(@color15, @color12);
+		}
+	}
+	.thumb-img {
+		text-align: center;
+		span {
+			.lightItalic();
+			display: block;
+		}
+	}
+}
+@media (min-width: @md-min) {
+	.post-details {
+		.meta {
+			.font-desktop(12px);
+		}
+		p {
+			&:first-of-type {
+				margin-bottom: 30px;
+			}
+		}
+	}
+}
+
+.comment-block {
+	margin-bottom: 20px;
+}
+
+
+
+.post-block {
+	padding-top: 20px;
+	.clearfix();
+	.hot-post {
+		margin-bottom: 20px;
+		overflow: hidden;
+		.thumb {
+			text-align: center;
+			img {
+				display: block;
+				width: 100%;
+			}
+		}
+		.content {
+			padding: 10px;
+			em {
+				display: block;
+				padding-top: 10px;
+				color: @color16;
+				.font-mobile(13px);
+				.line-height(18px, 13px);
+			}
+			.text-right {
+				padding-top: 10px;
+				padding-right: 20px;
+			}
+		}
+	}
+	.latest-post {
+		.item-cate {
+			padding-bottom: 0;
+			h3 {
+				padding-top: 0;
+				padding-bottom: 10px;
+				text-transform: uppercase;
+			}
+		}
+		.thumb {
+			img {
+				display: block;
+				width: 100%;
+			}
+		}
+		.content {
+			padding: 10px;
+		}
+	}
+}
+@media (max-width: @sm-max) {
+	.post-block {
+		.hot-post {
+			.content {
+			}
+			.thumb {
+			}
+		}
+	}
+}
+@media (min-width: @md-min) {
+	.post-block {
+		padding-top: 30px;
+		.hot-post {
+			margin-bottom: 0;
+			.thumb {
+				float: right;
+				margin-left: 15px;
+				max-width: 40%;
+				text-align: right;
+			}
+			.content {
+				padding: 20px;
+				em {
+					.font-desktop(13px);
+				}
+			}
+		}
+		.latest-post {
+			.thumb {
+				img {
+					display: block;
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+@media (min-width: @lg-min) {
+	.post-block {
+		.hot-post {
+			.thumb {
+				margin-left: 15px;
+			}
+			.content {
+				overflow: hidden;
+			}
+		}
+	}
+}
+
+
+
+// category-block
+.category-block {
+	padding: 20px 0;
+	.heading-2 {
+		margin-bottom: 15px;
+	}
+}
+.list-categories {
+	overflow: hidden;
+	li {
+		margin-bottom: 20px;
+	}
+	a {
+		.link-color(@text-color, @link);
+	}
+	.thumb {
+		text-align: center;
+		margin-bottom: 10px;
+		overflow: hidden;
+		&:hover {
+			img {
+				.scale(1.2);
+			}
+		}
+		img {
+			display: block;
+			width: 100%;
+			.transition(all .25s ease);
+		}
+	}
+	.meta {
+		margin-bottom: 8px;
+		color: @color12;
+		.font-mobile(12px);
+	}
+	.content {
+		h3 {
+			margin-bottom: 8px;
+		}
+	}
+	.read-more-link {
+		text-align: right;
+		a {
+			.link-color(@link, @link-hover);
+			.lightItalic();
+		}
+	}
+}
+@media (min-width: @md-min) {
+	.category-block {
+		padding-bottom: 40px;
+		.heading-2 {
+			margin-bottom: 20px;
+		}
+	}
+	.list-categories {
+		li {
+			.clearfix();
+			position: relative;
+			margin-bottom: 30px;
+		}
+		.thumb {
+			width: 264px;
+			float: left;
+			margin-right: 30px;
+			margin-bottom: 0;
+			img {
+				width: 100%;
+			}
+		}
+		.content {
+			overflow: hidden;
+		}
+		.meta {
+			.font-desktop(14px);
+		}
+		p {
+			.font-desktop(14px);
+			.line-height(20px, 14px);
+		}
+	}
+}
+
+@media (min-width: @xl-min) {
+	.list-categories {
+		.thumb {
+			width: 340px;
+		}
+		.content {
+			h3 {
+				.font-desktop(22px);
+			}
+		}
+		.read-more-link {
+			.position(null 0 0 null);
+			a {
+				.font-desktop(18px);
+			}
+		}
+	}
+}
+
+//category-page
+@media (min-width: @xl-min) {
+	.category-page {
+		.category-block {
+			padding-top: 30px;
+		}
+	}
+}
+
+
+
+
+// related-news
+.related-news {
+	.slider {
+		overflow: hidden;
+	}
+	.group-control {
+		text-align: right;
+	}
+	.btn-next,
+	.btn-prev {
+		position: relative;
+		display: inline-block;
+		.size(28px);
+		.border-radius(5px);
+		background: @color12;
+		color: white;
+		text-align: center;
+		line-height: 28px;
+		cursor: pointer;
+		&:hover {
+			background: #ea8b17;
+		}
+		i {
+			.position(50% null null 50%);
+			.translate(-50%, -50%);
+			font-size: 25px;
+		}
+	}
+	.btn-prev {
+		margin-left: 10px;
+	}
+}
+
+@media (min-width: @lg-min) {
+	.related-news {
+		.btn-next,
+		.btn-prev {
+			.size(35px);
+			line-height: 35px;
+			i {
+				font-size: 30px;
+			}
+		}
+	}
+}

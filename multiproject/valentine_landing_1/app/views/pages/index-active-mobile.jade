@@ -1,0 +1,16 @@
+extends ../layouts/layout
+
+block vars
+  -title = 'Homepage'
+  -bodyClass = 'home'
+  -mainNav = 0
+  -activeMobileMenu = true
+
+block main
+  main
+    .container
+      .row
+        .col-md-8.main-left
+          include ../modules/article
+        .col-md-4.main-right
+          include ../modules/featured-news

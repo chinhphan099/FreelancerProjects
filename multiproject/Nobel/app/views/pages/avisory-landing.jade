@@ -1,0 +1,64 @@
+extends ../layouts/layout
+
+block vars
+  -title = 'Avisory Landing'
+  -bodyClass = 'avisory-landing'
+  -mainNav = 1
+  -sub1 = 1
+  -sub2 = 1
+  -sub3 = 0
+
+block main
+  main
+    section.hero-banner
+      +img-upload('banner-1.jpg')
+    section.head-post
+      .container
+        .row
+          .col-lg-7.fadeInLeft.animated(data-wow-duration="1s")
+            .post-item
+              .thumb
+                +img('transparent.png')(style="background-image: url(images/upload/img-20.png)")
+              .content.clearfix
+                p Công dụng của vien tiểu đường Nobel và những lưu ý khi dùng viên tiểu đường Nobel
+                +link('Xem chi tiết', '#!', 'Xem chi tiết &gt;&gt;').link.pull-right
+          .col-lg-5.fadeInRight.animated(data-wow-duration="1s")
+            .post-item
+              .thumb
+                +img('transparent.png')(style="background-image: url(images/upload/img-21.png)")
+              .content.clearfix
+                p Công dụng của vien tiểu đường Nobel và những lưu ý khi dùng viên tiểu đường Nobel
+                +link('Xem chi tiết', '#!', 'Xem chi tiết &gt;&gt;').link.pull-right
+    section.list-avisory
+      .container
+        .row.post-item-1.wow.fadeInRight.animated(data-wow-duration="1s")
+          .col-md-4.col-lg-3.custom-col
+            .thumb(style="background-image: url(images/upload/img-14.png)")
+              +img-upload('img-14.png', 'alt')
+          .col-md-8.col-lg-9.pull-right
+            .content
+              h2.title Tôi đang dùng viên tiểu đường nobel có tác dụng tốt nhưng có vài thắc mắc xin tư vấn thêm.
+              .meta.orange-text 19 - 11 - 2016 | 136 trả lời | 1360 xem
+              p.desc Mình năm nay 25 tuổi, cách đây khoảng 2 năm sau khoảng thời gian căng thẳng mình bị mọc mụn cho tới giờ. Mụn của mình mụn bọc , da dầu, giờ lại có mụn cám và mụn đầu đen, cũng có đi chữa tại bệnh viện da liễu nhưng không thấy khỏi. Mụn ở lưng và ngực thỉnh thoảng mọc tương đối nhiều, mình dùng sữa tắm Tây Thi thấy khỏi nhanh ......
+              +link('Xem chi tiết', '#!', 'Xem chi tiết &gt;&gt;').link.pull-right
+        .row.post-item-1.wow.fadeInLeft.animated(data-wow-duration="1s")
+          .col-md-4.col-lg-3.custom-col
+            .thumb(style="background-image: url(images/upload/img-14.png)")
+              +img-upload('img-14.png', 'alt')
+          .col-md-8.col-lg-9.pull-right
+            .content
+              h2.title Tôi đang dùng viên tiểu đường nobel có tác dụng tốt nhưng có vài thắc mắc xin tư vấn thêm.
+              .meta.orange-text 19 - 11 - 2016 | 136 trả lời | 1360 xem
+              p.desc Mình năm nay 25 tuổi, cách đây khoảng 2 năm sau khoảng thời gian căng thẳng mình bị mọc mụn cho tới giờ. Mụn của mình mụn bọc , da dầu, giờ lại có mụn cám và mụn đầu đen, cũng có đi chữa tại bệnh viện da liễu nhưng không thấy khỏi. Mụn ở lưng và ngực thỉnh thoảng mọc tương đối nhiều, mình dùng sữa tắm Tây Thi thấy khỏi nhanh ......
+              +link('Xem chi tiết', '#!', 'Xem chi tiết &gt;&gt;').link.pull-right
+        .row.post-item-1.wow.fadeInRight.animated(data-wow-duration="1s")
+          .col-md-4.col-lg-3.custom-col
+            .thumb(style="background-image: url(images/upload/img-14.png)")
+              +img-upload('img-14.png', 'alt')
+          .col-md-8.col-lg-9.pull-right
+            .content
+              h2.title Tôi đang dùng viên tiểu đường nobel có tác dụng tốt nhưng có vài thắc mắc xin tư vấn thêm.
+              .meta.orange-text 19 - 11 - 2016 | 136 trả lời | 1360 xem
+              p.desc Mình năm nay 25 tuổi, cách đây khoảng 2 năm sau khoảng thời gian căng thẳng mình bị mọc mụn cho tới giờ. Mụn của mình mụn bọc , da dầu, giờ lại có mụn cám và mụn đầu đen, cũng có đi chữa tại bệnh viện da liễu nhưng không thấy khỏi. Mụn ở lưng và ngực thỉnh thoảng mọc tương đối nhiều, mình dùng sữa tắm Tây Thi thấy khỏi nhanh ......
+              +link('Xem chi tiết', '#!', 'Xem chi tiết &gt;&gt;').link.pull-right
+        +pagination()

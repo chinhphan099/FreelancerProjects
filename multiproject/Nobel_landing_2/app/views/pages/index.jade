@@ -1,0 +1,15 @@
+extends ../layouts/layout
+
+block vars
+  -title = 'index'
+  -bodyClass = 'index'
+  -mainNav = 0
+  -sub1 = 1
+  -sub2 = 1
+  -sub3 = 0
+
+block main
+  main
+    include ../modules/hero-slide
+    include ../modules/post-block
+    include ../modules/category

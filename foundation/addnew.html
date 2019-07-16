@@ -1,0 +1,142 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Addnew | HRM</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/vendor/modernizr.js"></script>
+  </head>
+  <body class="edit-page">
+    <div id="container">
+      <header id="header">
+        <div class="row">
+          <h1><a href="index.html" class="logo"><img src="images/logo.png" alt="Sutrix HRM"></a></h1>
+        </div>
+      </header>
+      <main id="main">
+        <ul class="head-link">
+          <li><a href="dashboard.html" title="Dashboard">Dashboard</a></li>
+          <li class="active"><a href="staff.html" title="Staff">Staff</a></li>
+        </ul>
+        <div class="block">
+          <div class="heading">
+            <h2 class="title">Staff information</h2>
+          </div>
+          <!-- /.heading -->
+          <div class="staff-info-form editing">
+            <form action="staff.html" method="post" name="add-new-staff" id="add-new-staff" data-abide>
+              <div class="row">
+                <div class="large-4 medium-6 column right">
+                  <div class="upload-block">
+                    <img src="images/upload/img-1.jpg" alt="username">
+                    <div class="upload">
+                      <input type="file" name="upload-image" id="upload-img">
+                      <i class="step fi-camera size-24"></i>
+                      <p>Choose images <br/>format available JPG, PNG, GIF</p>
+                    </div>
+                  </div>
+                  <!-- /.upload-block -->
+                </div>
+                <div class="medium-6 column left">
+                  <div class="row">
+                    <div class="small-4 column"><label for="full-name">Full Name:</label></div>
+                    <div class="small-8 column">
+                      <input type="text" name="full-name" id="full-name" required>
+                      <small class="error">Input your full name</small>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="small-4 column"><label for="birthday">Date of birth:</label></div>
+                    <div class="small-8 column">
+                      <input type="date" name="birthday" id="birthday">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="small-4 column"><label for="male">Gender</label></div>
+                    <div class="small-8 column">
+                      <input type="radio" name="gender" value="male" id="male" required><label for="male">Male</label>
+                      <input type="radio" name="gender" value="female" id="female" required><label for="female">Female</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="small-4 column"><label for="address">Address:</label></div>
+                    <div class="small-8 column">
+                      <input type="text" name="address" id="address">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="small-4 column"><label for="id">ID:</label></div>
+                    <div class="small-8 column">
+                      <input type="text" name="id" id="id">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="small-4 column"><label for="department">Department</label></div>
+                    <div class="small-8 column">
+                      <select name="department" id="department" required>
+                        <option value="">-- Choose department --</option>
+                        <option value="frontend">Frontend</option>
+                        <option value="qc">QC</option>
+                        <option value="mobile">Mobile</option>
+                        <option value="php">PHP</option>
+                        <option value="java">Java</option>
+                        <option value="admin">Admin</option>
+                      </select>
+                      <small class="error">Select department</small>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="small-4 column"><label for="mobile">Mobile:</label></div>
+                    <div class="small-8 column">
+                      <input type="tel" name="mobile" id="mobile">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="small-4 column"><label for="skype">Skype:</label></div>
+                    <div class="small-8 column">
+                      <input type="text" name="skype" id="skype">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="small-4 column"><label for="email">Email:</label></div>
+                    <div class="small-8 column">
+                      <input type="email" name="email" id="email" required>
+                      <small class="error">Invalid email</small>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="small-4 column"><label for="join-date">Join date:</label></div>
+                    <div class="small-8 column">
+                      <input type="date" name="join-date" id="join-date">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /.row -->
+              <div class="row">
+                <h3 class="title-1 pusher-t-50">History: </h3>
+                <div class="note-box text-center">
+                  <textarea name="Note" id="note" placeholder="Write a note"></textarea>
+                  <button type="submit" name="add-note" id="add-note">Add</button>
+                </div>
+              </div>
+              <!-- /.row -->
+            </form>
+          </div>
+        </div>
+        <!-- /.block -->
+      </main>
+      <!-- /#block -->
+    </div>
+    <!-- /#main -->
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>

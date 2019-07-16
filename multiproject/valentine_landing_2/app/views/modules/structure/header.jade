@@ -1,0 +1,20 @@
+- var classActive = pageActive ? 'active-mobile-menu': ''
+header.header(class=classActive)
+  .outer
+    .container
+      i.ion-navicon.hidden-md-up
+      h1.logo
+        +link('Beautyful', 'index.html')
+          +img('logo.png')
+  nav.main-nav
+    ul.navigation
+      li.left-nav
+        ul
+          li: a(href="#!" title="Bí quyết làm đẹp") Bí quyết làm đẹp
+          li: a(href="#!" title="Nguyên liệu làm đẹp") Nguyên liệu #[span.hidden-md-down Làm đẹp]
+          li: +link('Dưỡng da')
+      li.right-nav
+        ul
+          li: +link('Chống lão hoá')
+          li: +link('Dưỡng tóc')
+          li: +link('Ngăn rụng tóc')

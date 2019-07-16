@@ -1,0 +1,55 @@
+extends ../layouts/template
+
+block vars
+  -title = 'Style Guide'
+  -bodyClass = 'template'
+
+block main
+  .tmp-main
+    include ../guide/master
+block menu
+  .tmp-main-nav-wrap
+    .tmp-main-nav
+      ul
+        +items([
+          {title: 'Breakpoint', href: '#breakpoint'},
+          {title: 'Grid', href: '#grid'},
+          {title: 'Media Queries', href: '#media', text: 'Media Queries<i class="icon-arrow-up"></i>',
+            subList: [
+              {title: 'Dekstop First', href: '#desktop-first'},
+              {title: 'Mobile First', href: '#mobile-first'}
+            ],
+            subClass: 'tmp-sub-nav-1'
+          },
+          {title: 'Color', href: '#colors', linkClass: 'colors'},
+          {title: 'Background', href: '#backgrounds', linkClass: 'backgrounds'},
+          {title: 'Fonts', href: '#fonts'},
+          {title: 'Icons', href: '#icons', text: 'Icons<i class="icon-circle-filled"></i>'},
+          {title: 'Utilities Class', href: '#utilities-class'},
+          {title: 'Form Element', href: '#form-element', text: 'Form Element<i class="icon-arrow-up"></i>',
+            subList: [
+              {title: 'Form', href: '#form'},
+              {title: 'Label', href: '#label'},
+              {title: 'Textarea', href: '#textarea'},
+              {title: 'Input', href: '#input'},
+              {title: 'Custom Input', href: '#custom-input'},
+              {title: 'Custom Select', href: '#custom-select'},
+              {title: 'Custom Checkbox', href: '#custom-checkbox'},
+              {title: 'Custom Checkbox List', href: '#custom-checkbox-list'},
+              {title: 'Custom Link Checkbox', href: '#custom-link-checkbox'},
+              {title: 'Custom Radio', href: '#custom-radio'},
+              {title: 'Custom Radio List', href: '#custom-radio-list'},
+              {title: 'Button', href: '#button'}
+            ],
+            subClass: 'tmp-sub-nav-1'
+          },
+          {title: 'CSS Mixin', href: '#CSS-Mixin', text: 'CSS Mixin<i class="icon-arrow-up"></i>',
+            subList: [
+              {title: 'Position', href: '#position'},
+              {title: 'Triangle', href: '#triangle'}
+            ],
+            subClass: 'tmp-sub-nav-1'
+          },
+          {title: 'Guide Sprite', href: 'temp-sprite.html', linkClass: 'outlink'},
+          {title: 'Guide js', href: 'temp-js.html', linkClass: 'outlink'}
+        ])
