@@ -33,6 +33,17 @@ a[x-apple-data-detectors] {
   font-weight: inherit !important;
   line-height: inherit !important;
 }
+.ExternalClass{
+  width:100%;
+}
+.ExternalClass,
+.ExternalClass p,
+.ExternalClass span,
+.ExternalClass font,
+.ExternalClass td,
+.ExternalClass div{
+  line-height: 100%;
+}
 div[style*="margin: 16px 0;"] { Margin: 0 !important; }
 .makeSpacer {
   font-size:0;
