@@ -6,6 +6,8 @@ body {
   Margin: 0 !important;
   padding: 0 !important;
   width: 100% !important;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
 }
 table {
   mso-table-lspace: 0pt;
@@ -214,6 +216,7 @@ div[style*="margin: 16px 0;"] { Margin: 0 !important; }
   .leftSide .column,
   .twoColumn .column,
   .threeColumn .column {
+    display: block !important;
     width: 100% !important;
     max-width: 100% !important;
   }
