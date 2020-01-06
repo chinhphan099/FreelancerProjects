@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+
+<!-- Mirrored from www.22codes.com/demo/javascript/superwheel/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 16 May 2019 08:07:29 GMT -->
+<head>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Super Wheel | Easy and Fully Controlled Wheel of fortune</title>
+	
+	<link rel="stylesheet" href="assets/css/bootstrap.css">
+	<link rel="stylesheet" href="assets/css/prism.css">
+	<link rel="stylesheet" href="assets/css/sweetalert2.min.css">
+	<link rel="stylesheet" href="dist/superwheel.css">
+	<link rel="stylesheet" href="assets/css/main.css">
+	<link href="../../../../fonts.googleapis.com/cssfdf4.css?family=Lato:400,400i,700,700i" rel="stylesheet">
+	<script src="assets/js/jquery-3.3.1.js"></script>
+	<script src="assets/js/bootstrap.bundle.js"></script>
+	<script src="dist/superwheel.js"></script>
+	<script src="assets/js/prism.js" data-manual></script>
+	<script src="assets/js/sweetalert2.min.js" data-manual></script>
+	<script src="assets/js/main.js"></script>
+	<script>
+				jQuery(document).ready(function($){
+					
+					$('.wheel').superWheel({
+						slices: [
+							{
+								text    : '20% OFF',
+								message : 'You win 20% off',
+								background   : '#364C62',
+								value     : 1
+							},{
+								text    : 'No luck',
+								message : 'You have No luck today',
+								background   : '#9575CD',
+								value     : 0
+							},{
+								text    : '30% OFF',
+								message : 'You win 30% off',
+								background   : '#E67E22',
+								value     : 1
+							},{
+								value      : 'd',
+								text    : 'Lose',
+								message : 'You Lose :(',
+								background   : '#E74C3C',
+								win     : 0
+							},{
+								text    : '40% OFF',
+								message : 'You win 40% off',
+								background   : '#2196F3',
+								color : '#fff',
+								value     : 1
+							},{
+								text    : 'Nothing',
+								message : 'You get Nothing :(',
+								background   : '#95A5A6',
+								value     : 0
+							}
+						],
+						
+						
+						//======================================
+						//======================================
+						//=======    Wheel Parameters    =======
+						//======================================
+						//======================================
+						text : {
+							color: '#fff',
+							offset : 8,
+							letterSpacing: 0,
+							orientation: 'v',
+							arc: true
+						},
+						
+						slice : {
+							background : "#333",
+						},
+						
+						line:{
+							width : 6,
+							color : "#fefefe",
+						},
+						
+						outer : {
+							width : 10,
+							color : "#fefefe",
+						},
+						
+						inner : {
+							width : 8,
+							color : "#fefefe",
+						},
+						
+						width: 500,
+						duration: 8000,
+						
+					});
+					
+					var tick = new Audio('assets/media/tick.mp3');
+					
+					
+					$(document).on('click','.spin-to-win',function(e){
+						e.preventDefault();
+						$('.wheel').superWheel('start',0);
+						$(this).prop('disabled',true);
+					});
+					
+					$('.wheel').superWheel('onStart',function(results){
+						$('.spin-to-win').text('Spinning...');
+					});
+					
+					
+					$('.wheel').superWheel('onStep',function(results){
+						if (typeof tick.currentTime !== 'undefined')
+							tick.currentTime = 0;
+						tick.play();
+					});
+					
+					$('.wheel').superWheel('onComplete',function(results){
+						
+						if(results.value === 1){
+							swal({
+								type: 'success',
+								title: "Congratulations!", 
+								html: results.message+' <br><br><b>Discount : [ '+ results.discount+ ' ]</b>'
+							});
+						}else{
+							swal("Oops!", results.message, "error");
+						}
+						$('.spin-to-win:disabled').prop('disabled',false).text('Spin to win');
+					});
+					
+					
+				});
+				</script>
+	
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="../../../../www.googletagmanager.com/gtag/js0100?id=UA-130950821-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	  
+	  gtag('config', 'UA-130950821-1');
+	</script>
+</head>
+
+
+<body>
+	
+	
+	<header class="main-header main-header-light js-main-header">
+		<div class="main-header-container container container-xl">
+			<a href="../../../../22codes.com/index.html" class="logo">
+			<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="34" height="34" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+				 viewBox="0 0 34 34" style="enable-background:new 0 0 34 34;" xml:space="preserve">
+			<g>
+				<path class="logo_color" d="M8.9,24.1c3.6-2.6,8.5-5,10.2-8.8h-5.4v-0.9h0c0-4,1.3-6.8,3.2-8.5c-1.8-1.6-4.2-2.3-6.6-2.3
+					c-5.3,0-9.9,3.2-9.9,10.9h6.2c0-3.7,1.5-4.9,3.2-4.9c1.9,0,2.9,1.2,2.9,3.1C12.8,18.1,0,20,0,30.4h13.2c0-2.6,0.8-4.6,2-6.3H8.9z"
+					/>
+				<path class="logo_color" d="M34,24.1H23.2c4.4-3.2,10.8-6,10.8-11.6c0-6.1-4.8-8.9-9.4-8.9c-5.3,0-9.9,3.2-9.9,10.9h6.2
+					c0-3.7,1.5-4.9,3.2-4.9c1.9,0,2.9,1.2,2.9,3.1c0,5.4-12.8,7.3-12.8,17.7H34V24.1z"/>
+			</g>
+			</svg>
+			</a>
+			
+			
+			
+			<div class="main-nav js-main-nav">
+				<button class="main-nav-trigger js-trigger"><i>Menu</i><em aria-hidden="true">Close</em></button>
+				<nav class="main-nav-list js-nav">
+					<ul>
+						<li><a href="#demo_spinner"> Demo</a></li>
+						<li><a href="#templates">Templates</a></li>
+						<li><a href="builder.html" class="btn btn-success btn-sm">Try Builder</a></li>
+						<li><a href="docs.html" class="btn btn-primary btn-sm">Documentation</a></li>
+						<li><a href="../../../../codecanyon.net/item/super-wheel-super-easy-and-fully-controlled-wheel-of-fortune/22764259.html" class="btn btn-success btn-sm">Buy now</a></li>
+					</ul>
+				</nav>
+			</div>
+			
+			
+			
+		</div>
+	</header>
+	
+	
+	
+	<div class="home-intro blue-dark-bg height-vh" id="demo_spinner">
+		<div class="container-fluid">
+			<div class="container-xl">
+				<h1>SuperWheel</h1>
+				<div class="wheel mb-5"></div>
+				<ul class="intro-btn-group mb-5">
+				<li><button class="btn btn-primary btn-xl btn-block spin-to-win" type="button">Spin to win</button></li>
+				</ul>
+				
+			</div>
+		</div>
+	</div>
+	<div class="home-demo home-odd">
+		<div class="container">
+			<div class="content content-odd w-auto tempaltes-list">
+				<h2 id="templates">Templates</h2>
+				<p>Find your template and enjoy building your spinner</p>
+				<div class="row">
+					
+					
+					
+					
+					<div class="col-sm-3">
+						<a class="text-line-none" href="templates/left/left.html" title="Left sidebar">
+						<div class="card mb-5">
+							<img class="card-img-top" src="assets/img/superWheel_left.png" alt="Left sidebar">
+							<div class="btn btn-secondary btn-block brt-none">Left sidebar</div>
+						</div>
+						</a>
+					</div>
+					
+					
+					<div class="col-sm-3">
+						<a class="text-line-none" href="templates/top/top.html" title="Top sidebar">
+						<div class="card mb-5">
+							<img class="card-img-top" src="assets/img/superWheel_top.png" alt="Top sidebar">
+							<div class="btn btn-secondary btn-block brt-none">Top sidebar</div>
+						</div>
+						</a>
+					</div>
+					
+					<div class="col-sm-3">
+						<a class="text-line-none" href="templates/standard/standard.html" title="Standard">
+						<div class="card mb-5">
+							<img class="card-img-top" src="assets/img/superWheel_standard.png" alt="Standard">
+							<div class="btn btn-secondary btn-block brt-none">Standard</div>
+						</div>
+						</a>
+					</div>
+					
+					
+					<div class="col-sm-3">
+						<a class="text-line-none" href="templates/horizontal/horizontal.html" title="Horizontal">
+						<div class="card mb-5">
+							<img class="card-img-top" src="assets/img/superWheel_standard.png" alt="Horizontal">
+							<div class="btn btn-secondary btn-block brt-none">Horizontal</div>
+						</div>
+						</a>
+					</div>
+					<div class="col-sm-3">
+						<a class="text-line-none" href="templates/horizontal-arc/horizontal-arc.html" title="Horizontal - ARC">
+						<div class="card mb-5">
+							<img class="card-img-top" src="assets/img/superWheel_standard.png" alt="Horizontal - ARC">
+							<div class="btn btn-secondary btn-block brt-none">Horizontal - ARC</div>
+						</div>
+						</a>
+					</div>
+					<div class="col-sm-3">
+						<a class="text-line-none" href="templates/letter-spacing/letter-spacing.html" title="Letter spacing">
+						<div class="card mb-5">
+							<img class="card-img-top" src="assets/img/superWheel_standard.png" alt="Letter spacing">
+							<div class="btn btn-secondary btn-block brt-none">Letter spacing</div>
+						</div>
+						</a>
+					</div>
+					<div class="col-sm-3">
+						<a class="text-line-none" href="templates/with-image/with-image.html" title="Images">
+						<div class="card mb-5">
+							<img class="card-img-top" src="assets/img/superWheel_standard.png" alt="Images">
+							<div class="btn btn-secondary btn-block brt-none">Images</div>
+						</div>
+						</a>
+					</div>
+					<div class="col-sm-3">
+						<a class="text-line-none" href="templates/with-icons/with-icons.html" title="Icons">
+						<div class="card mb-5">
+							<img class="card-img-top" src="assets/img/superWheel_standard.png" alt="Icons">
+							<div class="btn btn-secondary btn-block brt-none">Icons</div>
+						</div>
+						</a>
+					</div>
+					<div class="col-sm-3">
+						<div class="card mb-5">
+							<img class="card-img-top" src="assets/img/superWheel_coming.png" alt="More Coming soon...">
+							<div class="btn btn-secondary btn-block brt-none">More Coming soon...</div>
+						</div>
+					</div>
+					
+					<div class="col-sm-12 text-center mt-5">
+						<p class="alert alert-success">
+							Free javascript popup plugin <b><a href="../../../../sweetalert.js.org/index.html" alt="SweetAlert" title="SweetAlert" target="blank_">SweetAlert</a></b> is included with template files
+						</p>
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+<footer class="footer text-center">
+	<div class="container">
+		<small class="copyright">Copyright © 2018 22Codes</small>
+	</div>
+</footer>
+  </body>
+
+<!-- Mirrored from www.22codes.com/demo/javascript/superwheel/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 16 May 2019 08:07:39 GMT -->
+</html>

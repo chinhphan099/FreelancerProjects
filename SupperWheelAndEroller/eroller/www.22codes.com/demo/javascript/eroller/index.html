@@ -1,0 +1,1531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.22codes.com/demo/javascript/eroller/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 16 May 2019 08:13:28 GMT -->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Easy Roller Demo's & Documentation</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css"> <!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css"> <!-- font-awesome style -->
+	<link rel="stylesheet" href="css/styles.css"> <!-- Resource style -->
+	<link rel="stylesheet" href="css/eroller.css"> <!-- Roller style -->
+	<link rel="stylesheet" href="css/prism.css"> <!-- Prisme style -->
+	<noscript><meta http-equiv="refresh" content="0; url=http://www.22codes.com/noscript.html" /></noscript>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/prism-min.js"></script>
+	<script>
+	
+	var _0x62a3=["\x75\x73\x65\x20\x73\x74\x72\x69\x63\x74","\x65\x52\x6F\x6C\x6C\x65\x72","\x64\x65\x73\x74\x72\x6F\x79","\x70\x72\x6F\x74\x6F\x74\x79\x70\x65","\x64\x65\x66\x61\x75\x6C\x74\x73","\x74\x65\x78\x74","\x68","\x63\x65\x6E\x74\x65\x72","\x64\x65\x66\x61\x75\x6C\x74","\x6C\x65\x66\x74","\x65\x72\x6F\x6C\x6C\x65\x72","\x64\x61\x74\x61","\x6F","\x65\x78\x74\x65\x6E\x64","\x6F\x62\x6A\x65\x63\x74","\x69\x74\x65\x6D\x73","\x6C\x65\x6E\x67\x74\x68","\x64\x69\x72\x65\x63\x74\x69\x6F\x6E","\x76\x65\x72\x74\x69\x63\x61\x6C","\x61\x6C\x69\x67\x6E","\x74\x72\x69\x6D","\x76","\x74\x6F\x70","\x62\x6F\x74\x74\x6F\x6D","\x72\x69\x67\x68\x74","\x69\x6E\x69\x74\x69\x61\x6C\x73","\x6B\x65\x79","\x73\x70\x65\x65\x64","\x2D","","\x63\x6C\x61\x73\x73","\x61\x74\x74\x72","\x65\x61\x73\x69\x6E\x67","\x63\x75\x62\x69\x63\x2D\x62\x65\x7A\x69\x65\x72\x28\x30\x2C\x20\x30\x2C\x20\x30\x2E\x32\x38\x2C\x20\x31\x29","\x63\x75\x62\x69\x63\x2D\x62\x65\x7A\x69\x65\x72\x28\x30\x2C\x20\x30\x2C\x20\x31\x2C\x20\x31\x29","\x63\x75\x62\x69\x63\x2D\x62\x65\x7A\x69\x65\x72\x28\x30\x2E\x34\x37\x2C\x20\x30\x2C\x20\x30\x2E\x37\x34\x35\x2C\x20\x30\x2E\x37\x31\x35\x29","\x63\x75\x62\x69\x63\x2D\x62\x65\x7A\x69\x65\x72\x28\x30\x2E\x33\x39\x2C\x20\x30\x2E\x35\x37\x35\x2C\x20\x30\x2E\x35\x36\x35\x2C\x20\x31\x29","\x63\x75\x62\x69\x63\x2D\x62\x65\x7A\x69\x65\x72\x28\x30\x2E\x34\x34\x35\x2C\x20\x30\x2E\x30\x35\x2C\x20\x30\x2E\x35\x35\x2C\x20\x30\x2E\x39\x35\x29","\x63\x75\x62\x69\x63\x2D\x62\x65\x7A\x69\x65\x72\x28\x30\x2E\x35\x35\x2C\x20\x30\x2E\x30\x38\x35\x2C\x20\x30\x2E\x36\x38\x2C\x20\x30\x2E\x35\x33\x29","\x63\x75\x62\x69\x63\x2D\x62\x65\x7A\x69\x65\x72\x28\x30\x2E\x32\x35\x2C\x20\x30\x2E\x34\x36\x2C\x20\x30\x2E\x34\x35\x2C\x20\x30\x2E\x39\x34\x29","\x63\x75\x62\x69\x63\x2D\x62\x65\x7A\x69\x65\x72\x28\x30\x2E\x34\x35\x35\x2C\x20\x30\x2E\x30\x33\x2C\x20\x30\x2E\x35\x31\x35\x2C\x20\x30\x2E\x39\x35\x35\x29","\x63\x75\x62\x69\x63\x2D\x62\x65\x7A\x69\x65\x72\x28\x30\x2E\x35\x35\x2C\x20\x30\x2E\x30\x35\x35\x2C\x20\x30\x2E\x36\x37\x35\x2C\x20\x30\x2E\x31\x39\x29","\x63\x75\x62\x69\x63\x2D\x62\x65\x7A\x69\x65\x72\x28\x30\x2E\x32\x31\x35\x2C\x20\x30\x2E\x36\x31\x2C\x20\x30\x2E\x33\x35\x35\x2C\x20\x31\x29","\x63\x75\x62\x69\x63\x2D\x62\x65\x7A\x69\x65\x72\x28\x30\x2E\x36\x34\x35\x2C\x20\x30\x2E\x30\x34\x35\x2C\x20\x30\x2E\x33\x35\x35\x2C\x20\x31\x29","\x63\x75\x62\x69\x63\x2D\x62\x65\x7A\x69\x65\x72\x28\x30\x2E\x38\x39\x35\x2C\x20\x30\x2E\x30\x33\x2C\x20\x30\x2E\x36\x38\x35\x2C\x20\x30\x2E\x32\x32\x29","\x63\x75\x62\x69\x63\x2D\x62\x65\x7A\x69\x65\x72\x28\x30\x2E\x31\x36\x35\x2C\x20\x30\x2E\x38\x34\x2C\x20\x30\x2E\x34\x34\x2C\x20\x31\x29","\x63\x75\x62\x69\x63\x2D\x62\x65\x7A\x69\x65\x72\x28\x30\x2E\x37\x37\x2C\x20\x30\x2C\x20\x30\x2E\x31\x37\x35\x2C\x20\x31\x29","\x63\x75\x62\x69\x63\x2D\x62\x65\x7A\x69\x65\x72\x28\x30\x2E\x37\x35\x35\x2C\x20\x30\x2E\x30\x35\x2C\x20\x30\x2E\x38\x35\x35\x2C\x20\x30\x2E\x30\x36\x29","\x63\x75\x62\x69\x63\x2D\x62\x65\x7A\x69\x65\x72\x28\x30\x2E\x32\x33\x2C\x20\x31\x2C\x20\x30\x2E\x33\x32\x2C\x20\x31\x29","\x63\x75\x62\x69\x63\x2D\x62\x65\x7A\x69\x65\x72\x28\x30\x2E\x38\x36\x2C\x20\x30\x2C\x20\x30\x2E\x30\x37\x2C\x20\x31\x29","\x63\x75\x62\x69\x63\x2D\x62\x65\x7A\x69\x65\x72\x28\x30\x2E\x39\x35\x2C\x20\x30\x2E\x30\x35\x2C\x20\x30\x2E\x37\x39\x35\x2C\x20\x30\x2E\x30\x33\x35\x29","\x63\x75\x62\x69\x63\x2D\x62\x65\x7A\x69\x65\x72\x28\x30\x2E\x31\x39\x2C\x20\x31\x2C\x20\x30\x2E\x32\x32\x2C\x20\x31\x29","\x63\x75\x62\x69\x63\x2D\x62\x65\x7A\x69\x65\x72\x28\x31\x2C\x20\x30\x2C\x20\x30\x2C\x20\x31\x29","\x63\x75\x62\x69\x63\x2D\x62\x65\x7A\x69\x65\x72\x28\x30\x2E\x36\x2C\x20\x30\x2E\x30\x34\x2C\x20\x30\x2E\x39\x38\x2C\x20\x30\x2E\x33\x33\x35\x29","\x63\x75\x62\x69\x63\x2D\x62\x65\x7A\x69\x65\x72\x28\x30\x2E\x30\x37\x35\x2C\x20\x30\x2E\x38\x32\x2C\x20\x30\x2E\x31\x36\x35\x2C\x20\x31\x29","\x63\x75\x62\x69\x63\x2D\x62\x65\x7A\x69\x65\x72\x28\x30\x2E\x37\x38\x35\x2C\x20\x30\x2E\x31\x33\x35\x2C\x20\x30\x2E\x31\x35\x2C\x20\x30\x2E\x38\x36\x29","\x63\x75\x62\x69\x63\x2D\x62\x65\x7A\x69\x65\x72\x28\x30\x2E\x36\x2C\x20\x2D\x30\x2E\x32\x38\x2C\x20\x30\x2E\x37\x33\x35\x2C\x20\x30\x2E\x30\x34\x35\x29","\x63\x75\x62\x69\x63\x2D\x62\x65\x7A\x69\x65\x72\x28\x30\x2E\x31\x37\x35\x2C\x20\x30\x2E\x38\x38\x35\x2C\x20\x30\x2E\x33\x32\x2C\x20\x31\x2E\x32\x37\x35\x29","\x63\x75\x62\x69\x63\x2D\x62\x65\x7A\x69\x65\x72\x28\x30\x2E\x36\x38\x2C\x20\x2D\x30\x2E\x35\x35\x2C\x20\x30\x2E\x32\x36\x35\x2C\x20\x31\x2E\x35\x35\x29","\x69\x6E\x69\x74","\x65\x72\x6F\x6C\x6C\x65\x72\x2E\x69\x6E\x69\x74","\x74\x72\x69\x67\x67\x65\x72","\x24\x65\x6C","\x69\x6E\x50\x72\x6F\x67\x72\x65\x73\x73","\x63\x6C\x65\x61\x72\x41\x6E\x69\x6D\x61\x74\x69\x6F\x6E","\x68\x74\x6D\x6C","\x6F\x72\x69\x67\x69\x6E\x43\x6C\x61\x73\x73","\x72\x65\x6D\x6F\x76\x65\x43\x6C\x61\x73\x73","\x65\x72\x6F\x6C\x6C\x65\x72\x2E\x73\x74\x61\x72\x74","\x6F\x66\x66","\x65\x72\x6F\x6C\x6C\x65\x72\x2E\x73\x74\x6F\x70","\x65\x72\x6F\x6C\x6C\x65\x72\x2E\x63\x6F\x6D\x70\x6C\x65\x74\x65","\x65\x72\x6F\x6C\x6C\x65\x72\x2E\x70\x72\x6F\x67\x72\x65\x73\x73","\x65\x72\x6F\x6C\x6C\x65\x72\x2E\x63\x6C\x65\x61\x72","\x65\x72\x6F\x6C\x6C\x65\x72\x2E\x66\x69\x6E\x69\x73\x68","\x6F\x70\x74\x69\x6F\x6E","\x75\x6E\x64\x65\x66\x69\x6E\x65\x64","\x66\x75\x6E\x63\x74\x69\x6F\x6E","\x69\x6E\x41\x72\x72\x61\x79","\x74\x6F\x74\x61\x6C","\x24\x67\x61\x6D\x65","\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x22\x65\x72\x2D\x69\x6E\x6E\x65\x72\x22\x3E\x3C\x2F\x64\x69\x76\x3E","\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x22\x65\x72\x2D\x69\x6E\x64\x69\x63\x61\x74\x6F\x72\x22\x3E\x3C\x2F\x64\x69\x76\x3E","\x24\x63\x6F\x6E\x74\x61\x69\x6E\x65\x72","\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x22\x65\x72\x2D\x63\x6F\x6E\x74\x61\x69\x6E\x65\x72\x22\x3E\x3C\x2F\x64\x69\x76\x3E","\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x22\x65\x72\x2D\x63\x6F\x6E\x74\x65\x6E\x74\x73\x22\x3E\x3C\x2F\x64\x69\x76\x3E","\x61\x64\x64\x43\x6C\x61\x73\x73","\x61\x70\x70\x65\x6E\x64","\x69\x6E\x64\x69\x63\x61\x74\x6F\x72","\x74\x72\x75\x65","\x64\x75\x70\x6C\x69\x63\x61\x74\x65","\x69\x6D\x67","\x69\x6D\x61\x67\x65","\x20\x65\x72\x2D\x68\x61\x73\x2D\x69\x6D\x67","\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x22\x65\x72\x2D\x69\x74\x65\x6D","\x20","\x22\x20\x64\x61\x74\x61\x2D\x63\x6C\x61\x73\x73\x3D\x22\x65\x72\x2D\x69\x74\x65\x6D\x20","\x22\x3E","\x3C\x69\x6D\x67\x20\x73\x72\x63\x3D\x22","\x22\x20\x2F\x3E","\x3C\x73\x70\x61\x6E\x3E","\x3C\x2F\x73\x70\x61\x6E\x3E","\x3C\x2F\x64\x69\x76\x3E","\x3E\x2E\x65\x72\x2D\x69\x74\x65\x6D","\x66\x69\x6E\x64","\x6F\x75\x74\x65\x72\x48\x65\x69\x67\x68\x74","\x65\x71","\x6F\x75\x74\x65\x72\x57\x69\x64\x74\x68","\x66\x69\x72\x73\x74\x48\x61\x6C\x66","\x74\x6F","\x6D\x61\x74\x72\x69\x78","\x63\x73\x73","\x72\x6F\x6C\x6C\x54\x6F","\x67\x72\x6F\x75\x70\x57\x69\x64\x74\x68","\x67\x72\x6F\x75\x70\x48\x65\x69\x67\x68\x74","\x69\x6E\x6E\x65\x72\x57\x69\x64\x74\x68","\x69\x6E\x6E\x65\x72\x48\x65\x69\x67\x68\x74","\x65\x72\x2D\x76\x65\x72\x20\x74\x6F\x2D","\x6D\x61\x72\x67\x69\x6E\x2D\x62\x6F\x74\x74\x6F\x6D","\x70\x78","\x77\x69\x64\x74\x68","\x68\x65\x69\x67\x68\x74","\x65\x72\x2D\x68\x6F\x72\x20\x74\x6F\x2D","\x6D\x61\x72\x67\x69\x6E\x2D\x6C\x65\x66\x74","\x73\x74\x61\x72\x74","\x72\x75\x6E","\x73\x74\x6F\x70","\x67\x65\x74\x54\x72\x61\x6E\x73\x66\x6F\x72\x6D","\x74\x72\x61\x6E\x73\x66\x6F\x72\x6D\x20\x30\x20\x6D\x73\x20","\x66\x69\x6E\x69\x73\x68","\x70\x72\x6F\x67\x72\x65\x73\x73","\x61\x6E\x69\x6D\x61\x74\x69\x6E\x67","\x74\x69\x6D\x65\x72","\x63\x6F\x75\x74\x44\x75\x72","\x63\x75\x72\x72\x44\x75\x72","\x67\x6F\x74\x6F\x77\x69\x6E\x6E\x65\x72","\x77\x69\x6E\x6E\x65\x72","\x66\x69\x6E\x64\x56\x61\x6C\x75\x65","\x65\x72\x6F\x6C\x6C\x65\x72\x2E\x66\x61\x69\x6C","\x73\x65\x74\x43\x75\x72\x72\x65\x6E\x74\x73\x70\x65\x65\x64","\x72\x65\x70\x6C\x61\x63\x65","\x6D\x61\x72\x67\x69\x6E\x2D\x74\x6F\x70","\x62\x6F\x72\x64\x65\x72\x2D\x74\x6F\x70\x2D\x77\x69\x64\x74\x68","\x62\x6F\x72\x64\x65\x72\x2D\x62\x6F\x74\x74\x6F\x6D\x2D\x77\x69\x64\x74\x68","\x62\x6F\x72\x64\x65\x72\x2D\x6C\x65\x66\x74\x2D\x77\x69\x64\x74\x68","\x6D\x61\x72\x67\x69\x6E\x2D\x72\x69\x67\x68\x74","\x62\x6F\x72\x64\x65\x72\x2D\x72\x69\x67\x68\x74\x2D\x77\x69\x64\x74\x68","\x69\x74\x65\x6D\x50\x6F\x73","\x67\x65\x74\x52\x61\x6E\x64\x6F\x6D\x49\x6E\x74","\x77\x69\x6E\x6E\x65\x72\x50\x6F\x73","\x63\x6C\x65\x61\x72","\x61\x6E\x69\x6D\x61\x74\x65","\x6C\x69\x6E\x65\x61\x72","\x67\x65\x74\x54\x69\x6D\x65","\x6D\x61\x74\x72\x69\x78\x28\x31\x2C\x20\x30\x2C\x20\x30\x2C\x20\x31\x2C\x20\x30\x2C\x20","\x29","\x6D\x61\x74\x72\x69\x78\x28\x31\x2C\x20\x30\x2C\x20\x30\x2C\x20\x31\x2C\x20","\x2C\x30\x29","\x2D\x77\x65\x62\x6B\x69\x74\x2D\x74\x72\x61\x6E\x73\x66\x6F\x72\x6D","\x2D\x6D\x6F\x7A\x2D\x74\x72\x61\x6E\x73\x66\x6F\x72\x6D","\x2D\x6D\x73\x2D\x74\x72\x61\x6E\x73\x66\x6F\x72\x6D","\x2D\x6F\x2D\x74\x72\x61\x6E\x73\x66\x6F\x72\x6D","\x74\x72\x61\x6E\x73\x66\x6F\x72\x6D","\x74\x72\x61\x6E\x73\x66\x6F\x72\x6D\x20","\x6D\x73\x20","\x61\x72\x72\x61\x79","\x72\x61\x6E\x64\x6F\x6D","\x66\x6C\x6F\x6F\x72","\x66\x6E","\x63\x61\x6C\x6C","\x73\x6C\x69\x63\x65","\x61\x70\x70\x6C\x79","\x61\x6D\x64","\x6A\x71\x75\x65\x72\x79","\x65\x78\x70\x6F\x72\x74\x73"];!function(_0x4b5bx1){_0x62a3[0];_0x62a3[77]==  typeof define&& define[_0x62a3[172]]?define([_0x62a3[173]],_0x4b5bx1):_0x62a3[76]!=  typeof exports?module[_0x62a3[174]]= _0x4b5bx1(require(_0x62a3[173])):_0x4b5bx1(jQuery)}(function(_0x4b5bx1){_0x62a3[0];var _0x4b5bx2=window[_0x62a3[1]]|| {};(_0x4b5bx2= function(){return function(_0x4b5bx2,_0x4b5bx3){var _0x4b5bx4,_0x4b5bx5=this;if(_0x4b5bx5[_0x62a3[4]]= {items:[],speed:8e3,indicator:!0,key:_0x62a3[5],align:_0x62a3[6],itemPos:_0x62a3[7],easing:_0x62a3[8],to:_0x62a3[9]},_0x4b5bx4= _0x4b5bx1(_0x4b5bx2)[_0x62a3[11]](_0x62a3[10])|| {},_0x4b5bx5[_0x62a3[12]]= _0x4b5bx1[_0x62a3[13]]({},_0x4b5bx5[_0x62a3[4]],_0x4b5bx3,_0x4b5bx4),_0x62a3[14]!=  typeof _0x4b5bx5[_0x62a3[12]][_0x62a3[15]]|| _0x62a3[14]==  typeof _0x4b5bx5[_0x62a3[12]][_0x62a3[15]]&& 0=== _0x4b5bx5[_0x62a3[12]][_0x62a3[15]][_0x62a3[16]]){return _0x4b5bx5};_0x4b5bx5[_0x62a3[12]][_0x62a3[17]]= _0x62a3[18]=== _0x4b5bx1[_0x62a3[20]](_0x4b5bx5[_0x62a3[12]][_0x62a3[19]])|| _0x62a3[21]=== _0x4b5bx1[_0x62a3[20]](_0x4b5bx5[_0x62a3[12]][_0x62a3[19]])?_0x62a3[22]!== _0x4b5bx5[_0x62a3[12]][_0x62a3[17]]?_0x62a3[22]:_0x62a3[23]:_0x62a3[9]!== _0x4b5bx5[_0x62a3[12]][_0x62a3[17]]?_0x62a3[24]:_0x62a3[9],_0x4b5bx5[_0x62a3[25]]= {items:_0x4b5bx5[_0x62a3[12]][_0x62a3[15]],key:_0x4b5bx5[_0x62a3[12]][_0x62a3[26]],duplicate:8,groupWidth:0,groupHeight:0,firstHalf:0,gotowinner:null,winnerPos:null,speed:parseInt(_0x4b5bx5[_0x62a3[12]][_0x62a3[27]])?parseInt(_0x4b5bx5[_0x62a3[12]][_0x62a3[27]]):8e3,coutDur:null,currDur:0,spinning:!1,inProgress:!1,timer:!1,progress:!1,animating:!1,to:_0x62a3[23]=== _0x4b5bx1[_0x62a3[20]](_0x4b5bx5[_0x62a3[12]][_0x62a3[17]])?_0x62a3[28]:_0x62a3[9]=== _0x4b5bx1[_0x62a3[20]](_0x4b5bx5[_0x62a3[12]][_0x62a3[17]])?_0x62a3[28]:_0x62a3[29],nonce:null,$el:_0x4b5bx1(_0x4b5bx2),$container:null,$game:null,winner:null,data:null,originClass:_0x4b5bx1(_0x4b5bx2)[_0x62a3[31]](_0x62a3[30])},_0x4b5bx5[_0x62a3[25]][_0x62a3[32]]= {default:_0x62a3[33],linear:_0x62a3[34],easeInSine:_0x62a3[35],easeOutSine:_0x62a3[36],easeInOutSine:_0x62a3[37],easeInQuad:_0x62a3[38],easeOutQuad:_0x62a3[39],easeInOutQuad:_0x62a3[40],easeInCubic:_0x62a3[41],easeOutCubic:_0x62a3[42],easeInOutCubic:_0x62a3[43],easeInQuart:_0x62a3[44],easeOutQuart:_0x62a3[45],easeInOutQuart:_0x62a3[46],easeInQuint:_0x62a3[47],easeOutQuint:_0x62a3[48],easeInOutQuint:_0x62a3[49],easeInExpo:_0x62a3[50],easeOutExpo:_0x62a3[51],easeInOutExpo:_0x62a3[52],easeInCirc:_0x62a3[53],easeOutCirc:_0x62a3[54],easeInOutCirc:_0x62a3[55],easeInBack:_0x62a3[56],easeOutBack:_0x62a3[57],easeInOutBack:_0x62a3[58]},_0x4b5bx1[_0x62a3[13]](_0x4b5bx5,_0x4b5bx5[_0x62a3[25]]),_0x4b5bx5[_0x62a3[59]](),setTimeout(function(){_0x4b5bx5[_0x62a3[62]][_0x62a3[61]](_0x62a3[60])},100)}}())[_0x62a3[3]][_0x62a3[2]]= function(_0x4b5bx2){var _0x4b5bx3=this;_0x4b5bx3[_0x62a3[63]]&& (_0x4b5bx3[_0x62a3[63]]=  !1),_0x4b5bx3[_0x62a3[64]](),_0x4b5bx3[_0x62a3[62]][_0x62a3[65]](_0x62a3[29]),_0x4b5bx3[_0x62a3[62]][_0x62a3[31]](_0x62a3[30],_0x4b5bx3[_0x62a3[66]]),_0x4b5bx3[_0x62a3[62]][_0x62a3[67]](_0x62a3[10]),_0x4b5bx1[_0x62a3[13]](_0x4b5bx3[_0x62a3[12]],_0x4b5bx3[_0x62a3[4]]),_0x4b5bx1[_0x62a3[13]](_0x4b5bx3,_0x4b5bx3[_0x62a3[25]]),_0x4b5bx3[_0x62a3[62]][_0x62a3[69]](_0x62a3[68]),_0x4b5bx3[_0x62a3[62]][_0x62a3[69]](_0x62a3[70]),_0x4b5bx3[_0x62a3[62]][_0x62a3[69]](_0x62a3[71]),_0x4b5bx3[_0x62a3[62]][_0x62a3[69]](_0x62a3[72]),_0x4b5bx3[_0x62a3[62]][_0x62a3[69]](_0x62a3[73]),_0x4b5bx3[_0x62a3[62]][_0x62a3[69]](_0x62a3[74]),_0x4b5bx3[_0x62a3[62]][_0x62a3[69]](_0x62a3[60])},_0x4b5bx2[_0x62a3[3]][_0x62a3[75]]= function(_0x4b5bx2,_0x4b5bx3){var _0x4b5bx4=this;if(-1=== _0x4b5bx1[_0x62a3[78]]( typeof _0x4b5bx3,[_0x62a3[76],_0x62a3[77]]) && -1=== _0x4b5bx1[_0x62a3[78]]( typeof _0x4b5bx4[_0x62a3[12]][_0x4b5bx2],[_0x62a3[76],_0x62a3[77]])){var _0x4b5bx5=[_0x62a3[32],_0x62a3[27]];-1!= _0x4b5bx1[_0x62a3[78]](_0x4b5bx2,_0x4b5bx5) && (_0x4b5bx4[_0x62a3[12]][_0x4b5bx2]= _0x4b5bx3)}},_0x4b5bx2[_0x62a3[3]][_0x62a3[59]]= function(){var _0x4b5bx2=this;_0x4b5bx2[_0x62a3[79]]= _0x4b5bx2[_0x62a3[15]][_0x62a3[16]],_0x4b5bx2[_0x62a3[62]][_0x62a3[65]](_0x62a3[29]),_0x4b5bx2[_0x62a3[80]]= _0x4b5bx1(_0x62a3[81]);var _0x4b5bx3=_0x4b5bx1(_0x62a3[82]);_0x4b5bx2[_0x62a3[83]]= _0x4b5bx1(_0x62a3[84]);var _0x4b5bx4=_0x4b5bx1(_0x62a3[85]);_0x4b5bx2[_0x62a3[62]][_0x62a3[86]](_0x62a3[10]),_0x4b5bx2[_0x62a3[83]][_0x62a3[87]](_0x4b5bx2.$game),_0x4b5bx4[_0x62a3[87]](_0x4b5bx2.$container),!0!== _0x4b5bx2[_0x62a3[12]][_0x62a3[88]] && _0x62a3[89]!== _0x4b5bx2[_0x62a3[12]][_0x62a3[88]] || _0x4b5bx4[_0x62a3[87]](_0x4b5bx3),_0x4b5bx2[_0x62a3[62]][_0x62a3[87]](_0x4b5bx4);for(var _0x4b5bx5=0,_0x4b5bx6=_0x62a3[29],_0x4b5bx7=0;_0x4b5bx7< _0x4b5bx2[_0x62a3[79]]* _0x4b5bx2[_0x62a3[90]];_0x4b5bx7++){_0x4b5bx5= _0x4b5bx7% _0x4b5bx2[_0x62a3[79]],_0x4b5bx6= void(0)!== _0x4b5bx2[_0x62a3[15]][_0x4b5bx5][_0x62a3[91]]|| void(0)!== _0x4b5bx2[_0x62a3[15]][_0x4b5bx5][_0x62a3[92]]?_0x62a3[93]:_0x62a3[29],_0x4b5bx2[_0x62a3[80]][_0x62a3[87]](_0x62a3[94]+ _0x4b5bx6+ (void(0)!== _0x4b5bx2[_0x62a3[15]][_0x4b5bx5][_0x62a3[30]]?_0x62a3[95]+ _0x4b5bx2[_0x62a3[15]][_0x4b5bx5][_0x62a3[30]]:_0x62a3[29])+ _0x62a3[96]+ (void(0)!== _0x4b5bx2[_0x62a3[15]][_0x4b5bx5][_0x62a3[30]]?_0x4b5bx2[_0x62a3[15]][_0x4b5bx5][_0x62a3[30]]:_0x62a3[29])+ _0x62a3[97]+ (void(0)!== _0x4b5bx2[_0x62a3[15]][_0x4b5bx5][_0x62a3[91]]?_0x62a3[98]+ _0x4b5bx2[_0x62a3[15]][_0x4b5bx5][_0x62a3[91]]+ _0x62a3[99]:void(0)!== _0x4b5bx2[_0x62a3[15]][_0x4b5bx5][_0x62a3[92]]?_0x62a3[98]+ _0x4b5bx2[_0x62a3[15]][_0x4b5bx5][_0x62a3[92]]+ _0x62a3[99]:_0x62a3[29])+ (void(0)!== _0x4b5bx2[_0x62a3[15]][_0x4b5bx5][_0x4b5bx2[_0x62a3[12]][_0x62a3[26]]]?_0x62a3[100]+ _0x4b5bx2[_0x62a3[15]][_0x4b5bx5][_0x4b5bx2[_0x62a3[12]][_0x62a3[26]]]+ _0x62a3[101]:_0x62a3[29])+ _0x62a3[102])};if(0!== _0x4b5bx2[_0x62a3[80]][_0x62a3[104]](_0x62a3[103])[_0x62a3[16]]){var _0x4b5bx8=(_0x62a3[18]=== _0x4b5bx1[_0x62a3[20]](_0x4b5bx2[_0x62a3[12]][_0x62a3[19]])|| _0x62a3[21]=== _0x4b5bx1[_0x62a3[20]](_0x4b5bx2[_0x62a3[12]][_0x62a3[19]])?_0x4b5bx2[_0x62a3[80]][_0x62a3[104]](_0x62a3[103])[_0x62a3[106]](0)[_0x62a3[105]](!0):_0x4b5bx2[_0x62a3[80]][_0x62a3[104]](_0x62a3[103])[_0x62a3[106]](0)[_0x62a3[107]](!0))/ 2;_0x4b5bx2[_0x62a3[108]]= _0x62a3[28]=== _0x4b5bx2[_0x62a3[109]]?_0x4b5bx8:-_0x4b5bx8,_0x4b5bx2[_0x62a3[80]][_0x62a3[111]]({"\x2D\x77\x65\x62\x6B\x69\x74\x2D\x74\x72\x61\x6E\x73\x66\x6F\x72\x6D":_0x4b5bx2[_0x62a3[110]](_0x4b5bx2[_0x62a3[109]]+ _0x4b5bx2[_0x62a3[108]]),"\x2D\x6D\x6F\x7A\x2D\x74\x72\x61\x6E\x73\x66\x6F\x72\x6D":_0x4b5bx2[_0x62a3[110]](_0x4b5bx2[_0x62a3[109]]+ _0x4b5bx2[_0x62a3[108]]),"\x2D\x6D\x73\x2D\x74\x72\x61\x6E\x73\x66\x6F\x72\x6D":_0x4b5bx2[_0x62a3[110]](_0x4b5bx2[_0x62a3[109]]+ _0x4b5bx2[_0x62a3[108]]),"\x2D\x6F\x2D\x74\x72\x61\x6E\x73\x66\x6F\x72\x6D":_0x4b5bx2[_0x62a3[110]](_0x4b5bx2[_0x62a3[109]]+ _0x4b5bx2[_0x62a3[108]]),transform:_0x4b5bx2[_0x62a3[110]](_0x4b5bx2[_0x62a3[109]]+ _0x4b5bx2[_0x62a3[108]])}),_0x4b5bx2[_0x62a3[112]](_0x4b5bx2[_0x62a3[109]],_0x4b5bx2[_0x62a3[108]])};for(_0x4b5bx7= 0;_0x4b5bx7< _0x4b5bx2[_0x62a3[79]];_0x4b5bx7++){_0x4b5bx2[_0x62a3[113]]+= _0x4b5bx2[_0x62a3[80]][_0x62a3[104]](_0x62a3[103])[_0x62a3[106]](_0x4b5bx7)[_0x62a3[107]](!0),_0x4b5bx2[_0x62a3[114]]+= _0x4b5bx2[_0x62a3[80]][_0x62a3[104]](_0x62a3[103])[_0x62a3[106]](_0x4b5bx7)[_0x62a3[105]](!0)};_0x4b5bx2[_0x62a3[115]]= _0x4b5bx2[_0x62a3[113]]* _0x4b5bx2[_0x62a3[90]],_0x4b5bx2[_0x62a3[116]]= _0x4b5bx2[_0x62a3[114]]* _0x4b5bx2[_0x62a3[90]],_0x62a3[18]=== _0x4b5bx1[_0x62a3[20]](_0x4b5bx2[_0x62a3[12]][_0x62a3[19]])|| _0x62a3[21]=== _0x4b5bx1[_0x62a3[20]](_0x4b5bx2[_0x62a3[12]][_0x62a3[19]])?(_0x4b5bx2[_0x62a3[62]][_0x62a3[86]](_0x62a3[117]+ _0x4b5bx2[_0x62a3[12]][_0x62a3[17]]),_0x4b5bx2[_0x62a3[80]][_0x62a3[121]](_0x4b5bx2[_0x62a3[116]])[_0x62a3[120]](_0x62a3[29])[_0x62a3[111]](_0x62a3[118],_0x4b5bx2[_0x62a3[109]]+ _0x4b5bx2[_0x62a3[116]]/ 2+ _0x62a3[119])):(_0x4b5bx2[_0x62a3[62]][_0x62a3[86]](_0x62a3[122]+ _0x4b5bx2[_0x62a3[12]][_0x62a3[17]]),_0x4b5bx2[_0x62a3[80]][_0x62a3[120]](_0x4b5bx2[_0x62a3[115]])[_0x62a3[121]](_0x62a3[29])[_0x62a3[111]](_0x62a3[123],(_0x62a3[28]=== _0x4b5bx2[_0x62a3[109]]?_0x62a3[29]:_0x62a3[28])+ _0x4b5bx2[_0x62a3[115]]/ 2+ _0x62a3[119]))},_0x4b5bx2[_0x62a3[3]][_0x62a3[124]]= function(_0x4b5bx1,_0x4b5bx2,_0x4b5bx3){var _0x4b5bx4=this;null!== _0x4b5bx4[_0x62a3[80]]&& (_0x4b5bx4[_0x62a3[64]](),_0x4b5bx4[_0x62a3[125]](_0x4b5bx1,_0x4b5bx2,_0x4b5bx3))},_0x4b5bx2[_0x62a3[3]][_0x62a3[126]]= function(){var _0x4b5bx1=this,_0x4b5bx2=_0x4b5bx1[_0x62a3[127]]();_0x4b5bx1[_0x62a3[64]](),_0x4b5bx1[_0x62a3[80]][_0x62a3[111]]({"\x2D\x77\x65\x62\x6B\x69\x74\x2D\x74\x72\x61\x6E\x73\x69\x74\x69\x6F\x6E":_0x62a3[128],"\x2D\x6D\x6F\x7A\x2D\x74\x72\x61\x6E\x73\x69\x74\x69\x6F\x6E":_0x62a3[128],"\x2D\x6D\x73\x2D\x74\x72\x61\x6E\x73\x69\x74\x69\x6F\x6E":_0x62a3[128],"\x2D\x6F\x2D\x74\x72\x61\x6E\x73\x69\x74\x69\x6F\x6E":_0x62a3[128],transition:_0x62a3[128],"\x2D\x77\x65\x62\x6B\x69\x74\x2D\x74\x72\x61\x6E\x73\x66\x6F\x72\x6D":_0x4b5bx2,"\x2D\x6D\x6F\x7A\x2D\x74\x72\x61\x6E\x73\x66\x6F\x72\x6D":_0x4b5bx2,"\x2D\x6D\x73\x2D\x74\x72\x61\x6E\x73\x66\x6F\x72\x6D":_0x4b5bx2,"\x2D\x6F\x2D\x74\x72\x61\x6E\x73\x66\x6F\x72\x6D":_0x4b5bx2,transform:_0x4b5bx2}),_0x4b5bx1[_0x62a3[62]][_0x62a3[61]](_0x62a3[70],_0x4b5bx1[_0x62a3[11]])},_0x4b5bx2[_0x62a3[3]][_0x62a3[129]]= function(){var _0x4b5bx1=this;null!== _0x4b5bx1[_0x62a3[80]]&& (_0x4b5bx1[_0x62a3[130]]&& clearInterval(_0x4b5bx1[_0x62a3[130]]),_0x4b5bx1[_0x62a3[63]]=  !1,_0x4b5bx1[_0x62a3[131]]&& clearInterval(_0x4b5bx1[_0x62a3[131]]),_0x4b5bx1[_0x62a3[132]]&& clearTimeout(_0x4b5bx1[_0x62a3[132]]),_0x4b5bx1[_0x62a3[133]]&& clearInterval(_0x4b5bx1[_0x62a3[133]]),_0x4b5bx1[_0x62a3[134]]= 0,_0x4b5bx1[_0x62a3[112]](_0x4b5bx1[_0x62a3[109]],_0x4b5bx1[_0x62a3[135]],0),_0x4b5bx1[_0x62a3[62]][_0x62a3[61]](_0x62a3[74],_0x4b5bx1[_0x62a3[11]]))},_0x4b5bx2[_0x62a3[3]][_0x62a3[125]]= function(_0x4b5bx2,_0x4b5bx3,_0x4b5bx4){var _0x4b5bx5=this;if(_0x4b5bx5[_0x62a3[131]]&& clearInterval(_0x4b5bx5[_0x62a3[131]]),null!== _0x4b5bx5[_0x62a3[80]]&& !1=== _0x4b5bx5[_0x62a3[63]]){if(_0x4b5bx5[_0x62a3[136]]= _0x4b5bx5[_0x62a3[137]](_0x4b5bx2,_0x4b5bx3),_0x4b5bx5[_0x62a3[11]]= jQuery[_0x62a3[13]](!0,{},_0x4b5bx5[_0x62a3[15]][_0x4b5bx5[_0x62a3[136]]]),void(0)=== _0x4b5bx5[_0x62a3[136]]){return void(_0x4b5bx5[_0x62a3[62]][_0x62a3[61]](_0x62a3[138]))};_0x4b5bx5[_0x62a3[63]]=  !0,_0x4b5bx4= parseInt(_0x4b5bx4)?parseInt(_0x4b5bx4):_0x4b5bx5[_0x62a3[27]],_0x4b5bx5[_0x62a3[139]](),_0x4b5bx4-= _0x4b5bx5[_0x62a3[134]];for(var _0x4b5bx6=0,_0x4b5bx7=0;_0x4b5bx7< (_0x62a3[29]=== _0x4b5bx5[_0x62a3[109]]?_0x4b5bx5[_0x62a3[15]][_0x62a3[16]]- _0x4b5bx5[_0x62a3[136]]:_0x4b5bx5[_0x62a3[136]]);_0x4b5bx7++){_0x4b5bx6+= _0x62a3[18]=== _0x4b5bx1[_0x62a3[20]](_0x4b5bx5[_0x62a3[12]][_0x62a3[19]])|| _0x62a3[21]=== _0x4b5bx1[_0x62a3[20]](_0x4b5bx5[_0x62a3[12]][_0x62a3[19]])?_0x4b5bx5[_0x62a3[80]][_0x62a3[104]](_0x62a3[103])[_0x62a3[106]](_0x4b5bx7)[_0x62a3[105]](!0):_0x4b5bx5[_0x62a3[80]][_0x62a3[104]](_0x62a3[103])[_0x62a3[106]](_0x4b5bx7)[_0x62a3[107]](!0)};if(_0x62a3[18]=== _0x4b5bx1[_0x62a3[20]](_0x4b5bx5[_0x62a3[12]][_0x62a3[19]])|| _0x62a3[21]=== _0x4b5bx1[_0x62a3[20]](_0x4b5bx5[_0x62a3[12]][_0x62a3[19]])){var _0x4b5bx8=_0x4b5bx5[_0x62a3[80]][_0x62a3[104]](_0x62a3[103])[_0x62a3[106]](_0x4b5bx5[_0x62a3[136]])[_0x62a3[105]](!0),_0x4b5bx9=parseFloat(_0x4b5bx5[_0x62a3[80]][_0x62a3[104]](_0x62a3[103])[_0x62a3[106]](_0x4b5bx5[_0x62a3[136]])[_0x62a3[111]](_0x62a3[141])[_0x62a3[140]](/[^0-9.]/g,_0x62a3[29]))+ parseFloat(_0x4b5bx5[_0x62a3[80]][_0x62a3[104]](_0x62a3[103])[_0x62a3[106]](_0x4b5bx5[_0x62a3[136]])[_0x62a3[111]](_0x62a3[142])[_0x62a3[140]](/[^0-9.]/g,_0x62a3[29]))+ 2,_0x4b5bxa=parseFloat(_0x4b5bx5[_0x62a3[80]][_0x62a3[104]](_0x62a3[103])[_0x62a3[106]](_0x4b5bx5[_0x62a3[136]])[_0x62a3[111]](_0x62a3[118])[_0x62a3[140]](/[^0-9.]/g,_0x62a3[29])+ parseFloat(_0x4b5bx5[_0x62a3[80]][_0x62a3[104]](_0x62a3[103])[_0x62a3[106]](_0x4b5bx5[_0x62a3[136]])[_0x62a3[111]](_0x62a3[143])[_0x62a3[140]](/[^0-9.]/g,_0x62a3[29])))- 2;_0x4b5bx8= _0x62a3[28]=== _0x4b5bx5[_0x62a3[109]]?_0x4b5bx8:-_0x4b5bx8}else {var _0x4b5bx8=_0x4b5bx5[_0x62a3[80]][_0x62a3[104]](_0x62a3[103])[_0x62a3[106]](_0x4b5bx5[_0x62a3[136]])[_0x62a3[107]](!0),_0x4b5bx9=parseFloat(_0x4b5bx5[_0x62a3[80]][_0x62a3[104]](_0x62a3[103])[_0x62a3[106]](_0x4b5bx5[_0x62a3[136]])[_0x62a3[111]](_0x62a3[123])[_0x62a3[140]](/[^0-9.]/g,_0x62a3[29]))+ parseFloat(_0x4b5bx5[_0x62a3[80]][_0x62a3[104]](_0x62a3[103])[_0x62a3[106]](_0x4b5bx5[_0x62a3[136]])[_0x62a3[111]](_0x62a3[144])[_0x62a3[140]](/[^0-9.]/g,_0x62a3[29]))+ 2,_0x4b5bxa=parseFloat(_0x4b5bx5[_0x62a3[80]][_0x62a3[104]](_0x62a3[103])[_0x62a3[106]](_0x4b5bx5[_0x62a3[136]])[_0x62a3[111]](_0x62a3[145])[_0x62a3[140]](/[^0-9.]/g,_0x62a3[29])+ parseFloat(_0x4b5bx5[_0x62a3[80]][_0x62a3[104]](_0x62a3[103])[_0x62a3[106]](_0x4b5bx5[_0x62a3[136]])[_0x62a3[111]](_0x62a3[146])[_0x62a3[140]](/[^0-9.]/g,_0x62a3[29])))- 2;_0x4b5bx8= _0x62a3[28]=== _0x4b5bx5[_0x62a3[109]]?_0x4b5bx8:-_0x4b5bx8};_0x4b5bx5[_0x62a3[135]]= _0x4b5bx6+ (_0x62a3[7]=== _0x4b5bx5[_0x62a3[12]][_0x62a3[147]]?_0x4b5bx8/ 2:_0x4b5bx5[_0x62a3[148]](_0x4b5bx9,_0x4b5bx8- _0x4b5bxa));var _0x4b5bxb=_0x62a3[18]=== _0x4b5bx1[_0x62a3[20]](_0x4b5bx5[_0x62a3[12]][_0x62a3[19]])|| _0x62a3[21]=== _0x4b5bx1[_0x62a3[20]](_0x4b5bx5[_0x62a3[12]][_0x62a3[19]])?_0x4b5bx5[_0x62a3[116]]/ 2:_0x4b5bx5[_0x62a3[115]]/ 2;_0x4b5bx5[_0x62a3[149]]= _0x4b5bxb+ _0x4b5bx5[_0x62a3[135]],_0x4b5bx5[_0x62a3[62]][_0x62a3[61]](_0x62a3[68]);var _0x4b5bxc=void(0)!== _0x4b5bx5[_0x62a3[32]][_0x4b5bx5[_0x62a3[12]][_0x62a3[32]]]?_0x4b5bx5[_0x62a3[32]][_0x4b5bx5[_0x62a3[12]][_0x62a3[32]]]:_0x4b5bx5[_0x62a3[32]][_0x62a3[8]];_0x4b5bx5[_0x62a3[112]](_0x4b5bx5[_0x62a3[109]],_0x4b5bx5[_0x62a3[149]],_0x4b5bx4,_0x4b5bxc),_0x4b5bx5[_0x62a3[130]]= setInterval(function(){_0x4b5bx5[_0x62a3[62]][_0x62a3[61]](_0x62a3[72])},1),_0x4b5bx5[_0x62a3[132]]= setTimeout(function(){clearInterval(_0x4b5bx5[_0x62a3[130]]),clearInterval(_0x4b5bx5[_0x62a3[133]]),_0x4b5bx5[_0x62a3[134]]= 0,_0x4b5bx5[_0x62a3[112]](_0x4b5bx5[_0x62a3[109]],_0x4b5bx5[_0x62a3[135]],0),_0x4b5bx5[_0x62a3[63]]=  !1,_0x4b5bx5[_0x62a3[62]][_0x62a3[61]](_0x62a3[71],_0x4b5bx5[_0x62a3[11]])},_0x4b5bx4)}},_0x4b5bx2[_0x62a3[3]][_0x62a3[150]]= function(){var _0x4b5bx1=this;_0x4b5bx1[_0x62a3[64]](),_0x4b5bx1[_0x62a3[62]][_0x62a3[61]](_0x62a3[73])},_0x4b5bx2[_0x62a3[3]][_0x62a3[151]]= function(_0x4b5bx2){var _0x4b5bx3=this;if(null!== _0x4b5bx3[_0x62a3[80]]){_0x4b5bx2= parseInt(_0x4b5bx2)?parseInt(_0x4b5bx2):_0x4b5bx3[_0x62a3[27]],_0x4b5bx3[_0x62a3[139]]();var _0x4b5bx4=null!== _0x4b5bx3[_0x62a3[149]]?_0x4b5bx3[_0x62a3[149]]:_0x4b5bx3[_0x62a3[108]]+ 4* (_0x62a3[18]=== _0x4b5bx1[_0x62a3[20]](_0x4b5bx3[_0x62a3[12]][_0x62a3[19]])|| _0x62a3[21]=== _0x4b5bx1[_0x62a3[20]](_0x4b5bx3[_0x62a3[12]][_0x62a3[19]])?_0x4b5bx3[_0x62a3[114]]:_0x4b5bx3[_0x62a3[113]]);_0x4b5bx3[_0x62a3[112]](_0x4b5bx3[_0x62a3[109]],_0x4b5bx4,_0x4b5bx2),_0x4b5bx3[_0x62a3[131]]= setInterval(function(){_0x4b5bx3[_0x62a3[112]](_0x4b5bx3[_0x62a3[109]],null!== _0x4b5bx3[_0x62a3[135]]?_0x4b5bx3[_0x62a3[135]]:_0x4b5bx3[_0x62a3[108]]),_0x4b5bx3[_0x62a3[80]][_0x62a3[151]]({to:0},{step:function(_0x4b5bx1,_0x4b5bx5){_0x4b5bx3[_0x62a3[112]](_0x4b5bx3[_0x62a3[109]],_0x4b5bx4,_0x4b5bx2)}},_0x62a3[152])},_0x4b5bx2)}},_0x4b5bx2[_0x62a3[3]][_0x62a3[64]]= function(){var _0x4b5bx1=this;null!== _0x4b5bx1[_0x62a3[80]]&& (_0x4b5bx1[_0x62a3[130]]&& clearInterval(_0x4b5bx1[_0x62a3[130]]),_0x4b5bx1[_0x62a3[131]]&& clearInterval(_0x4b5bx1[_0x62a3[131]]),_0x4b5bx1[_0x62a3[132]]&& clearTimeout(_0x4b5bx1[_0x62a3[132]]),_0x4b5bx1[_0x62a3[133]]&& clearInterval(_0x4b5bx1[_0x62a3[133]]),_0x4b5bx1[_0x62a3[63]]=  !1,_0x4b5bx1[_0x62a3[112]](_0x62a3[29],0,0))},_0x4b5bx2[_0x62a3[3]][_0x62a3[139]]= function(){var _0x4b5bx1=this,_0x4b5bx2=( new Date)[_0x62a3[153]]()- _0x4b5bx1[_0x62a3[134]];_0x4b5bx1[_0x62a3[133]]= setInterval(function(){var _0x4b5bx3=( new Date)[_0x62a3[153]]();_0x4b5bx1[_0x62a3[134]]= _0x4b5bx3- _0x4b5bx2},1)},_0x4b5bx2[_0x62a3[3]][_0x62a3[110]]= function(_0x4b5bx2){var _0x4b5bx3=this;return _0x62a3[18]=== _0x4b5bx1[_0x62a3[20]](_0x4b5bx3[_0x62a3[12]][_0x62a3[19]])|| _0x62a3[21]=== _0x4b5bx1[_0x62a3[20]](_0x4b5bx3[_0x62a3[12]][_0x62a3[19]])?_0x62a3[154]+ _0x4b5bx2+ _0x62a3[155]:_0x62a3[156]+ _0x4b5bx2+ _0x62a3[157]},_0x4b5bx2[_0x62a3[3]][_0x62a3[127]]= function(){var _0x4b5bx1=this;return _0x4b5bx1[_0x62a3[80]][_0x62a3[111]](_0x62a3[158])|| _0x4b5bx1[_0x62a3[80]][_0x62a3[111]](_0x62a3[159])|| _0x4b5bx1[_0x62a3[80]][_0x62a3[111]](_0x62a3[160])|| _0x4b5bx1[_0x62a3[80]][_0x62a3[111]](_0x62a3[161])|| _0x4b5bx1[_0x62a3[80]][_0x62a3[111]](_0x62a3[162])},_0x4b5bx2[_0x62a3[3]][_0x62a3[112]]= function(_0x4b5bx1,_0x4b5bx2,_0x4b5bx3,_0x4b5bx4){var _0x4b5bx5=this;_0x4b5bx1|| (_0x4b5bx1= _0x62a3[29]),_0x4b5bx2|| (_0x4b5bx2= 0),_0x4b5bx3|| (_0x4b5bx3= 0),_0x4b5bx4|| (_0x4b5bx4= _0x62a3[152]),_0x4b5bx5[_0x62a3[80]][_0x62a3[111]]({"\x2D\x77\x65\x62\x6B\x69\x74\x2D\x74\x72\x61\x6E\x73\x69\x74\x69\x6F\x6E":_0x62a3[163]+ _0x4b5bx3+ _0x62a3[164]+ _0x4b5bx4,"\x2D\x6D\x6F\x7A\x2D\x74\x72\x61\x6E\x73\x69\x74\x69\x6F\x6E":_0x62a3[163]+ _0x4b5bx3+ _0x62a3[164]+ _0x4b5bx4,"\x2D\x6D\x73\x2D\x74\x72\x61\x6E\x73\x69\x74\x69\x6F\x6E":_0x62a3[163]+ _0x4b5bx3+ _0x62a3[164]+ _0x4b5bx4,"\x2D\x6F\x2D\x74\x72\x61\x6E\x73\x69\x74\x69\x6F\x6E":_0x62a3[163]+ _0x4b5bx3+ _0x62a3[164]+ _0x4b5bx4,transition:_0x62a3[163]+ _0x4b5bx3+ _0x62a3[164]+ _0x4b5bx4,"\x2D\x77\x65\x62\x6B\x69\x74\x2D\x74\x72\x61\x6E\x73\x66\x6F\x72\x6D":_0x4b5bx5[_0x62a3[110]](_0x4b5bx1+ _0x4b5bx2),"\x2D\x6D\x6F\x7A\x2D\x74\x72\x61\x6E\x73\x66\x6F\x72\x6D":_0x4b5bx5[_0x62a3[110]](_0x4b5bx1+ _0x4b5bx2),"\x2D\x6D\x73\x2D\x74\x72\x61\x6E\x73\x66\x6F\x72\x6D":_0x4b5bx5[_0x62a3[110]](_0x4b5bx1+ _0x4b5bx2),"\x2D\x6F\x2D\x74\x72\x61\x6E\x73\x66\x6F\x72\x6D":_0x4b5bx5[_0x62a3[110]](_0x4b5bx1+ _0x4b5bx2),transform:_0x4b5bx5[_0x62a3[110]](_0x4b5bx1+ _0x4b5bx2)})},_0x4b5bx2[_0x62a3[3]][_0x62a3[137]]= function(_0x4b5bx1,_0x4b5bx2){var _0x4b5bx3=this,_0x4b5bx4=void(0);if(_0x62a3[14]==  typeof _0x4b5bx3[_0x62a3[15]]|| _0x62a3[165]==  typeof _0x4b5bx3[_0x62a3[15]]){for(var _0x4b5bx5=0;_0x4b5bx5< _0x4b5bx3[_0x62a3[15]][_0x62a3[16]]&& void(0)!== _0x4b5bx3[_0x62a3[15]][_0x4b5bx5][_0x4b5bx1];_0x4b5bx5++){if(_0x4b5bx3[_0x62a3[15]][_0x4b5bx5][_0x4b5bx1]=== _0x4b5bx2){_0x4b5bx4= _0x4b5bx5;break}};return _0x4b5bx4}},_0x4b5bx2[_0x62a3[3]][_0x62a3[148]]= function(_0x4b5bx1,_0x4b5bx2){return Math[_0x62a3[167]](Math[_0x62a3[166]]()* (_0x4b5bx2- _0x4b5bx1+ 1)+ _0x4b5bx1)},_0x4b5bx1[_0x62a3[168]][_0x62a3[10]]= function(){var _0x4b5bx3,_0x4b5bx4,_0x4b5bx5=this,_0x4b5bx6=arguments[0],_0x4b5bx7=Array[_0x62a3[3]][_0x62a3[170]][_0x62a3[169]](arguments,1),_0x4b5bx8=_0x4b5bx5[_0x62a3[16]],_0x4b5bx9=[_0x62a3[75],_0x62a3[124],_0x62a3[150],_0x62a3[129],_0x62a3[2],_0x62a3[126],_0x62a3[151]];for(_0x4b5bx3= 0;_0x4b5bx3< _0x4b5bx8;_0x4b5bx3++){if(_0x62a3[14]==  typeof _0x4b5bx6|| void(0)=== _0x4b5bx6?(_0x4b5bx5[_0x4b5bx3][_0x62a3[10]]=  new _0x4b5bx2(_0x4b5bx5[_0x4b5bx3],_0x4b5bx6),_0x4b5bx5[_0x4b5bx3][_0x62a3[10]][_0x62a3[62]][_0x62a3[61]](_0x62a3[60])):-1!== _0x4b5bx1[_0x62a3[78]](_0x4b5bx1[_0x62a3[20]](_0x4b5bx6),_0x4b5bx9) && (_0x4b5bx4= _0x4b5bx5[_0x4b5bx3][_0x62a3[10]][_0x4b5bx6][_0x62a3[171]](_0x4b5bx5[_0x4b5bx3][_0x62a3[10]],_0x4b5bx7)),void(0)!== _0x4b5bx4){return _0x4b5bx4}};return _0x4b5bx5}})
+	</script>
+	<script src="js/scripts.js"></script>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-130950821-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	  
+	  gtag('config', 'UA-130950821-1');
+	</script>
+</head>
+<body>
+
+<div class="container">
+
+<section class="examples example-1 text-center">
+	<h2>Horizontal Roller</h2>
+	
+	
+	<div class="panel panel-primary">
+		<div class="panel-heading">
+			<!-- Tabs -->
+			<ul class="nav panel-tabs">
+				<li class="active"><a href="#ex1-preview" class="btn" data-toggle="tab">Preview</a></li>
+				<li><a href="#ex1-html" class="btn" data-toggle="tab">HTML</a></li>
+				<li><a href="#ex1-javascript" class="btn" data-toggle="tab">Javascript</a></li>
+				<li><a href="#ex1-css" class="btn" data-toggle="tab">CSS</a></li>
+				<li><a href="#ex1-fullcode" class="btn" data-toggle="tab">Full Code</a></li>
+			</ul>
+		</div>
+		
+		<div class="panel-body">
+			<div class="tab-content">
+				<div class="tab-pane active" id="ex1-preview">
+				<style>
+				.example-1 .er-item {
+					width: 100px;
+					font-size: 14px;
+				}
+				</style>
+				<div class="roller"></div>
+					<div class="text-center">
+						<select class="select-direction form-control" style="display:inline-block;width: auto;">
+						 <option value="left">To Left</option>
+						 <option value="right">To Right</option>
+						</select>
+						<select class="select-item form-control" style="display:inline-block;width: auto;"></select>
+						
+						<button type="button" class="btn btn-primary start-spin">Start</button>
+						<button type="button" class="btn btn-primary stop-spin">Stop</button>
+					</div>
+				</div>
+				<div class="tab-pane" id="ex1-html">
+<pre>
+<code class="language-html">
+&#x3C;div class=&#x22;roller&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;p&#x3E;&#x3C;button type=&#x22;button&#x22; class=&#x22;start-spin&#x22;&#x3E;Start&#x3C;/button&#x3E;&#x3C;/p&#x3E;
+</code>
+</pre>
+				</div>
+				
+				
+				<div class="tab-pane" id="ex1-javascript">
+<pre>
+<code class="language-javascript">
+jQuery(document).ready(function($){
+
+  var items = [
+    {
+      name: 'Adnane',
+    },{
+      name: 'Zarrouk',
+    },{
+      name: 'Aberdeen',
+    },{
+      name: 'Aliz',
+    },{
+      name: 'Clea',
+    },{
+      name: 'Lucas',
+    },{
+      name: 'Ethan',
+    },{
+      name: 'Aiden',
+    },{
+      name: 'Federica',
+    },{
+      name: 'Emanuella',
+    },{
+      name: 'Oliver',
+    },{
+      name: 'Grayson',
+    },{
+      name: 'Kitty',
+    },{
+      name: 'Samuel',
+    },{
+      name: 'Trixie',
+    },{
+      name: 'Cicely',
+    },{
+      name: 'Nathan',
+    }
+  ];
+
+  $(".roller").eroller({
+    items  : items,
+  });
+
+  //Start Button
+  $(document).on('click','.start-spin',function(){
+    var winner = 'Snow';
+    $(".roller").eroller('start','name',winner);
+  });
+
+});
+</code>
+</pre>
+				</div>
+				<div class="tab-pane" id="ex1-css">
+<pre>
+<code class="language-css">
+.roller .er-item {
+  width: 100px;
+  font-size: 14px;
+}
+</code>
+</pre>
+				</div>
+				<div class="tab-pane" id="ex1-fullcode">
+<pre>
+<code class="language-html">
+&#x3C;div class=&#x22;roller&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;p&#x3E;&#x3C;button type=&#x22;button&#x22; class=&#x22;start-spin&#x22;&#x3E;Start&#x3C;/button&#x3E;&#x3C;/p&#x3E;
+
+&#x3C;style&#x3E;
+.roller .er-item {
+  width: 100px;
+  font-size: 14px;
+}
+&#x3C;/style&#x3E;
+
+&#x3C;script&#x3E;
+jQuery(document).ready(function($){
+
+  var items = [
+    {
+      name: 'Adnane',
+    },{
+      name: 'Zarrouk',
+    },{
+      name: 'Aberdeen',
+    },{
+      name: 'Aliz',
+    },{
+      name: 'Clea',
+    },{
+      name: 'Lucas',
+    },{
+      name: 'Ethan',
+    },{
+      name: 'Aiden',
+    },{
+      name: 'Federica',
+    },{
+      name: 'Emanuella',
+    },{
+      name: 'Oliver',
+    },{
+      name: 'Grayson',
+    },{
+      name: 'Kitty',
+    },{
+      name: 'Samuel',
+    },{
+      name: 'Trixie',
+    },{
+      name: 'Cicely',
+    },{
+      name: 'Nathan',
+    }
+  ];
+
+  $(".roller").eroller({
+    items : items,
+  });
+
+  //Start Button
+  $(document).on('click','.start-spin',function(){
+    var winner = 'Snow';
+    $(".roller").eroller('start','value',winner);
+  });
+  
+  //Events
+  $(document).on('eroller.start','.roller',function(){
+    $('.message').text('Rolling...');
+    
+  });
+  
+  $(document).on('eroller.complete','.roller',function(event,item){
+    $('.message').text(item.message);
+  });
+  
+});
+&#x3C;/script&#x3E;
+</code>
+</pre>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+</section>
+
+
+
+
+<section class="examples example-2 text-center">
+<h2>Vertical Roller</h2>
+
+<style>
+.example-2 .roller{
+  height: 400px;
+  font-size: 24px;
+}
+</style>
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<!-- Tabs -->
+				<ul class="nav panel-tabs">
+					<li class="active"><a href="#ex2-preview" class="btn" data-toggle="tab">Preview</a></li>
+					<li><a href="#ex2-html" class="btn" data-toggle="tab">HTML</a></li>
+					<li><a href="#ex2-javascript" class="btn" data-toggle="tab">Javascript</a></li>
+					<li><a href="#ex2-css" class="btn" data-toggle="tab">CSS</a></li>
+					<li><a href="#ex2-fullcode" class="btn" data-toggle="tab">Full Code</a></li>
+				</ul>
+			</div>
+			
+			<div class="panel-body">
+				<div class="tab-content">
+					
+					<div class="tab-pane active" id="ex2-preview">
+						<div class="roller"></div>
+						<p><b class="message">Roll to win</b></p>
+						<p>
+						<select class="select-direction form-control" style="display:inline-block;width: auto;">
+						 <option value="top">To Top</option>
+						 <option value="bottom">To Bottom</option>
+						</select>
+						<button type="button" class="btn btn-primary start-spin">Roll</button>
+						</p>
+					</div>
+					<div class="tab-pane" id="ex2-html">
+<pre>
+<code class="language-html">
+&#x3C;div class=&#x22;roller&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;p&#x3E;&#x3C;button type=&#x22;button&#x22; class=&#x22;start-spin&#x22;&#x3E;Start&#x3C;/button&#x3E;&#x3C;/p&#x3E;
+</code>
+</pre>
+					</div>
+					
+					
+					<div class="tab-pane" id="ex2-javascript">
+<pre>
+<code class="language-javascript">
+jQuery(document).ready(function($){
+
+  var items = [
+    {
+      text: &#x27;&#x3C;i class=&#x22;fa fa-cubes&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Cubes&#x27;,
+      message: &#x27;You win a Cubes&#x27;,
+    },{
+      text: &#x27;&#x3C;i class=&#x22;fa fa-gift&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Gift&#x27;,
+      message: &#x27;You win a Gift&#x27;,
+    },{
+      text: &#x27;&#x3C;i class=&#x22;fa fa-leaf&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Leaf&#x27;,
+      message: &#x27;You win a Leaf&#x27;,
+    },{
+      text: &#x27;&#x3C;i class=&#x22;fa fa-heartbeat&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Heartbeat&#x27;,
+      message: &#x27;You win a Heartbeat&#x27;,
+    },{
+      text: &#x27;&#x3C;i class=&#x22;fa fa-key&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Key&#x27;,
+      message: &#x27;You win a Key&#x27;,
+    },{
+      text: &#x27;&#x3C;i class=&#x22;fa fa-sun-o&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Sun&#x27;,
+      message: &#x27;You win a Sun&#x27;,
+    },{
+      text: &#x27;&#x3C;i class=&#x22;fa fa-taxi&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Taxi&#x27;,
+      message: &#x27;You win a Taxi&#x27;,
+    },{
+      text: &#x27;&#x3C;i class=&#x22;fa fa-futbol-o&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Ball&#x27;,
+      message: &#x27;You win a Ball&#x27;,
+    },{
+      text: &#x27;&#x3C;i class=&#x22;fa fa-snowflake-o&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Snow&#x27;,
+      message: &#x27;You win a Snow&#x27;,
+    },{
+      text: &#x27;&#x3C;i class=&#x22;fa fa-refresh fa-spin&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Spin&#x27;,
+      message: &#x27;You win a Spin&#x27;,
+    },{
+      text: &#x27;&#x3C;i class=&#x22;fa fa-book&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Book&#x27;,
+      message: &#x27;You win a Book&#x27;,
+    },{
+      text: &#x27;&#x3C;i class=&#x22;fa fa-battery-full&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Battery&#x27;,
+      message: &#x27;You win a Battery&#x27;,
+    },{
+      text: &#x27;&#x3C;i class=&#x22;fa fa-beer&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Beer&#x27;,
+      message: &#x27;You win a Beer&#x27;,
+    },{
+      text: &#x27;&#x3C;i class=&#x22;fa fa-gamepad&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Gamepad&#x27;,
+      message: &#x27;You win a Gamepad&#x27;,
+    },{
+      text: &#x27;&#x3C;i class=&#x22;fa fa-puzzle-piece&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Puzzle Piece&#x27;,
+      message: &#x27;You win a Puzzle Piece&#x27;,
+    }
+  ];
+
+  $(".roller").eroller({
+    items  : items,
+  });
+
+  //Start Button
+  $(document).on('click','.start-spin',function(){
+    var winner = 'Snow';
+    $(".roller").eroller('start','value',winner);
+  });
+  
+  //Events
+  $(document).on('eroller.start','.roller',function(){
+    $('.message').text('Rolling...');
+    
+  });
+  
+  $(document).on('eroller.complete','.roller',function(event,item){
+    $('.message').text(item.message);
+  });
+  
+});
+</code>
+</pre>
+					</div>
+					
+					<div class="tab-pane" id="ex2-css">
+<pre>
+<code class="language-css">
+.roller{
+  height: 400px;
+  font-size: 24px;
+}
+</code>
+</pre>
+					</div>
+					<div class="tab-pane" id="ex2-fullcode">
+<pre>
+<code class="language-html">
+&#x3C;div class=&#x22;roller&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;p&#x3E;&#x3C;button type=&#x22;button&#x22; class=&#x22;start-spin&#x22;&#x3E;Start&#x3C;/button&#x3E;&#x3C;/p&#x3E;
+
+&#x3C;style&#x3E;
+.roller{
+  height: 400px;
+  font-size: 24px;
+}
+&#x3C;/style&#x3E;
+
+&#x3C;script&#x3E;
+jQuery(document).ready(function($){
+
+  var items = [
+    {
+      text: &#x27;&#x3C;i class=&#x22;fa fa-cubes&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Cubes&#x27;,
+      message: &#x27;You win a Cubes&#x27;,
+    },{
+      text: &#x27;&#x3C;i class=&#x22;fa fa-gift&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Gift&#x27;,
+      message: &#x27;You win a Gift&#x27;,
+    },{
+      text: &#x27;&#x3C;i class=&#x22;fa fa-leaf&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Leaf&#x27;,
+      message: &#x27;You win a Leaf&#x27;,
+    },{
+      text: &#x27;&#x3C;i class=&#x22;fa fa-heartbeat&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Heartbeat&#x27;,
+      message: &#x27;You win a Heartbeat&#x27;,
+    },{
+      text: &#x27;&#x3C;i class=&#x22;fa fa-key&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Key&#x27;,
+      message: &#x27;You win a Key&#x27;,
+    },{
+      text: &#x27;&#x3C;i class=&#x22;fa fa-sun-o&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Sun&#x27;,
+      message: &#x27;You win a Sun&#x27;,
+    },{
+      text: &#x27;&#x3C;i class=&#x22;fa fa-taxi&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Taxi&#x27;,
+      message: &#x27;You win a Taxi&#x27;,
+    },{
+      text: &#x27;&#x3C;i class=&#x22;fa fa-futbol-o&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Ball&#x27;,
+      message: &#x27;You win a Ball&#x27;,
+    },{
+      text: &#x27;&#x3C;i class=&#x22;fa fa-snowflake-o&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Snow&#x27;,
+      message: &#x27;You win a Snow&#x27;,
+    },{
+      text: &#x27;&#x3C;i class=&#x22;fa fa-refresh fa-spin&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Spin&#x27;,
+      message: &#x27;You win a Spin&#x27;,
+    },{
+      text: &#x27;&#x3C;i class=&#x22;fa fa-book&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Book&#x27;,
+      message: &#x27;You win a Book&#x27;,
+    },{
+      text: &#x27;&#x3C;i class=&#x22;fa fa-battery-full&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Battery&#x27;,
+      message: &#x27;You win a Battery&#x27;,
+    },{
+      text: &#x27;&#x3C;i class=&#x22;fa fa-beer&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Beer&#x27;,
+      message: &#x27;You win a Beer&#x27;,
+    },{
+      text: &#x27;&#x3C;i class=&#x22;fa fa-gamepad&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Gamepad&#x27;,
+      message: &#x27;You win a Gamepad&#x27;,
+    },{
+      text: &#x27;&#x3C;i class=&#x22;fa fa-puzzle-piece&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Puzzle Piece&#x27;,
+      message: &#x27;You win a Puzzle Piece&#x27;,
+    }
+  ];
+
+  $(".roller").eroller({
+    items  : items,
+	align  : 'vertical',
+  });
+
+  //Start Button
+  $(document).on('click','.start-spin',function(){
+    var winner = 'Snow';
+    $(".roller").eroller('start','value',winner);
+  });
+
+});
+&#x3C;/script&#x3E;
+</code>
+</pre>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="examples example-3 text-center">
+	<h2>Game Roller Example</h2>
+	
+	<div class="panel panel-primary">
+		<div class="panel-heading">
+			<!-- Tabs -->
+			<ul class="nav panel-tabs">
+				<li class="active"><a href="#ex3-preview" class="btn" data-toggle="tab">Preview</a></li>
+				<li><a href="#ex3-html" class="btn" data-toggle="tab">HTML</a></li>
+				<li><a href="#ex3-javascript" class="btn" data-toggle="tab">Javascript</a></li>
+				<li><a href="#ex3-css" class="btn" data-toggle="tab">CSS</a></li>
+				<li><a href="#ex3-fullcode" class="btn" data-toggle="tab">Full Code</a></li>
+			</ul>
+		</div>
+		
+		<div class="panel-body">
+			<div class="tab-content">
+				<div class="tab-pane active" id="ex3-preview">
+					<style>
+						.game-roller .roller-1 ,.game-roller .roller-2 ,.game-roller .roller-3{
+							height: 200px;
+							font-size: 24px;
+						}
+						</style>
+					<div class="game-roller">
+						<div class="roller-1"></div>
+						<div class="roller-2"></div>
+						<div class="roller-3"></div>
+						<p><b class="message">Roll to win</b></p>
+						<div class="text-center">
+							<button type="button" class="btn btn-primary start-spin">Start</button>
+						</div>
+					</div>
+				</div>
+				<div class="tab-pane" id="ex3-html">
+<pre>
+<code class="language-html">
+&#x3C;div class=&#x22;game-roller&#x22;&#x3E;
+  &#x3C;div class=&#x22;roller-1&#x22;&#x3E;&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;roller-2&#x22;&#x3E;&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;roller-3&#x22;&#x3E;&#x3C;/div&#x3E;
+  &#x3C;p&#x3E;&#x3C;b class=&#x22;message&#x22;&#x3E;Roll to win&#x3C;/b&#x3E;&#x3C;/p&#x3E;
+  &#x3C;div style=&#x22;text-align: center&#x22;&#x3E;
+    &#x3C;button type=&#x22;button&#x22; class=&#x22;start-spin&#x22;&#x3E;Start&#x3C;/button&#x3E;
+  &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+</code>
+</pre>
+				</div>
+				
+				<div class="tab-pane" id="ex3-javascript">
+<pre>
+<code class="language-javascript">
+function getDuplicates(array) {
+  var sorted_arr = array.slice().sort();
+  var results = [];
+  var c = 0;
+  for (var i = 0; i &#x3C; sorted_arr.length - 1; i++) { 
+    if (sorted_arr[i + 1] == sorted_arr[i]) {
+      results[c] = sorted_arr[i];
+      c++;
+    }
+  }
+  return results;
+}
+
+jQuery(document).ready(function($){
+  var items = [
+    {
+      text: &#x27;&#x3C;i class=&#x22;fa fa-cubes&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Cubes&#x27;,
+      message: &#x27;You win a Cubes&#x27;,
+    },{
+      text: &#x27;&#x3C;i class=&#x22;fa fa-gift&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Gift&#x27;,
+      message: &#x27;You win a Gift&#x27;,
+    },{
+      text: &#x27;&#x3C;i class=&#x22;fa fa-leaf&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Leaf&#x27;,
+      message: &#x27;You win a Leaf&#x27;,
+    },{
+      text: &#x27;&#x3C;i class=&#x22;fa fa-heartbeat&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Heartbeat&#x27;,
+      message: &#x27;You win a Heartbeat&#x27;,
+    },{
+      text: &#x27;&#x3C;i class=&#x22;fa fa-key&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Key&#x27;,
+      message: &#x27;You win a Key&#x27;,
+    },{
+      text: &#x27;&#x3C;i class=&#x22;fa fa-sun-o&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Sun&#x27;,
+      message: &#x27;You win a Sun&#x27;,
+    },{
+      text: &#x27;&#x3C;i class=&#x22;fa fa-taxi&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Taxi&#x27;,
+      message: &#x27;You win a Taxi&#x27;,
+    },{
+      text: &#x27;&#x3C;i class=&#x22;fa fa-futbol-o&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Ball&#x27;,
+      message: &#x27;You win a Ball&#x27;,
+    },{
+      text: &#x27;&#x3C;i class=&#x22;fa fa-snowflake-o&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Snow&#x27;,
+      message: &#x27;You win a Snow&#x27;,
+    },{
+      text: &#x27;&#x3C;i class=&#x22;fa fa-refresh fa-spin&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Spin&#x27;,
+      message: &#x27;You win a Spin&#x27;,
+    },{
+      text: &#x27;&#x3C;i class=&#x22;fa fa-book&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Book&#x27;,
+      message: &#x27;You win a Book&#x27;,
+    },{
+      text: &#x27;&#x3C;i class=&#x22;fa fa-battery-full&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Battery&#x27;,
+      message: &#x27;You win a Battery&#x27;,
+    },{
+      text: &#x27;&#x3C;i class=&#x22;fa fa-beer&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Beer&#x27;,
+      message: &#x27;You win a Beer&#x27;,
+    },{
+      text: &#x27;&#x3C;i class=&#x22;fa fa-gamepad&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Gamepad&#x27;,
+      message: &#x27;You win a Gamepad&#x27;,
+    },{
+      text: &#x27;&#x3C;i class=&#x22;fa fa-puzzle-piece&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Puzzle Piece&#x27;,
+      message: &#x27;You win a Puzzle Piece&#x27;,
+    }
+  ];
+
+  $(&#x27;.roller-1 ,.roller-2 ,.roller-3&#x27;).eroller({
+    items  : items,
+    key    : &#x27;text&#x27;,
+    align   : &#x27;vertical&#x27;,
+  });
+  
+  // Buttons
+  $(&#x27;.game-roller&#x27;).on(&#x27;click&#x27;,&#x27;.start-spin&#x27;,function(){
+    var randomWinner  = items[Math.floor(Math.random() * items.length)];
+    $(&#x27;.game-roller .roller-1&#x27;).eroller(&#x27;start&#x27;,&#x27;value&#x27;,randomWinner.value,8000);
+    randomWinner  = items[Math.floor(Math.random() * items.length)];
+    $(&#x27;.game-roller .roller-2&#x27;).eroller(&#x27;start&#x27;,&#x27;value&#x27;,randomWinner.value,7500);
+    randomWinner  = items[Math.floor(Math.random() * items.length)];
+    $(&#x27;.game-roller .roller-3&#x27;).eroller(&#x27;start&#x27;,&#x27;value&#x27;,randomWinner.value,7000);
+    
+    $(&#x27;.game-roller b.message&#x27;).text(&#x27;Rolling...&#x27;);
+    $(&#x22;.game-roller .start-spin&#x22;).prop(&#x22;disabled&#x22;, true);
+  });
+  
+  //Events
+  var winners = [],calc = 0;
+  $(&#x27;.game-roller&#x27;).on(&#x27;eroller.complete&#x27;,&#x27;.roller-1 ,.roller-2 ,.roller-3&#x27;,function(event,item){
+    
+    winners[calc] = item.value;
+    ++calc;
+    if(calc === 3){
+      var wins = getDuplicates(winners);
+      
+      if( wins.length === 0 )
+        $(&#x27;.game-roller b.message&#x27;).html(&#x27;You win Nothing&#x27; );
+      else{
+        $(&#x27;.game-roller b.message&#x27;).html(&#x27;You win &#x27; +(wins.length + 1)+ &#x27; &#x27;+wins[0]+&#x27;\&#x27;s&#x27; );
+      }
+      $(&#x22;.game-roller .start-spin&#x22;).prop(&#x22;disabled&#x22;, false);
+      calc = 0;
+    }
+  });
+});
+</code>
+</pre>
+				</div>
+				
+				<div class="tab-pane" id="ex3-css">
+<pre>
+<code class="language-css">
+.game-roller .roller-1 ,
+.game-roller .roller-2 ,
+.game-roller .roller-3{
+  height: 200px;
+  font-size: 24px;
+}
+</code>
+</pre>
+				</div>
+				<div class="tab-pane" id="ex3-fullcode">
+<pre>
+<code class="language-html">
+&#x3C;div class=&#x22;game-roller&#x22;&#x3E;
+  &#x3C;div class=&#x22;roller-1&#x22;&#x3E;&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;roller-2&#x22;&#x3E;&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;roller-3&#x22;&#x3E;&#x3C;/div&#x3E;
+  &#x3C;p&#x3E;&#x3C;b class=&#x22;message&#x22;&#x3E;Roll to win&#x3C;/b&#x3E;&#x3C;/p&#x3E;
+  &#x3C;div style=&#x22;text-align: center&#x22;&#x3E;
+    &#x3C;button type=&#x22;button&#x22; class=&#x22;start-spin&#x22;&#x3E;Start&#x3C;/button&#x3E;
+  &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+
+&#x3C;style&#x3E;
+.game-roller .roller-1 ,
+.game-roller .roller-2 ,
+.game-roller .roller-3{
+  height: 200px;
+  font-size: 24px;
+}
+&#x3C;/style&#x3E;
+
+&#x3C;script&#x3E;
+function getDuplicates(array) {
+  var sorted_arr = array.slice().sort();
+  var results = [];
+  var c = 0;
+  for (var i = 0; i &#x3C; sorted_arr.length - 1; i++) { 
+    if (sorted_arr[i + 1] == sorted_arr[i]) {
+      results[c] = sorted_arr[i];
+      c++;
+    }
+  }
+  return results;
+}
+
+jQuery(document).ready(function($){
+  var items = [
+    {
+      text: &#x27;&#x3C;i class=&#x22;fa fa-cubes&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Cubes&#x27;,
+      message: &#x27;You win a Cubes&#x27;,
+    },{
+      text: &#x27;&#x3C;i class=&#x22;fa fa-gift&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Gift&#x27;,
+      message: &#x27;You win a Gift&#x27;,
+    },{
+      text: &#x27;&#x3C;i class=&#x22;fa fa-leaf&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Leaf&#x27;,
+      message: &#x27;You win a Leaf&#x27;,
+    },{
+      text: &#x27;&#x3C;i class=&#x22;fa fa-heartbeat&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Heartbeat&#x27;,
+      message: &#x27;You win a Heartbeat&#x27;,
+    },{
+      text: &#x27;&#x3C;i class=&#x22;fa fa-key&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Key&#x27;,
+      message: &#x27;You win a Key&#x27;,
+    },{
+      text: &#x27;&#x3C;i class=&#x22;fa fa-sun-o&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Sun&#x27;,
+      message: &#x27;You win a Sun&#x27;,
+    },{
+      text: &#x27;&#x3C;i class=&#x22;fa fa-taxi&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Taxi&#x27;,
+      message: &#x27;You win a Taxi&#x27;,
+    },{
+      text: &#x27;&#x3C;i class=&#x22;fa fa-futbol-o&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Ball&#x27;,
+      message: &#x27;You win a Ball&#x27;,
+    },{
+      text: &#x27;&#x3C;i class=&#x22;fa fa-snowflake-o&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Snow&#x27;,
+      message: &#x27;You win a Snow&#x27;,
+    },{
+      text: &#x27;&#x3C;i class=&#x22;fa fa-refresh fa-spin&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Spin&#x27;,
+      message: &#x27;You win a Spin&#x27;,
+    },{
+      text: &#x27;&#x3C;i class=&#x22;fa fa-book&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Book&#x27;,
+      message: &#x27;You win a Book&#x27;,
+    },{
+      text: &#x27;&#x3C;i class=&#x22;fa fa-battery-full&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Battery&#x27;,
+      message: &#x27;You win a Battery&#x27;,
+    },{
+      text: &#x27;&#x3C;i class=&#x22;fa fa-beer&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Beer&#x27;,
+      message: &#x27;You win a Beer&#x27;,
+    },{
+      text: &#x27;&#x3C;i class=&#x22;fa fa-gamepad&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Gamepad&#x27;,
+      message: &#x27;You win a Gamepad&#x27;,
+    },{
+      text: &#x27;&#x3C;i class=&#x22;fa fa-puzzle-piece&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x27;,
+      value: &#x27;Puzzle Piece&#x27;,
+      message: &#x27;You win a Puzzle Piece&#x27;,
+    }
+  ];
+
+  $(&#x27;.roller-1 ,.roller-2 ,.roller-3&#x27;).eroller({
+    items  : items,
+    key    : &#x27;text&#x27;,
+    align   : &#x27;vertical&#x27;,
+  });
+  
+  // Buttons
+  $(&#x27;.game-roller&#x27;).on(&#x27;click&#x27;,&#x27;.start-spin&#x27;,function(){
+    var randomWinner  = items[Math.floor(Math.random() * items.length)];
+    $(&#x27;.game-roller .roller-1&#x27;).eroller(&#x27;start&#x27;,&#x27;value&#x27;,randomWinner.value,8000);
+    randomWinner  = items[Math.floor(Math.random() * items.length)];
+    $(&#x27;.game-roller .roller-2&#x27;).eroller(&#x27;start&#x27;,&#x27;value&#x27;,randomWinner.value,7500);
+    randomWinner  = items[Math.floor(Math.random() * items.length)];
+    $(&#x27;.game-roller .roller-3&#x27;).eroller(&#x27;start&#x27;,&#x27;value&#x27;,randomWinner.value,7000);
+    
+    $(&#x27;.game-roller b.message&#x27;).text(&#x27;Rolling...&#x27;);
+    $(&#x22;.game-roller .start-spin&#x22;).prop(&#x22;disabled&#x22;, true);
+  });
+  
+  //Events
+  var winners = [],calc = 0;
+  $(&#x27;.game-roller&#x27;).on(&#x27;eroller.complete&#x27;,&#x27;.roller-1 ,.roller-2 ,.roller-3&#x27;,function(event,item){
+    
+    winners[calc] = item.value;
+    ++calc;
+    if(calc === 3){
+      var wins = getDuplicates(winners);
+      
+      if( wins.length === 0 )
+        $(&#x27;.game-roller b.message&#x27;).html(&#x27;You win Nothing&#x27; );
+      else{
+        $(&#x27;.game-roller b.message&#x27;).html(&#x27;You win &#x27; +(wins.length + 1)+ &#x27; &#x27;+wins[0]+&#x27;\&#x27;s&#x27; );
+      }
+      $(&#x22;.game-roller .start-spin&#x22;).prop(&#x22;disabled&#x22;, false);
+      calc = 0;
+    }
+  });
+});
+&#x3C;/script&#x3E;
+</code>
+</pre>
+				
+				</div>
+				
+	
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+
+
+
+<section class="examples example-4 text-center">
+	<h2>Player VS Player Example</h2>
+	
+	<div class="panel panel-primary">
+		<div class="panel-heading">
+			<!-- Tabs -->
+			<ul class="nav panel-tabs">
+				<li class="active"><a href="#ex4-preview" class="btn" data-toggle="tab">Preview</a></li>
+				<li><a href="#ex4-html" class="btn" data-toggle="tab">HTML</a></li>
+				<li><a href="#ex4-javascript" class="btn" data-toggle="tab">Javascript</a></li>
+				<li><a href="#ex4-css" class="btn" data-toggle="tab">CSS</a></li>
+				<li><a href="#ex4-fullcode" class="btn" data-toggle="tab">Full Code</a></li>
+			</ul>
+		</div>
+		
+		<div class="panel-body">
+			<div class="tab-content">
+				<div class="tab-pane active" id="ex4-preview">
+					<style>
+						.players-roller {
+							width: 270px;
+							margin-left: auto;
+							margin-right: auto;
+						}
+						.players-roller .player-1,
+						.players-roller .player-2 {
+							width: 100px;
+							height: 100px;
+							border-color: #fefefe;
+							border-radius: 10px;
+						}
+						
+						
+						.players-roller .player-1 .er-item ,
+						.players-roller .player-2 .er-item {
+							width: 100px;
+							height: 100px;
+							margin-top: 6px;
+							margin-bottom: 6px;
+							border-color: #fefefe;
+						}
+						
+						.players-roller .p-vs-p {
+							display: inline-block;
+							width: 60px;
+							height: 100px;
+							line-height: 100px;
+							vertical-align: top;
+							font-size: 30px;
+							color: #ffffff;
+						}
+						.players-roller .player-1-name,
+						.players-roller .player-2-name {
+							text-align: center;
+							display: inline-block;
+							width: 100px;
+							box-sizing: border-box;
+							padding: 5px 10px;
+							font-size: 15px;
+							font-weight: bold;
+							border-color: transparent;
+						}
+						.players-name:after,.players-name:before {
+							display: table;
+							content: " "
+						}
+						.players-name:after{
+							clear: both
+						}
+						
+						.players-roller .player-1-name{
+							float: left;
+						}
+						.players-roller .player-2-name {
+							float: right;
+						}
+						
+						</style>
+					<div class="players-roller">
+						<div class="player-1"></div>
+						<div class="p-vs-p"><b>VS</b></div>
+						<div class="player-2"></div>
+						<div class="players-name"><span class="player-1-name">&nbsp;</span><span class="player-2-name">&nbsp;</span></div>
+						<div class="text-center">
+							<button type="button" class="btn btn-primary start-spin">Start</button>
+						</div>
+					</div>
+				</div>
+				<div class="tab-pane" id="ex4-html">
+<pre>
+<code class="language-html">
+&#x3C;div class=&#x22;players-roller&#x22;&#x3E;
+  &#x3C;div class=&#x22;player-1&#x22;&#x3E;&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;p-vs-p&#x22;&#x3E;&#x3C;b&#x3E;VS&#x3C;/b&#x3E;&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;player-2&#x22;&#x3E;&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;players-name&#x22;&#x3E;&#x3C;span class=&#x22;player-1-name&#x22;&#x3E;&#x26;nbsp;&#x3C;/span&#x3E;&#x3C;span class=&#x22;player-2-name&#x22;&#x3E;&#x26;nbsp;&#x3C;/span&#x3E;&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;text-center&#x22;&#x3E;
+    &#x3C;button type=&#x22;button&#x22; class=&#x22;btn btn-primary start-spin&#x22;&#x3E;Start&#x3C;/button&#x3E;
+  &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+</code>
+</pre>
+				</div>
+				
+				<div class="tab-pane" id="ex4-javascript">
+<pre>
+<code class="language-javascript">
+function vsWinners(items,exclude){
+  var winner = items[Math.floor(Math.random() * items.length)];
+  if(winner.playerName === exclude)
+    return vsWinners(items,exclude);
+  return winner;
+}
+jQuery(document).ready(function($){
+  var playersData = [
+    {
+      image : &#x27;./players/player-1.jpg&#x27;,
+      playerName: &#x27;Aberdeen&#x27;,
+    },{
+      image : &#x27;./players/player-2.jpg&#x27;,
+      playerName: &#x27;Aliz&#x27;,
+    },{
+      image : &#x27;./players/player-3.jpg&#x27;,
+      playerName: &#x27;Clea&#x27;,
+    },{
+      image : &#x27;./players/player-4.jpg&#x27;,
+      playerName: &#x27;Lucas&#x27;,
+    },{
+      image : &#x27;./players/player-5.jpg&#x27;,
+      playerName: &#x27;Ethan&#x27;,
+    },{
+      image : &#x27;./players/player-6.jpg&#x27;,
+      playerName: &#x27;Aiden&#x27;,
+    },{
+      image : &#x27;./players/player-7.jpg&#x27;,
+      playerName: &#x27;Federica&#x27;,
+    },{
+      image : &#x27;./players/player-8.jpg&#x27;,
+      playerName: &#x27;Emanuella&#x27;,
+    },{
+      image : &#x27;./players/player-9.jpg&#x27;,
+      playerName: &#x27;Oliver&#x27;,
+    },{
+      image : &#x27;./players/player-10.jpg&#x27;,
+      playerName: &#x27;Grayson&#x27;,
+    },{
+      image : &#x27;./players/player-11.jpg&#x27;,
+      playerName: &#x27;Kitty&#x27;,
+    },{
+      image : &#x27;./players/player-12.jpg&#x27;,
+      playerName: &#x27;Samuel&#x27;,
+    },{
+      image : &#x27;./players/player-13.jpg&#x27;,
+      playerName: &#x27;Trixie&#x27;,
+    },{
+      image : &#x27;./players/player-14.jpg&#x27;,
+      playerName: &#x27;Cicely&#x27;,
+    },{
+      image : &#x27;./players/player-15.jpg&#x27;,
+      playerName: &#x27;Nathan&#x27;,
+    }
+  ];
+  
+  $(&#x27;.example-4 .player-1&#x27;).eroller({
+    items     : playersData,
+    align     : &#x27;vertical&#x27;,
+    indicator : false,
+  });
+  $(&#x27;.example-4 .player-2&#x27;).eroller({
+    items     : playersData,
+    align     : &#x27;vertical&#x27;,
+    to        : &#x27;top&#x27;,
+    indicator : false,
+  });
+  
+  // Buttons
+  $(&#x27;.example-4&#x27;).on(&#x27;click&#x27;,&#x27;.start-spin&#x27;,function(){
+    
+    var player1  = playersData[Math.floor(Math.random() * playersData.length)];
+    $(&#x27;.example-4 .player-1&#x27;).eroller(&#x27;start&#x27;,&#x27;playerName&#x27;,player1.playerName, 7000 );
+    
+    var player2  = vsWinners(playersData,player1.playerName);
+    $(&#x27;.example-4 .player-2&#x27;).eroller(&#x27;start&#x27;,&#x27;playerName&#x27;,player2.playerName, 7000 );
+    
+    $(&#x27;.example-4 .player-1-name&#x27;).html(&#x27;&#x26;nbsp;&#x27;);
+    $(&#x27;.example-4 .player-2-name&#x27;).html(&#x27;&#x26;nbsp;&#x27;);
+    
+    $(&#x22;.example-4 .start-spin&#x22;).prop(&#x22;disabled&#x22;, true);
+    $(&#x22;.example-4 .panel-tabs a&#x22;).addClass(&#x22;disabled&#x22;);
+  });
+  
+  //Events
+  $(&#x27;.example-4&#x27;).on(&#x27;eroller.complete&#x27;,&#x27;.player-1&#x27;,function(event,player){
+    $(&#x27;.example-4 .player-1-name&#x27;).html(player.playerName);
+  });
+  
+  $(&#x27;.example-4&#x27;).on(&#x27;eroller.complete&#x27;,&#x27;.player-2&#x27;,function(event,player){
+    $(&#x27;.example-4 .player-2-name&#x27;).html(player.playerName);
+  });
+});
+</code>
+</pre>
+				</div>
+				
+				<div class="tab-pane" id="ex4-css">
+<pre>
+<code class="language-css">
+.players-roller {
+  width: 270px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.players-roller .player-1,
+.players-roller .player-2 {
+  width: 100px;
+  height: 100px;
+  border-color: #fefefe;
+  border-radius: 10px;
+}
+.players-roller .player-1 .er-item ,
+.players-roller .player-2 .er-item {
+  width: 100px;
+  height: 100px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  border-color: #fefefe;
+}
+.players-roller .p-vs-p {
+  display: inline-block;
+  width: 60px;
+  height: 100px;
+  line-height: 100px;
+  vertical-align: top;
+  font-size: 30px;
+  color: #ffffff;
+}
+.players-roller .player-1-name,
+.players-roller .player-2-name {
+  text-align: center;
+  display: inline-block;
+  width: 100px;
+  box-sizing: border-box;
+  padding: 5px 10px;
+  font-size: 15px;
+  font-weight: bold;
+  border-color: transparent;
+}
+.players-name:after,.players-name:before {
+  display: table;
+  content: " "
+}
+.players-name:after{
+  clear: both
+}
+.players-roller .player-1-name{
+  float: left;
+}
+.players-roller .player-2-name {
+  float: right;
+}
+</code>
+</pre>
+				</div>
+				<div class="tab-pane" id="ex4-fullcode">
+<pre>
+<code class="language-html">
+&#x3C;div class=&#x22;players-roller&#x22;&#x3E;
+  &#x3C;div class=&#x22;player-1&#x22;&#x3E;&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;p-vs-p&#x22;&#x3E;&#x3C;b&#x3E;VS&#x3C;/b&#x3E;&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;player-2&#x22;&#x3E;&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;players-name&#x22;&#x3E;&#x3C;span class=&#x22;player-1-name&#x22;&#x3E;&#x26;nbsp;&#x3C;/span&#x3E;&#x3C;span class=&#x22;player-2-name&#x22;&#x3E;&#x26;nbsp;&#x3C;/span&#x3E;&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;text-center&#x22;&#x3E;
+    &#x3C;button type=&#x22;button&#x22; class=&#x22;btn btn-primary start-spin&#x22;&#x3E;Start&#x3C;/button&#x3E;
+  &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+
+&#x3C;style&#x3E;
+.players-roller {
+  width: 270px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.players-roller .player-1,
+.players-roller .player-2 {
+  width: 100px;
+  height: 100px;
+  border-color: #fefefe;
+  border-radius: 10px;
+}
+.players-roller .player-1 .er-item ,
+.players-roller .player-2 .er-item {
+  width: 100px;
+  height: 100px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  border-color: #fefefe;
+}
+.players-roller .p-vs-p {
+  display: inline-block;
+  width: 60px;
+  height: 100px;
+  line-height: 100px;
+  vertical-align: top;
+  font-size: 30px;
+  color: #ffffff;
+}
+.players-roller .player-1-name,
+.players-roller .player-2-name {
+  text-align: center;
+  display: inline-block;
+  width: 100px;
+  box-sizing: border-box;
+  padding: 5px 10px;
+  font-size: 15px;
+  font-weight: bold;
+  border-color: transparent;
+}
+.players-name:after,.players-name:before {
+  display: table;
+  content: " "
+}
+.players-name:after{
+  clear: both
+}
+.players-roller .player-1-name{
+  float: left;
+}
+.players-roller .player-2-name {
+  float: right;
+}
+&#x3C;/style&#x3E;
+
+&#x3C;script&#x3E;
+function vsWinners(items,exclude){
+  var winner = items[Math.floor(Math.random() * items.length)];
+  if(winner.playerName === exclude)
+    return vsWinners(items,exclude);
+  return winner;
+}
+jQuery(document).ready(function($){
+  var playersData = [
+    {
+      image : &#x27;./players/player-1.jpg&#x27;,
+      playerName: &#x27;Aberdeen&#x27;,
+    },{
+      image : &#x27;./players/player-2.jpg&#x27;,
+      playerName: &#x27;Aliz&#x27;,
+    },{
+      image : &#x27;./players/player-3.jpg&#x27;,
+      playerName: &#x27;Clea&#x27;,
+    },{
+      image : &#x27;./players/player-4.jpg&#x27;,
+      playerName: &#x27;Lucas&#x27;,
+    },{
+      image : &#x27;./players/player-5.jpg&#x27;,
+      playerName: &#x27;Ethan&#x27;,
+    },{
+      image : &#x27;./players/player-6.jpg&#x27;,
+      playerName: &#x27;Aiden&#x27;,
+    },{
+      image : &#x27;./players/player-7.jpg&#x27;,
+      playerName: &#x27;Federica&#x27;,
+    },{
+      image : &#x27;./players/player-8.jpg&#x27;,
+      playerName: &#x27;Emanuella&#x27;,
+    },{
+      image : &#x27;./players/player-9.jpg&#x27;,
+      playerName: &#x27;Oliver&#x27;,
+    },{
+      image : &#x27;./players/player-10.jpg&#x27;,
+      playerName: &#x27;Grayson&#x27;,
+    },{
+      image : &#x27;./players/player-11.jpg&#x27;,
+      playerName: &#x27;Kitty&#x27;,
+    },{
+      image : &#x27;./players/player-12.jpg&#x27;,
+      playerName: &#x27;Samuel&#x27;,
+    },{
+      image : &#x27;./players/player-13.jpg&#x27;,
+      playerName: &#x27;Trixie&#x27;,
+    },{
+      image : &#x27;./players/player-14.jpg&#x27;,
+      playerName: &#x27;Cicely&#x27;,
+    },{
+      image : &#x27;./players/player-15.jpg&#x27;,
+      playerName: &#x27;Nathan&#x27;,
+    }
+  ];
+  
+  $(&#x27;.example-4 .player-1&#x27;).eroller({
+    items     : playersData,
+    align     : &#x27;vertical&#x27;,
+    indicator : false,
+  });
+  $(&#x27;.example-4 .player-2&#x27;).eroller({
+    items     : playersData,
+    align     : &#x27;vertical&#x27;,
+    to        : &#x27;top&#x27;,
+    indicator : false,
+  });
+  
+  // Buttons
+  $(&#x27;.example-4&#x27;).on(&#x27;click&#x27;,&#x27;.start-spin&#x27;,function(){
+    
+    var player1  = playersData[Math.floor(Math.random() * playersData.length)];
+    $(&#x27;.example-4 .player-1&#x27;).eroller(&#x27;start&#x27;,&#x27;playerName&#x27;,player1.playerName, 7000 );
+    
+    var player2  = vsWinners(playersData,player1.playerName);
+    $(&#x27;.example-4 .player-2&#x27;).eroller(&#x27;start&#x27;,&#x27;playerName&#x27;,player2.playerName, 7000 );
+    
+    $(&#x27;.example-4 .player-1-name&#x27;).html(&#x27;&#x26;nbsp;&#x27;);
+    $(&#x27;.example-4 .player-2-name&#x27;).html(&#x27;&#x26;nbsp;&#x27;);
+    
+    $(&#x22;.example-4 .start-spin&#x22;).prop(&#x22;disabled&#x22;, true);
+    $(&#x22;.example-4 .panel-tabs a&#x22;).addClass(&#x22;disabled&#x22;);
+  });
+  
+  //Events
+  $(&#x27;.example-4&#x27;).on(&#x27;eroller.complete&#x27;,&#x27;.player-1&#x27;,function(event,player){
+    $(&#x27;.example-4 .player-1-name&#x27;).html(player.playerName);
+  });
+  
+  $(&#x27;.example-4&#x27;).on(&#x27;eroller.complete&#x27;,&#x27;.player-2&#x27;,function(event,player){
+    $(&#x27;.example-4 .player-2-name&#x27;).html(player.playerName);
+  });
+});
+&#x3C;/script&#x3E;
+</code>
+</pre>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</section>
+
+
+
+<section>
+<h2 class="text-center">Usage</h2>
+                <pre>    
+<code class="language-html">//add a link to the css file in your &#x3C;head&#x3E;:
+&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;http://example.com/css/eroller.min.css&#x22;&#x3E;
+//Before your closing &#x3C;/body&#x3E; tag add:
+&#x3C;script src=&#x22;http://example.com/js/eroller.min.js&#x22;&#x3E;</code>
+                </pre>
+				<pre>        
+<code class="language-javascript">//Code to execute after loading the roller plugin
+jQuery(document).ready(function($){
+  
+  var items = [
+    {
+      name: 'Adnane',
+    },{
+      name: 'Zarrouk',
+    },{
+      name: 'Aberdeen',
+    },{
+      name: 'Aliz',
+    },{
+      name: 'Clea',
+    },{
+      name: 'Lucas',
+    },{
+      name: 'Ethan',
+    },{
+      name: 'Aiden',
+    },{
+      name: 'Federica',
+    },{
+      name: 'Emanuella',
+    },{
+      name: 'Oliver',
+    },{
+      name: 'Grayson',
+    },{
+      name: 'Kitty',
+    },{
+      name: 'Samuel',
+    },{
+      name: 'Trixie',
+    },{
+      name: 'Cicely',
+    },{
+      name: 'Nathan',
+    }
+  ];
+
+  $(".roller").eroller({
+    items  : items,
+  });
+
+  //Start Button
+  $(document).on('click','.start-spin',function(){
+    var winner = 'Snow';
+    $(".roller").eroller('start','name',winner);
+  });
+  
+});</code>
+                </pre>
+</section>
+<section>
+<h2 class="text-center">Options</h2>
+<div class="well has-table">
+<table class="table table-bordered table-hover text-center">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Type</th>
+			<th>Default</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>items</td>
+			<td><i>object</i></td>
+			<td><code>[]</code></td>
+			<td>Your items option should have JSON like the following format Example <code>[ {text: '0',value: 'Zéro'}, {text: '1',value: 'One'} ]</code></td>
+		</tr>
+		<tr>
+			<td>key</td>
+			<td><i>string</i></td>
+			<td><code>text</code></td>
+			<td>Allows you to set "item" text or html from items object by key.</td>
+		</tr>
+		
+		<tr>
+			<td>speed</td>
+			<td><i>integer</i></td>
+			<td><code>8000</code></td>
+			<td>Transition speed</td>
+		</tr>
+		<tr>
+			<td>indicator</td>
+			<td><i>boolean</i></td>
+			<td><code>true</code></td>
+			<td>Enables Indicator, have two boolean values : <code>true</code> or <code>false</code></td>
+		</tr>
+		
+		<tr>
+			<td>itemPos</td>
+			<td><i>string</i></td>
+			<td><code>center</code></td>
+			<td>Allows you to align the winner item position with indicator, have two values : <code>center</code> or <code>random</code></td>
+		</tr>
+		
+		<tr>
+			<td>align</td>
+			<td><i>string</i></td>
+			<td><code>horizontal</code></td>
+			<td>Allows you to align the Roller Styles,  have two values : <code>horizontal</code> or <code>vertical</code></td>
+		</tr>
+		<tr>
+			<td>direction</td>
+			<td><i>string</i></td>
+			<td><code>left</code></td>
+			<td>Allows you to set the animation direction based to <code>"align"</code> value.<br>
+				if <code>align</code> value is <code>horizontal</code> then use : <code>left</code> or <code>right</code>.<br>
+				if <code>align</code> value is <code>vertical</code> then use : <code>top</code> or <code>bottom</code>.</td>
+		</tr>
+		
+		<tr>
+			<td>easing</td>
+			<td><i>string</i></td>
+			<td><code>default</code></td>
+			<td> <button type="button" class="btn btn-success" data-toggle="modal" data-target="#easingList">CSS Easing</button></td>
+		</tr>
+		
+	</tbody>
+</table>
+</div>
+</section>
+<div id="easingList" class="modal fade" role="dialog">
+	<div class="modal-dialog" style="max-width: 200px;">
+		  <!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-body">
+<pre>
+default
+linear
+easeInSine
+easeOutSine
+easeInOutSine
+easeInQuad
+easeOutQuad
+easeInOutQuad
+easeInCubic
+easeOutCubic
+easeInOutCubic
+easeInQuart
+easeOutQuart
+easeInOutQuart
+easeInQuint
+easeOutQuint
+easeInOutQuint
+easeInExpo
+easeOutExpo
+easeInOutExpo
+easeInCirc
+easeOutCirc
+easeInOutCirc
+easeInBack
+easeOutBack
+easeInOutBack
+</pre>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+
+
+<section>
+<h2 class="text-center">Methods</h2>
+<div class="well">
+<h3>Start</h3><pre><code class="language-javascript">$('.classname').eroller('start',object_key (required),object_value (required),speed (optional));</code></pre>
+<p><i>Use Start Method to start rolling.</i></p>
+<p><code>object_key</code><i> allows you to select winner by key thats are available in item object</i>.</p>
+<p><code>object_value</code><i> allows you to set the winner value based to selected</i> <code>object_key</code>.</p>
+<p><code>speed</code><i> allows you to set the speed of animation.</i></p>
+<hr>
+<h3>stop</h3><pre><code class="language-javascript">$('.classname').eroller('stop');</code></pre>
+<p><i>Use Stop Method to stop rolling animation, This option will stop animation in current position and will not select the winner.</i></p>
+<hr>
+<h3>Finish</h3><pre><code class="language-javascript">$('.classname').eroller('finish');</code></pre>
+<p><i>Use Stop Method to Finish rolling animation, This option will finish animation completly and will move directly to winner position.</i></p>
+<hr>
+<h3>Clear</h3><pre><code class="language-javascript">$('.classname').eroller('clear');</code></pre>
+<p><i>Use Clear Method to stop evreything and to reset The Roller position, This option will stop animation  and will not select the winner.</i></p>
+<hr>
+<h3>Destroy</h3><pre><code class="language-javascript">$('.classname').eroller('destroy');</code></pre>
+<p><i>Use Destroy Method to Destroy selected Roller, This option will remove the roller items and will reset all of the parameters.</i></p>
+</div>
+</section>
+<section class="examples">
+<h2 class="text-center">Events</h2>
+<div class="well">
+<h3>Init</h3>
+<pre><code class="language-javascript">
+$(document).on('eroller.init','.classname',function(event){
+  //do something on init
+});
+</code></pre><hr>
+<h3>Start</h3>
+<pre><code class="language-javascript">
+$(document).on('eroller.start','.classname',function(event){
+  //do something on start
+});
+</code></pre><hr>
+<h3>Stop</h3>
+<pre><code class="language-javascript">
+$(document).on('eroller.stop','.classname',function(event){
+  //do something on stop
+});
+</code></pre><hr>
+<h3>Progress</h3>
+<pre><code class="language-javascript">
+$(document).on('eroller.progress','.classname',function(event){
+  //do something on progress
+});
+</code></pre><hr>
+<h3>Complete</h3>
+<pre><code class="language-javascript">
+$(document).on('eroller.complete','.classname',function(event,item){
+  //do something on complete
+});
+</code></pre><hr>
+<h3>Finish</h3>
+<pre><code class="language-javascript">
+$(document).on('eroller.finish','.classname',function(event,item){
+  //do something on finish
+});
+</code></pre><hr>
+<h3>Clear</h3>
+<pre><code class="language-javascript">
+$(document).on('eroller.clear','.classname',function(event){
+  //do something on clear
+});
+</code></pre>
+</div>
+<p class="well">
+	<span class="note">
+		Please report issues! Thanks for checking it out and supporting <b>22Codes Dev Team</b>.
+	</span>
+</p>
+</section>
+
+
+
+</div>
+<footer class="footer text-center">
+	<div class="container">
+		<small class="copyright">Copyright © 2018 22Codes</small>
+	</div>
+</footer>
+</body>
+
+<!-- Mirrored from www.22codes.com/demo/javascript/eroller/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 16 May 2019 08:13:31 GMT -->
+</html>

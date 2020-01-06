@@ -1,0 +1,787 @@
+<!doctype html>
+<html lang="en">
+
+<!-- Mirrored from www.22codes.com/demo/javascript/superwheel/docs.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 16 May 2019 08:07:44 GMT -->
+<head>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Super Wheel | Documentation</title>
+	<link rel="stylesheet" href="assets/css/bootstrap.css">
+	<link rel="stylesheet" href="assets/css/prism.css">
+	<link rel="stylesheet" href="assets/css/main.css">
+	<link href="../../../../fonts.googleapis.com/cssfdf4.css?family=Lato:400,400i,700,700i" rel="stylesheet">
+	<script src="assets/js/jquery-3.3.1.js"></script>
+	<script src="assets/js/bootstrap.bundle.js"></script>
+	<script src="assets/js/prism.js" data-manual></script>
+	<script src="assets/js/main.js"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="../../../../www.googletagmanager.com/gtag/js0100?id=UA-130950821-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	  
+	  gtag('config', 'UA-130950821-1');
+	</script>
+	
+</head>
+
+
+<body>
+	
+	
+	<header class="main-header main-header-light js-main-header">
+		<div class="main-header-container container container-xl">
+			<a href="../../../../22codes.com/index.html" class="logo">
+			<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="34" height="34" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+				 viewBox="0 0 34 34" style="enable-background:new 0 0 34 34;" xml:space="preserve">
+			<g>
+				<path class="logo_color" d="M8.9,24.1c3.6-2.6,8.5-5,10.2-8.8h-5.4v-0.9h0c0-4,1.3-6.8,3.2-8.5c-1.8-1.6-4.2-2.3-6.6-2.3
+					c-5.3,0-9.9,3.2-9.9,10.9h6.2c0-3.7,1.5-4.9,3.2-4.9c1.9,0,2.9,1.2,2.9,3.1C12.8,18.1,0,20,0,30.4h13.2c0-2.6,0.8-4.6,2-6.3H8.9z"
+					/>
+				<path class="logo_color" d="M34,24.1H23.2c4.4-3.2,10.8-6,10.8-11.6c0-6.1-4.8-8.9-9.4-8.9c-5.3,0-9.9,3.2-9.9,10.9h6.2
+					c0-3.7,1.5-4.9,3.2-4.9c1.9,0,2.9,1.2,2.9,3.1c0,5.4-12.8,7.3-12.8,17.7H34V24.1z"/>
+			</g>
+			</svg>
+			</a>
+			
+			
+			
+			<div class="main-nav js-main-nav">
+				<button class="main-nav-trigger js-trigger"><i>Menu</i><em aria-hidden="true">Close</em></button>
+				<nav class="main-nav-list js-nav">
+					<ul>
+						<li><a href="#get_started">Getting Started</a></li>
+						<li><a href="#slice_features">Slice Features</a></li>
+						<li><a href="#settings">Settings</a></li>
+						<li><a href="#events">Events</a></li>
+						<li><a href="#methods">Methods</a></li>
+						<li><a href="../../../../codecanyon.net/item/super-wheel-super-easy-and-fully-controlled-wheel-of-fortune/22764259.html" class="btn btn-success btn-sm" title="Buy now">Buy now</a></li>
+					</ul>
+				</nav>
+			</div>
+			
+			
+			
+		</div>
+	</header>
+	
+	
+	
+	<div class="home-intro blue-dark-bg">
+		<div class="container-fluid">
+			<div class="container-xl">
+				<h1>SuperWheel Documentation</h1>
+				<ul class="intro-btn-group">
+				<li><a class="btn btn-primary btn-xl btn-block" href="builder.html" alt="Try Builder" title="Try Builder">Try Builder</a></li>
+				<li><a class="btn btn-secondary btn-xl btn-block" href="index-2.html#templates"alt="Browse Templates" title="Browse Templates">Browse Templates</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="home-demo">
+		<div class="container-fluid">
+			<div class="content">
+				<h2 id="get_started">Getting Started</h2>
+				<p>Set up your HTML markup.</p>
+<script type="text/plain" class="language-markup"><div class="superwheel"></div>
+<button class="spin-button">Spin now</button>
+</script>
+			<hr>
+			
+			<p>Move <code class="badge badge-danger">superwheel</code> folder into your project folder</p>
+			<hr>
+				
+			<p>in the page <code class="badge badge-danger">&#x3C;head&#x3E;</code> add the <code class="badge badge-danger">superwheel.min.css</code> resource.</p>
+<pre><code  class="language-markup"><!--<link rel="stylesheet" type="text/css" href="superwheel/superwheel.min.css"/>
+--></code></pre>
+			<hr>
+			
+			
+			<p>Add <code class="badge badge-danger">superwheel.min.js</code> before your closing <code class="badge badge-danger">&#x3C;body&#x3E;</code> tag and after <code class="badge badge-danger">jQuery</code> script.</p>
+<pre><code  class="language-markup"><!--//requires jQuery v1.12+
+<script type="text/javascript" src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="superwheel/superwheel.min.js"></script>
+--></code></pre>
+			<hr>
+			
+			
+			<p>Initialize your wheel in your script file or an inline script tag</p>
+<script type="text/plain" class="language-js"> jQuery(document).ready(function($){
+  $('.superwheel').superWheel({
+    slices: [
+	  {
+	    text: '20% OFF',
+	    message: 'You win 20% off',
+	    value: 1
+	  },{
+	    text: 'No luck',
+	    message: 'You have No luck today',
+	    value: 0
+	  },{
+	    text: '30% OFF',
+	    message: 'You win 30% off',
+	    value: 1
+	  },{
+	    text: 'Lose',
+	    message: 'You Lose :(',
+	    value: 0
+	  },{
+	    text: '40% OFF',
+	    message: 'You win 40% off',
+	    value: 1
+	  },{
+      text: 'Nothing',
+	    message: 'You get Nothing :(',
+        value: 0
+      }
+    ],
+    selector: 'value'
+  });
+});
+</script>
+			<hr>
+			
+			<p>Add Spinner Button code <small>(On click spin)</small>:</p>
+<script type="text/plain" class="language-js">$(document).on('click', '.spin-button' ,function(e){
+	
+  // By default the slice key (value) is captured from wheel parameter "selector"
+  // Start spin and select random winner from slices Where value is "0"
+  $('.superwheel').superWheel('start', 0);
+  
+});
+</script>
+<p>Note : you can change winner selector like this example :</p>
+<script type="text/plain" class="language-js">$(document).on('click', '.spin-button' ,function(e){
+  
+  // Start spin and select winner Where "text" value is "40% OFF".
+  $('.superwheel').superWheel('start', 'text', '40% OFF');
+  
+});
+</script>
+			<hr>
+			
+			
+			<p>When complete, your HTML should look something like:</p>
+<pre><code class="language-markup"><!--<html>
+  <head>
+  <title>My Amazing Wheel Page</title>
+  <link rel="stylesheet" type="text/css" href="superwheel/superwheel.min.css">​
+  </head>
+    <body>
+	<div class="superwheel"></div>
+	<button class="spin-button">Spin now</button>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.12.0.min.js"/>
+    <script type="text/javascript" src="superwheel/superwheel.min.js"/>
+
+    <script type="text/javascript">
+      jQuery(document).ready(function($){
+        $('.superwheel').superWheel({
+          slices: [
+            {
+              text: '20% OFF',
+              message: 'You win 20% off',
+			  value: 1
+            },{
+              text: 'No luck',
+              message: 'You have No luck today',
+			  value: 0
+            },{
+              text: '30% OFF',
+              message: 'You win 30% off',
+			  value: 1
+            },{
+              text: 'Lose',
+              message: 'You Lose :(',
+			  value: 0
+            },{
+              text: '40% OFF',
+              message: 'You win 40% off',
+			  value: 1
+            },{
+              text: 'Nothing',
+              message: 'You get Nothing :(',
+			  value: 0
+            }
+          ],
+		  selector: 'value'
+        });
+      });
+    </script>
+
+  </body>
+</html> --></code></pre>
+			
+		</div>
+	</div>
+</div>
+<div class="home-demo home-odd">
+	<div class="container-fluid">	
+		<div class="content content-odd">
+			
+			<h2 id="slice_features">Slice Features & Customizations</h2>
+			<p>You can manage each slice completly,
+			<br>Like <code class="badge badge-danger">(text,message,color,background,value)</code>
+			<br> also you can add custom data <code class="badge badge-danger">(custom data can be handled on callbacks)</code>:</p>
+<script type="text/plain" class="language-js">$('.superwheel').superWheel({
+  slices: [
+	{
+	  text: '20% OFF',
+	  message: 'You win 20% off',
+	  background: '#364C62',
+	  color: 'yellow',
+	  value: 1,
+	  custom_key: 'custom value 1'
+	},{
+	  text: 'No luck',
+	  message: 'You have No luck today',
+	  background: '#364C62',
+	  color: 'yellow',
+	  value: 0,
+	  custom_key : 'custom value 2'
+	},{
+	  text: '30% OFF',
+	  message: 'You win 30% off',
+	  background: '#364C62',
+	  color: 'yellow',
+	  value: 1,
+	  custom_key: 'custom value 3'
+	}
+  ],
+  
+  selector: 'custom_key'
+});
+</script>
+		</div>
+	</div>
+</div>
+<div class="home-demo">
+	<div class="container-fluid">
+		<div class="content">
+			<h2 id="settings">Settings</h2>
+			<p>Set up your HTML markup.</p><div class="settings">
+				
+				<span><span>Option:			</span>slices</span>
+				<span><span>Type:			</span>Object</span>
+				<span><span>Default:		</span><code class="badge badge-danger">[{name:'Win',message:'You win',value:'win'},{name:'Lose',message:'You lose',value:'lose'}]</code></span>
+				<span><span>Description:	</span>Object containing slice items.</span>
+				<a href="#" class="show-example btn btn-light btn-block btn-sm">
+					<span class="sxa">Show Example</span>
+					<span class="hxa d-none">Hide Example</span>
+				</a>
+				<div class="settings-example" style="display: none;">
+				<h4>Example</h4>
+<script type="text/plain" class="language-js">$('.superwheel').superWheel({
+  slices: [
+	
+	{
+	  text: '20% OFF',
+	  message: 'You win 20% off',
+	  background: '#364C62',
+	  color: 'yellow',
+	  value: 1,
+	  custom_key: 'custom value 1'
+	},{
+	  text: 'No luck',
+	  message: 'You have No luck today',
+	  background: '#364C62',
+	  color: 'yellow',
+	  value: 0,
+	  custom_key: 'custom value 2'
+	},{
+	  text    : '30% OFF',
+	  message : 'You win 30% off',
+	  background   : '#364C62',
+	  color : 'yellow',
+	  value     : 1,
+	  custom_key : 'custom value 3'
+	}
+	
+  ]
+});
+</script>
+				</div>
+				<hr>
+			</div>
+			
+			
+			<div class="settings">
+				
+				<span><span>Option:			</span>selector</span>
+				<span><span>Type:			</span>string</span>
+				<span><span>Default:		</span><code class="badge badge-danger">value</code></span>
+				<span><span>Description:	</span>You can change winner key by changing the option selector, for example if item Object have akey like "custom_key" then you can make winner selector like :<code class="badge badge-danger">selector: "custom_key"</code>.</span>
+				<span><span>Note:	</span>When you change selector option to other item key then you will need to give the value of winner based to the value of the new selector.</span>
+				
+				<a href="#" class="show-example btn btn-light btn-block btn-sm">
+					<span class="sxa">Show Example</span>
+					<span class="hxa d-none">Hide Example</span>
+				</a>
+				<div class="settings-example" style="display: none;">
+				<h4>Example</h4>
+<script type="text/plain" class="language-js">jQuery(document).ready(function($){
+  $('.superwheel').superWheel({
+    slices: [
+      {
+	    text: '20% OFF',
+	    message: 'You win 20% off',
+	    background: '#364C62',
+	    color: 'yellow',
+	    value: 1,
+	    custom_key: 'custom value 1'
+	  },{
+	    text: 'No luck',
+	    message: 'You have No luck today',
+	    background: '#364C62',
+	    color: 'yellow',
+	    value: 0,
+	    custom_key : 'custom value 2'
+	  },{
+	    text: '30% OFF',
+	    message: 'You win 30% off',
+	    background: '#364C62',
+	    color: 'yellow',
+	    value: 1,
+	    custom_key: 'custom value 3'
+	  }
+    ],
+    
+    selector: 'custom_key'
+  });
+  
+  $(document).on('click', '.spin-button' ,function(e){
+	// By default the slice key (value) is captured from wheel parameter "selector"
+	// // Start spin and select random winner from slices Where value is "custom value 3".
+  $('.superwheel').superWheel('start', 'custom value 3');
+  });
+});
+
+
+
+</script>
+				</div>
+				<hr>
+			</div>
+			<div class="settings">
+				
+				<span><span>Option:			</span>slice</span>
+				<span><span>Type:			</span>Object</span>
+				<span><span>Default:		</span><code class="badge badge-danger">{background : "#333", selected : {background: "#ddd", color: "#333"}}</code></span>
+				<span><span>Description:	</span>Set general slice settings.</span>
+				<span><span>Note:	</span>slice->selected object is an option can be used with the option ( type: "color" ) only, not required with ( type: "spinner" ).</span>
+				
+				
+				<a href="#" class="show-example btn btn-light btn-block btn-sm">
+					<span class="sxa">Show Example</span>
+					<span class="hxa d-none">Hide Example</span>
+				</a>
+				<div class="settings-example" style="display: none;">
+				<h4>Example</h4>
+<script type="text/plain" class="language-js">$('.superwheel').superWheel({
+ slice: {
+    background : "#333",// Default slice background color (works only if the slice is not colored in item object)
+    selected : {
+      background: "#ddd", // Animation background color
+      color:      "#333"  // Animation text color
+    }
+  },
+});
+</script>
+				</div>
+				<hr>
+			</div><div class="settings">
+				
+				<span><span>Option:			</span>text</span>
+				<span><span>Type:			</span>Object</span>
+				<span><span>Default:		</span><code class="badge badge-danger">{color: '#ccc', size : 14, offset: 8, letterSpacing: 0, orientation: 'v', arc: false}</code></span>
+				<span><span>Description:	</span>Set general slice text styles.</span>
+				
+				<a href="#" class="show-example btn btn-light btn-block btn-sm">
+					<span class="sxa">Show Example</span>
+					<span class="hxa d-none">Hide Example</span>
+				</a>
+				<div class="settings-example" style="display: none;">
+				<h4>Example</h4>
+<script type="text/plain" class="language-js">$('.superwheel').superWheel({
+  text: {
+    color: '#ccc',
+    size: 14,
+    offset: 8,
+    letterSpacing: 0,
+    orientation: 'v',
+    arc: false
+  }
+});
+</script>
+				</div>
+				<hr>
+			</div>
+			
+			<div class="settings">
+				
+				<span><span>Option:			</span>line</span>
+				<span><span>Type:			</span>Object</span>
+				<span><span>Default:		</span><code class="badge badge-danger">{width: 3, color: "#757575"}</code></span>
+				<span><span>Description:	</span>Set general slice lines (left/right) color/width.</span>
+				
+				<a href="#" class="show-example btn btn-light btn-block btn-sm">
+					<span class="sxa">Show Example</span>
+					<span class="hxa d-none">Hide Example</span>
+				</a>
+				<div class="settings-example" style="display: none;">
+				<h4>Example</h4>
+<script type="text/plain" class="language-js">$('.superwheel').superWheel({
+  line: {
+    width: 5,
+    color: "#333"
+  }
+});
+</script>
+				</div>
+				<hr>
+			</div>
+			
+			<div class="settings">
+				
+				<span><span>Option:			</span>outer</span>
+				<span><span>Type:			</span>Object</span>
+				<span><span>Default:		</span><code class="badge badge-danger">{width : 6, color : "#757575"}</code></span>
+				<span><span>Description:	</span>Set wheel outer line color/width.</span>
+				
+				<a href="#" class="show-example btn btn-light btn-block btn-sm">
+					<span class="sxa">Show Example</span>
+					<span class="hxa d-none">Hide Example</span>
+				</a>
+				<div class="settings-example" style="display: none;">
+				<h4>Example</h4>
+<script type="text/plain" class="language-js">$('.superwheel').superWheel({
+  outer: {
+    width: 6,
+    color: "#757575"
+  }
+});
+</script>
+				</div>
+				<hr>
+			</div>
+			
+			<div class="settings">
+				
+				<span><span>Option:			</span>inner</span>
+				<span><span>Type:			</span>Object</span>
+				<span><span>Default:		</span><code class="badge badge-danger">line: {width: 3, color: "#757575"}</code></span>
+				<span><span>Description:	</span>Set wheel inner line color/width.</span>
+				
+				<a href="#" class="show-example btn btn-light btn-block btn-sm">
+					<span class="sxa">Show Example</span>
+					<span class="hxa d-none">Hide Example</span>
+				</a>
+				<div class="settings-example" style="display: none;">
+				<h4>Example</h4>
+<script type="text/plain" class="language-js">$('.superwheel').superWheel({
+  inner: {
+    width: 3,
+    color: "#757575"
+  }
+});
+</script>
+				</div>
+				<hr>
+			</div>
+			
+			<div class="settings">
+				
+				<span><span>Option:			</span>center</span>
+				<span><span>Type:			</span>Object</span>
+				<span><span>Default:		</span><code class="badge badge-danger">{width: 30, background: '#FFFFFF00', rotate: true, class: "", image: {url: "", width: 45}, html: {template: '', width: 45}}</code></span>
+				<span><span>Description:	</span>Set wheel center settings "image/color/html/width/background".</span>
+				
+				<span><span>Note: </span><br>1 - Add html/text to the center of wheel using option (html->template).<br>2 -Add image to the center of wheel using option (image->url) .</span>
+				
+				<a href="#" class="show-example btn btn-light btn-block btn-sm">
+					<span class="sxa">Show Example</span>
+					<span class="hxa d-none">Hide Example</span>
+				</a>
+				<div class="settings-example" style="display: none;">
+				<h4>Example</h4>
+<script type="text/plain" class="language-js">$('.superwheel').superWheel({
+  center:{
+    width: 30,
+    background: '#FFFFFF00',
+    rotate: true,
+    class: "",
+    image:{
+      url: "http://example.com/images/wheel-logo.png",
+      width: 45
+    },
+    html: {
+      template: '<button type="button" class="spin-button">Spin</button>',
+      width: 45
+    }
+  }
+});
+</script>
+				</div>
+				<hr>
+			</div>
+			
+			<div class="settings">
+				
+				<span><span>Option:			</span>marker</span>
+				<span><span>Type:			</span>Object</span>
+				<span><span>Default:		</span><code class="badge badge-danger">{animate : true,background: "#E0E0E0"}</code></span>
+				<span><span>Description:	</span>Set Marker animation and color.</span>
+				
+				<a href="#" class="show-example btn btn-light btn-block btn-sm">
+					<span class="sxa">Show Example</span>
+					<span class="hxa d-none">Hide Example</span>
+				</a>
+				<div class="settings-example" style="display: none;">
+				<h4>Example</h4>
+<script type="text/plain" class="language-js">$('.superwheel').superWheel({
+  marker: {
+    animate : true,
+    background: "#E0E0E0"
+  }
+});
+</script>
+				</div>
+				<hr>
+			</div>
+			
+			<div class="settings">
+				
+				<span><span>Option:			</span>width</span>
+				<span><span>Type:			</span>Number</span>
+				<span><span>Default:		</span><code class="badge badge-danger">400</code></span>
+				<span><span>Description:	</span>Set Wheel Size.</span>
+				
+				<a href="#" class="show-example btn btn-light btn-block btn-sm">
+					<span class="sxa">Show Example</span>
+					<span class="hxa d-none">Hide Example</span>
+				</a>
+				<div class="settings-example" style="display: none;">
+				<h4>Example</h4>
+<script type="text/plain" class="language-js">$('.superwheel').superWheel({
+  width: 400
+});
+</script>
+				</div>
+				<hr>
+			</div>
+			
+			<div class="settings">
+				
+				<span><span>Option:			</span>easing</span>
+				<span><span>Type:			</span>String</span>
+				<span><span>Default:		</span><code class="badge badge-danger">superWheel</code></span>
+				<span><span>Description:	</span>Set wheel animation Easing.</span>
+				<span><span>Note:	</span>Use <a href="https://github.com/gdsmith/jquery.easing" target="_BLANK">jQuery Easing</a> plugin for more Easing Effects.</span>
+				
+				<a href="#" class="show-example btn btn-light btn-block btn-sm">
+					<span class="sxa">Show Example</span>
+					<span class="hxa d-none">Hide Example</span>
+				</a>
+				<div class="settings-example" style="display: none;">
+				<h4>Example</h4>
+<script type="text/plain" class="language-js">$('.superwheel').superWheel({
+  easing: "superWheel"
+});
+</script>
+				</div>
+				<hr>
+			</div>
+			
+			
+			<div class="settings">
+				
+				<span><span>Option:			</span>duration</span>
+				<span><span>Type:			</span>Number</span>
+				<span><span>Default:		</span><code class="badge badge-danger">8000</code></span>
+				<span><span>Description:	</span>Set wheel animation Duration (ms).</span>
+				
+				<a href="#" class="show-example btn btn-light btn-block btn-sm">
+					<span class="sxa">Show Example</span>
+					<span class="hxa d-none">Hide Example</span>
+				</a>
+				<div class="settings-example" style="display: none;">
+				<h4>Example</h4>
+<script type="text/plain" class="language-js">$('.superwheel').superWheel({
+  duration: 8000
+});
+</script>
+				</div>
+				<hr>
+			</div>
+			
+			
+			<div class="settings">
+				
+				<span><span>Option:			</span>type</span>
+				<span><span>Type:			</span>string</span>
+				<span><span>Default:		</span><code class="badge badge-danger">rotate</code></span>
+				<span><span>Description:	</span>Set wheel to spin with <code class="badge badge-danger">rotate</code> Or <code class="badge badge-danger">color</code>, if you set type to color, the wheel will use color animation instead of rotate animation.</span>
+				<span><span>Note:	</span>When you set the option <code class="badge badge-danger">type</code> to <code class="badge badge-danger">color</code> you will need to set animation background color in the option <code class="badge badge-danger">slice->selected</code>, See code Example.</span>
+				<a href="#" class="show-example btn btn-light btn-block btn-sm">
+					<span class="sxa">Show Example</span>
+					<span class="hxa d-none">Hide Example</span>
+				</a>
+				<div class="settings-example" style="display: none;">
+				<h4>Example</h4>
+<script type="text/plain" class="language-js">$('.superwheel').superWheel({
+  slice: {
+    background : "#333",// Default slice background color (works only if the slice is not colored in item object)
+    selected : {
+      background: "#ddd", // Animation background color
+      color:      "#333"  // Animation text color
+    }
+  },
+  
+  type: "color"
+});
+</script>
+				</div>
+				<hr>
+			</div>
+			
+			
+			<div class="settings">
+				
+				<span><span>Option:			</span>rotates</span>
+				<span><span>Type:			</span>Number</span>
+				<span><span>Default:		</span><code class="badge badge-danger">8</code></span>
+				<span><span>Description:	</span>Set number of rotates before selecting the winner.</span>
+				
+				<a href="#" class="show-example btn btn-light btn-block btn-sm">
+					<span class="sxa">Show Example</span>
+					<span class="hxa d-none">Hide Example</span>
+				</a>
+				<div class="settings-example" style="display: none;">
+				<h4>Example</h4>
+<script type="text/plain" class="language-js">$('.superwheel').superWheel({
+  rotates: 8
+});
+</script>
+				</div>
+				<hr>
+			</div>
+			
+			
+			<div class="settings">
+				
+				<span><span>Option:			</span>frame</span>
+				<span><span>Type:			</span>Object</span>
+				<span><span>Default:		</span><code class="badge badge-danger">6</code></span>
+				<span><span>Description:	</span>The rate (in milliseconds) at which animations fire..</span>
+				
+				<a href="#" class="show-example btn btn-light btn-block btn-sm">
+					<span class="sxa">Show Example</span>
+					<span class="hxa d-none">Hide Example</span>
+				</a>
+				<div class="settings-example" style="display: none;">
+				<h4>Example</h4>
+<script type="text/plain" class="language-js">$('.superwheel').superWheel({
+  frame: 6
+});
+</script>
+				</div>
+				<hr>
+			</div>
+			
+			
+			
+		</div>
+			
+	</div>
+</div>
+
+
+
+
+
+
+
+
+<div class="home-demo home-odd">
+	<div class="container-fluid">	
+		<div class="content content-odd">
+			
+			<h2 id="events">Events</h2>
+			<p>callback events. Use them as shown below</p>
+<script type="text/plain" class="language-js">// On Start event
+$('.wheel').superWheel('onStart',function(results,spinCount,now){
+  console.log(results);
+});
+  
+  
+// On Step event
+$('.wheel').superWheel('onStep',function(results,slicePercent,circlePercent){
+  console.log('Spin Current Slice');
+  console.log(results);
+});
+  
+  
+// On Progress event
+$('.wheel').superWheel('onProgress',function(slicePercent,circlePercent){
+  console.log('Spin Progress');
+  console.log(slicePercent);
+});
+  
+  
+// On Complete event
+$('.wheel').superWheel('onComplete',function(results,spinCount,now){
+  console.log('Spin Completed');
+  console.log(results);
+});
+  
+// On Fail Event
+$('.wheel').superWheel('onFail',function(results,spinCount,now){
+  log('Spin Failed, Something wrong in wheel settings');
+  log(results);
+});
+</script>
+		</div>
+	</div>
+</div>
+
+
+
+<div class="home-demo">
+	<div class="container-fluid">	
+		<div class="content">
+			
+			<h2 id="methods">Methods</h2>
+			<p>Methods are called on superWheel instances through the superWheel method itself.</p>
+<script type="text/plain" class="language-js">// By default the slice key (value) is captured from wheel parameter "selector"
+// Start spin and select random winner from slices Where value is "0"
+$('.superwheel').superWheel('start', 0);
+
+
+// Start spin and select winner Where "text" value is "40% OFF".
+$('.superwheel').superWheel('start', 'text', '40% OFF');
+
+</script>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<footer class="footer text-center">
+	<div class="container">
+		<small class="copyright">Copyright © 2018 22Codes</small>
+	</div>
+</footer>
+  </body>
+
+<!-- Mirrored from www.22codes.com/demo/javascript/superwheel/docs.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 16 May 2019 08:07:44 GMT -->
+</html>
