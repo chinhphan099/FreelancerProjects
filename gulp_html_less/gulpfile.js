@@ -76,7 +76,7 @@ task('clean', () => {
 task('webserver', (done) => {
     src(PUBLIC_DIR.root)
     .pipe(webserver({
-        host: ip.address(),
+        //host: ip.address(),
         port: process.env.PORT || 3000,
         directoryListing: true,
         open: '/index.html',
