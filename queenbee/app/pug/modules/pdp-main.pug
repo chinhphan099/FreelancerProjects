@@ -29,10 +29,15 @@
 			.slider.thumb-slider(data-cslider='{"type": "syncing", "navFor": ".slider-nav", "view": "true", "hasPopup": true, "hasZoom": true, "smoothZoom": true}')
 				span.flag On Sale
 				.slick.slider-thumb
-					.item(data-zoom-id="zoom2"): +img-upload('pdp-1.jpg').img-view.zoomer(data-zoom-image="images/upload/pdp-1.jpg")
-					.item(data-zoom-id="zoom2"): +img-upload('pdp-1.jpg').img-view.zoomer(data-zoom-image="images/upload/pdp-1.jpg")
-					.item(data-zoom-id="zoom2"): +img-upload('pdp-1.jpg').img-view.zoomer(data-zoom-image="images/upload/pdp-1.jpg")
-					.item(data-zoom-id="zoom2"): +img-upload('pdp-1.jpg').img-view.zoomer(data-zoom-image="images/upload/pdp-1.jpg")
+					.item(data-zoom-id="zoom1"): +img-upload('pdp-1.jpg').img-view.zoomer(data-zoom-image="images/upload/pdp-1.jpg")
+					.item(data-zoom-id="zoom2"): +img-upload('media-1.jpg').img-view.zoomer(data-zoom-image="images/upload/media-1.jpg")
+					.item(data-zoom-id="zoom3"): +img-upload('media-2.jpg').img-view.zoomer(data-zoom-image="images/upload/media-2.jpg")
+					.item(data-zoom-id="zoom4"): +img-upload('media-3.jpg').img-view.zoomer(data-zoom-image="images/upload/pdp-media-3pg")
+					.item(data-zoom-id="zoom1"): +img-upload('pdp-1.jpg').img-view.zoomer(data-zoom-image="images/upload/pdp-1.jpg")
+					.item(data-zoom-id="zoom2"): +img-upload('media-1.jpg').img-view.zoomer(data-zoom-image="images/upload/media-1.jpg")
+					.item(data-zoom-id="zoom3"): +img-upload('media-2.jpg').img-view.zoomer(data-zoom-image="images/upload/media-2.jpg")
+					.item(data-zoom-id="zoom4"): +img-upload('media-3.jpg').img-view.zoomer(data-zoom-image="images/upload/pdp-media-3pg")
+				.slick.slider-thumb
 				span.load
 				.pinchZoomWrap(data-pinchzoom='{"initUnder": 767}')
 					.pinchZoomInner
@@ -43,9 +48,13 @@
 			.slider.vertical-slider(data-cslider='{"type": "syncing", "navFor": ".slider-thumb"}')
 				.slick.slider-nav
 					.item: +img-upload('pdp-thumb-1.jpg').img-view
+					.item: +img-upload('media-1.jpg').img-view
+					.item: +img-upload('media-2.jpg').img-view
+					.item: +img-upload('media-3.jpg').img-view
 					.item: +img-upload('pdp-thumb-1.jpg').img-view
-					.item: +img-upload('pdp-thumb-1.jpg').img-view
-					.item: +img-upload('pdp-thumb-1.jpg').img-view
+					.item: +img-upload('media-1.jpg').img-view
+					.item: +img-upload('media-2.jpg').img-view
+					.item: +img-upload('media-3.jpg').img-view
 				span.load
 
 	// Detail Block

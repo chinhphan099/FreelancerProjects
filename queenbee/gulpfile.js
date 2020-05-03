@@ -1,191 +1,217 @@
 'use strict';
 
-const gulp = require('gulp'),
-	less = require('gulp-less'),
-	pug = require('gulp-pug'),
-	jshint = require('gulp-jshint'),
-	cssmin = require('gulp-cssmin'),
-	concat = require('gulp-concat'),
-	imagemin = require('gulp-imagemin'),
-	uglify = require('gulp-uglify'),
-	rename = require('gulp-rename'),
-	clean = require('gulp-clean'),
-	connect = require('gulp-connect'),
-	gutil = require('gulp-util'),
-	qunit = require('gulp-qunit');
-
+const {task, watch, src, dest, parallel, series} = require('gulp'),
+    less = require('gulp-less'),
+    pug = require('gulp-pug'),
+    jshint = require('gulp-jshint'),
+    cssmin = require('gulp-cssmin'),
+    concat = require('gulp-concat'),
+    imagemin = require('gulp-imagemin'),
+    uglify = require('gulp-uglify'),
+    rename = require('gulp-rename'),
+    clean = require('gulp-clean'),
+    webserver = require('gulp-webserver'),
+    gutil = require('gulp-util'),
+    babel = require('gulp-babel'),
+    sourcemaps = require('gulp-sourcemaps'),
+    qunit = require('gulp-qunit'),
+    autoprefixer = require('gulp-autoprefixer'),
+    ip = require('ip');
 
 // Source folder configuration
-const SRC_DIR = {};
-SRC_DIR.root = './app/';
-SRC_DIR.assets = SRC_DIR.root + 'assets/';
-SRC_DIR.img = SRC_DIR.root + 'images/';
-SRC_DIR.js = SRC_DIR.root + 'js/';
-SRC_DIR.less = SRC_DIR.root + 'less/';
-SRC_DIR.pug = SRC_DIR.root + 'pug/';
-
+const SRC = {};
+SRC.root = './app/';
+SRC.assets = SRC.root + 'assets/';
+SRC.img = SRC.root + 'images/';
+SRC.js = SRC.root + 'js/';
+SRC.less = SRC.root + 'less/';
+SRC.pug = SRC.root + 'pug/';
 
 // Source file matchers, using respective directories
-const SRC_FILES = {
-	less: SRC_DIR.less + '*.less',
-	pug: [SRC_DIR.pug + '*.pug'],
-	js: SRC_DIR.js + '**/*.js',
-	images: SRC_DIR.img + '**/*',
-	assets: SRC_DIR.assets + '**/*'
+const FILES = {
+    less: SRC.less + '*.less',
+    pug: [SRC.pug + '*.pug'],
+    js: SRC.js + '**/*.js',
+    images: SRC.img + '**/*',
+    assets: SRC.assets + '**/*'
 };
 
 // Output directories
-const PUB_DIR = {};
-PUB_DIR.root = './public/';
-PUB_DIR.js = PUB_DIR.root + 'js/';
-PUB_DIR.css = PUB_DIR.root + 'css/';
-PUB_DIR.cssFiles = PUB_DIR.root + 'css/style.css';
-PUB_DIR.fnt = PUB_DIR.root + 'fonts/';
-PUB_DIR.img = PUB_DIR.root + 'images/';
+const PUB = {};
+PUB.root = './public/';
+PUB.js = PUB.root + 'js/';
+PUB.css = PUB.root + 'css/';
+PUB.fnt = PUB.root + 'fonts/';
+PUB.img = PUB.root + 'images/';
 
-gulp.task('scripts', () => {
-	return gulp.src([SRC_DIR.js + 'site.js', SRC_DIR.js + 'plugins/*.js'])
-		.pipe(jshint('.jshintrc'))
-		.pipe(jshint.reporter('default'))
-		.on('error', function(err) {
-			let displayErr = gutil.colors.red(err.message);
-			gutil.log(displayErr);
-			this.emit('end');
-		})
-		.pipe(concat('scripts.js'))
-		.pipe(gulp.dest(PUB_DIR.js))
-		// .pipe(rename({ suffix: '.min' }))
-		// .pipe(uglify())
-		// .on('error', function(err) {
-		// 	let displayErr = gutil.colors.red(err.message);
-		// 	gutil.log(displayErr);
-		// 	this.emit('end');
-		// })
-		// .pipe(gulp.dest(PUB_DIR.js))
+task('scripts', () => {
+    return src([SRC.js + 'site.js', SRC.js + 'plugins/*.js'])
+        //.pipe(sourcemaps.init())
+        .pipe(jshint('.jshintrc'))
+        .pipe(jshint.reporter('default'))
+        .on('error', function(err) {
+            let displayErr = gutil.colors.red(err.message);
+            gutil.log(displayErr);
+            this.emit('end');
+        })
+        .pipe(babel({
+            "presets": ["@babel/preset-env"]
+        }))
+        .pipe(concat('scripts.js'))
+        .pipe(dest(PUB.js))
+        .pipe(uglify())
+        //.pipe(rename({suffix: '.min'}))
+        .on('error', function(err) {
+            let displayErr = gutil.colors.red(err.message);
+            gutil.log(displayErr);
+            this.emit('end');
+        })
+        // .pipe(dest(PUB.js))
+        //.pipe(sourcemaps.write('.'))
+        .pipe(dest(PUB.js))
 });
 
-gulp.task('jsguide', () => {
-	return gulp.src([SRC_DIR.js + 'guide/guide.js', SRC_DIR.js + 'guide/plugins/*.js'])
-		.pipe(jshint('.jshintrc'))
-		.pipe(jshint.reporter('default'))
-		.on('error', function(err) {
-			let displayErr = gutil.colors.red(err.message);
-			gutil.log(displayErr);
-			this.emit('end');
-		})
-		.pipe(concat('jsguide.js'))
-		.pipe(gulp.dest(PUB_DIR.js))
-		// .pipe(rename({ suffix: '.min' }))
-		// .pipe(uglify())
-		// .on('error', function(err) {
-		// 	let displayErr = gutil.colors.red(err.message);
-		// 	gutil.log(displayErr);
-		// 	this.emit('end');
-		// })
-		// .pipe(gulp.dest(PUB_DIR.js))
+task('jsguide', () => {
+    return src([SRC.js + 'guide/guide.js', SRC.js + 'guide/components/*.js'])
+        .pipe(sourcemaps.init())
+        .pipe(jshint('.jshintrc'))
+        .pipe(jshint.reporter('default'))
+        .on('error', function(err) {
+            let displayErr = gutil.colors.red(err.message);
+            gutil.log(displayErr);
+            this.emit('end');
+        })
+        .pipe(babel({
+            "presets": ["@babel/preset-env"]
+        }))
+        .pipe(concat('jsguide.js'))
+        .pipe(uglify())
+        .pipe(dest(PUB.js))
+        .pipe(sourcemaps.write('.'))
+        .pipe(dest(PUB.js))
 });
 
-gulp.task('libs', () => {
-	return gulp.src(SRC_DIR.js + 'libs/*.js')
-		.pipe(concat('libs.js'))
-		.pipe(gulp.dest(PUB_DIR.js))
-		// .pipe(rename({ suffix: '.min' }))
-		// .pipe(uglify())
-		// .pipe(gulp.dest(PUB_DIR.js))
+task('libs', () => {
+    return src(SRC.js + 'libs/*.js')
+        //.pipe(sourcemaps.init())
+        .pipe(concat('libs.js'))
+        .pipe(uglify())
+        //.pipe(sourcemaps.write('.'))
+        .pipe(dest(PUB.js))
 });
 
-gulp.task('less', () =>
-	gulp.src(SRC_FILES.less)
-		.pipe(less().on('error', function(err) {
-			let displayErr = gutil.colors.red(err.message);
-			gutil.log(displayErr);
-			this.emit('end');
-		}))
-		.pipe(gulp.dest(PUB_DIR.css))
-		// .pipe(cssmin())
-		// .pipe(rename({suffix: '.min'}))
-		// .pipe(gulp.dest(PUB_DIR.css))
-		// .pipe(connect.reload())
+task('less', () =>
+    src(FILES.less)
+        .pipe(less().on('error', function(err) {
+            let displayErr = gutil.colors.red(err.message);
+            gutil.log(displayErr);
+            this.emit('end');
+        }))
+        .pipe(autoprefixer({
+            flexbox: "no-2009"
+        }))
+        .pipe(dest(PUB.css))
+        .pipe(cssmin())
+        //.pipe(rename({suffix: '.min'}))
+        .pipe(dest(PUB.css))
 );
 
-gulp.task('pug', () =>
-	gulp.src(SRC_FILES.pug)
-		.pipe(pug({
-			pretty: true
-		})
-		.on('error', function(err) {
-			let displayErr = gutil.colors.red(err.message);
-			gutil.log(displayErr);
-			this.emit('end');
-		}))
-		.pipe(gulp.dest(file => {
-			var pugIndex = file.base.lastIndexOf('pug');
-			var relPath = file.base.substr(pugIndex+4);
-			return PUB_DIR.root + relPath;
-		}))
-		//.pipe(connect.reload())
+task('pug', () =>
+    src(FILES.pug)
+        .pipe(pug({
+            pretty: true
+        })
+        .on('error', function(err) {
+            let displayErr = gutil.colors.red(err.message);
+            gutil.log(displayErr);
+            this.emit('end');
+        }))
+        .pipe(dest(file => {
+            var pugIndex = file.base.lastIndexOf('pug');
+            var relPath = file.base.substr(pugIndex+4);
+            return PUB.root + relPath;
+        }))
 );
 
-gulp.task('pugdata', () =>
-	gulp.src('./app/pug/data/*.pug')
-		.pipe(pug({
-			pretty: true
-		})
-		.on('error', function(err) {
-			let displayErr = gutil.colors.red(err.message);
-			gutil.log(displayErr);
-			this.emit('end');
-		}))
-		.pipe(gulp.dest(file => {
-			var pugIndex = file.base.lastIndexOf('pug');
-			var relPath = file.base.substr(pugIndex+4);
-			return PUB_DIR.root + relPath;
-		}))
-		//.pipe(connect.reload())
+task('pugdata', () =>
+    src('./app/pug/data/*.pug')
+        .pipe(pug({
+            pretty: true
+        })
+        .on('error', function(err) {
+            let displayErr = gutil.colors.red(err.message);
+            gutil.log(displayErr);
+            this.emit('end');
+        }))
+        .pipe(dest(file => {
+            var pugIndex = file.base.lastIndexOf('pug');
+            var relPath = file.base.substr(pugIndex+4);
+            return PUB.root + relPath;
+        }))
 );
 
-gulp.task('imagemin', () =>
-	gulp.src(SRC_FILES.images)
-		//.pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
-		.pipe(gulp.dest(PUB_DIR.img))
-		//.pipe(connect.reload())
+task('imagemin', () =>
+    src(FILES.images)
+    .pipe(imagemin([
+        imagemin.gifsicle({interlaced: true, progressive: true, optimizationLevel: 5}),
+        imagemin.jpegtran({interlaced: true, progressive: true, optimizationLevel: 5}),
+        imagemin.optipng({interlaced: true, progressive: true, optimizationLevel: 5}),
+        imagemin.svgo({
+            plugins: [
+                {removeViewBox: true},
+                {cleanupIDs: false}
+            ]
+        })
+    ]))
+    .pipe(dest(PUB.img))
 );
 
-gulp.task('copyAssets', () =>
-	gulp.src(SRC_FILES.assets)
-		.pipe(gulp.dest(PUB_DIR.root))
-		//.pipe(connect.reload())
+task('copyAssets', () =>
+    src(FILES.assets)
+        .pipe(dest(PUB.root))
 );
 
-gulp.task('test', function() {
-	return gulp.src('./test/*.html')
-		.pipe(qunit({'page': {
-			viewportSize: { width: 1280, height: 800 }
-		}}));
+task('test', function() {
+    return src('./test/*.html')
+        .pipe(qunit({'page': {
+            viewportSize: { width: 1280, height: 800 }
+        }}));
 });
 
-gulp.task('watch', () => {
-	gulp.watch([SRC_DIR.less + '*.less', SRC_DIR.less + '**/*.less'], ['less']);
-	gulp.watch([SRC_DIR.js + 'site.js', SRC_DIR.js + 'plugins/*.js', SRC_DIR.js + 'guide/guide.js', SRC_DIR.js + 'guide/**/*.js'], ['scripts']);
-	gulp.watch([SRC_DIR.pug + '**/*.pug', SRC_DIR.pug + '*.pug'], ['pug']);
-	gulp.watch(SRC_FILES.images, ['imagemin']);
-	gulp.watch(SRC_FILES.assets.onlyCopy, ['copyAssets']);
+task('watch', (done) => {
+    watch([SRC.less + '*.less', SRC.less + '**/*.less'], series('less'));
+    watch([SRC.js + 'site.js', SRC.js + 'components/*.js'], series('scripts'));
+    watch([SRC.js + 'guide/guide.js', SRC.js + 'guide/**/*.js'], series('jsguide'));
+    watch(SRC.js + 'libs/*.js', series('libs'));
+    watch([SRC.pug + '**/*.pug', SRC.pug + '*.pug'], series('pug'));
+    watch(FILES.images, series('imagemin'));
+    watch(FILES.assets, series('copyAssets'));
+    done();
 });
 
-gulp.task('clean', () => {
-	return gulp.src('./public', {read: false})
-		.pipe(clean());
+task('clean', () => {
+    return src('./public', {read: false, allowEmpty: true})
+        .pipe(clean());
 });
 
-gulp.task('webserver', () =>
-	connect.server({
-		root: PUB_DIR.root,
-		livereload: false,
-		port: 3333,
-		host: 'localhost'
-	})
+task('webserver', (done) => {
+    src(PUB.root)
+    .pipe(webserver({
+        host: ip.address(),
+        port: process.env.PORT || 1111,
+        directoryListing: true,
+        open: '/sitemap.html',
+        fallback: '/404.html'
+    }));
+    done();
+});
+
+task('optimized',
+    parallel('imagemin')
 );
-
-gulp.task('server', ['watch', 'webserver']);
-gulp.task('build', ['less', 'pug', 'pugdata', 'imagemin', 'scripts', 'jsguide', 'libs', 'copyAssets', 'watch']);
-gulp.task('default', ['clean'], () => { gulp.run(['build', 'server']); });
+task('build',
+    parallel('less', 'pug', 'scripts', 'jsguide', 'libs', 'copyAssets', 'watch')
+);
+task('default',
+    series('clean', 'build', 'webserver')
+);
